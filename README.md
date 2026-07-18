@@ -2,6 +2,9 @@
 
 Public marketing website for **ZatGo Innovation** — products, downloads, docs/tutorials hubs, updates, pricing, and contact.
 
+**Path:** `Clients/web/marketing/`  
+**Git remote:** https://github.com/teamzatgoinnovation-collab/website.git
+
 ## Quick start
 
 ```bash
