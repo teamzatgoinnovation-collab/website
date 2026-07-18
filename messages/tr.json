@@ -1,0 +1,1371 @@
+{
+  "meta": {
+    "titleDefault": "ZatGo Innovation — Operasyonlar ekiplerinizle birlikte hareket eder.",
+    "titleTemplate": "%s · ZatGo",
+    "description": "Kurumsal operasyon platformu — saha uygulamaları, ofis araçları ve müşteri portalları."
+  },
+  "brand": {
+    "name": "ZatGo",
+    "legalName": "ZatGo Innovation",
+    "tagline": "Operasyonlar ekiplerinizle birlikte hareket eder.",
+    "footerNote": "Modern ekipler için operasyon yazılımı"
+  },
+  "nav": {
+    "products": "Ürünler",
+    "downloads": "İndirmeler",
+    "docs": "Dokümanlar",
+    "tutorials": "Eğitimler",
+    "updates": "Güncellemeler",
+    "pricing": "Fiyatlandırma",
+    "contact": "İletişim",
+    "language": "Dil"
+  },
+  "footer": {
+    "products": "Ürünler",
+    "resources": "Kaynaklar",
+    "company": "Şirket",
+    "allProducts": "Tüm ürünler",
+    "documentation": "Dokümantasyon",
+    "changelog": "Değişiklik günlüğü",
+    "industries": "Sektörler",
+    "solutions": "Çözümler",
+    "requestDemo": "Demo talep et",
+    "about": "About",
+    "careers": "Careers",
+    "partners": "Partners",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  },
+  "common": {
+    "learnMore": "Daha fazla",
+    "view": "Görüntüle",
+    "comingSoon": "Yakında",
+    "comingSoonLong": "Yakında",
+    "openInDocs": "Dokümanlarda aç",
+    "downloads": "İndirmeler",
+    "documentation": "Dokümantasyon",
+    "backHome": "Ana sayfaya dön",
+    "allProducts": "Tüm ürünler",
+    "available": "Kullanılabilir",
+    "availableOn": "Kullanılabilir kanallar",
+    "capabilities": "Yetenekler",
+    "product": "Ürün",
+    "mobile": "Mobil",
+    "desktop": "Masaüstü",
+    "web": "Web",
+    "requestDemo": "Demo talep et"
+  },
+  "home": {
+    "supporting": "Saha uygulamaları, masaüstü araçları ve portallar — ekiplerinizin çalışma biçimi için tek platform.",
+    "exploreProducts": "Ürünleri keşfet",
+    "requestDemo": "Demo talep et",
+    "productsEyebrow": "Ürünler",
+    "productsTitle": "Operasyon için üretilmiş, her kanala gönderilmiş",
+    "productsDesc": "Project Tracker ile başlayın; ardından van satışları, teslimat, depo, IK ve CRM’e genişletin.",
+    "allProducts": "Tüm ürünler",
+    "channelsEyebrow": "Kanallar",
+    "channelsTitle": "Mobil, masaüstü ve web — aynı platform",
+    "channelsDesc": "Telefon, masaüstü ve tarayıcıda tek ürün ailesi — her rol için veriler senkron kalır.",
+    "channelMobileTitle": "Mobil",
+    "channelMobileBody": "Saha ve çevrimdışı öncelikli uygulamalar — Go Van, Teslimat, Depo ve daha fazlası.",
+    "channelDesktopTitle": "Masaüstü",
+    "channelDesktopBody": "Güç kullanıcıları için araçlar — Project Tracker Pro, ZatGo POS, Muhasebe, Filo.",
+    "channelWebTitle": "Web",
+    "channelWebBody": "Müşteriler, tedarikçiler, yöneticiler ve yöneticiler için portallar ve paneller.",
+    "viewChannel": "Görüntüle",
+    "resourcesEyebrow": "Kaynaklar",
+    "resourcesTitle": "İndirmeler, dokümanlar ve eğitimler",
+    "resourcesDesc": "Uygulamaları alın, ardından kılavuzlar ve yardım için dokümantasyona geçin.",
+    "resourceDownloads": "İndirmeler",
+    "resourceDownloadsDesc": "Mobil, masaüstü ve web istemcileri",
+    "resourceDocs": "Dokümantasyon",
+    "resourceDocsDesc": "Kılavuzlar, yardım merkezi ve ürün dokümanları",
+    "resourceTutorials": "Eğitimler",
+    "resourceTutorialsDesc": "Ekipler için adım adım seriler",
+    "resourceUpdates": "Güncellemeler",
+    "resourceUpdatesDesc": "Değişiklik günlüğü ve sürüm notları",
+    "updatesEyebrow": "Güncellemeler",
+    "updatesTitle": "Son çıkanlar",
+    "fullChangelog": "Tam değişiklik günlüğü",
+    "ctaTitle": "ZatGo’yu operasyonunuzda görün",
+    "ctaBody": "Sitelerinizi, rollerinizi ve kanallarınızı anlatın — ürünleri bir yayın planına bağlarız.",
+    "ctaButton": "Bize ulaşın"
+  },
+  "productsPage": {
+    "title": "Ürünler",
+    "metaDescription": "ZatGo ürün kataloğu — Project Tracker, Go Van, Teslimat, depo, IK, CRM, POS ve daha fazlası.",
+    "eyebrow": "Ürünler",
+    "heading": "ZatGo ürün kataloğu",
+    "description": "Saha, kat ve ofis için uygulamalar — tüm ekibinizin kullanabileceği tek platform.",
+    "comingSoonHeading": "Yakında"
+  },
+  "downloadsPage": {
+    "title": "İndirmeler",
+    "metaDescription": "ZatGo mobil, masaüstü ve web uygulamalarını indirin.",
+    "eyebrow": "İndirmeler",
+    "heading": "Uygulamaları alın",
+    "description": "Mağaza bağlantıları ve kurulumlar yayınlanana kadar paketler yakında olarak işaretlenir. Ürün sayfaları planlama için hazırdır.",
+    "mobileIntro": "iOS ve Android mobil uygulamalar — önce saha ve depo.",
+    "desktopIntro": "Windows ve macOS güç kullanıcıları için masaüstü kurulumları.",
+    "webIntro": "Tarayıcı uygulamaları ve portallar — siteniz hazır olduğunda açılır.",
+    "helpPrefix": "Kurulum yardımı mı arıyorsunuz?",
+    "docsHub": "Dokümantasyon merkezi",
+    "tutorials": "Eğitimler",
+    "checksum": "Checksum",
+    "checksumNote": "SHA-256 digests show sha256:pending until published installers ship. Verify checksums from the release notes once live.",
+    "requirementsTitle": "System requirements",
+    "requirementsIntro": "Baseline device and browser guidance. Exact needs depend on the product package you deploy.",
+    "requirements": {
+      "ios": "iOS 16 or later. Camera and location permissions for field products.",
+      "android": "Android 10 or later. Storage and location permissions for offline and visits.",
+      "windows": "Windows 10/11 (64-bit). 4 GB RAM minimum, 8 GB recommended.",
+      "macos": "macOS 13 or later. Apple Silicon and Intel builds when published.",
+      "linux": "Ubuntu 22.04+ or equivalent. AppImage / deb when published.",
+      "web": "Current Chrome, Edge, Firefox, or Safari. Stable broadband recommended.",
+      "docker": "Docker Engine 24+. Suitable for self-hosted platform components when published."
+    }
+  },
+  "docsPage": {
+    "title": "Dokümantasyon",
+    "metaDescription": "ZatGo doküman merkezi — kılavuzlar, entegrasyonlar, geliştiriciler ve yardım.",
+    "eyebrow": "Dokümantasyon",
+    "heading": "Kılavuzlar, entegrasyonlar ve yardım",
+    "description": "Bağlantılar özel doküman sitesini açar. Yayınlandığında NEXT_PUBLIC_DOCS_URL ayarlayın.",
+    "preferTutorials": "Uygulamalı anlatımı mı tercih edersiniz?",
+    "browseTutorials": "Eğitimlere göz atın",
+    "categories": {
+      "guides": "Kılavuzlar",
+      "api": "Geliştiriciler",
+      "help": "Yardım",
+      "integrations": "Entegrasyonlar"
+    }
+  },
+  "tutorialsPage": {
+    "title": "Eğitimler",
+    "metaDescription": "Proje yöneticileri, saha ekipleri, depo ve yöneticiler için ZatGo eğitim serileri.",
+    "eyebrow": "Eğitimler",
+    "heading": "Yaparak öğrenin",
+    "description": "Her seri dokümantasyon sitesinde açılır. Rolünüze uygun yolu bu merkezlerden bulun.",
+    "needDocs": "Referans mı lazım?",
+    "docsHub": "Dokümantasyon merkezi"
+  },
+  "updatesPage": {
+    "title": "Güncellemeler",
+    "metaDescription": "ZatGo değişiklik günlüğü ve sürüm notları.",
+    "eyebrow": "Güncellemeler",
+    "heading": "Değişiklik günlüğü",
+    "description": "Platform, istemciler ve bu pazarlama sitesinde neler yayınlıyoruz."
+  },
+  "pricingPage": {
+    "title": "Fiyatlandırma",
+    "metaDescription": "ZatGo paketleri — Starter, Business ve Enterprise.",
+    "eyebrow": "Fiyatlandırma",
+    "heading": "Yayınımıza uyan planlar",
+    "description": "Fiyatlandırma siteye ve kanal karışımına göre özeldir. Aşağıdaki paketler tipik paketlemeyi anlatır.",
+    "periodSite": "site başına",
+    "periodOrg": "organizasyon başına",
+    "custom": "Özel",
+    "comparisonTitle": "Compare plans",
+    "comparisonIntro": "High-level capability matrix — your quote may tailor modules and sites.",
+    "faqTitle": "Pricing FAQ",
+    "yes": "Yes",
+    "no": "—",
+    "rows": {
+      "sites": "Sites / orgs",
+      "fieldApps": "Field apps",
+      "desktopApps": "Desktop apps",
+      "portals": "Portals",
+      "bi": "BI & reports",
+      "sla": "SLA",
+      "support": "Support"
+    },
+    "sites": {
+      "1": "1 site",
+      "multi": "Multi-branch",
+      "campus": "Campus",
+      "agency": "Agency",
+      "unlimited": "Unlimited"
+    },
+    "support": {
+      "standard": "Standard",
+      "priority": "Priority",
+      "education": "Education desk",
+      "gov": "Public sector",
+      "dedicated": "Dedicated CSM"
+    },
+    "faq": [
+      {
+        "question": "Do you publish list prices?",
+        "answer": "Pricing is custom based on sites, modules, and channels. Use Contact to request a quote."
+      },
+      {
+        "question": "What is included in Education?",
+        "answer": "Education covers academic and training use with campus-friendly licensing. Commercial resale is not included."
+      },
+      {
+        "question": "How does Government differ from Enterprise?",
+        "answer": "Government adds procurement-friendly documentation, security review pathways, and public-sector support — features can match Enterprise when required."
+      },
+      {
+        "question": "Can we mix field and desktop apps?",
+        "answer": "Yes. Most customers start with Project Tracker and add Go Van, Delivery, Warehouse, or desktop tools as needed."
+      }
+    ]
+  },
+  "contactPage": {
+    "title": "İletişim",
+    "metaDescription": "ZatGo demosu talep edin veya satışla iletişime geçin.",
+    "eyebrow": "İletişim",
+    "heading": "Demo talep et",
+    "description": "Şirketinizi, sitelerinizi ve önce hangi ürünlerin önemli olduğunu paylaşın. Kanalları bir yayın planına bağlarız.",
+    "bullet1": "Saha, masa ve portallar için ürün uyumu",
+    "bullet2": "Entegrasyon ve yayın planlaması",
+    "bullet3": "İndirme ve doküman hazırlığı",
+    "name": "Ad",
+    "email": "İş e-postası",
+    "company": "Şirket",
+    "interest": "İlgi alanı",
+    "interestPlaceholder": "örn. Project Tracker + Delivery",
+    "message": "Mesaj",
+    "submit": "Demo talep et",
+    "sending": "Gönderiliyor…",
+    "toastTitle": "E-posta istemciniz açılıyor",
+    "toastDesc": "Mesajınız geldiğinde takip ederiz.",
+    "errors": {
+      "name": "Please enter your name",
+      "email": "Enter a valid work email",
+      "company": "Company is required",
+      "interest": "Tell us what you are interested in",
+      "message": "A short message helps us prepare",
+      "inquiryType": "Select an inquiry type"
+    },
+    "inquiryType": "Inquiry type",
+    "inquiryTypes": {
+      "demo": "Request a demo",
+      "sales": "Sales / pricing",
+      "support": "Product support",
+      "partnership": "Partnership",
+      "careers": "Careers",
+      "other": "Other"
+    },
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "whatsappLabel": "WhatsApp",
+    "addressLabel": "Address",
+    "addressFallback": "Office address is shared during onboarding.",
+    "downloadsLink": "Downloads",
+    "supportLink": "Documentation",
+    "socialTitle": "Social",
+    "socialFallback": "Set NEXT_PUBLIC_LINKEDIN / NEXT_PUBLIC_X / NEXT_PUBLIC_YOUTUBE / NEXT_PUBLIC_FACEBOOK to show social links.",
+    "social": {
+      "linkedin": "LinkedIn",
+      "x": "X",
+      "youtube": "YouTube",
+      "facebook": "Facebook"
+    }
+  },
+  "industriesPage": {
+    "title": "Sektörler",
+    "metaDescription": "Dağıtım, projeler, otelcilik, filo ve lojistik için ZatGo.",
+    "eyebrow": "Sektörler",
+    "heading": "ZatGo nereye uyar",
+    "description": "Yaygın operasyon biçimleri için ürün paketleri — tek beden UI değil.",
+    "preferSolutions": "Sektör etiketlerinden çok sonuçları mı tercih edersiniz?",
+    "viewSolutions": "Çözümleri gör"
+  },
+  "solutionsPage": {
+    "title": "Çözümler",
+    "metaDescription": "Saha operasyonları, POS, proje teslimi ve arka ofis için ZatGo çözümleri.",
+    "eyebrow": "Çözümler",
+    "heading": "Kanallar arasinda sonuçlar",
+    "description": "Ürünleri işin gerçek hareketine göre birleştirin — saha, kat ve ofis.",
+    "mapSolution": "Bir çözümü sitelerinize bağlayın"
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Sayfa bulunamadı",
+    "body": "Bu yol pazarlama sitesinin parçası değil. Ürünler, indirmeler veya dokümanları deneyin."
+  },
+  "products": {
+    "project-tracker": {
+      "name": "Project Tracker",
+      "tagline": "Projeler, görevler ve zaman — sahada ve masada.",
+      "description": "İşi planlayın, Kanban’da görevleri izleyin, zaman kaydedin; dosya ve bildirimleri web, mobil ve masaüstünde senkron tutun.",
+      "capabilities": [
+        "Projelerim ve görevler",
+        "Kanban",
+        "Zaman girişi",
+        "Dosyalar ve bildirimler",
+        "Gantt ve raporlar (masaüstü)"
+      ],
+      "modules": [
+        {
+          "name": "My Projects & Tasks",
+          "summary": "My Projects & Tasks workflows inside Project Tracker."
+        },
+        {
+          "name": "Kanban",
+          "summary": "Kanban workflows inside Project Tracker."
+        },
+        {
+          "name": "Time entry",
+          "summary": "Time entry workflows inside Project Tracker."
+        },
+        {
+          "name": "Files & notifications",
+          "summary": "Files & notifications workflows inside Project Tracker."
+        },
+        {
+          "name": "Gantt & reports (desktop)",
+          "summary": "Gantt & reports (desktop) workflows inside Project Tracker."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which channels does Project Tracker support?",
+          "answer": "Project Tracker is available on web, mobile, desktop. Availability by plan may vary — ask sales for your rollout."
+        },
+        {
+          "question": "Is Project Tracker available offline?",
+          "answer": "Field-oriented channels for Project Tracker are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+        },
+        {
+          "question": "How do we get started?",
+          "answer": "Request a demo from the Contact page. We will map roles, sites, and the right product mix for your organization."
+        }
+      ]
+    },
+    "go-van": {
+      "name": "Go Van",
+      "tagline": "Çevrimdışı çalışan rota satışları.",
+      "description": "Van ve rota satışları; çevrimdışı siparişler, tahsilatlar, stok transferi, müşteri ziyaretleri ve GPS.",
+      "capabilities": [
+        "Çevrimdışı siparişler",
+        "Tahsilatlar",
+        "Stok transferi",
+        "Müşteri ziyaretleri",
+        "GPS"
+      ],
+      "modules": [
+        {
+          "name": "Offline orders",
+          "summary": "Offline orders workflows inside Go Van."
+        },
+        {
+          "name": "Collections",
+          "summary": "Collections workflows inside Go Van."
+        },
+        {
+          "name": "Stock transfer",
+          "summary": "Stock transfer workflows inside Go Van."
+        },
+        {
+          "name": "Customer visits",
+          "summary": "Customer visits workflows inside Go Van."
+        },
+        {
+          "name": "GPS",
+          "summary": "GPS workflows inside Go Van."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which channels does Go Van support?",
+          "answer": "Go Van is available on mobile. Availability by plan may vary — ask sales for your rollout."
+        },
+        {
+          "question": "Is Go Van available offline?",
+          "answer": "Field-oriented channels for Go Van are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+        },
+        {
+          "question": "How do we get started?",
+          "answer": "Request a demo from the Contact page. We will map roles, sites, and the right product mix for your organization."
+        }
+      ]
+    },
+    "delivery": {
+      "name": "Delivery",
+      "tagline": "Rotalar, teslim kanıtı ve canlı takip.",
+      "description": "Teslimat siparişleri, rota optimizasyonu, OTP, imza, teslim kanıtı ve sürücüler için canlı takip.",
+      "capabilities": [
+        "Teslimat siparişleri",
+        "Rota optimizasyonu",
+        "OTP ve imza",
+        "Teslim kanıtı",
+        "Canlı takip"
+      ],
+      "modules": [
+        {
+          "name": "Delivery orders",
+          "summary": "Delivery orders workflows inside Delivery."
+        },
+        {
+          "name": "Route optimization",
+          "summary": "Route optimization workflows inside Delivery."
+        },
+        {
+          "name": "OTP & signature",
+          "summary": "OTP & signature workflows inside Delivery."
+        },
+        {
+          "name": "Proof of delivery",
+          "summary": "Proof of delivery workflows inside Delivery."
+        },
+        {
+          "name": "Live tracking",
+          "summary": "Live tracking workflows inside Delivery."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which channels does Delivery support?",
+          "answer": "Delivery is available on mobile. Availability by plan may vary — ask sales for your rollout."
+        },
+        {
+          "question": "Is Delivery available offline?",
+          "answer": "Field-oriented channels for Delivery are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+        },
+        {
+          "question": "How do we get started?",
+          "answer": "Request a demo from the Contact page. We will map roles, sites, and the right product mix for your organization."
+        }
+      ]
+    },
+    "warehouse": {
+      "name": "Warehouse",
+      "tagline": "Toplama, yerleştirme ve sayım.",
+      "description": "Toplama, yerleştirme, barkod, envanter sayımı ve transferler — mobil ve masaüstü.",
+      "capabilities": [
+        "Toplama ve yerleştirme",
+        "Barkod",
+        "Envanter sayımı",
+        "Transferler"
+      ],
+      "modules": [
+        {
+          "name": "Picking & put-away",
+          "summary": "Picking & put-away workflows inside Warehouse."
+        },
+        {
+          "name": "Barcode",
+          "summary": "Barcode workflows inside Warehouse."
+        },
+        {
+          "name": "Inventory count",
+          "summary": "Inventory count workflows inside Warehouse."
+        },
+        {
+          "name": "Transfers",
+          "summary": "Transfers workflows inside Warehouse."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which channels does Warehouse support?",
+          "answer": "Warehouse is available on mobile, desktop. Availability by plan may vary — ask sales for your rollout."
+        },
+        {
+          "question": "Is Warehouse available offline?",
+          "answer": "Field-oriented channels for Warehouse are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+        },
+        {
+          "question": "How do we get started?",
+          "answer": "Request a demo from the Contact page. We will map roles, sites, and the right product mix for your organization."
+        }
+      ]
+    },
+    "hr": {
+      "name": "HR",
+      "tagline": "Hareket halinde yoklama, izin ve masraflar.",
+      "description": "Yoklama, izin, masraf talepleri ve bordro görünümü için mobil IK.",
+      "capabilities": [
+        "Yoklama",
+        "İzin",
+        "Masraf talepleri",
+        "Bordro görünümü"
+      ],
+      "modules": [
+        {
+          "name": "Attendance",
+          "summary": "Attendance workflows inside HR."
+        },
+        {
+          "name": "Leave",
+          "summary": "Leave workflows inside HR."
+        },
+        {
+          "name": "Expense claims",
+          "summary": "Expense claims workflows inside HR."
+        },
+        {
+          "name": "Payroll view",
+          "summary": "Payroll view workflows inside HR."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which channels does HR support?",
+          "answer": "HR is available on mobile. Availability by plan may vary — ask sales for your rollout."
+        },
+        {
+          "question": "Is HR available offline?",
+          "answer": "Field-oriented channels for HR are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+        },
+        {
+          "question": "How do we get started?",
+          "answer": "Request a demo from the Contact page. We will map roles, sites, and the right product mix for your organization."
+        }
+      ]
+    },
+    "crm": {
+      "name": "CRM",
+      "tagline": "Anlaşmaların olduğu yerde adaylar ve ziyaretler.",
+      "description": "Adaylar, ziyaretler, takipler ve saha notları için mobil CRM — pipeline için web portalı ile.",
+      "capabilities": [
+        "Adaylar",
+        "Ziyaretler",
+        "Takipler",
+        "Pipeline (web)"
+      ],
+      "modules": [
+        {
+          "name": "Leads",
+          "summary": "Leads workflows inside CRM."
+        },
+        {
+          "name": "Visits",
+          "summary": "Visits workflows inside CRM."
+        },
+        {
+          "name": "Follow-ups",
+          "summary": "Follow-ups workflows inside CRM."
+        },
+        {
+          "name": "Pipeline (web)",
+          "summary": "Pipeline (web) workflows inside CRM."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which channels does CRM support?",
+          "answer": "CRM is available on mobile, web. Availability by plan may vary — ask sales for your rollout."
+        },
+        {
+          "question": "Is CRM available offline?",
+          "answer": "Field-oriented channels for CRM are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+        },
+        {
+          "question": "How do we get started?",
+          "answer": "Request a demo from the Contact page. We will map roles, sites, and the right product mix for your organization."
+        }
+      ]
+    },
+    "field-service": {
+      "name": "Field Service",
+      "tagline": "İmza ile kapanan biletler.",
+      "description": "Servis biletleri, yerinde iş ve müşteri imzası — saha ekipleri için.",
+      "capabilities": [
+        "Biletler",
+        "Kontrol listeleri",
+        "Müşteri imzası"
+      ],
+      "modules": [
+        {
+          "name": "Tickets",
+          "summary": "Tickets workflows inside Field Service."
+        },
+        {
+          "name": "Checklists",
+          "summary": "Checklists workflows inside Field Service."
+        },
+        {
+          "name": "Customer signature",
+          "summary": "Customer signature workflows inside Field Service."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which channels does Field Service support?",
+          "answer": "Field Service is available on mobile. Availability by plan may vary — ask sales for your rollout."
+        },
+        {
+          "question": "Is Field Service available offline?",
+          "answer": "Field-oriented channels for Field Service are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+        },
+        {
+          "question": "How do we get started?",
+          "answer": "Request a demo from the Contact page. We will map roles, sites, and the right product mix for your organization."
+        }
+      ]
+    },
+    "customer-portal": {
+      "name": "Customer Portal",
+      "tagline": "Müşterileriniz için siparişler, faturalar ve destek.",
+      "description": "Siparişler, faturalar, ödemeler, destek ve garanti için self-servis — web ve mobil.",
+      "capabilities": [
+        "Siparişler",
+        "Faturalar",
+        "Ödemeler",
+        "Destek",
+        "Garanti"
+      ],
+      "modules": [
+        {
+          "name": "Orders",
+          "summary": "Orders workflows inside Customer Portal."
+        },
+        {
+          "name": "Invoices",
+          "summary": "Invoices workflows inside Customer Portal."
+        },
+        {
+          "name": "Payments",
+          "summary": "Payments workflows inside Customer Portal."
+        },
+        {
+          "name": "Support",
+          "summary": "Support workflows inside Customer Portal."
+        },
+        {
+          "name": "Warranty",
+          "summary": "Warranty workflows inside Customer Portal."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which channels does Customer Portal support?",
+          "answer": "Customer Portal is available on web, mobile. Availability by plan may vary — ask sales for your rollout."
+        },
+        {
+          "question": "Is Customer Portal available offline?",
+          "answer": "Field-oriented channels for Customer Portal are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+        },
+        {
+          "question": "How do we get started?",
+          "answer": "Request a demo from the Contact page. We will map roles, sites, and the right product mix for your organization."
+        }
+      ]
+    },
+    "vendor-portal": {
+      "name": "Vendor Portal",
+      "tagline": "Tedarikçileriniz için PO’lar ve ödemeler.",
+      "description": "Tedarikçi tarafı RFQ, satın alma siparişleri, ASN, ödemeler ve teslimat takvimleri.",
+      "capabilities": [
+        "RFQ",
+        "Satın alma siparişleri",
+        "ASN",
+        "Ödemeler"
+      ],
+      "modules": [
+        {
+          "name": "RFQ",
+          "summary": "RFQ workflows inside Vendor Portal."
+        },
+        {
+          "name": "Purchase orders",
+          "summary": "Purchase orders workflows inside Vendor Portal."
+        },
+        {
+          "name": "ASN",
+          "summary": "ASN workflows inside Vendor Portal."
+        },
+        {
+          "name": "Payments",
+          "summary": "Payments workflows inside Vendor Portal."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which channels does Vendor Portal support?",
+          "answer": "Vendor Portal is available on web, mobile. Availability by plan may vary — ask sales for your rollout."
+        },
+        {
+          "question": "Is Vendor Portal available offline?",
+          "answer": "Field-oriented channels for Vendor Portal are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+        },
+        {
+          "question": "How do we get started?",
+          "answer": "Request a demo from the Contact page. We will map roles, sites, and the right product mix for your organization."
+        }
+      ]
+    },
+    "accounting": {
+      "name": "Accounting",
+      "tagline": "Yevmiyeler, ödemeler ve banka mutabakatı.",
+      "description": "Yevmiye, ödeme, banka mutabakatı ve mali raporlar için masaüstü muhasebe.",
+      "capabilities": [
+        "Yevmiyeler",
+        "Ödemeler",
+        "Banka mutabakatı",
+        "Raporlar"
+      ],
+      "modules": [
+        {
+          "name": "Journals",
+          "summary": "Journals workflows inside Accounting."
+        },
+        {
+          "name": "Payments",
+          "summary": "Payments workflows inside Accounting."
+        },
+        {
+          "name": "Bank recon",
+          "summary": "Bank recon workflows inside Accounting."
+        },
+        {
+          "name": "Reports",
+          "summary": "Reports workflows inside Accounting."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which channels does Accounting support?",
+          "answer": "Accounting is available on desktop. Availability by plan may vary — ask sales for your rollout."
+        },
+        {
+          "question": "Is Accounting available offline?",
+          "answer": "Field-oriented channels for Accounting are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+        },
+        {
+          "question": "How do we get started?",
+          "answer": "Request a demo from the Contact page. We will map roles, sites, and the right product mix for your organization."
+        }
+      ]
+    },
+    "fleet": {
+      "name": "Fleet",
+      "tagline": "Araçlar, yakıt, seferler, bakım.",
+      "description": "Araçlar, yakıt, seferler ve bakım takvimleri için masaüstü filo yönetimi.",
+      "capabilities": [
+        "Araçlar",
+        "Yakıt",
+        "Seferler",
+        "Bakım"
+      ],
+      "modules": [
+        {
+          "name": "Vehicles",
+          "summary": "Vehicles workflows inside Fleet."
+        },
+        {
+          "name": "Fuel",
+          "summary": "Fuel workflows inside Fleet."
+        },
+        {
+          "name": "Trips",
+          "summary": "Trips workflows inside Fleet."
+        },
+        {
+          "name": "Maintenance",
+          "summary": "Maintenance workflows inside Fleet."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which channels does Fleet support?",
+          "answer": "Fleet is available on desktop. Availability by plan may vary — ask sales for your rollout."
+        },
+        {
+          "question": "Is Fleet available offline?",
+          "answer": "Field-oriented channels for Fleet are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+        },
+        {
+          "question": "How do we get started?",
+          "answer": "Request a demo from the Contact page. We will map roles, sites, and the right product mix for your organization."
+        }
+      ]
+    },
+    "admin-console": {
+      "name": "Admin Console",
+      "tagline": "Kullanıcılar, roller ve site kontrolü.",
+      "description": "Kullanıcılar, roller, şirketler, şubeler, günlükler ve API anahtarları için yönetim konsolu.",
+      "capabilities": [
+        "Kullanıcılar ve roller",
+        "Şirketler",
+        "Şubeler",
+        "Günlükler",
+        "API anahtarları"
+      ],
+      "modules": [
+        {
+          "name": "Users & roles",
+          "summary": "Users & roles workflows inside Admin Console."
+        },
+        {
+          "name": "Companies",
+          "summary": "Companies workflows inside Admin Console."
+        },
+        {
+          "name": "Branches",
+          "summary": "Branches workflows inside Admin Console."
+        },
+        {
+          "name": "Logs",
+          "summary": "Logs workflows inside Admin Console."
+        },
+        {
+          "name": "API keys",
+          "summary": "API keys workflows inside Admin Console."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which channels does Admin Console support?",
+          "answer": "Admin Console is available on desktop, web. Availability by plan may vary — ask sales for your rollout."
+        },
+        {
+          "question": "Is Admin Console available offline?",
+          "answer": "Field-oriented channels for Admin Console are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+        },
+        {
+          "question": "How do we get started?",
+          "answer": "Request a demo from the Contact page. We will map roles, sites, and the right product mix for your organization."
+        }
+      ]
+    },
+    "report-studio": {
+      "name": "Report Studio",
+      "tagline": "Pivotlar, paneller ve dışa aktarma.",
+      "description": "Platform verilerinde pivot, panel ve grafikler oluşturun — sonra ihtiyacınızı dışa aktarın.",
+      "capabilities": [
+        "Pivot",
+        "Paneller",
+        "Grafikler",
+        "Dışa aktarma"
+      ],
+      "modules": [
+        {
+          "name": "Pivot",
+          "summary": "Pivot workflows inside Report Studio."
+        },
+        {
+          "name": "Dashboards",
+          "summary": "Dashboards workflows inside Report Studio."
+        },
+        {
+          "name": "Charts",
+          "summary": "Charts workflows inside Report Studio."
+        },
+        {
+          "name": "Exports",
+          "summary": "Exports workflows inside Report Studio."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which channels does Report Studio support?",
+          "answer": "Report Studio is available on desktop. Availability by plan may vary — ask sales for your rollout."
+        },
+        {
+          "question": "Is Report Studio available offline?",
+          "answer": "Field-oriented channels for Report Studio are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+        },
+        {
+          "question": "How do we get started?",
+          "answer": "Request a demo from the Contact page. We will map roles, sites, and the right product mix for your organization."
+        }
+      ]
+    },
+    "bi-dashboard": {
+      "name": "BI Dashboard",
+      "tagline": "Stack genelinde yönetici KPI’ları.",
+      "description": "Gelir, satış, envanter, projeler ve IK için web BI — ürünler arası görünürlük.",
+      "capabilities": [
+        "Yönetici KPI’ları",
+        "Uygulamalar arası görünüm",
+        "Salt okunur analitik"
+      ],
+      "modules": [
+        {
+          "name": "Executive KPIs",
+          "summary": "Executive KPIs workflows inside BI Dashboard."
+        },
+        {
+          "name": "Cross-app views",
+          "summary": "Cross-app views workflows inside BI Dashboard."
+        },
+        {
+          "name": "Read-only analytics",
+          "summary": "Read-only analytics workflows inside BI Dashboard."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which channels does BI Dashboard support?",
+          "answer": "BI Dashboard is available on web. Availability by plan may vary — ask sales for your rollout."
+        },
+        {
+          "question": "Is BI Dashboard available offline?",
+          "answer": "Field-oriented channels for BI Dashboard are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+        },
+        {
+          "question": "How do we get started?",
+          "answer": "Request a demo from the Contact page. We will map roles, sites, and the right product mix for your organization."
+        }
+      ]
+    },
+    "retail-pos": {
+      "name": "Retail POS",
+      "tagline": "Barkod, nakit ve fişler.",
+      "description": "Barkod, kasa çekmecesi, fiş yazıcısı ve müşteri ekranı ile perakende satış noktası.",
+      "capabilities": [
+        "Barkod",
+        "Kasa çekmecesi",
+        "Fişler",
+        "Müşteri ekranı"
+      ],
+      "modules": [
+        {
+          "name": "Barcode",
+          "summary": "Barcode workflows inside Retail POS."
+        },
+        {
+          "name": "Cash drawer",
+          "summary": "Cash drawer workflows inside Retail POS."
+        },
+        {
+          "name": "Receipts",
+          "summary": "Receipts workflows inside Retail POS."
+        },
+        {
+          "name": "Customer display",
+          "summary": "Customer display workflows inside Retail POS."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which channels does Retail POS support?",
+          "answer": "Retail POS is available on mobile, desktop. Availability by plan may vary — ask sales for your rollout."
+        },
+        {
+          "question": "Is Retail POS available offline?",
+          "answer": "Field-oriented channels for Retail POS are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+        },
+        {
+          "question": "How do we get started?",
+          "answer": "Request a demo from the Contact page. We will map roles, sites, and the right product mix for your organization."
+        }
+      ]
+    },
+    "sales-executive": {
+      "name": "Sales Executive",
+      "tagline": "Saha satış yöneticileri için CRM.",
+      "description": "Saha satışı için aday yönetimi, teklifler, ziyaretler, takipler ve notlar.",
+      "capabilities": [
+        "Adaylar",
+        "Teklifler",
+        "Ziyaretler",
+        "Takipler"
+      ],
+      "modules": [
+        {
+          "name": "Leads",
+          "summary": "Leads workflows inside Sales Executive."
+        },
+        {
+          "name": "Quotations",
+          "summary": "Quotations workflows inside Sales Executive."
+        },
+        {
+          "name": "Visits",
+          "summary": "Visits workflows inside Sales Executive."
+        },
+        {
+          "name": "Follow-ups",
+          "summary": "Follow-ups workflows inside Sales Executive."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which channels does Sales Executive support?",
+          "answer": "Sales Executive is available on mobile. Availability by plan may vary — ask sales for your rollout."
+        },
+        {
+          "question": "Is Sales Executive available offline?",
+          "answer": "Field-oriented channels for Sales Executive are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+        },
+        {
+          "question": "How do we get started?",
+          "answer": "Request a demo from the Contact page. We will map roles, sites, and the right product mix for your organization."
+        }
+      ]
+    },
+    "zatgo-pos": {
+      "name": "ZatGo POS",
+      "tagline": "Mutfak ekranı ve masalarla restoran POS.",
+      "description": "Masalar, mutfak ekranı, faturalama, envanter ve raporları kapsayan masaüstü restoran POS.",
+      "capabilities": [
+        "POS",
+        "Mutfak ekranı",
+        "Masalar",
+        "Faturalama",
+        "Envanter"
+      ],
+      "modules": [
+        {
+          "name": "POS",
+          "summary": "POS workflows inside ZatGo POS."
+        },
+        {
+          "name": "KDS",
+          "summary": "KDS workflows inside ZatGo POS."
+        },
+        {
+          "name": "Tables",
+          "summary": "Tables workflows inside ZatGo POS."
+        },
+        {
+          "name": "Billing",
+          "summary": "Billing workflows inside ZatGo POS."
+        },
+        {
+          "name": "Inventory",
+          "summary": "Inventory workflows inside ZatGo POS."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which channels does ZatGo POS support?",
+          "answer": "ZatGo POS is available on desktop. Availability by plan may vary — ask sales for your rollout."
+        },
+        {
+          "question": "Is ZatGo POS available offline?",
+          "answer": "Field-oriented channels for ZatGo POS are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+        },
+        {
+          "question": "How do we get started?",
+          "answer": "Request a demo from the Contact page. We will map roles, sites, and the right product mix for your organization."
+        }
+      ]
+    }
+  },
+  "changelog": {
+    "2026-07-foundation": {
+      "title": "Platform lansmanı ve pazarlama sitesi",
+      "summary": "Herkese açık ürün kataloğu, indirme merkezi, doküman bağlantıları ve ZatGo pazarlama sitesinin ilk sürümü."
+    },
+    "2026-06-stack": {
+      "title": "Web ve masaüstü deneyim yenilemesi",
+      "summary": "ZatGo web ve masaüstü uygulamalarında geliştirilmiş gezinme ve ortak tasarım dili."
+    },
+    "2026-05-roadmap": {
+      "title": "Ürün kataloğu yayınlandı",
+      "summary": "Web, mobil ve masaüstünde Project Tracker odaklı başlangıç — yol haritasında Go Van, Teslimat ve daha fazlası."
+    }
+  },
+  "pricing": {
+    "starter": {
+      "name": "Starter",
+      "description": "ZatGo’ya başlayan küçük ekipler için temel modüller.",
+      "features": [
+        "1 şirket / site",
+        "Project Tracker (web + mobil)",
+        "Standart destek",
+        "Ürün güncellemeleri",
+        "Dokümantasyon ve eğitimler"
+      ],
+      "cta": "Satışla iletişime geç"
+    },
+    "business": {
+      "name": "Business",
+      "description": "Büyüyen operasyonlar için saha + ofis uygulamaları.",
+      "features": [
+        "Çoklu şube desteği",
+        "Go Van, Teslimat, Depo",
+        "Masaüstü uygulamaları (seçili)",
+        "Müşteri ve tedarikçi portalları",
+        "Öncelikli destek",
+        "Admin Console"
+      ],
+      "cta": "Demo talep et"
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "description": "Tam platform, SLA ve kanallar boyunca özel yayın.",
+      "features": [
+        "Tam ürün kataloğu",
+        "BI Dashboard ve Report Studio",
+        "Özel başarı mühendisi",
+        "SLA ve güvenlik incelemesi",
+        "Özel entegrasyonlar",
+        "Yerel veya bulut seçenekleri"
+      ],
+      "cta": "Bizimle konuşun"
+    },
+    "education": {
+      "name": "Education",
+      "description": "Discounted campus and training deployments for schools and institutes.",
+      "features": [
+        "Campus / multi-lab sites",
+        "Project Tracker + selected field apps",
+        "Desktop tools for labs",
+        "Student / staff portals (selected)",
+        "Education support hours",
+        "Academic use licensing"
+      ],
+      "cta": "Talk to education sales"
+    },
+    "government": {
+      "name": "Government",
+      "description": "Agency rollouts with security review, reporting, and procurement support.",
+      "features": [
+        "Multi-agency / site rollouts",
+        "Full field + desktop suite options",
+        "Portals and BI Dashboard",
+        "Security & compliance review",
+        "SLA options",
+        "Procurement-friendly docs"
+      ],
+      "cta": "Contact public sector"
+    }
+  },
+  "docsHub": {
+    "guides": {
+      "title": "Ürün kılavuzları",
+      "description": "Project Tracker, Go Van, Teslimat ve daha fazlası için kurulum ve günlük kullanım."
+    },
+    "project-tracker": {
+      "title": "Project Tracker kılavuzu",
+      "description": "Projeler, görevler, Kanban, zaman girişi ve çok kanallı senkron."
+    },
+    "go-van": {
+      "title": "Go Van kılavuzu",
+      "description": "Rota satışları, çevrimdışı siparişler, tahsilatlar ve GPS."
+    },
+    "delivery": {
+      "title": "Teslimat kılavuzu",
+      "description": "Rotalar, OTP, imzalar ve teslim kanıtı."
+    },
+    "integrations": {
+      "title": "Entegrasyonlar",
+      "description": "ZatGo ürünlerini zaten kullandığınız sistemlere bağlayın."
+    },
+    "developers": {
+      "title": "Geliştirici dokümanları",
+      "description": "Güvenli API’ler ve istemci kitaplıklarıyla platform üzerine geliştirin."
+    },
+    "help": {
+      "title": "Yardım Merkezi",
+      "description": "SSS, sorun giderme ve destek alma."
+    },
+    "getting-started": {
+      "title": "Başlarken",
+      "description": "İstemcileri kurun, ekibinizi davet edin ve canlıya geçin."
+    }
+  },
+  "tutorials": {
+    "get-started-project-tracker": {
+      "title": "Project Tracker ile başlayın",
+      "description": "İlk projenizi oluşturun, görev ekleyin ve web ile mobil arasında senkronlayın.",
+      "audience": "Proje yöneticileri",
+      "duration": "15 dk"
+    },
+    "go-van-offline-orders": {
+      "title": "Go Van ile çevrimdışı sipariş alın",
+      "description": "Bir van rotası kurun, sinyal olmadan sipariş alın ve yeniden bağlanınca senkronlayın.",
+      "audience": "Saha satış",
+      "duration": "20 dk"
+    },
+    "delivery-pod": {
+      "title": "Teslim kanıtı ile teslimatı tamamlayın",
+      "description": "Sürücü uygulamasında OTP, imza ve teslim kanıtını adım adım görün.",
+      "audience": "Sürücüler ve sevkiyat",
+      "duration": "12 dk"
+    },
+    "warehouse-picking": {
+      "title": "Barkod ile depo toplama",
+      "description": "Toplama listesi çalıştırın, barkod tarayın ve yerleştirme onayını mobil veya masaüstünde verin.",
+      "audience": "Depo ekipleri",
+      "duration": "18 dk"
+    },
+    "secure-sign-in": {
+      "title": "Uygulamalar arasında güvenli oturum açma",
+      "description": "Ekip üyelerinin mobil, masaüstü ve web uygulamalarına aynı hesapla nasıl eriştiğini öğrenin.",
+      "audience": "Yöneticiler",
+      "duration": "15 dk"
+    },
+    "admin-roles": {
+      "title": "Kullanıcılar, roller ve şubeler",
+      "description": "Admin Console’dan şirketleri, şubeleri ve rol izinlerini yapılandırın.",
+      "audience": "Yöneticiler",
+      "duration": "22 dk"
+    }
+  },
+  "industries": {
+    "distribution": {
+      "name": "Dağıtım ve toptan",
+      "description": "Rota satışları, teslimatlar ve depo stoğu tek canlı görünümde."
+    },
+    "projects": {
+      "name": "Projeler ve hizmetler",
+      "description": "İş teslimini planlayın, saha zamanını izleyin ve biletleri imza ile kapatın."
+    },
+    "hospitality": {
+      "name": "Otelcilik ve restoranlar",
+      "description": "Ön ofis POS ve mutfak akışı envanter ve raporlarla bağlı."
+    },
+    "fleet-logistics": {
+      "name": "Filo ve lojistik",
+      "description": "Araçlar, seferler, yakıt ve son mil teslimatı tek yığında."
+    }
+  },
+  "solutions": {
+    "field-ops": {
+      "name": "Saha operasyonları",
+      "description": "Mobil ekiplere yeniden bağlanınca senkron olan çevrimdışı uygulamalar verin.",
+      "outcomes": [
+        "Yolda yakalanan siparişler ve ziyaretler",
+        "GPS ve rota bağlamı",
+        "Daha az kağıt el değişimi"
+      ]
+    },
+    "retail-pos": {
+      "name": "Perakende ve restoran POS",
+      "description": "Envanter ve arka ofis muhasebesi döngüsünde masaüstü POS.",
+      "outcomes": [
+        "Daha hızlı ödeme",
+        "Mutfak / kat görünürlüğü",
+        "Stok doğruluğu"
+      ]
+    },
+    "project-delivery": {
+      "name": "Proje teslimi",
+      "description": "Web, mobil ve masaüstünde tek proje sistemi — birikmiş işten raporlara.",
+      "outcomes": [
+        "Ortak görev gerçeği",
+        "Bağlamda zaman ve dosyalar",
+        "Masaüstü güç araçları"
+      ]
+    },
+    "back-office": {
+      "name": "Arka ofis ve kontrol",
+      "description": "Finans, BT, müşteriler ve tedarikçiler için muhasebe, yönetim, BI ve portallar.",
+      "outcomes": [
+        "Merkezi izinler",
+        "Yönetici KPI’ları",
+        "Self-servis portallar"
+      ]
+    }
+  },
+  "aboutPage": {
+    "title": "About",
+    "metaDescription": "About ZatGo Innovation — operations software for modern teams.",
+    "eyebrow": "Company",
+    "heading": "Operations software built with field teams in mind",
+    "intro": "ZatGo Innovation builds mobile, desktop, and web products that help organizations run projects, sales, delivery, warehouse, and back-office work in one connected family of apps.",
+    "missionTitle": "Mission",
+    "missionBody": "Make day-to-day operations clear for every role — on the road, on the floor, and at the desk.",
+    "valuesTitle": "How we work",
+    "values": [
+      "Products that respect offline and field reality",
+      "One experience language across channels",
+      "Honest roadmaps and long-term partnerships"
+    ]
+  },
+  "careersPage": {
+    "title": "Careers",
+    "metaDescription": "Careers at ZatGo Innovation.",
+    "eyebrow": "Careers",
+    "heading": "Build products operators actually use",
+    "description": "We are a product company focused on operations software. Open roles are listed below — even if you do not see a perfect match, tell us what you want to work on.",
+    "openRoles": "Open roles",
+    "applyCta": "Apply via contact",
+    "empty": "No open roles right now — reach out anyway.",
+    "roles": {
+      "product-designer": {
+        "title": "Product Designer",
+        "summary": "Shape multi-channel product UX for field and office workflows."
+      },
+      "mobile-engineer": {
+        "title": "Mobile Engineer",
+        "summary": "Ship reliable mobile experiences for offline-first operations."
+      },
+      "customer-success": {
+        "title": "Customer Success",
+        "summary": "Help customers roll out products across sites and roles."
+      }
+    }
+  },
+  "partnersPage": {
+    "title": "Partners",
+    "metaDescription": "Partner with ZatGo Innovation — resellers, implementers, and technology partners.",
+    "eyebrow": "Partners",
+    "heading": "Grow with ZatGo",
+    "description": "We work with resellers, implementation partners, and technology allies who help customers adopt the platform.",
+    "tiersTitle": "Partner types",
+    "cta": "Become a partner",
+    "tiers": {
+      "reseller": {
+        "name": "Reseller",
+        "body": "Introduce ZatGo products to your customers and earn recurring value."
+      },
+      "implementation": {
+        "name": "Implementation",
+        "body": "Configure rollouts, train teams, and support go-lives across sites."
+      },
+      "technology": {
+        "name": "Technology",
+        "body": "Integrate complementary tools and share go-to-market motions."
+      }
+    }
+  },
+  "privacyPage": {
+    "title": "Privacy Policy",
+    "metaDescription": "ZatGo Innovation privacy policy.",
+    "eyebrow": "Legal",
+    "heading": "Privacy Policy",
+    "updated": "Last updated: 15 July 2026",
+    "sections": [
+      {
+        "title": "What we collect",
+        "body": "When you contact us through this website we collect the information you submit (such as name, email, company, and message). Site analytics may collect anonymous usage data if analytics are configured."
+      },
+      {
+        "title": "How we use information",
+        "body": "We use contact details to respond to demo requests and inquiries. We do not sell personal information."
+      },
+      {
+        "title": "Retention",
+        "body": "Inquiry records are kept only as long as needed to handle your request and related follow-up, unless a longer period is required by law."
+      },
+      {
+        "title": "Contact",
+        "body": "For privacy questions, contact us through the Contact page on this site."
+      }
+    ]
+  },
+  "termsPage": {
+    "title": "Terms of Use",
+    "metaDescription": "ZatGo Innovation website terms of use.",
+    "eyebrow": "Legal",
+    "heading": "Terms of Use",
+    "updated": "Last updated: 15 July 2026",
+    "sections": [
+      {
+        "title": "Website content",
+        "body": "This marketing site describes ZatGo products for informational purposes. Features, availability, and pricing may change and are confirmed during sales conversations."
+      },
+      {
+        "title": "Downloads and demos",
+        "body": "Download links and demo requests may be marked as coming soon until packages or environments are published. Access to production software is governed by a separate agreement."
+      },
+      {
+        "title": "Acceptable use",
+        "body": "Do not misuse this website, attempt to disrupt services, or submit unlawful or abusive content through forms."
+      },
+      {
+        "title": "Liability",
+        "body": "The site is provided as-is without warranties regarding completeness of marketing materials. Product warranties are defined in customer contracts."
+      }
+    ]
+  },
+  "productDetail": {
+    "modulesTitle": "Modules",
+    "modulesHint": "Core areas included with this product.",
+    "faqTitle": "Frequently asked questions",
+    "changelogTitle": "Recent updates",
+    "changelogViewAll": "View all updates",
+    "screenshotTitle": "Product screens",
+    "screenshotNote": "UI previews below show the product layout direction — replace with live screenshots when packs ship."
+  }
+}

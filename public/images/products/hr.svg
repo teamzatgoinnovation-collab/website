@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="640" viewBox="0 0 480 640" role="img" aria-label="HR app preview">
+  <defs>
+    <linearGradient id="bg-hr" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d4efef"/>
+      <stop offset="100%" stop-color="#e8eef2"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="640" fill="url(#bg-hr)"/>
+  <rect x="110" y="36" width="260" height="568" rx="36" fill="#1a2a36"/>
+  <rect x="122" y="52" width="236" height="536" rx="28" fill="#f4f7f9"/>
+  <rect x="200" y="62" width="80" height="8" rx="4" fill="#c5d0d8"/>
+  <text x="140" y="102" font-family="system-ui,sans-serif" font-size="16" font-weight="700" fill="#1a2a36">HR</text>
+  <rect x="140" y="116" width="100" height="6" rx="3" fill="#0d8a8a"/>
+  
+  <rect x="28" y="118" width="184" height="44" rx="8" fill="#ffffff" stroke="#c5d0d8"/>
+  <circle cx="48" cy="140" r="8" fill="#d4efef"/>
+  <circle cx="48" cy="140" r="4" fill="#0d8a8a"/>
+  <text x="66" y="138" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#1a2a36">Attend</text>
+  <text x="66" y="154" font-family="system-ui,sans-serif" font-size="9" fill="#5c6b78">Module · ready</text>
+  <rect x="28" y="170" width="184" height="44" rx="8" fill="#ffffff" stroke="#c5d0d8"/>
+  <circle cx="48" cy="192" r="8" fill="#d4efef"/>
+  <circle cx="48" cy="192" r="4" fill="#0d8a8a"/>
+  <text x="66" y="190" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#1a2a36">Leave</text>
+  <text x="66" y="206" font-family="system-ui,sans-serif" font-size="9" fill="#5c6b78">Module · ready</text>
+  <rect x="28" y="222" width="184" height="44" rx="8" fill="#ffffff" stroke="#c5d0d8"/>
+  <circle cx="48" cy="244" r="8" fill="#d4efef"/>
+  <circle cx="48" cy="244" r="4" fill="#0d8a8a"/>
+  <text x="66" y="242" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#1a2a36">Expense</text>
+  <text x="66" y="258" font-family="system-ui,sans-serif" font-size="9" fill="#5c6b78">Module · ready</text>
+  <rect x="28" y="274" width="184" height="44" rx="8" fill="#ffffff" stroke="#c5d0d8"/>
+  <circle cx="48" cy="296" r="8" fill="#d4efef"/>
+  <circle cx="48" cy="296" r="4" fill="#0d8a8a"/>
+  <text x="66" y="294" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#1a2a36">Pay</text>
+  <text x="66" y="310" font-family="system-ui,sans-serif" font-size="9" fill="#5c6b78">Module · ready</text>
+  <rect x="160" y="540" width="160" height="28" rx="14" fill="#0d8a8a"/>
+  <text x="240" y="558" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#ffffff">Open workspace</text>
+</svg>

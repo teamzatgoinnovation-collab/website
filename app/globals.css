@@ -1,0 +1,348 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-poppins, "Poppins"), ui-sans-serif, system-ui, sans-serif;
+  --color-background: oklch(0.985 0.005 240);
+  --color-foreground: oklch(0.22 0.028 250);
+  --color-primary: oklch(0.42 0.1 200);
+  --color-primary-foreground: oklch(0.99 0.005 200);
+  --color-muted: oklch(0.965 0.008 240);
+  --color-muted-foreground: oklch(0.48 0.02 250);
+  --color-border: oklch(0.86 0.012 240);
+  --color-destructive: oklch(0.55 0.2 25);
+  --radius-lg: 0.5rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+:root {
+  /* Enterprise cool slate + precise teal signal */
+  --color-background: oklch(0.985 0.005 240);
+  --color-foreground: oklch(0.22 0.028 250);
+  --m-accent: oklch(0.42 0.1 200);
+  --m-accent-soft: oklch(0.94 0.03 200);
+  --m-accent-foreground: oklch(0.99 0.005 200);
+  --m-surface: oklch(0.972 0.006 240);
+  --m-surface-elevated: oklch(1 0 0);
+  --m-ink: oklch(0.22 0.028 250);
+  --m-ink-muted: oklch(0.48 0.02 250);
+  --m-line: oklch(0.86 0.012 240);
+  --m-hero-a: oklch(0.9 0.04 200);
+  --m-hero-b: oklch(0.955 0.018 235);
+  --m-hero-c: oklch(0.92 0.028 175);
+  --m-glow: oklch(0.62 0.1 200 / 0.28);
+  --m-font-display: var(--font-poppins, "Poppins"), ui-sans-serif, system-ui, sans-serif;
+  --m-font-body: var(--font-poppins, "Poppins"), ui-sans-serif, system-ui, sans-serif;
+  --m-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --m-radius: 0.5rem;
+  --m-shadow-soft: 0 1px 0 color-mix(in oklch, var(--m-ink) 4%, transparent),
+    0 18px 48px -28px color-mix(in oklch, var(--m-ink) 28%, transparent);
+}
+
+.dark {
+  --m-accent: oklch(0.76 0.1 200);
+  --m-accent-soft: oklch(0.26 0.04 200);
+  --m-accent-foreground: oklch(0.14 0.02 250);
+  --m-surface: oklch(0.18 0.018 250);
+  --m-surface-elevated: oklch(0.22 0.02 250);
+  --m-ink: oklch(0.96 0.008 95);
+  --m-ink-muted: oklch(0.72 0.018 250);
+  --m-line: oklch(0.36 0.02 250);
+  --m-hero-a: oklch(0.24 0.045 200);
+  --m-hero-b: oklch(0.15 0.025 250);
+  --m-hero-c: oklch(0.22 0.035 175);
+  --m-glow: oklch(0.5 0.1 200 / 0.22);
+  --color-background: oklch(0.13 0.018 250);
+  --color-foreground: oklch(0.96 0.008 95);
+  --m-shadow-soft: 0 1px 0 color-mix(in oklch, white 4%, transparent),
+    0 22px 50px -30px color-mix(in oklch, black 55%, transparent);
+}
+
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--m-font-body);
+  color: var(--m-ink);
+  background:
+    radial-gradient(ellipse 120% 80% at 50% -20%, color-mix(in oklch, var(--m-accent-soft) 55%, transparent), transparent 55%),
+    var(--color-background);
+  letter-spacing: -0.012em;
+  font-feature-settings: "ss01" on, "kern" on;
+  line-height: 1.55;
+}
+
+::selection {
+  background: color-mix(in oklch, var(--m-accent) 24%, transparent);
+  color: var(--m-ink);
+}
+
+.font-display {
+  font-family: var(--m-font-display);
+  letter-spacing: -0.035em;
+  font-feature-settings: "ss01" on;
+}
+
+body:not(.font-arabic):not(.font-devanagari):not(.font-malayalam):not(.font-cjk-sc):not(.font-cjk-jp) .font-display {
+  font-family: var(--font-poppins, "Poppins"), var(--m-font-display);
+}
+
+.font-arabic {
+  --m-font-display: var(--font-noto-arabic, "Noto Sans Arabic"), var(--font-poppins, "Poppins"), ui-sans-serif, system-ui, sans-serif;
+  --m-font-body: var(--font-noto-arabic, "Noto Sans Arabic"), var(--font-poppins, "Poppins"), ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--m-font-body);
+  letter-spacing: 0;
+}
+
+.font-arabic .font-display {
+  font-family: var(--m-font-display);
+  letter-spacing: 0;
+}
+
+.font-devanagari {
+  --m-font-display: var(--font-noto-devanagari, "Noto Sans Devanagari"), var(--font-poppins, "Poppins"), ui-sans-serif, system-ui, sans-serif;
+  --m-font-body: var(--font-noto-devanagari, "Noto Sans Devanagari"), var(--font-poppins, "Poppins"), ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--m-font-body);
+  letter-spacing: 0;
+}
+
+.font-devanagari .font-display {
+  font-family: var(--m-font-display);
+  letter-spacing: 0;
+}
+
+.font-malayalam {
+  --m-font-display: var(--font-noto-malayalam, "Noto Sans Malayalam"), var(--font-poppins, "Poppins"), ui-sans-serif, system-ui, sans-serif;
+  --m-font-body: var(--font-noto-malayalam, "Noto Sans Malayalam"), var(--font-poppins, "Poppins"), ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--m-font-body);
+  letter-spacing: 0;
+}
+
+.font-malayalam .font-display {
+  font-family: var(--m-font-display);
+  letter-spacing: 0;
+}
+
+.font-cjk-sc {
+  --m-font-display: var(--font-noto-sc, "Noto Sans SC"), var(--font-poppins, "Poppins"), ui-sans-serif, system-ui, sans-serif;
+  --m-font-body: var(--font-noto-sc, "Noto Sans SC"), var(--font-poppins, "Poppins"), ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--m-font-body);
+  letter-spacing: 0;
+}
+
+.font-cjk-sc .font-display {
+  font-family: var(--m-font-display);
+  letter-spacing: 0;
+}
+
+.font-cjk-jp {
+  --m-font-display: var(--font-noto-jp, "Noto Sans JP"), var(--font-poppins, "Poppins"), ui-sans-serif, system-ui, sans-serif;
+  --m-font-body: var(--font-noto-jp, "Noto Sans JP"), var(--font-poppins, "Poppins"), ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--m-font-body);
+  letter-spacing: 0;
+}
+
+.font-cjk-jp .font-display {
+  font-family: var(--m-font-display);
+  letter-spacing: 0;
+}
+
+.m-accent {
+  color: var(--m-accent);
+}
+
+.bg-m-accent {
+  background-color: var(--m-accent);
+  color: var(--m-accent-foreground);
+}
+
+.bg-m-surface {
+  background-color: var(--m-surface);
+}
+
+.border-m-line {
+  border-color: var(--m-line) !important;
+  border-style: solid;
+}
+
+.text-m-muted {
+  color: var(--m-ink-muted);
+}
+
+.hero-plane {
+  background:
+    radial-gradient(ellipse 80% 65% at 88% 8%, var(--m-hero-a), transparent 58%),
+    radial-gradient(ellipse 50% 50% at 6% 88%, var(--m-hero-c), transparent 52%),
+    linear-gradient(160deg, var(--m-hero-b) 0%, var(--color-background) 68%);
+}
+
+.hero-grain {
+  opacity: 0.28;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+  mix-blend-mode: soft-light;
+}
+
+.hero-glow {
+  background: radial-gradient(
+    circle at 72% 32%,
+    var(--m-glow),
+    transparent 44%
+  );
+}
+
+.m-tile {
+  position: relative;
+  border: 1px solid var(--m-line);
+  background: var(--m-surface-elevated);
+  border-radius: calc(var(--m-radius) + 0.125rem);
+  box-shadow: 0 1px 0 color-mix(in oklch, var(--m-ink) 3%, transparent);
+  transition:
+    border-color 0.28s var(--m-ease),
+    transform 0.28s var(--m-ease),
+    background-color 0.28s var(--m-ease),
+    box-shadow 0.28s var(--m-ease);
+}
+
+.m-tile::before {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 0;
+  width: 2px;
+  border-radius: calc(var(--m-radius) + 0.125rem) 0 0 calc(var(--m-radius) + 0.125rem);
+  background: transparent;
+  transition: background-color 0.28s var(--m-ease);
+}
+
+.m-tile:hover {
+  border-color: color-mix(in oklch, var(--m-accent) 45%, var(--m-line));
+  transform: translateY(-3px);
+  box-shadow: var(--m-shadow-soft);
+}
+
+.m-tile:hover::before {
+  background: var(--m-accent);
+}
+
+.m-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  border-radius: var(--m-radius);
+  padding: 0.78rem 1.4rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  transition:
+    transform 0.22s var(--m-ease),
+    opacity 0.22s var(--m-ease),
+    background-color 0.22s var(--m-ease),
+    border-color 0.22s var(--m-ease),
+    box-shadow 0.22s var(--m-ease);
+}
+
+.m-btn:hover {
+  transform: translateY(-1px);
+}
+
+.m-btn-primary {
+  background: var(--m-accent);
+  color: var(--m-accent-foreground);
+  box-shadow: 0 1px 0 color-mix(in oklch, white 18%, transparent) inset,
+    0 10px 28px -16px color-mix(in oklch, var(--m-accent) 70%, transparent);
+}
+
+.m-btn-primary:hover {
+  opacity: 0.94;
+}
+
+.m-btn-ghost {
+  border: 1px solid var(--m-line);
+  background: color-mix(in oklch, var(--m-surface-elevated) 78%, transparent);
+  color: var(--m-ink);
+  backdrop-filter: blur(10px);
+}
+
+.m-btn-ghost:hover {
+  border-color: color-mix(in oklch, var(--m-accent) 35%, var(--m-line));
+  background: var(--m-surface);
+}
+
+.m-link {
+  color: var(--m-accent);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-underline-offset: 0.22em;
+  transition: color 0.2s var(--m-ease);
+}
+
+.m-link:hover {
+  text-decoration: underline;
+}
+
+.m-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--m-accent);
+  font-family: var(--m-font-display);
+}
+
+.m-field {
+  margin-top: 0.4rem;
+  width: 100%;
+  border-radius: var(--m-radius);
+  border: 1px solid var(--m-line);
+  background: var(--m-surface-elevated);
+  padding: 0.78rem 0.95rem;
+  font-size: 0.9375rem;
+  outline: none;
+  transition:
+    border-color 0.2s var(--m-ease),
+    box-shadow 0.2s var(--m-ease);
+}
+
+.m-field:focus {
+  border-color: var(--m-accent);
+  box-shadow: 0 0 0 3px color-mix(in oklch, var(--m-accent) 16%, transparent);
+}
+
+.section-rule {
+  display: block;
+  height: 2px;
+  width: 2.5rem;
+  background: linear-gradient(90deg, var(--m-accent), transparent);
+  margin-bottom: 0.9rem;
+  border-radius: 999px;
+}
+
+.prose-narrow {
+  max-width: 40rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .m-tile,
+  .m-btn {
+    transition: none;
+  }
+
+  .m-tile:hover,
+  .m-btn:hover {
+    transform: none;
+  }
+}

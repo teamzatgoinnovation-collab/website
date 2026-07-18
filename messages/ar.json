@@ -1,0 +1,1371 @@
+{
+  "meta": {
+    "titleDefault": "ZatGo Innovation — عمليات تتحرك مع فرقك.",
+    "titleTemplate": "%s · ZatGo",
+    "description": "منصة عمليات للمؤسسات — تطبيقات ميدانية وأدوات مكتبية وبوابات للعملاء."
+  },
+  "brand": {
+    "name": "ZatGo",
+    "legalName": "ZatGo Innovation",
+    "tagline": "عمليات تتحرك مع فرقك.",
+    "footerNote": "برمجيات تشغيل للفرق الحديثة"
+  },
+  "nav": {
+    "products": "المنتجات",
+    "downloads": "التنزيلات",
+    "docs": "الوثائق",
+    "tutorials": "الدروس",
+    "updates": "التحديثات",
+    "pricing": "الأسعار",
+    "contact": "تواصل",
+    "language": "اللغة"
+  },
+  "footer": {
+    "products": "المنتجات",
+    "resources": "الموارد",
+    "company": "الشركة",
+    "allProducts": "كل المنتجات",
+    "documentation": "الوثائق",
+    "changelog": "سجل التغييرات",
+    "industries": "القطاعات",
+    "solutions": "الحلول",
+    "requestDemo": "اطلب عرضًا",
+    "about": "About",
+    "careers": "Careers",
+    "partners": "Partners",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  },
+  "common": {
+    "learnMore": "اعرف المزيد",
+    "view": "عرض",
+    "comingSoon": "قريبًا",
+    "comingSoonLong": "قريبًا",
+    "openInDocs": "افتح في الوثائق",
+    "downloads": "التنزيلات",
+    "documentation": "الوثائق",
+    "backHome": "العودة للرئيسية",
+    "allProducts": "كل المنتجات",
+    "available": "متاح",
+    "availableOn": "متاح على",
+    "capabilities": "القدرات",
+    "product": "منتج",
+    "mobile": "الجوال",
+    "desktop": "سطح المكتب",
+    "web": "الويب",
+    "requestDemo": "اطلب عرضًا"
+  },
+  "home": {
+    "supporting": "تطبيقات ميدانية وأدوات مكتبية وبوابات — منصة واحدة لطريقة عمل فرقك.",
+    "exploreProducts": "استكشف المنتجات",
+    "requestDemo": "اطلب عرضًا",
+    "productsEyebrow": "المنتجات",
+    "productsTitle": "مبنية للعمليات، ومتاحة عبر كل القنوات",
+    "productsDesc": "ابدأ بـ Project Tracker ثم وسّع إلى مبيعات السيارة والتوصيل والمستودع والموارد البشرية وإدارة العملاء.",
+    "allProducts": "كل المنتجات",
+    "channelsEyebrow": "القنوات",
+    "channelsTitle": "جوال وسطح مكتب وويب — منصة واحدة",
+    "channelsDesc": "عائلة منتجات واحدة عبر الهاتف والحاسوب والمتصفح — البيانات متزامنة لكل دور.",
+    "channelMobileTitle": "الجوال",
+    "channelMobileBody": "تطبيقات للعمل الميداني وأوفلاين — Go Van والتوصيل والمستودع والمزيد.",
+    "channelDesktopTitle": "سطح المكتب",
+    "channelDesktopBody": "أدوات للمستخدمين المتقدمين — Project Tracker Pro وZatGo POS والمحاسبة والأسطول.",
+    "channelWebTitle": "الويب",
+    "channelWebBody": "بوابات ولوحات للعملاء والموردين والمديرين والتنفيذيين.",
+    "viewChannel": "عرض",
+    "resourcesEyebrow": "الموارد",
+    "resourcesTitle": "التنزيلات والوثائق والدروس",
+    "resourcesDesc": "احصل على التطبيقات ثم انتقل إلى الوثائق للإرشادات والمساعدة.",
+    "resourceDownloads": "التنزيلات",
+    "resourceDownloadsDesc": "عملاء الجوال وسطح المكتب والويب",
+    "resourceDocs": "الوثائق",
+    "resourceDocsDesc": "أدلة ومركز مساعدة ووثائق المنتجات",
+    "resourceTutorials": "الدروس",
+    "resourceTutorialsDesc": "سلاسل خطوة بخطوة للفرق",
+    "resourceUpdates": "التحديثات",
+    "resourceUpdatesDesc": "سجل التغييرات وملاحظات الإصدار",
+    "updatesEyebrow": "التحديثات",
+    "updatesTitle": "ما صدر مؤخرًا",
+    "fullChangelog": "سجل التغييرات كاملًا",
+    "ctaTitle": "شاهد ZatGo في عملك",
+    "ctaBody": "أخبرنا عن مواقعك وأدوارك وقنواتك — وسنربط المنتجات بخطة طرح.",
+    "ctaButton": "تواصل معنا"
+  },
+  "productsPage": {
+    "title": "المنتجات",
+    "metaDescription": "كتالوج منتجات ZatGo — Project Tracker وGo Van والتوصيل والمستودع والمزيد.",
+    "eyebrow": "المنتجات",
+    "heading": "كتالوج منتجات ZatGo",
+    "description": "تطبيقات للميدان والطابق والمكتب — منصة واحدة لفريقك.",
+    "comingSoonHeading": "قريبًا"
+  },
+  "downloadsPage": {
+    "title": "التنزيلات",
+    "metaDescription": "نزّل تطبيقات ZatGo للجوال وسطح المكتب والويب.",
+    "eyebrow": "التنزيلات",
+    "heading": "احصل على التطبيقات",
+    "description": "الحزم معلّمة كقريبًا حتى تُنشر روابط المتاجر والمثبتات. صفحات المنتجات متاحة للتخطيط.",
+    "mobileIntro": "تطبيقات الجوال لـ iOS وAndroid — الميدان والمستودع أولًا.",
+    "desktopIntro": "مثبتات سطح المكتب لـ Windows وmacOS.",
+    "webIntro": "تطبيقات وبوابات المتصفح — تُفتح عندما يكون موقعك جاهزًا.",
+    "helpPrefix": "تبحث عن مساعدة للتثبيت؟",
+    "docsHub": "مركز الوثائق",
+    "tutorials": "الدروس",
+    "checksum": "Checksum",
+    "checksumNote": "SHA-256 digests show sha256:pending until published installers ship. Verify checksums from the release notes once live.",
+    "requirementsTitle": "System requirements",
+    "requirementsIntro": "Baseline device and browser guidance. Exact needs depend on the product package you deploy.",
+    "requirements": {
+      "ios": "iOS 16 or later. Camera and location permissions for field products.",
+      "android": "Android 10 or later. Storage and location permissions for offline and visits.",
+      "windows": "Windows 10/11 (64-bit). 4 GB RAM minimum, 8 GB recommended.",
+      "macos": "macOS 13 or later. Apple Silicon and Intel builds when published.",
+      "linux": "Ubuntu 22.04+ or equivalent. AppImage / deb when published.",
+      "web": "Current Chrome, Edge, Firefox, or Safari. Stable broadband recommended.",
+      "docker": "Docker Engine 24+. Suitable for self-hosted platform components when published."
+    }
+  },
+  "docsPage": {
+    "title": "الوثائق",
+    "metaDescription": "مركز وثائق ZatGo — أدلة وتكاملات ومطورون ومساعدة.",
+    "eyebrow": "الوثائق",
+    "heading": "أدلة وتكاملات ومساعدة",
+    "description": "الروابط تفتح موقع الوثائق المخصص. عيّن NEXT_PUBLIC_DOCS_URL عند نشره.",
+    "preferTutorials": "تفضل الشرح العملي؟",
+    "browseTutorials": "تصفح الدروس",
+    "categories": {
+      "guides": "أدلة",
+      "api": "للمطورين",
+      "help": "مساعدة",
+      "integrations": "تكاملات"
+    }
+  },
+  "tutorialsPage": {
+    "title": "الدروس",
+    "metaDescription": "دروس ZatGo لمديري المشاريع وفرق الميدان والمستودع والمديرين.",
+    "eyebrow": "الدروس",
+    "heading": "تعلّم بالممارسة",
+    "description": "كل سلسلة تُفتح في موقع الوثائق. استخدم هذه المراكز لإيجاد المسار المناسب لدورك.",
+    "needDocs": "تحتاج مرجعًا؟",
+    "docsHub": "مركز الوثائق"
+  },
+  "updatesPage": {
+    "title": "التحديثات",
+    "metaDescription": "سجل تغييرات ZatGo وملاحظات الإصدار.",
+    "eyebrow": "التحديثات",
+    "heading": "سجل التغييرات",
+    "description": "ما نصدره عبر المنصة والتطبيقات وموقع التسويق."
+  },
+  "pricingPage": {
+    "title": "الأسعار",
+    "metaDescription": "باقات ZatGo — Starter وBusiness وEnterprise.",
+    "eyebrow": "الأسعار",
+    "heading": "باقات تناسب طرحك",
+    "description": "التسعير مخصص حسب الموقع ومزيج القنوات. الباقات أدناه تصف طريقة التغليف المعتادة.",
+    "periodSite": "لكل موقع",
+    "periodOrg": "لكل مؤسسة",
+    "custom": "مخصص",
+    "comparisonTitle": "Compare plans",
+    "comparisonIntro": "High-level capability matrix — your quote may tailor modules and sites.",
+    "faqTitle": "Pricing FAQ",
+    "yes": "Yes",
+    "no": "—",
+    "rows": {
+      "sites": "Sites / orgs",
+      "fieldApps": "Field apps",
+      "desktopApps": "Desktop apps",
+      "portals": "Portals",
+      "bi": "BI & reports",
+      "sla": "SLA",
+      "support": "Support"
+    },
+    "sites": {
+      "1": "1 site",
+      "multi": "Multi-branch",
+      "campus": "Campus",
+      "agency": "Agency",
+      "unlimited": "Unlimited"
+    },
+    "support": {
+      "standard": "Standard",
+      "priority": "Priority",
+      "education": "Education desk",
+      "gov": "Public sector",
+      "dedicated": "Dedicated CSM"
+    },
+    "faq": [
+      {
+        "question": "Do you publish list prices?",
+        "answer": "Pricing is custom based on sites, modules, and channels. Use Contact to request a quote."
+      },
+      {
+        "question": "What is included in Education?",
+        "answer": "Education covers academic and training use with campus-friendly licensing. Commercial resale is not included."
+      },
+      {
+        "question": "How does Government differ from Enterprise?",
+        "answer": "Government adds procurement-friendly documentation, security review pathways, and public-sector support — features can match Enterprise when required."
+      },
+      {
+        "question": "Can we mix field and desktop apps?",
+        "answer": "Yes. Most customers start with Project Tracker and add Go Van, Delivery, Warehouse, or desktop tools as needed."
+      }
+    ]
+  },
+  "contactPage": {
+    "title": "تواصل",
+    "metaDescription": "اطلب عرض ZatGo أو تواصل مع المبيعات.",
+    "eyebrow": "تواصل",
+    "heading": "اطلب عرضًا",
+    "description": "شاركنا شركتك ومواقعك والمنتجات الأهم أولًا. سنربط القنوات بخطة طرح.",
+    "bullet1": "ملاءمة المنتج للميدان والمكتب والبوابات",
+    "bullet2": "تخطيط التكامل والطرح",
+    "bullet3": "جاهزية التنزيل والوثائق",
+    "name": "الاسم",
+    "email": "البريد الوظيفي",
+    "company": "الشركة",
+    "interest": "الاهتمام",
+    "interestPlaceholder": "مثلًا Project Tracker + Delivery",
+    "message": "الرسالة",
+    "submit": "اطلب عرضًا",
+    "sending": "جارٍ الإرسال…",
+    "toastTitle": "فتح عميل البريد",
+    "toastDesc": "سنتابع عند وصول رسالتك.",
+    "errors": {
+      "name": "Please enter your name",
+      "email": "Enter a valid work email",
+      "company": "Company is required",
+      "interest": "Tell us what you are interested in",
+      "message": "A short message helps us prepare",
+      "inquiryType": "Select an inquiry type"
+    },
+    "inquiryType": "Inquiry type",
+    "inquiryTypes": {
+      "demo": "Request a demo",
+      "sales": "Sales / pricing",
+      "support": "Product support",
+      "partnership": "Partnership",
+      "careers": "Careers",
+      "other": "Other"
+    },
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "whatsappLabel": "WhatsApp",
+    "addressLabel": "Address",
+    "addressFallback": "Office address is shared during onboarding.",
+    "downloadsLink": "Downloads",
+    "supportLink": "Documentation",
+    "socialTitle": "Social",
+    "socialFallback": "Set NEXT_PUBLIC_LINKEDIN / NEXT_PUBLIC_X / NEXT_PUBLIC_YOUTUBE / NEXT_PUBLIC_FACEBOOK to show social links.",
+    "social": {
+      "linkedin": "LinkedIn",
+      "x": "X",
+      "youtube": "YouTube",
+      "facebook": "Facebook"
+    }
+  },
+  "industriesPage": {
+    "title": "القطاعات",
+    "metaDescription": "ZatGo للتوزيع والمشاريع والضيافة والأسطول والخدمات اللوجستية.",
+    "eyebrow": "القطاعات",
+    "heading": "أين يناسب ZatGo",
+    "description": "حزم منتجات لأشكال تشغيل شائعة — وليس واجهة واحدة للجميع.",
+    "preferSolutions": "تفضل النتائج على تسميات القطاعات؟",
+    "viewSolutions": "عرض الحلول"
+  },
+  "solutionsPage": {
+    "title": "الحلول",
+    "metaDescription": "حلول ZatGo للعمليات الميدانية ونقاط البيع وتسليم المشاريع والمكتب الخلفي.",
+    "eyebrow": "الحلول",
+    "heading": "نتائج عبر القنوات",
+    "description": "اجمع المنتجات حول حركة العمل الحقيقية — الميدان والطابق والمكتب.",
+    "mapSolution": "اربط حلًا بمواقعك"
+  },
+  "notFound": {
+    "code": "404",
+    "title": "الصفحة غير موجودة",
+    "body": "هذا المسار ليس جزءًا من موقع التسويق. جرّب المنتجات أو التنزيلات أو الوثائق."
+  },
+  "products": {
+    "project-tracker": {
+      "name": "Project Tracker",
+      "tagline": "مشاريع ومهام ووقت — في الميدان وعلى المكتب.",
+      "description": "خطط للعمل وتتبع المهام على كانبان وسجّل الوقت واحتفظ بالملفات والإشعارات متزامنة عبر الويب والجوال وسطح المكتب.",
+      "capabilities": [
+        "مشاريعي ومهامي",
+        "كانبان",
+        "تسجيل الوقت",
+        "ملفات وإشعارات",
+        "جانت وتقارير (سطح المكتب)"
+      ],
+      "modules": [
+        {
+          "name": "My Projects & Tasks",
+          "summary": "My Projects & Tasks workflows inside Project Tracker."
+        },
+        {
+          "name": "Kanban",
+          "summary": "Kanban workflows inside Project Tracker."
+        },
+        {
+          "name": "Time entry",
+          "summary": "Time entry workflows inside Project Tracker."
+        },
+        {
+          "name": "Files & notifications",
+          "summary": "Files & notifications workflows inside Project Tracker."
+        },
+        {
+          "name": "Gantt & reports (desktop)",
+          "summary": "Gantt & reports (desktop) workflows inside Project Tracker."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which channels does Project Tracker support?",
+          "answer": "Project Tracker is available on web, mobile, desktop. Availability by plan may vary — ask sales for your rollout."
+        },
+        {
+          "question": "Is Project Tracker available offline?",
+          "answer": "Field-oriented channels for Project Tracker are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+        },
+        {
+          "question": "How do we get started?",
+          "answer": "Request a demo from the Contact page. We will map roles, sites, and the right product mix for your organization."
+        }
+      ]
+    },
+    "go-van": {
+      "name": "Go Van",
+      "tagline": "مبيعات الطريق تعمل دون اتصال.",
+      "description": "مبيعات السيارة والطرق مع طلبات أوفلاين والتحصيلات ونقل المخزون وزيارات العملاء ونظام تحديد المواقع.",
+      "capabilities": [
+        "طلبات أوفلاين",
+        "تحصيلات",
+        "نقل مخزون",
+        "زيارات العملاء",
+        "GPS"
+      ],
+      "modules": [
+        {
+          "name": "Offline orders",
+          "summary": "Offline orders workflows inside Go Van."
+        },
+        {
+          "name": "Collections",
+          "summary": "Collections workflows inside Go Van."
+        },
+        {
+          "name": "Stock transfer",
+          "summary": "Stock transfer workflows inside Go Van."
+        },
+        {
+          "name": "Customer visits",
+          "summary": "Customer visits workflows inside Go Van."
+        },
+        {
+          "name": "GPS",
+          "summary": "GPS workflows inside Go Van."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which channels does Go Van support?",
+          "answer": "Go Van is available on mobile. Availability by plan may vary — ask sales for your rollout."
+        },
+        {
+          "question": "Is Go Van available offline?",
+          "answer": "Field-oriented channels for Go Van are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+        },
+        {
+          "question": "How do we get started?",
+          "answer": "Request a demo from the Contact page. We will map roles, sites, and the right product mix for your organization."
+        }
+      ]
+    },
+    "delivery": {
+      "name": "Delivery",
+      "tagline": "مسارات وإثبات تسليم وتتبع مباشر.",
+      "description": "أوامر التوصيل وتحسين المسار وOTP والتوقيع وإثبات التسليم والتتبع المباشر للسائقين.",
+      "capabilities": [
+        "أوامر توصيل",
+        "تحسين المسار",
+        "OTP وتوقيع",
+        "إثبات التسليم",
+        "تتبع مباشر"
+      ],
+      "modules": [
+        {
+          "name": "Delivery orders",
+          "summary": "Delivery orders workflows inside Delivery."
+        },
+        {
+          "name": "Route optimization",
+          "summary": "Route optimization workflows inside Delivery."
+        },
+        {
+          "name": "OTP & signature",
+          "summary": "OTP & signature workflows inside Delivery."
+        },
+        {
+          "name": "Proof of delivery",
+          "summary": "Proof of delivery workflows inside Delivery."
+        },
+        {
+          "name": "Live tracking",
+          "summary": "Live tracking workflows inside Delivery."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which channels does Delivery support?",
+          "answer": "Delivery is available on mobile. Availability by plan may vary — ask sales for your rollout."
+        },
+        {
+          "question": "Is Delivery available offline?",
+          "answer": "Field-oriented channels for Delivery are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+        },
+        {
+          "question": "How do we get started?",
+          "answer": "Request a demo from the Contact page. We will map roles, sites, and the right product mix for your organization."
+        }
+      ]
+    },
+    "warehouse": {
+      "name": "Warehouse",
+      "tagline": "انتقاء وتخزين وجرد.",
+      "description": "عمليات المستودع للانتقاء والتخزين ومسح الباركود والجرد والنقل — على الجوال وسطح المكتب.",
+      "capabilities": [
+        "انتقاء وتخزين",
+        "باركود",
+        "جرد",
+        "نقل"
+      ],
+      "modules": [
+        {
+          "name": "Picking & put-away",
+          "summary": "Picking & put-away workflows inside Warehouse."
+        },
+        {
+          "name": "Barcode",
+          "summary": "Barcode workflows inside Warehouse."
+        },
+        {
+          "name": "Inventory count",
+          "summary": "Inventory count workflows inside Warehouse."
+        },
+        {
+          "name": "Transfers",
+          "summary": "Transfers workflows inside Warehouse."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which channels does Warehouse support?",
+          "answer": "Warehouse is available on mobile, desktop. Availability by plan may vary — ask sales for your rollout."
+        },
+        {
+          "question": "Is Warehouse available offline?",
+          "answer": "Field-oriented channels for Warehouse are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+        },
+        {
+          "question": "How do we get started?",
+          "answer": "Request a demo from the Contact page. We will map roles, sites, and the right product mix for your organization."
+        }
+      ]
+    },
+    "hr": {
+      "name": "HR",
+      "tagline": "حضور وإجازات ومصاريف أثناء التنقل.",
+      "description": "موارد بشرية للجوال للحضور والإجازات ومطالبات المصاريف وعرض الرواتب.",
+      "capabilities": [
+        "حضور",
+        "إجازات",
+        "مطالبات مصاريف",
+        "عرض الرواتب"
+      ],
+      "modules": [
+        {
+          "name": "Attendance",
+          "summary": "Attendance workflows inside HR."
+        },
+        {
+          "name": "Leave",
+          "summary": "Leave workflows inside HR."
+        },
+        {
+          "name": "Expense claims",
+          "summary": "Expense claims workflows inside HR."
+        },
+        {
+          "name": "Payroll view",
+          "summary": "Payroll view workflows inside HR."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which channels does HR support?",
+          "answer": "HR is available on mobile. Availability by plan may vary — ask sales for your rollout."
+        },
+        {
+          "question": "Is HR available offline?",
+          "answer": "Field-oriented channels for HR are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+        },
+        {
+          "question": "How do we get started?",
+          "answer": "Request a demo from the Contact page. We will map roles, sites, and the right product mix for your organization."
+        }
+      ]
+    },
+    "crm": {
+      "name": "CRM",
+      "tagline": "عملاء محتملون وزيارات حيث تحدث الصفقات.",
+      "description": "إدارة علاقات للجوال للعملاء المحتملين والزيارات والمتابعات والملاحظات — مع بوابة ويب لخط الأنابيب.",
+      "capabilities": [
+        "عملاء محتملون",
+        "زيارات",
+        "متابعات",
+        "خط الأنابيب (ويب)"
+      ],
+      "modules": [
+        {
+          "name": "Leads",
+          "summary": "Leads workflows inside CRM."
+        },
+        {
+          "name": "Visits",
+          "summary": "Visits workflows inside CRM."
+        },
+        {
+          "name": "Follow-ups",
+          "summary": "Follow-ups workflows inside CRM."
+        },
+        {
+          "name": "Pipeline (web)",
+          "summary": "Pipeline (web) workflows inside CRM."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which channels does CRM support?",
+          "answer": "CRM is available on mobile, web. Availability by plan may vary — ask sales for your rollout."
+        },
+        {
+          "question": "Is CRM available offline?",
+          "answer": "Field-oriented channels for CRM are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+        },
+        {
+          "question": "How do we get started?",
+          "answer": "Request a demo from the Contact page. We will map roles, sites, and the right product mix for your organization."
+        }
+      ]
+    },
+    "field-service": {
+      "name": "Field Service",
+      "tagline": "تذاكر تُغلق بتوقيع.",
+      "description": "تذاكر الخدمة والعمل الميداني والتقاط توقيع العميل لفرق الميدان.",
+      "capabilities": [
+        "تذاكر",
+        "قوائم تحقق",
+        "توقيع العميل"
+      ],
+      "modules": [
+        {
+          "name": "Tickets",
+          "summary": "Tickets workflows inside Field Service."
+        },
+        {
+          "name": "Checklists",
+          "summary": "Checklists workflows inside Field Service."
+        },
+        {
+          "name": "Customer signature",
+          "summary": "Customer signature workflows inside Field Service."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which channels does Field Service support?",
+          "answer": "Field Service is available on mobile. Availability by plan may vary — ask sales for your rollout."
+        },
+        {
+          "question": "Is Field Service available offline?",
+          "answer": "Field-oriented channels for Field Service are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+        },
+        {
+          "question": "How do we get started?",
+          "answer": "Request a demo from the Contact page. We will map roles, sites, and the right product mix for your organization."
+        }
+      ]
+    },
+    "customer-portal": {
+      "name": "Customer Portal",
+      "tagline": "طلبات وفواتير ودعم لعملائك.",
+      "description": "خدمة ذاتية للطلبات والفواتير والمدفوعات والدعم والضمان — ويب وجوال.",
+      "capabilities": [
+        "طلبات",
+        "فواتير",
+        "مدفوعات",
+        "دعم",
+        "ضمان"
+      ],
+      "modules": [
+        {
+          "name": "Orders",
+          "summary": "Orders workflows inside Customer Portal."
+        },
+        {
+          "name": "Invoices",
+          "summary": "Invoices workflows inside Customer Portal."
+        },
+        {
+          "name": "Payments",
+          "summary": "Payments workflows inside Customer Portal."
+        },
+        {
+          "name": "Support",
+          "summary": "Support workflows inside Customer Portal."
+        },
+        {
+          "name": "Warranty",
+          "summary": "Warranty workflows inside Customer Portal."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which channels does Customer Portal support?",
+          "answer": "Customer Portal is available on web, mobile. Availability by plan may vary — ask sales for your rollout."
+        },
+        {
+          "question": "Is Customer Portal available offline?",
+          "answer": "Field-oriented channels for Customer Portal are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+        },
+        {
+          "question": "How do we get started?",
+          "answer": "Request a demo from the Contact page. We will map roles, sites, and the right product mix for your organization."
+        }
+      ]
+    },
+    "vendor-portal": {
+      "name": "Vendor Portal",
+      "tagline": "أوامر شراء ومدفوعات لمورّديك.",
+      "description": "طلبات عرض أسعار وأوامر شراء وASN ومدفوعات وجداول تسليم للموردين.",
+      "capabilities": [
+        "طلبات عرض أسعار",
+        "أوامر شراء",
+        "ASN",
+        "مدفوعات"
+      ],
+      "modules": [
+        {
+          "name": "RFQ",
+          "summary": "RFQ workflows inside Vendor Portal."
+        },
+        {
+          "name": "Purchase orders",
+          "summary": "Purchase orders workflows inside Vendor Portal."
+        },
+        {
+          "name": "ASN",
+          "summary": "ASN workflows inside Vendor Portal."
+        },
+        {
+          "name": "Payments",
+          "summary": "Payments workflows inside Vendor Portal."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which channels does Vendor Portal support?",
+          "answer": "Vendor Portal is available on web, mobile. Availability by plan may vary — ask sales for your rollout."
+        },
+        {
+          "question": "Is Vendor Portal available offline?",
+          "answer": "Field-oriented channels for Vendor Portal are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+        },
+        {
+          "question": "How do we get started?",
+          "answer": "Request a demo from the Contact page. We will map roles, sites, and the right product mix for your organization."
+        }
+      ]
+    },
+    "accounting": {
+      "name": "Accounting",
+      "tagline": "قيود ومدفوعات وتسوية بنكية.",
+      "description": "محاسبة سطح مكتب للقيود والمدفوعات والتسوية البنكية والتقارير المالية.",
+      "capabilities": [
+        "قيود",
+        "مدفوعات",
+        "تسوية بنكية",
+        "تقارير"
+      ],
+      "modules": [
+        {
+          "name": "Journals",
+          "summary": "Journals workflows inside Accounting."
+        },
+        {
+          "name": "Payments",
+          "summary": "Payments workflows inside Accounting."
+        },
+        {
+          "name": "Bank recon",
+          "summary": "Bank recon workflows inside Accounting."
+        },
+        {
+          "name": "Reports",
+          "summary": "Reports workflows inside Accounting."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which channels does Accounting support?",
+          "answer": "Accounting is available on desktop. Availability by plan may vary — ask sales for your rollout."
+        },
+        {
+          "question": "Is Accounting available offline?",
+          "answer": "Field-oriented channels for Accounting are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+        },
+        {
+          "question": "How do we get started?",
+          "answer": "Request a demo from the Contact page. We will map roles, sites, and the right product mix for your organization."
+        }
+      ]
+    },
+    "fleet": {
+      "name": "Fleet",
+      "tagline": "مركبات ووقود ورحلات وصيانة.",
+      "description": "إدارة أسطول سطح مكتب للمركبات والوقود والرحلات وجداول الصيانة.",
+      "capabilities": [
+        "مركبات",
+        "وقود",
+        "رحلات",
+        "صيانة"
+      ],
+      "modules": [
+        {
+          "name": "Vehicles",
+          "summary": "Vehicles workflows inside Fleet."
+        },
+        {
+          "name": "Fuel",
+          "summary": "Fuel workflows inside Fleet."
+        },
+        {
+          "name": "Trips",
+          "summary": "Trips workflows inside Fleet."
+        },
+        {
+          "name": "Maintenance",
+          "summary": "Maintenance workflows inside Fleet."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which channels does Fleet support?",
+          "answer": "Fleet is available on desktop. Availability by plan may vary — ask sales for your rollout."
+        },
+        {
+          "question": "Is Fleet available offline?",
+          "answer": "Field-oriented channels for Fleet are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+        },
+        {
+          "question": "How do we get started?",
+          "answer": "Request a demo from the Contact page. We will map roles, sites, and the right product mix for your organization."
+        }
+      ]
+    },
+    "admin-console": {
+      "name": "Admin Console",
+      "tagline": "مستخدمون وأدوار وتحكم بالموقع.",
+      "description": "وحدة تحكم للمديرين للمستخدمين والأدوار والشركات والفروع والسجلات ومفاتيح API.",
+      "capabilities": [
+        "مستخدمون وأدوار",
+        "شركات",
+        "فروع",
+        "سجلات",
+        "مفاتيح API"
+      ],
+      "modules": [
+        {
+          "name": "Users & roles",
+          "summary": "Users & roles workflows inside Admin Console."
+        },
+        {
+          "name": "Companies",
+          "summary": "Companies workflows inside Admin Console."
+        },
+        {
+          "name": "Branches",
+          "summary": "Branches workflows inside Admin Console."
+        },
+        {
+          "name": "Logs",
+          "summary": "Logs workflows inside Admin Console."
+        },
+        {
+          "name": "API keys",
+          "summary": "API keys workflows inside Admin Console."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which channels does Admin Console support?",
+          "answer": "Admin Console is available on desktop, web. Availability by plan may vary — ask sales for your rollout."
+        },
+        {
+          "question": "Is Admin Console available offline?",
+          "answer": "Field-oriented channels for Admin Console are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+        },
+        {
+          "question": "How do we get started?",
+          "answer": "Request a demo from the Contact page. We will map roles, sites, and the right product mix for your organization."
+        }
+      ]
+    },
+    "report-studio": {
+      "name": "Report Studio",
+      "tagline": "محاور ولوحات وتصدير.",
+      "description": "ابنِ محاور ولوحات ورسومًا عبر بيانات المنصة — ثم صدّر ما تحتاجه.",
+      "capabilities": [
+        "محاور",
+        "لوحات",
+        "رسوم",
+        "تصدير"
+      ],
+      "modules": [
+        {
+          "name": "Pivot",
+          "summary": "Pivot workflows inside Report Studio."
+        },
+        {
+          "name": "Dashboards",
+          "summary": "Dashboards workflows inside Report Studio."
+        },
+        {
+          "name": "Charts",
+          "summary": "Charts workflows inside Report Studio."
+        },
+        {
+          "name": "Exports",
+          "summary": "Exports workflows inside Report Studio."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which channels does Report Studio support?",
+          "answer": "Report Studio is available on desktop. Availability by plan may vary — ask sales for your rollout."
+        },
+        {
+          "question": "Is Report Studio available offline?",
+          "answer": "Field-oriented channels for Report Studio are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+        },
+        {
+          "question": "How do we get started?",
+          "answer": "Request a demo from the Contact page. We will map roles, sites, and the right product mix for your organization."
+        }
+      ]
+    },
+    "bi-dashboard": {
+      "name": "BI Dashboard",
+      "tagline": "مؤشرات تنفيذية عبر المنصة.",
+      "description": "ذكاء أعمال للويب للإيرادات والمبيعات والمخزون والمشاريع والموارد البشرية.",
+      "capabilities": [
+        "مؤشرات تنفيذية",
+        "عرض عبر التطبيقات",
+        "تحليلات للقراءة فقط"
+      ],
+      "modules": [
+        {
+          "name": "Executive KPIs",
+          "summary": "Executive KPIs workflows inside BI Dashboard."
+        },
+        {
+          "name": "Cross-app views",
+          "summary": "Cross-app views workflows inside BI Dashboard."
+        },
+        {
+          "name": "Read-only analytics",
+          "summary": "Read-only analytics workflows inside BI Dashboard."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which channels does BI Dashboard support?",
+          "answer": "BI Dashboard is available on web. Availability by plan may vary — ask sales for your rollout."
+        },
+        {
+          "question": "Is BI Dashboard available offline?",
+          "answer": "Field-oriented channels for BI Dashboard are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+        },
+        {
+          "question": "How do we get started?",
+          "answer": "Request a demo from the Contact page. We will map roles, sites, and the right product mix for your organization."
+        }
+      ]
+    },
+    "retail-pos": {
+      "name": "Retail POS",
+      "tagline": "باركود ونقد وإيصالات.",
+      "description": "نقطة بيع للتجزئة مع باركود ودرج نقد وطابعة إيصالات وشاشة عميل.",
+      "capabilities": [
+        "باركود",
+        "درج نقد",
+        "إيصالات",
+        "شاشة عميل"
+      ],
+      "modules": [
+        {
+          "name": "Barcode",
+          "summary": "Barcode workflows inside Retail POS."
+        },
+        {
+          "name": "Cash drawer",
+          "summary": "Cash drawer workflows inside Retail POS."
+        },
+        {
+          "name": "Receipts",
+          "summary": "Receipts workflows inside Retail POS."
+        },
+        {
+          "name": "Customer display",
+          "summary": "Customer display workflows inside Retail POS."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which channels does Retail POS support?",
+          "answer": "Retail POS is available on mobile, desktop. Availability by plan may vary — ask sales for your rollout."
+        },
+        {
+          "question": "Is Retail POS available offline?",
+          "answer": "Field-oriented channels for Retail POS are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+        },
+        {
+          "question": "How do we get started?",
+          "answer": "Request a demo from the Contact page. We will map roles, sites, and the right product mix for your organization."
+        }
+      ]
+    },
+    "sales-executive": {
+      "name": "Sales Executive",
+      "tagline": "إدارة علاقات لمندوبي المبيعات الميدانيين.",
+      "description": "إدارة العملاء المحتملين وعروض الأسعار والزيارات والمتابعات والملاحظات للمبيعات الميدانية.",
+      "capabilities": [
+        "عملاء محتملون",
+        "عروض أسعار",
+        "زيارات",
+        "متابعات"
+      ],
+      "modules": [
+        {
+          "name": "Leads",
+          "summary": "Leads workflows inside Sales Executive."
+        },
+        {
+          "name": "Quotations",
+          "summary": "Quotations workflows inside Sales Executive."
+        },
+        {
+          "name": "Visits",
+          "summary": "Visits workflows inside Sales Executive."
+        },
+        {
+          "name": "Follow-ups",
+          "summary": "Follow-ups workflows inside Sales Executive."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which channels does Sales Executive support?",
+          "answer": "Sales Executive is available on mobile. Availability by plan may vary — ask sales for your rollout."
+        },
+        {
+          "question": "Is Sales Executive available offline?",
+          "answer": "Field-oriented channels for Sales Executive are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+        },
+        {
+          "question": "How do we get started?",
+          "answer": "Request a demo from the Contact page. We will map roles, sites, and the right product mix for your organization."
+        }
+      ]
+    },
+    "zatgo-pos": {
+      "name": "ZatGo POS",
+      "tagline": "نقطة بيع للمطاعم مع مطبخ وطاولات.",
+      "description": "نقطة بيع سطح مكتب للمطاعم تغطي الطاولات وشاشة المطبخ والفوترة والمخزون والتقارير.",
+      "capabilities": [
+        "نقطة بيع",
+        "شاشة مطبخ",
+        "طاولات",
+        "فوترة",
+        "مخزون"
+      ],
+      "modules": [
+        {
+          "name": "POS",
+          "summary": "POS workflows inside ZatGo POS."
+        },
+        {
+          "name": "KDS",
+          "summary": "KDS workflows inside ZatGo POS."
+        },
+        {
+          "name": "Tables",
+          "summary": "Tables workflows inside ZatGo POS."
+        },
+        {
+          "name": "Billing",
+          "summary": "Billing workflows inside ZatGo POS."
+        },
+        {
+          "name": "Inventory",
+          "summary": "Inventory workflows inside ZatGo POS."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which channels does ZatGo POS support?",
+          "answer": "ZatGo POS is available on desktop. Availability by plan may vary — ask sales for your rollout."
+        },
+        {
+          "question": "Is ZatGo POS available offline?",
+          "answer": "Field-oriented channels for ZatGo POS are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+        },
+        {
+          "question": "How do we get started?",
+          "answer": "Request a demo from the Contact page. We will map roles, sites, and the right product mix for your organization."
+        }
+      ]
+    }
+  },
+  "changelog": {
+    "2026-07-foundation": {
+      "title": "إطلاق المنصة وموقع التسويق",
+      "summary": "كتالوج منتجات عام ومركز تنزيلات وروابط وثائق وأول إصدار لموقع تسويق ZatGo."
+    },
+    "2026-06-stack": {
+      "title": "تحديث تجربة الويب وسطح المكتب",
+      "summary": "تحسين التنقل ولغة تصميم موحّدة عبر تطبيقات ZatGo للويب وسطح المكتب."
+    },
+    "2026-05-roadmap": {
+      "title": "نشر كتالوج المنتجات",
+      "summary": "التركيز على Project Tracker عبر الويب والجوال وسطح المكتب — مع Go Van والتوصيل والمزيد على خارطة الطريق."
+    }
+  },
+  "pricing": {
+    "starter": {
+      "name": "Starter",
+      "description": "وحدات أساسية للفرق الصغيرة التي تبدأ مع ZatGo.",
+      "features": [
+        "شركة / موقع واحد",
+        "Project Tracker (ويب + جوال)",
+        "دعم قياسي",
+        "تحديثات المنتج",
+        "وثائق ودروس"
+      ],
+      "cta": "تواصل مع المبيعات"
+    },
+    "business": {
+      "name": "Business",
+      "description": "تطبيقات ميدانية ومكتبية للعمليات النامية.",
+      "features": [
+        "دعم فروع متعددة",
+        "Go Van والتوصيل والمستودع",
+        "تطبيقات سطح مكتب (مختارة)",
+        "بوابات عملاء وموردين",
+        "دعم أولوية",
+        "Admin Console"
+      ],
+      "cta": "اطلب عرضًا"
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "description": "المنصة كاملة واتفاقية مستوى خدمة وطرح مخصص عبر القنوات.",
+      "features": [
+        "كتالوج المنتجات كاملًا",
+        "BI Dashboard وReport Studio",
+        "مهندس نجاح مخصص",
+        "SLA ومراجعة أمنية",
+        "تكاملات مخصصة",
+        "خيارات محلية أو سحابية"
+      ],
+      "cta": "تحدث معنا"
+    },
+    "education": {
+      "name": "Education",
+      "description": "Discounted campus and training deployments for schools and institutes.",
+      "features": [
+        "Campus / multi-lab sites",
+        "Project Tracker + selected field apps",
+        "Desktop tools for labs",
+        "Student / staff portals (selected)",
+        "Education support hours",
+        "Academic use licensing"
+      ],
+      "cta": "Talk to education sales"
+    },
+    "government": {
+      "name": "Government",
+      "description": "Agency rollouts with security review, reporting, and procurement support.",
+      "features": [
+        "Multi-agency / site rollouts",
+        "Full field + desktop suite options",
+        "Portals and BI Dashboard",
+        "Security & compliance review",
+        "SLA options",
+        "Procurement-friendly docs"
+      ],
+      "cta": "Contact public sector"
+    }
+  },
+  "docsHub": {
+    "guides": {
+      "title": "أدلة المنتجات",
+      "description": "الإعداد والاستخدام اليومي لـ Project Tracker وGo Van والتوصيل والمزيد."
+    },
+    "project-tracker": {
+      "title": "دليل Project Tracker",
+      "description": "مشاريع ومهام وكانبان وتسجيل وقت ومزامنة متعددة القنوات."
+    },
+    "go-van": {
+      "title": "دليل Go Van",
+      "description": "مبيعات الطريق وطلبات أوفلاين والتحصيلات وGPS."
+    },
+    "delivery": {
+      "title": "دليل التسليم",
+      "description": "مسارات وOTP وتوقيعات وإثبات التسليم."
+    },
+    "integrations": {
+      "title": "التكاملات",
+      "description": "اربط منتجات ZatGo بالأنظمة التي تستخدمها بالفعل."
+    },
+    "developers": {
+      "title": "وثائق المطورين",
+      "description": "ابنِ على المنصة بواجهات برمجة آمنة ومكتبات عميل."
+    },
+    "help": {
+      "title": "مركز المساعدة",
+      "description": "أسئلة شائعة واستكشاف أخطاء وكيفية الحصول على الدعم."
+    },
+    "getting-started": {
+      "title": "البدء",
+      "description": "ثبّت العملاء وادعُ فريقك وانطلق."
+    }
+  },
+  "tutorials": {
+    "get-started-project-tracker": {
+      "title": "ابدأ مع Project Tracker",
+      "description": "أنشئ مشروعك الأول وأضف المهام وزامن بين الويب والجوال.",
+      "audience": "مديرو المشاريع",
+      "duration": "15 دقيقة"
+    },
+    "go-van-offline-orders": {
+      "title": "خذ طلبات أوفلاين مع Go Van",
+      "description": "أعد مسار سيارة والتقط الطلبات بلا إشارة وزامن عند العودة.",
+      "audience": "مبيعات ميدانية",
+      "duration": "20 دقيقة"
+    },
+    "delivery-pod": {
+      "title": "أكمل تسليمًا بإثبات التسليم",
+      "description": "مرّ بـ OTP والتوقيع وإثبات التسليم على تطبيق السائق.",
+      "audience": "سائقون ومشغّلون",
+      "duration": "12 دقيقة"
+    },
+    "warehouse-picking": {
+      "title": "انتقاء المستودع بالباركود",
+      "description": "نفّذ قائمة انتقاء وامسح الباركود وأكّد التخزين على الجوال أو سطح المكتب.",
+      "audience": "فرق المستودع",
+      "duration": "18 دقيقة"
+    },
+    "secure-sign-in": {
+      "title": "تسجيل دخول آمن عبر التطبيقات",
+      "description": "تعرّف كيف يصل أعضاء الفريق لتطبيقات الجوال وسطح المكتب والويب بنفس الحساب.",
+      "audience": "المسؤولون",
+      "duration": "15 دقيقة"
+    },
+    "admin-roles": {
+      "title": "المستخدمون والأدوار والفروع",
+      "description": "اضبط الشركات والفروع وصلاحيات الأدوار من Admin Console.",
+      "audience": "المسؤولون",
+      "duration": "22 دقيقة"
+    }
+  },
+  "industries": {
+    "distribution": {
+      "name": "التوزيع والجملة",
+      "description": "مبيعات الطريق والتسليمات ومخزون المستودع في صورة حية واحدة."
+    },
+    "projects": {
+      "name": "المشاريع والخدمات",
+      "description": "خطّط لتسليم العمل وتتبع الوقت الميداني وأغلق التذاكر بتوقيع."
+    },
+    "hospitality": {
+      "name": "الضيافة والمطاعم",
+      "description": "نقطة بيع الواجهة وتدفق المطبخ مرتبط بالمخزون والتقارير."
+    },
+    "fleet-logistics": {
+      "name": "الأسطول والخدمات اللوجستية",
+      "description": "مركبات ورحلات ووقود وتسليم الميل الأخير في منظومة واحدة."
+    }
+  },
+  "solutions": {
+    "field-ops": {
+      "name": "العمليات الميدانية",
+      "description": "امنح فرق الجوال تطبيقات تعمل دون اتصال وتُزامن عند إعادة الاتصال.",
+      "outcomes": [
+        "طلبات وزيارات تُلتقط على الطريق",
+        "سياق GPS والمسار",
+        "تقليل التسليم الورقي"
+      ]
+    },
+    "retail-pos": {
+      "name": "نقاط بيع التجزئة والمطاعم",
+      "description": "نقطة بيع سطح مكتب مع مخزون ومحاسبة مكتبية في الحلقة.",
+      "outcomes": [
+        "دفع أسرع",
+        "رؤية المطبخ / الطابق",
+        "دقة المخزون"
+      ]
+    },
+    "project-delivery": {
+      "name": "تسليم المشاريع",
+      "description": "نظام مشاريع واحد عبر الويب والجوال وسطح المكتب — من المتأخرات إلى التقارير.",
+      "outcomes": [
+        "حقيقة مهام مشتركة",
+        "وقت وملفات في السياق",
+        "أدوات سطح مكتب قوية"
+      ]
+    },
+    "back-office": {
+      "name": "المكتب الخلفي والتحكم",
+      "description": "محاسبة وإدارة وذكاء أعمال وبوابات للمالية وتقنية المعلومات والعملاء والموردين.",
+      "outcomes": [
+        "صلاحيات مركزية",
+        "مؤشرات تنفيذية",
+        "بوابات خدمة ذاتية"
+      ]
+    }
+  },
+  "aboutPage": {
+    "title": "About",
+    "metaDescription": "About ZatGo Innovation — operations software for modern teams.",
+    "eyebrow": "Company",
+    "heading": "Operations software built with field teams in mind",
+    "intro": "ZatGo Innovation builds mobile, desktop, and web products that help organizations run projects, sales, delivery, warehouse, and back-office work in one connected family of apps.",
+    "missionTitle": "Mission",
+    "missionBody": "Make day-to-day operations clear for every role — on the road, on the floor, and at the desk.",
+    "valuesTitle": "How we work",
+    "values": [
+      "Products that respect offline and field reality",
+      "One experience language across channels",
+      "Honest roadmaps and long-term partnerships"
+    ]
+  },
+  "careersPage": {
+    "title": "Careers",
+    "metaDescription": "Careers at ZatGo Innovation.",
+    "eyebrow": "Careers",
+    "heading": "Build products operators actually use",
+    "description": "We are a product company focused on operations software. Open roles are listed below — even if you do not see a perfect match, tell us what you want to work on.",
+    "openRoles": "Open roles",
+    "applyCta": "Apply via contact",
+    "empty": "No open roles right now — reach out anyway.",
+    "roles": {
+      "product-designer": {
+        "title": "Product Designer",
+        "summary": "Shape multi-channel product UX for field and office workflows."
+      },
+      "mobile-engineer": {
+        "title": "Mobile Engineer",
+        "summary": "Ship reliable mobile experiences for offline-first operations."
+      },
+      "customer-success": {
+        "title": "Customer Success",
+        "summary": "Help customers roll out products across sites and roles."
+      }
+    }
+  },
+  "partnersPage": {
+    "title": "Partners",
+    "metaDescription": "Partner with ZatGo Innovation — resellers, implementers, and technology partners.",
+    "eyebrow": "Partners",
+    "heading": "Grow with ZatGo",
+    "description": "We work with resellers, implementation partners, and technology allies who help customers adopt the platform.",
+    "tiersTitle": "Partner types",
+    "cta": "Become a partner",
+    "tiers": {
+      "reseller": {
+        "name": "Reseller",
+        "body": "Introduce ZatGo products to your customers and earn recurring value."
+      },
+      "implementation": {
+        "name": "Implementation",
+        "body": "Configure rollouts, train teams, and support go-lives across sites."
+      },
+      "technology": {
+        "name": "Technology",
+        "body": "Integrate complementary tools and share go-to-market motions."
+      }
+    }
+  },
+  "privacyPage": {
+    "title": "Privacy Policy",
+    "metaDescription": "ZatGo Innovation privacy policy.",
+    "eyebrow": "Legal",
+    "heading": "Privacy Policy",
+    "updated": "Last updated: 15 July 2026",
+    "sections": [
+      {
+        "title": "What we collect",
+        "body": "When you contact us through this website we collect the information you submit (such as name, email, company, and message). Site analytics may collect anonymous usage data if analytics are configured."
+      },
+      {
+        "title": "How we use information",
+        "body": "We use contact details to respond to demo requests and inquiries. We do not sell personal information."
+      },
+      {
+        "title": "Retention",
+        "body": "Inquiry records are kept only as long as needed to handle your request and related follow-up, unless a longer period is required by law."
+      },
+      {
+        "title": "Contact",
+        "body": "For privacy questions, contact us through the Contact page on this site."
+      }
+    ]
+  },
+  "termsPage": {
+    "title": "Terms of Use",
+    "metaDescription": "ZatGo Innovation website terms of use.",
+    "eyebrow": "Legal",
+    "heading": "Terms of Use",
+    "updated": "Last updated: 15 July 2026",
+    "sections": [
+      {
+        "title": "Website content",
+        "body": "This marketing site describes ZatGo products for informational purposes. Features, availability, and pricing may change and are confirmed during sales conversations."
+      },
+      {
+        "title": "Downloads and demos",
+        "body": "Download links and demo requests may be marked as coming soon until packages or environments are published. Access to production software is governed by a separate agreement."
+      },
+      {
+        "title": "Acceptable use",
+        "body": "Do not misuse this website, attempt to disrupt services, or submit unlawful or abusive content through forms."
+      },
+      {
+        "title": "Liability",
+        "body": "The site is provided as-is without warranties regarding completeness of marketing materials. Product warranties are defined in customer contracts."
+      }
+    ]
+  },
+  "productDetail": {
+    "modulesTitle": "Modules",
+    "modulesHint": "Core areas included with this product.",
+    "faqTitle": "Frequently asked questions",
+    "changelogTitle": "Recent updates",
+    "changelogViewAll": "View all updates",
+    "screenshotTitle": "Product screens",
+    "screenshotNote": "UI previews below show the product layout direction — replace with live screenshots when packs ship."
+  }
+}
