@@ -100,7 +100,8 @@ Copy [`.env.example`](./.env.example) → `.env.local`. **Never set localhost UR
 |----------|------|
 | `DOWNLOAD_BASE_URL` | Server-side CDN/base for apps + releases (mirrored to public at build) |
 | `NEXT_PUBLIC_DOWNLOAD_BASE_URL` | Same, public (preferred for client cards) |
-| `NEXT_PUBLIC_PROJECT_TRACKER_WEB_URL` | Optional override |
+| `NEXT_PUBLIC_TRACKER_WEB_URL` | Optional override (preferred) |
+| `NEXT_PUBLIC_PROJECT_TRACKER_WEB_URL` | Legacy alias for tracker URL |
 | `NEXT_PUBLIC_CUSTOMER_PORTAL_URL` | Optional override |
 | `NEXT_PUBLIC_VENDOR_PORTAL_URL` | Optional override |
 | `NEXT_PUBLIC_ADMIN_PORTAL_URL` | Optional override |
@@ -113,7 +114,7 @@ Copy [`.env.example`](./.env.example) → `.env.local`. **Never set localhost UR
 
 `DOWNLOAD_BASE_URL` path map:
 
-- `{base}/apps/project-tracker` · `customer-portal` · `vendor-portal` · `admin-console` · `bi-dashboard` · `crm`
+- `{base}/apps/tracker` · `customer-portal` · `vendor-portal` · `admin-console` · `bi-dashboard` · `crm`
 - `{base}/docs`
 - `{base}/releases/{fileName}`
 

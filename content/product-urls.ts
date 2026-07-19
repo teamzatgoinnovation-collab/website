@@ -8,7 +8,7 @@
  */
 
 const WEB_APP_PATHS = {
-  "project-tracker": "apps/project-tracker",
+  "tracker": "apps/tracker",
   "customer-portal": "apps/customer-portal",
   "vendor-portal": "apps/vendor-portal",
   "admin-console": "apps/admin-console",
@@ -20,7 +20,7 @@ const WEB_APP_PATHS = {
 export type ProductWebSlug = keyof typeof WEB_APP_PATHS;
 
 const DEV_FALLBACKS: Record<ProductWebSlug, string> = {
-  "project-tracker": "http://localhost:3004",
+  "tracker": "http://localhost:3004",
   "customer-portal": "http://localhost:3002",
   "vendor-portal": "http://localhost:3003",
   "admin-console": "http://localhost:3001",
@@ -30,13 +30,18 @@ const DEV_FALLBACKS: Record<ProductWebSlug, string> = {
 };
 
 const PRODUCT_ENV_KEYS: Record<ProductWebSlug, string> = {
-  "project-tracker": "NEXT_PUBLIC_PROJECT_TRACKER_WEB_URL",
+  "tracker": "NEXT_PUBLIC_TRACKER_WEB_URL",
   "customer-portal": "NEXT_PUBLIC_CUSTOMER_PORTAL_URL",
   "vendor-portal": "NEXT_PUBLIC_VENDOR_PORTAL_URL",
   "admin-console": "NEXT_PUBLIC_ADMIN_PORTAL_URL",
   "bi-dashboard": "NEXT_PUBLIC_BI_DASHBOARD_URL",
   crm: "NEXT_PUBLIC_CRM_PORTAL_URL",
   documentation: "NEXT_PUBLIC_DOCS_URL",
+};
+
+/** Legacy env key for tracker (prefer NEXT_PUBLIC_TRACKER_WEB_URL). */
+const PRODUCT_ENV_FALLBACKS: Partial<Record<ProductWebSlug, string>> = {
+  tracker: "NEXT_PUBLIC_PROJECT_TRACKER_WEB_URL",
 };
 
 export function isProductionRuntime(): boolean {
@@ -92,7 +97,11 @@ export function getProductWebUrl(slug: string): string | undefined {
   if (!(slug in WEB_APP_PATHS)) return undefined;
   const key = slug as ProductWebSlug;
 
-  const explicit = readEnvUrl(PRODUCT_ENV_KEYS[key]);
+  const explicit =
+    readEnvUrl(PRODUCT_ENV_KEYS[key]) ||
+    (PRODUCT_ENV_FALLBACKS[key]
+      ? readEnvUrl(PRODUCT_ENV_FALLBACKS[key]!)
+      : undefined);
   if (explicit) return explicit;
 
   const base = getDownloadBaseUrl();
