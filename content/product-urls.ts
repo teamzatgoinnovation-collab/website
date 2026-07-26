@@ -8,6 +8,7 @@
  */
 
 const WEB_APP_PATHS = {
+  "space": "space",
   "tracker": "apps/tracker",
   "customer-portal": "apps/customer-portal",
   "vendor-portal": "apps/vendor-portal",
@@ -20,6 +21,7 @@ const WEB_APP_PATHS = {
 export type ProductWebSlug = keyof typeof WEB_APP_PATHS;
 
 const DEV_FALLBACKS: Record<ProductWebSlug, string> = {
+  "space": "http://localhost:3010",
   "tracker": "http://localhost:3004",
   "customer-portal": "http://localhost:3002",
   "vendor-portal": "http://localhost:3003",
@@ -30,6 +32,7 @@ const DEV_FALLBACKS: Record<ProductWebSlug, string> = {
 };
 
 const PRODUCT_ENV_KEYS: Record<ProductWebSlug, string> = {
+  "space": "NEXT_PUBLIC_SPACE_URL",
   "tracker": "NEXT_PUBLIC_TRACKER_WEB_URL",
   "customer-portal": "NEXT_PUBLIC_CUSTOMER_PORTAL_URL",
   "vendor-portal": "NEXT_PUBLIC_VENDOR_PORTAL_URL",

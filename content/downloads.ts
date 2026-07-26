@@ -92,6 +92,11 @@ function webOpen(partial: {
 }
 
 export const downloads: DownloadItem[] = [
+  webOpen({
+    id: "space-web",
+    productSlug: "space",
+    label: "Try SpaceCloud",
+  }),
   comingSoon({
     id: "tracker-ios",
     productSlug: "tracker",

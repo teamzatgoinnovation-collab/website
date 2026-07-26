@@ -287,6 +287,54 @@
     "body": "Bu yol pazarlama sitesinin parçası değil. Ürünler, indirmeler veya dokümanları deneyin."
   },
   "products": {
+    "space": {
+      "name": "Space",
+      "tagline": "Dakikalar içinde barındırılan ERPNext — kendi kontrol paneliniz.",
+      "description": "Space, ZatGo'nun barındırma kontrol panelidir: talep üzerine ERPNext siteleri oluşturun, sunucuları, depolama havuzlarını ve yedeklemeleri yönetin ve her müşteriye denemeden üretime kendi kendine hizmet eden bir yol sunun — hepsi tek bir panelden.",
+      "capabilities": [
+        "Kendi kendine hizmet ERPNext siteleri",
+        "Barındırma havuzları ve kotalar",
+        "Müşteri ve abonelik yönetimi",
+        "Bench yöneticisi ve yedeklemeler",
+        "Çoklu bölge desteğine hazır"
+      ],
+      "modules": [
+        {
+          "name": "Kendi kendine hizmet ERPNext siteleri",
+          "summary": "Müşteriler kendi ERPNext sitelerini rehberli bir sihirbazdan oluşturur ve yönetir — destek talebi gerekmez."
+        },
+        {
+          "name": "Barındırma havuzları ve kotalar",
+          "summary": "Her sunucudaki gerçek disk, RAM ve CPU kapasitesini takip edin; site ve plan başına kotalar uygulanır."
+        },
+        {
+          "name": "Müşteri ve abonelik yönetimi",
+          "summary": "Her site gerçek bir müşteri hesabına ve plana bağlıdır; denemeler, yükseltmeler ve fatura durumu merkezi olarak izlenir."
+        },
+        {
+          "name": "Bench yöneticisi ve yedeklemeler",
+          "summary": "Uygulamaları git'ten çekin, site başına kurun veya kaldırın, geçiş yapın ve yedeklemeleri planlayın — hepsi yönetim panelinden."
+        },
+        {
+          "name": "Çoklu bölge desteğine hazır",
+          "summary": "Filo büyüdükçe siteleri bölgeye, kümeye ve sunucu yakınlığına göre yerleştirin."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Space nedir?",
+          "answer": "Space, ZatGo'nun ERPNext için barındırma platformudur. Sunucu kapasitesini, site provizyonunu, planları ve müşteri hesaplarını yönetir; böylece altyapıyı kendiniz yönetmeden çalışan bir ERPNext sitesine sahip olursunuz."
+        },
+        {
+          "question": "Ücretsiz deneyebilir miyim?",
+          "answer": "Evet — müşteri portalından kaydolun ve dakikalar içinde ücretsiz bir deneme sitesi başlatın. Platformu keşfetmek için kredi kartı gerekmez."
+        },
+        {
+          "question": "Space kimler için uygun?",
+          "answer": "Kendi sunucularını çalıştırmadan ERPNext isteyen ekipler ve birçok müşteri sitesini, planını ve yedeklemesini tek yerden yönetecek bir kontrol paneline ihtiyaç duyan operatörler için."
+        }
+      ]
+    },
     "tracker": {
       "name": "Tracker",
       "tagline": "Projeler, görevler ve zaman — sahada ve masada.",

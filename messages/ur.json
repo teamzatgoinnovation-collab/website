@@ -287,6 +287,54 @@
     "body": "وہ راستہ مارکیٹنگ سائٹ کا حصہ نہیں۔ مصنوعات، ڈاؤن لوڈز یا دستاویزات آزمائیں۔"
   },
   "products": {
+    "space": {
+      "name": "Space",
+      "tagline": "Hosted ERPNext, live in minutes — with your own control plane.",
+      "description": "Space is ZatGo's hosting control plane: spin up ERPNext sites on demand, manage servers, storage pools, and backups, and give every customer a self-serve trial-to-production path — all from one console.",
+      "capabilities": [
+        "Self-serve ERPNext sites",
+        "Hosting pools & quotas",
+        "Customer & subscription management",
+        "Bench manager & backups",
+        "Multi-region ready"
+      ],
+      "modules": [
+        {
+          "name": "Self-serve ERPNext sites",
+          "summary": "Customers create and manage their own ERPNext sites from a guided wizard — no ops ticket required."
+        },
+        {
+          "name": "Hosting pools & quotas",
+          "summary": "Track real disk, RAM, and CPU capacity per server, with quotas enforced per site and per plan."
+        },
+        {
+          "name": "Customer & subscription management",
+          "summary": "Every site is tied to a real customer account and plan, with trials, upgrades, and billing status tracked centrally."
+        },
+        {
+          "name": "Bench manager & backups",
+          "summary": "Fetch apps from git, install or remove them per site, migrate, and schedule backups — all from the admin console."
+        },
+        {
+          "name": "Multi-region ready",
+          "summary": "Place sites by region, cluster, and server affinity as the fleet grows across providers."
+        }
+      ],
+      "faq": [
+        {
+          "question": "What is Space?",
+          "answer": "Space is ZatGo's hosting platform for ERPNext. It handles server capacity, site provisioning, plans, and customer accounts, so you get a working ERPNext site without managing infrastructure yourself."
+        },
+        {
+          "question": "Can I try it for free?",
+          "answer": "Yes — sign up and start a free trial site in minutes from the customer portal. No credit card required to explore the platform."
+        },
+        {
+          "question": "Who is Space for?",
+          "answer": "Teams who want ERPNext without running their own servers, and operators who need a control plane to manage many customer sites, plans, and backups from one place."
+        }
+      ]
+    },
     "tracker": {
       "name": "Tracker",
       "tagline": "Projects, tasks, and time — in the field and on the desk.",
