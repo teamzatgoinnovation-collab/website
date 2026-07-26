@@ -24,6 +24,12 @@ export const products: ProductMeta[] = [
     highlight: true,
   },
   {
+    slug: "erpnext",
+    channels: ["web"],
+    status: "available",
+    highlight: true,
+  },
+  {
     slug: "tracker",
     channels: ["web", "mobile", "desktop"],
     status: "available",

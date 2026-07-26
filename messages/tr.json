@@ -289,8 +289,8 @@
   "products": {
     "space": {
       "name": "Space",
-      "tagline": "Dakikalar içinde barındırılan ERPNext — kendi kontrol paneliniz.",
-      "description": "Space, ZatGo'nun barındırma kontrol panelidir: talep üzerine ERPNext siteleri oluşturun, sunucuları, depolama havuzlarını ve yedeklemeleri yönetin ve her müşteriye denemeden üretime kendi kendine hizmet eden bir yol sunun — hepsi tek bir panelden.",
+      "tagline": "Kurumsal düzeyde ERPNext barındırma — dakikalar içinde sağlanır, üretim standartlarında işletilir.",
+      "description": "Space, ZatGo'nun ERPNext için kurumsal barındırma kontrol panelidir: talep üzerine site sağlayın, sunucu başına kapasite ve kotaları uygulayın, yedeklemeleri ve abonelikleri yönetin ve her müşteriye denemeden üretime denetlenebilir bir yol sunun — hepsi tek, denetlenebilir bir panelden.",
       "capabilities": [
         "Kendi kendine hizmet ERPNext siteleri",
         "Barındırma havuzları ve kotalar",
@@ -332,6 +332,54 @@
         {
           "question": "Space kimler için uygun?",
           "answer": "Kendi sunucularını çalıştırmadan ERPNext isteyen ekipler ve birçok müşteri sitesini, planını ve yedeklemesini tek yerden yönetecek bir kontrol paneline ihtiyaç duyan operatörler için."
+        }
+      ]
+    },
+    "erpnext": {
+      "name": "ERPNext",
+      "tagline": "Kurumsal ERP — finans, tedarik zinciri ve İK tek, güvenli bir platformda.",
+      "description": "ERPNext, her ZatGo dağıtımının arkasındaki kurumsal kaynak planlama sistemidir: muhasebe, satış ve satın alma, envanter ve üretim, projeler ve İK, tek bir denetlenebilir kayıt sisteminde birleştirilir. ZatGo'nun barındırma platformu Space üzerinde çalışır; sağlama, izleme ve yedeklemeler otomatik olarak yönetilir.",
+      "capabilities": [
+        "Finansal muhasebe & uyumluluk",
+        "Satış, satın alma & tedarik zinciri",
+        "Envanter & üretim",
+        "İK, bordro & iş gücü yönetimi",
+        "Kurumsal özelleştirme & entegrasyon"
+      ],
+      "modules": [
+        {
+          "name": "Finansal muhasebe & uyumluluk",
+          "summary": "Genel muhasebe, çoklu para birimi, vergi uyumluluğu ve denetime hazır finansal raporlama."
+        },
+        {
+          "name": "Satış, satın alma & tedarik zinciri",
+          "summary": "Teklif-tahsilat ve satın alma-ödeme döngüleri uçtan uca tam izlenebilirlikle."
+        },
+        {
+          "name": "Envanter & üretim",
+          "summary": "Çoklu depo stok kontrolü, malzeme listeleri ve üretim planlaması."
+        },
+        {
+          "name": "İK, bordro & iş gücü yönetimi",
+          "summary": "Çalışan yaşam döngüsü, devam, izin ve bordro aynı kayıt sisteminde."
+        },
+        {
+          "name": "Kurumsal özelleştirme & entegrasyon",
+          "summary": "Kuruluşunuza özel iş akışları, onay hiyerarşileri, role dayalı erişim ve API entegrasyonları."
+        }
+      ],
+      "faq": [
+        {
+          "question": "ERPNext nedir?",
+          "answer": "ERPNext, her ZatGo dağıtımını çalıştıran kurumsal düzeyde, açık kaynaklı ERP platformudur — finans, tedarik zinciri, üretim, projeler ve İK'yı tek bir kayıt sisteminde birleştirir."
+        },
+        {
+          "question": "Kurumsal ölçekli operasyonlar için uygun mu?",
+          "answer": "Evet. Space üzerindeki ERPNext, çoklu site ve çoklu şirket operasyonları için role dayalı izinler, denetim kayıtları ve dağıtım başına ayrılmış barındırma kaynaklarıyla oluşturulmuştur."
+        },
+        {
+          "question": "Nasıl başlarım?",
+          "answer": "Bir ERPNext sitesini doğrudan Space üzerinden sağlayabilirsiniz — bir plan seçin, platform kurulumu, barındırmayı, izlemeyi ve yedeklemeleri otomatik olarak yönetir. Site sağlamanın nasıl çalıştığını görmek için Space ürün sayfasına bakın."
         }
       ]
     },

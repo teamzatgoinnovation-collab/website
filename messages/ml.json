@@ -289,8 +289,8 @@
   "products": {
     "space": {
       "name": "Space",
-      "tagline": "Hosted ERPNext, live in minutes — with your own control plane.",
-      "description": "Space is ZatGo's hosting control plane: spin up ERPNext sites on demand, manage servers, storage pools, and backups, and give every customer a self-serve trial-to-production path — all from one console.",
+      "tagline": "Enterprise-grade ERPNext hosting — provisioned in minutes, operated to production standards.",
+      "description": "Space is ZatGo's hosting control plane for ERPNext: provision sites on demand, enforce capacity and quotas per server, manage backups and subscriptions, and give every customer a governed path from trial to production — all from a single, auditable console.",
       "capabilities": [
         "Self-serve ERPNext sites",
         "Hosting pools & quotas",
@@ -332,6 +332,54 @@
         {
           "question": "Who is Space for?",
           "answer": "Teams who want ERPNext without running their own servers, and operators who need a control plane to manage many customer sites, plans, and backups from one place."
+        }
+      ]
+    },
+    "erpnext": {
+      "name": "ERPNext",
+      "tagline": "Enterprise ERP — finance, supply chain, and HR on a single, secure platform.",
+      "description": "ERPNext is the enterprise resource planning system behind every ZatGo deployment: accounting, sales and purchasing, inventory and manufacturing, projects, and HR, unified in a single auditable system of record. It runs on Space, ZatGo's hosting platform, with provisioning, monitoring, and backups handled automatically.",
+      "capabilities": [
+        "Financial accounting & compliance",
+        "Sales, purchasing & supply chain",
+        "Inventory & manufacturing",
+        "HR, payroll & workforce management",
+        "Enterprise customization & integration"
+      ],
+      "modules": [
+        {
+          "name": "Financial accounting & compliance",
+          "summary": "General ledger, multi-currency accounting, tax compliance, and audit-ready financial reporting."
+        },
+        {
+          "name": "Sales, purchasing & supply chain",
+          "summary": "End-to-end quote-to-cash and procure-to-pay cycles with full traceability."
+        },
+        {
+          "name": "Inventory & manufacturing",
+          "summary": "Multi-warehouse stock control, bills of materials, and production planning."
+        },
+        {
+          "name": "HR, payroll & workforce management",
+          "summary": "Employee lifecycle, attendance, leave, and payroll in the same system of record."
+        },
+        {
+          "name": "Enterprise customization & integration",
+          "summary": "Custom workflows, approval hierarchies, role-based access, and API integrations tailored to your organization."
+        }
+      ],
+      "faq": [
+        {
+          "question": "What is ERPNext?",
+          "answer": "ERPNext is the enterprise-grade, open-source ERP platform that powers every ZatGo deployment — unifying finance, supply chain, manufacturing, projects, and HR in a single system of record."
+        },
+        {
+          "question": "Is it suitable for enterprise-scale operations?",
+          "answer": "Yes. ERPNext on Space is built for multi-site, multi-company operations, with role-based permissions, audit trails, and dedicated hosting resources per deployment."
+        },
+        {
+          "question": "How do I get started?",
+          "answer": "Provision an ERPNext site directly through Space — pick a plan and the platform handles installation, hosting, monitoring, and backups. See the Space product page for how site provisioning works."
         }
       ]
     },
