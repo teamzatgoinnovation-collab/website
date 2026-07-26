@@ -13,14 +13,14 @@ export const changelog: ChangelogMeta[] = [
     date: "2026-07-15",
     version: "0.1.0",
     tags: ["Platform", "Marketing"],
-    products: ["project-tracker", "go-van", "delivery", "admin-console"],
+    products: ["tracker", "go-van", "delivery", "admin-console"],
   },
   {
     id: "2026-06-stack",
     date: "2026-06-01",
     version: "0.0.2",
     tags: ["Web", "Desktop"],
-    products: ["project-tracker", "accounting", "fleet", "admin-console", "report-studio"],
+    products: ["tracker", "accounting", "fleet", "admin-console", "report-studio"],
   },
   {
     id: "2026-05-roadmap",
@@ -28,7 +28,7 @@ export const changelog: ChangelogMeta[] = [
     version: "0.0.1",
     tags: ["Roadmap"],
     products: [
-      "project-tracker",
+      "tracker",
       "go-van",
       "delivery",
       "warehouse",

@@ -7,8 +7,8 @@ export type TutorialMeta = {
 
 export const tutorials: TutorialMeta[] = [
   {
-    slug: "get-started-project-tracker",
-    docsPath: "/tutorials/project-tracker/get-started",
+    slug: "get-started-tracker",
+    docsPath: "/tutorials/tracker/get-started",
   },
   {
     slug: "go-van-offline-orders",

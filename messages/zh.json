@@ -61,7 +61,7 @@
     "requestDemo": "申请演示",
     "productsEyebrow": "产品",
     "productsTitle": "为运营而生，覆盖每个渠道",
-    "productsDesc": "从 Project Tracker 起步，扩展到厢式销售、配送、仓储、人事与 CRM。",
+    "productsDesc": "从 Tracker 起步，扩展到厢式销售、配送、仓储、人事与 CRM。",
     "allProducts": "全部产品",
     "channelsEyebrow": "渠道",
     "channelsTitle": "移动、桌面与网页 — 同一平台",
@@ -69,7 +69,7 @@
     "channelMobileTitle": "移动端",
     "channelMobileBody": "面向外勤与离线优先的应用 — Go Van、Delivery、Warehouse 等。",
     "channelDesktopTitle": "桌面端",
-    "channelDesktopBody": "面向高阶用户的工具 — Project Tracker Pro、ZatGo POS、Accounting、Fleet。",
+    "channelDesktopBody": "面向高阶用户的工具 — Tracker Pro、ZatGo POS、Accounting、Fleet。",
     "channelWebTitle": "网页端",
     "channelWebBody": "面向客户、供应商、管理员与高管的门户与看板。",
     "viewChannel": "查看",
@@ -93,7 +93,7 @@
   },
   "productsPage": {
     "title": "产品",
-    "metaDescription": "ZatGo 产品目录 — Project Tracker、Go Van、Delivery 等。",
+    "metaDescription": "ZatGo 产品目录 — Tracker、Go Van、Delivery 等。",
     "eyebrow": "产品",
     "heading": "ZatGo 产品目录",
     "description": "面向外勤、现场与办公的应用 — 全员共用一套平台。",
@@ -208,7 +208,7 @@
       },
       {
         "question": "Can we mix field and desktop apps?",
-        "answer": "Yes. Most customers start with Project Tracker and add Go Van, Delivery, Warehouse, or desktop tools as needed."
+        "answer": "Yes. Most customers start with Tracker and add Go Van, Delivery, Warehouse, or desktop tools as needed."
       }
     ]
   },
@@ -225,7 +225,7 @@
     "email": "工作邮箱",
     "company": "公司",
     "interest": "意向",
-    "interestPlaceholder": "例如 Project Tracker + Delivery",
+    "interestPlaceholder": "例如 Tracker + Delivery",
     "message": "留言",
     "submit": "申请演示",
     "sending": "发送中…",
@@ -287,8 +287,8 @@
     "body": "该路径不属于营销站点。请尝试产品、下载或文档。"
   },
   "products": {
-    "project-tracker": {
-      "name": "Project Tracker",
+    "tracker": {
+      "name": "Tracker",
       "tagline": "Projects, tasks, and time — in the field and on the desk.",
       "description": "Plan work, track tasks on Kanban, log time, and keep files and notifications in sync across web, mobile, and desktop.",
       "capabilities": [
@@ -301,33 +301,33 @@
       "modules": [
         {
           "name": "My Projects & Tasks",
-          "summary": "My Projects & Tasks workflows inside Project Tracker."
+          "summary": "My Projects & Tasks workflows inside Tracker."
         },
         {
           "name": "Kanban",
-          "summary": "Kanban workflows inside Project Tracker."
+          "summary": "Kanban workflows inside Tracker."
         },
         {
           "name": "Time entry",
-          "summary": "Time entry workflows inside Project Tracker."
+          "summary": "Time entry workflows inside Tracker."
         },
         {
           "name": "Files & notifications",
-          "summary": "Files & notifications workflows inside Project Tracker."
+          "summary": "Files & notifications workflows inside Tracker."
         },
         {
           "name": "Gantt & reports (desktop)",
-          "summary": "Gantt & reports (desktop) workflows inside Project Tracker."
+          "summary": "Gantt & reports (desktop) workflows inside Tracker."
         }
       ],
       "faq": [
         {
-          "question": "Which channels does Project Tracker support?",
-          "answer": "Project Tracker is available on web, mobile, desktop. Availability by plan may vary — ask sales for your rollout."
+          "question": "Which channels does Tracker support?",
+          "answer": "Tracker is available on web, mobile, desktop. Availability by plan may vary — ask sales for your rollout."
         },
         {
-          "question": "Is Project Tracker available offline?",
-          "answer": "Field-oriented channels for Project Tracker are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+          "question": "Is Tracker available offline?",
+          "answer": "Field-oriented channels for Tracker are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
         },
         {
           "question": "How do we get started?",
@@ -1050,7 +1050,7 @@
     },
     "2026-05-roadmap": {
       "title": "Product catalog published",
-      "summary": "Flagship focus on Project Tracker across web, mobile, and desktop — with Go Van, Delivery, and more products on the roadmap."
+      "summary": "Flagship focus on Tracker across web, mobile, and desktop — with Go Van, Delivery, and more products on the roadmap."
     }
   },
   "pricing": {
@@ -1059,7 +1059,7 @@
       "description": "Core modules for smaller teams getting started on ZatGo.",
       "features": [
         "1 company / site",
-        "Project Tracker (web + mobile)",
+        "Tracker (web + mobile)",
         "Standard support",
         "Product updates",
         "Documentation & tutorials"
@@ -1097,7 +1097,7 @@
       "description": "Discounted campus and training deployments for schools and institutes.",
       "features": [
         "Campus / multi-lab sites",
-        "Project Tracker + selected field apps",
+        "Tracker + selected field apps",
         "Desktop tools for labs",
         "Student / staff portals (selected)",
         "Education support hours",
@@ -1122,10 +1122,10 @@
   "docsHub": {
     "guides": {
       "title": "Product guides",
-      "description": "Setup and day-to-day use for Project Tracker, Go Van, Delivery, and more."
+      "description": "Setup and day-to-day use for Tracker, Go Van, Delivery, and more."
     },
-    "project-tracker": {
-      "title": "Project Tracker guide",
+    "tracker": {
+      "title": "Tracker guide",
       "description": "Projects, tasks, Kanban, time entry, and multi-channel sync."
     },
     "go-van": {
@@ -1154,8 +1154,8 @@
     }
   },
   "tutorials": {
-    "get-started-project-tracker": {
-      "title": "Get started with Project Tracker",
+    "get-started-tracker": {
+      "title": "Get started with Tracker",
       "description": "Create your first project, add tasks, and sync between web and mobile.",
       "audience": "Project managers",
       "duration": "15 min"

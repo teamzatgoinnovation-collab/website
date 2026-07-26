@@ -38,7 +38,7 @@ export const primaryNav = [
 export const footerNav = {
   products: [
     { href: "/products", key: "allProducts" as const },
-    { href: "/products/project-tracker", productSlug: "project-tracker" },
+    { href: "/products/tracker", productSlug: "tracker" },
     { href: "/products/go-van", productSlug: "go-van" },
     { href: "/products/delivery", productSlug: "delivery" },
     { href: "/downloads", key: "downloads" as const },

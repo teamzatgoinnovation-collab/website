@@ -61,7 +61,7 @@
     "requestDemo": "Demo talep et",
     "productsEyebrow": "Ürünler",
     "productsTitle": "Operasyon için üretilmiş, her kanala gönderilmiş",
-    "productsDesc": "Project Tracker ile başlayın; ardından van satışları, teslimat, depo, IK ve CRM’e genişletin.",
+    "productsDesc": "Tracker ile başlayın; ardından van satışları, teslimat, depo, IK ve CRM’e genişletin.",
     "allProducts": "Tüm ürünler",
     "channelsEyebrow": "Kanallar",
     "channelsTitle": "Mobil, masaüstü ve web — aynı platform",
@@ -69,7 +69,7 @@
     "channelMobileTitle": "Mobil",
     "channelMobileBody": "Saha ve çevrimdışı öncelikli uygulamalar — Go Van, Teslimat, Depo ve daha fazlası.",
     "channelDesktopTitle": "Masaüstü",
-    "channelDesktopBody": "Güç kullanıcıları için araçlar — Project Tracker Pro, ZatGo POS, Muhasebe, Filo.",
+    "channelDesktopBody": "Güç kullanıcıları için araçlar — Tracker Pro, ZatGo POS, Muhasebe, Filo.",
     "channelWebTitle": "Web",
     "channelWebBody": "Müşteriler, tedarikçiler, yöneticiler ve yöneticiler için portallar ve paneller.",
     "viewChannel": "Görüntüle",
@@ -93,7 +93,7 @@
   },
   "productsPage": {
     "title": "Ürünler",
-    "metaDescription": "ZatGo ürün kataloğu — Project Tracker, Go Van, Teslimat, depo, IK, CRM, POS ve daha fazlası.",
+    "metaDescription": "ZatGo ürün kataloğu — Tracker, Go Van, Teslimat, depo, IK, CRM, POS ve daha fazlası.",
     "eyebrow": "Ürünler",
     "heading": "ZatGo ürün kataloğu",
     "description": "Saha, kat ve ofis için uygulamalar — tüm ekibinizin kullanabileceği tek platform.",
@@ -208,7 +208,7 @@
       },
       {
         "question": "Can we mix field and desktop apps?",
-        "answer": "Yes. Most customers start with Project Tracker and add Go Van, Delivery, Warehouse, or desktop tools as needed."
+        "answer": "Yes. Most customers start with Tracker and add Go Van, Delivery, Warehouse, or desktop tools as needed."
       }
     ]
   },
@@ -225,7 +225,7 @@
     "email": "İş e-postası",
     "company": "Şirket",
     "interest": "İlgi alanı",
-    "interestPlaceholder": "örn. Project Tracker + Delivery",
+    "interestPlaceholder": "örn. Tracker + Delivery",
     "message": "Mesaj",
     "submit": "Demo talep et",
     "sending": "Gönderiliyor…",
@@ -287,8 +287,8 @@
     "body": "Bu yol pazarlama sitesinin parçası değil. Ürünler, indirmeler veya dokümanları deneyin."
   },
   "products": {
-    "project-tracker": {
-      "name": "Project Tracker",
+    "tracker": {
+      "name": "Tracker",
       "tagline": "Projeler, görevler ve zaman — sahada ve masada.",
       "description": "İşi planlayın, Kanban’da görevleri izleyin, zaman kaydedin; dosya ve bildirimleri web, mobil ve masaüstünde senkron tutun.",
       "capabilities": [
@@ -301,33 +301,33 @@
       "modules": [
         {
           "name": "My Projects & Tasks",
-          "summary": "My Projects & Tasks workflows inside Project Tracker."
+          "summary": "My Projects & Tasks workflows inside Tracker."
         },
         {
           "name": "Kanban",
-          "summary": "Kanban workflows inside Project Tracker."
+          "summary": "Kanban workflows inside Tracker."
         },
         {
           "name": "Time entry",
-          "summary": "Time entry workflows inside Project Tracker."
+          "summary": "Time entry workflows inside Tracker."
         },
         {
           "name": "Files & notifications",
-          "summary": "Files & notifications workflows inside Project Tracker."
+          "summary": "Files & notifications workflows inside Tracker."
         },
         {
           "name": "Gantt & reports (desktop)",
-          "summary": "Gantt & reports (desktop) workflows inside Project Tracker."
+          "summary": "Gantt & reports (desktop) workflows inside Tracker."
         }
       ],
       "faq": [
         {
-          "question": "Which channels does Project Tracker support?",
-          "answer": "Project Tracker is available on web, mobile, desktop. Availability by plan may vary — ask sales for your rollout."
+          "question": "Which channels does Tracker support?",
+          "answer": "Tracker is available on web, mobile, desktop. Availability by plan may vary — ask sales for your rollout."
         },
         {
-          "question": "Is Project Tracker available offline?",
-          "answer": "Field-oriented channels for Project Tracker are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+          "question": "Is Tracker available offline?",
+          "answer": "Field-oriented channels for Tracker are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
         },
         {
           "question": "How do we get started?",
@@ -1050,7 +1050,7 @@
     },
     "2026-05-roadmap": {
       "title": "Ürün kataloğu yayınlandı",
-      "summary": "Web, mobil ve masaüstünde Project Tracker odaklı başlangıç — yol haritasında Go Van, Teslimat ve daha fazlası."
+      "summary": "Web, mobil ve masaüstünde Tracker odaklı başlangıç — yol haritasında Go Van, Teslimat ve daha fazlası."
     }
   },
   "pricing": {
@@ -1059,7 +1059,7 @@
       "description": "ZatGo’ya başlayan küçük ekipler için temel modüller.",
       "features": [
         "1 şirket / site",
-        "Project Tracker (web + mobil)",
+        "Tracker (web + mobil)",
         "Standart destek",
         "Ürün güncellemeleri",
         "Dokümantasyon ve eğitimler"
@@ -1097,7 +1097,7 @@
       "description": "Discounted campus and training deployments for schools and institutes.",
       "features": [
         "Campus / multi-lab sites",
-        "Project Tracker + selected field apps",
+        "Tracker + selected field apps",
         "Desktop tools for labs",
         "Student / staff portals (selected)",
         "Education support hours",
@@ -1122,10 +1122,10 @@
   "docsHub": {
     "guides": {
       "title": "Ürün kılavuzları",
-      "description": "Project Tracker, Go Van, Teslimat ve daha fazlası için kurulum ve günlük kullanım."
+      "description": "Tracker, Go Van, Teslimat ve daha fazlası için kurulum ve günlük kullanım."
     },
-    "project-tracker": {
-      "title": "Project Tracker kılavuzu",
+    "tracker": {
+      "title": "Tracker kılavuzu",
       "description": "Projeler, görevler, Kanban, zaman girişi ve çok kanallı senkron."
     },
     "go-van": {
@@ -1154,8 +1154,8 @@
     }
   },
   "tutorials": {
-    "get-started-project-tracker": {
-      "title": "Project Tracker ile başlayın",
+    "get-started-tracker": {
+      "title": "Tracker ile başlayın",
       "description": "İlk projenizi oluşturun, görev ekleyin ve web ile mobil arasında senkronlayın.",
       "audience": "Proje yöneticileri",
       "duration": "15 dk"

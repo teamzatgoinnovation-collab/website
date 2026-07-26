@@ -61,7 +61,7 @@
     "requestDemo": "デモを依頼",
     "productsEyebrow": "製品",
     "productsTitle": "オペレーションのために、あらゆるチャネルへ",
-    "productsDesc": "Project Tracker から始め、バン販売、配送、倉庫、人事、CRM へと拡張。",
+    "productsDesc": "Tracker から始め、バン販売、配送、倉庫、人事、CRM へと拡張。",
     "allProducts": "すべての製品",
     "channelsEyebrow": "チャネル",
     "channelsTitle": "モバイル、デスクトップ、Web — 同じプラットフォーム",
@@ -69,7 +69,7 @@
     "channelMobileTitle": "モバイル",
     "channelMobileBody": "フィールドとオフライン優先のアプリ — Go Van、Delivery、Warehouse など。",
     "channelDesktopTitle": "デスクトップ",
-    "channelDesktopBody": "パワーユーザー向けツール — Project Tracker Pro、ZatGo POS、Accounting、Fleet。",
+    "channelDesktopBody": "パワーユーザー向けツール — Tracker Pro、ZatGo POS、Accounting、Fleet。",
     "channelWebTitle": "Web",
     "channelWebBody": "顧客・ベンダー・管理者・経営層向けのポータルとダッシュボード。",
     "viewChannel": "表示",
@@ -93,7 +93,7 @@
   },
   "productsPage": {
     "title": "製品",
-    "metaDescription": "ZatGo 製品カタログ — Project Tracker、Go Van、Delivery など。",
+    "metaDescription": "ZatGo 製品カタログ — Tracker、Go Van、Delivery など。",
     "eyebrow": "製品",
     "heading": "ZatGo 製品カタログ",
     "description": "フィールド・フロア・オフィス向けアプリ — チーム全体のための一つのプラットフォーム。",
@@ -208,7 +208,7 @@
       },
       {
         "question": "Can we mix field and desktop apps?",
-        "answer": "Yes. Most customers start with Project Tracker and add Go Van, Delivery, Warehouse, or desktop tools as needed."
+        "answer": "Yes. Most customers start with Tracker and add Go Van, Delivery, Warehouse, or desktop tools as needed."
       }
     ]
   },
@@ -225,7 +225,7 @@
     "email": "勤務先メール",
     "company": "会社名",
     "interest": "関心",
-    "interestPlaceholder": "例: Project Tracker + Delivery",
+    "interestPlaceholder": "例: Tracker + Delivery",
     "message": "メッセージ",
     "submit": "デモを依頼",
     "sending": "送信中…",
@@ -287,8 +287,8 @@
     "body": "そのルートはマーケティングサイトにありません。製品、ダウンロード、ドキュメントを試してください。"
   },
   "products": {
-    "project-tracker": {
-      "name": "Project Tracker",
+    "tracker": {
+      "name": "Tracker",
       "tagline": "Projects, tasks, and time — in the field and on the desk.",
       "description": "Plan work, track tasks on Kanban, log time, and keep files and notifications in sync across web, mobile, and desktop.",
       "capabilities": [
@@ -301,33 +301,33 @@
       "modules": [
         {
           "name": "My Projects & Tasks",
-          "summary": "My Projects & Tasks workflows inside Project Tracker."
+          "summary": "My Projects & Tasks workflows inside Tracker."
         },
         {
           "name": "Kanban",
-          "summary": "Kanban workflows inside Project Tracker."
+          "summary": "Kanban workflows inside Tracker."
         },
         {
           "name": "Time entry",
-          "summary": "Time entry workflows inside Project Tracker."
+          "summary": "Time entry workflows inside Tracker."
         },
         {
           "name": "Files & notifications",
-          "summary": "Files & notifications workflows inside Project Tracker."
+          "summary": "Files & notifications workflows inside Tracker."
         },
         {
           "name": "Gantt & reports (desktop)",
-          "summary": "Gantt & reports (desktop) workflows inside Project Tracker."
+          "summary": "Gantt & reports (desktop) workflows inside Tracker."
         }
       ],
       "faq": [
         {
-          "question": "Which channels does Project Tracker support?",
-          "answer": "Project Tracker is available on web, mobile, desktop. Availability by plan may vary — ask sales for your rollout."
+          "question": "Which channels does Tracker support?",
+          "answer": "Tracker is available on web, mobile, desktop. Availability by plan may vary — ask sales for your rollout."
         },
         {
-          "question": "Is Project Tracker available offline?",
-          "answer": "Field-oriented channels for Project Tracker are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+          "question": "Is Tracker available offline?",
+          "answer": "Field-oriented channels for Tracker are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
         },
         {
           "question": "How do we get started?",
@@ -1050,7 +1050,7 @@
     },
     "2026-05-roadmap": {
       "title": "Product catalog published",
-      "summary": "Flagship focus on Project Tracker across web, mobile, and desktop — with Go Van, Delivery, and more products on the roadmap."
+      "summary": "Flagship focus on Tracker across web, mobile, and desktop — with Go Van, Delivery, and more products on the roadmap."
     }
   },
   "pricing": {
@@ -1059,7 +1059,7 @@
       "description": "Core modules for smaller teams getting started on ZatGo.",
       "features": [
         "1 company / site",
-        "Project Tracker (web + mobile)",
+        "Tracker (web + mobile)",
         "Standard support",
         "Product updates",
         "Documentation & tutorials"
@@ -1097,7 +1097,7 @@
       "description": "Discounted campus and training deployments for schools and institutes.",
       "features": [
         "Campus / multi-lab sites",
-        "Project Tracker + selected field apps",
+        "Tracker + selected field apps",
         "Desktop tools for labs",
         "Student / staff portals (selected)",
         "Education support hours",
@@ -1122,10 +1122,10 @@
   "docsHub": {
     "guides": {
       "title": "Product guides",
-      "description": "Setup and day-to-day use for Project Tracker, Go Van, Delivery, and more."
+      "description": "Setup and day-to-day use for Tracker, Go Van, Delivery, and more."
     },
-    "project-tracker": {
-      "title": "Project Tracker guide",
+    "tracker": {
+      "title": "Tracker guide",
       "description": "Projects, tasks, Kanban, time entry, and multi-channel sync."
     },
     "go-van": {
@@ -1154,8 +1154,8 @@
     }
   },
   "tutorials": {
-    "get-started-project-tracker": {
-      "title": "Get started with Project Tracker",
+    "get-started-tracker": {
+      "title": "Get started with Tracker",
       "description": "Create your first project, add tasks, and sync between web and mobile.",
       "audience": "Project managers",
       "duration": "15 min"

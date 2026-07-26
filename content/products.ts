@@ -18,7 +18,7 @@ export type LocalizedProduct = ProductMeta & {
 
 export const products: ProductMeta[] = [
   {
-    slug: "project-tracker",
+    slug: "tracker",
     channels: ["web", "mobile", "desktop"],
     status: "available",
     highlight: true,

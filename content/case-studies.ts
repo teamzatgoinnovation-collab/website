@@ -8,12 +8,12 @@ export const caseStudies: CaseStudyMeta[] = [
   {
     id: "regional-distribution",
     slug: "regional-distribution",
-    productSlugs: ["go-van", "delivery", "project-tracker", "customer-portal"],
+    productSlugs: ["go-van", "delivery", "tracker", "customer-portal"],
   },
   {
     id: "campus-projects",
     slug: "campus-projects",
-    productSlugs: ["project-tracker", "vendor-portal"],
+    productSlugs: ["tracker", "vendor-portal"],
   },
   {
     id: "field-service-fleet",

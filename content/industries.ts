@@ -15,7 +15,7 @@ export const industries: IndustryMeta[] = [
   },
   {
     slug: "projects",
-    products: ["project-tracker", "field-service", "hr"],
+    products: ["tracker", "field-service", "hr"],
   },
   {
     slug: "hospitality",
@@ -38,7 +38,7 @@ export const solutions: SolutionMeta[] = [
   },
   {
     slug: "project-delivery",
-    products: ["project-tracker", "hr", "report-studio"],
+    products: ["tracker", "hr", "report-studio"],
   },
   {
     slug: "back-office",

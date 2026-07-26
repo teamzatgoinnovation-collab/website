@@ -62,7 +62,7 @@
     "requestDemo": "Request a demo",
     "productsEyebrow": "Products",
     "productsTitle": "Built for ops, shipped to every channel",
-    "productsDesc": "Start with Project Tracker, then expand into van sales, delivery, warehouse, HR, CRM, and back office.",
+    "productsDesc": "Start with Tracker, then expand into van sales, delivery, warehouse, HR, CRM, and back office.",
     "allProducts": "All products",
     "channelsEyebrow": "Channels",
     "channelsTitle": "Mobile, desktop, and web — same platform",
@@ -70,7 +70,7 @@
     "channelMobileTitle": "Mobile",
     "channelMobileBody": "Apps for field and offline-first work — Go Van, Delivery, Warehouse, and more.",
     "channelDesktopTitle": "Desktop",
-    "channelDesktopBody": "Tools for power users — Project Tracker Pro, ZatGo POS, Accounting, Fleet.",
+    "channelDesktopBody": "Tools for power users — Tracker Pro, ZatGo POS, Accounting, Fleet.",
     "channelWebTitle": "Web",
     "channelWebBody": "Portals and dashboards for customers, vendors, admins, and executives.",
     "viewChannel": "View",
@@ -107,7 +107,7 @@
   },
   "productsPage": {
     "title": "Products",
-    "metaDescription": "ZatGo product catalog — Project Tracker, Go Van, Delivery, warehouse, HR, CRM, POS, and more.",
+    "metaDescription": "ZatGo product catalog — Tracker, Go Van, Delivery, warehouse, HR, CRM, POS, and more.",
     "eyebrow": "Products",
     "heading": "The ZatGo product catalog",
     "description": "Apps for field, floor, and office — one platform your whole team can use.",
@@ -229,7 +229,7 @@
       },
       {
         "question": "Can we mix field and desktop apps?",
-        "answer": "Yes. Most customers start with Project Tracker and add Go Van, Delivery, Warehouse, or desktop tools as needed."
+        "answer": "Yes. Most customers start with Tracker and add Go Van, Delivery, Warehouse, or desktop tools as needed."
       }
     ]
   },
@@ -246,7 +246,7 @@
     "email": "Work email",
     "company": "Company",
     "interest": "Interest",
-    "interestPlaceholder": "e.g. Project Tracker + Delivery",
+    "interestPlaceholder": "e.g. Tracker + Delivery",
     "message": "Message",
     "submit": "Request a demo",
     "sending": "Sending…",
@@ -314,8 +314,8 @@
     "body": "That route is not part of the marketing site. Try products, downloads, or docs."
   },
   "products": {
-    "project-tracker": {
-      "name": "Project Tracker",
+    "tracker": {
+      "name": "Tracker",
       "tagline": "Projects, tasks, and time — in the field and on the desk.",
       "description": "Plan work, track tasks on Kanban, log time, and keep files and notifications in sync across web, mobile, and desktop.",
       "capabilities": [
@@ -328,33 +328,33 @@
       "modules": [
         {
           "name": "My Projects & Tasks",
-          "summary": "My Projects & Tasks workflows inside Project Tracker."
+          "summary": "My Projects & Tasks workflows inside Tracker."
         },
         {
           "name": "Kanban",
-          "summary": "Kanban workflows inside Project Tracker."
+          "summary": "Kanban workflows inside Tracker."
         },
         {
           "name": "Time entry",
-          "summary": "Time entry workflows inside Project Tracker."
+          "summary": "Time entry workflows inside Tracker."
         },
         {
           "name": "Files & notifications",
-          "summary": "Files & notifications workflows inside Project Tracker."
+          "summary": "Files & notifications workflows inside Tracker."
         },
         {
           "name": "Gantt & reports (desktop)",
-          "summary": "Gantt & reports (desktop) workflows inside Project Tracker."
+          "summary": "Gantt & reports (desktop) workflows inside Tracker."
         }
       ],
       "faq": [
         {
-          "question": "Which channels does Project Tracker support?",
-          "answer": "Project Tracker is available on web, mobile, desktop. Availability by plan may vary — ask sales for your rollout."
+          "question": "Which channels does Tracker support?",
+          "answer": "Tracker is available on web, mobile, desktop. Availability by plan may vary — ask sales for your rollout."
         },
         {
-          "question": "Is Project Tracker available offline?",
-          "answer": "Field-oriented channels for Project Tracker are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+          "question": "Is Tracker available offline?",
+          "answer": "Field-oriented channels for Tracker are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
         },
         {
           "question": "How do we get started?",
@@ -1077,7 +1077,7 @@
     },
     "2026-05-roadmap": {
       "title": "Product catalog published",
-      "summary": "Flagship focus on Project Tracker across web, mobile, and desktop — with Go Van, Delivery, and more products on the roadmap."
+      "summary": "Flagship focus on Tracker across web, mobile, and desktop — with Go Van, Delivery, and more products on the roadmap."
     }
   },
   "pricing": {
@@ -1086,7 +1086,7 @@
       "description": "Core modules for smaller teams getting started on ZatGo.",
       "features": [
         "1 company / site",
-        "Project Tracker (web + mobile)",
+        "Tracker (web + mobile)",
         "Standard support",
         "Product updates",
         "Documentation & tutorials"
@@ -1124,7 +1124,7 @@
       "description": "Discounted campus and training deployments for schools and institutes.",
       "features": [
         "Campus / multi-lab sites",
-        "Project Tracker + selected field apps",
+        "Tracker + selected field apps",
         "Desktop tools for labs",
         "Student / staff portals (selected)",
         "Education support hours",
@@ -1149,10 +1149,10 @@
   "docsHub": {
     "guides": {
       "title": "Product guides",
-      "description": "Setup and day-to-day use for Project Tracker, Go Van, Delivery, and more."
+      "description": "Setup and day-to-day use for Tracker, Go Van, Delivery, and more."
     },
-    "project-tracker": {
-      "title": "Project Tracker guide",
+    "tracker": {
+      "title": "Tracker guide",
       "description": "Projects, tasks, Kanban, time entry, and multi-channel sync."
     },
     "go-van": {
@@ -1181,8 +1181,8 @@
     }
   },
   "tutorials": {
-    "get-started-project-tracker": {
-      "title": "Get started with Project Tracker",
+    "get-started-tracker": {
+      "title": "Get started with Tracker",
       "description": "Create your first project, add tasks, and sync between web and mobile.",
       "audience": "Project managers",
       "duration": "15 min"
@@ -1427,7 +1427,7 @@
       "summary": "A multi-branch distributor moved van sales and deliveries onto mobile apps with live desk visibility.",
       "industry": "Wholesale distribution",
       "challenge": "Reps carried paper orders; warehouse and finance reconciled days later, and branch managers lacked a live picture of routes.",
-      "approach": "Rolled out Go Van and Delivery for the field, with Project Tracker for internal ops projects and a customer portal for order status.",
+      "approach": "Rolled out Go Van and Delivery for the field, with Tracker for internal ops projects and a customer portal for order status.",
       "outcome": "Same-day order capture, fewer missed collections, and branch leads reviewing routes without chasing spreadsheets."
     },
     "campus-projects": {
@@ -1435,7 +1435,7 @@
       "summary": "A university facilities team unified capital projects, contractors, and time logs across web and mobile.",
       "industry": "Higher education",
       "challenge": "Projects lived in email and shared drives; contractors and staff used different tools, so status meetings became archaeology.",
-      "approach": "Adopted Project Tracker on web, desktop, and mobile, with vendor portal access for key contractors.",
+      "approach": "Adopted Tracker on web, desktop, and mobile, with vendor portal access for key contractors.",
       "outcome": "Shared boards and time entries replaced status chase-downs; leadership sees portfolio progress in one view."
     },
     "field-service-fleet": {

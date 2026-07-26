@@ -61,7 +61,7 @@
     "requestDemo": "اطلب عرضًا",
     "productsEyebrow": "المنتجات",
     "productsTitle": "مبنية للعمليات، ومتاحة عبر كل القنوات",
-    "productsDesc": "ابدأ بـ Project Tracker ثم وسّع إلى مبيعات السيارة والتوصيل والمستودع والموارد البشرية وإدارة العملاء.",
+    "productsDesc": "ابدأ بـ Tracker ثم وسّع إلى مبيعات السيارة والتوصيل والمستودع والموارد البشرية وإدارة العملاء.",
     "allProducts": "كل المنتجات",
     "channelsEyebrow": "القنوات",
     "channelsTitle": "جوال وسطح مكتب وويب — منصة واحدة",
@@ -69,7 +69,7 @@
     "channelMobileTitle": "الجوال",
     "channelMobileBody": "تطبيقات للعمل الميداني وأوفلاين — Go Van والتوصيل والمستودع والمزيد.",
     "channelDesktopTitle": "سطح المكتب",
-    "channelDesktopBody": "أدوات للمستخدمين المتقدمين — Project Tracker Pro وZatGo POS والمحاسبة والأسطول.",
+    "channelDesktopBody": "أدوات للمستخدمين المتقدمين — Tracker Pro وZatGo POS والمحاسبة والأسطول.",
     "channelWebTitle": "الويب",
     "channelWebBody": "بوابات ولوحات للعملاء والموردين والمديرين والتنفيذيين.",
     "viewChannel": "عرض",
@@ -93,7 +93,7 @@
   },
   "productsPage": {
     "title": "المنتجات",
-    "metaDescription": "كتالوج منتجات ZatGo — Project Tracker وGo Van والتوصيل والمستودع والمزيد.",
+    "metaDescription": "كتالوج منتجات ZatGo — Tracker وGo Van والتوصيل والمستودع والمزيد.",
     "eyebrow": "المنتجات",
     "heading": "كتالوج منتجات ZatGo",
     "description": "تطبيقات للميدان والطابق والمكتب — منصة واحدة لفريقك.",
@@ -208,7 +208,7 @@
       },
       {
         "question": "Can we mix field and desktop apps?",
-        "answer": "Yes. Most customers start with Project Tracker and add Go Van, Delivery, Warehouse, or desktop tools as needed."
+        "answer": "Yes. Most customers start with Tracker and add Go Van, Delivery, Warehouse, or desktop tools as needed."
       }
     ]
   },
@@ -225,7 +225,7 @@
     "email": "البريد الوظيفي",
     "company": "الشركة",
     "interest": "الاهتمام",
-    "interestPlaceholder": "مثلًا Project Tracker + Delivery",
+    "interestPlaceholder": "مثلًا Tracker + Delivery",
     "message": "الرسالة",
     "submit": "اطلب عرضًا",
     "sending": "جارٍ الإرسال…",
@@ -287,8 +287,8 @@
     "body": "هذا المسار ليس جزءًا من موقع التسويق. جرّب المنتجات أو التنزيلات أو الوثائق."
   },
   "products": {
-    "project-tracker": {
-      "name": "Project Tracker",
+    "tracker": {
+      "name": "Tracker",
       "tagline": "مشاريع ومهام ووقت — في الميدان وعلى المكتب.",
       "description": "خطط للعمل وتتبع المهام على كانبان وسجّل الوقت واحتفظ بالملفات والإشعارات متزامنة عبر الويب والجوال وسطح المكتب.",
       "capabilities": [
@@ -301,33 +301,33 @@
       "modules": [
         {
           "name": "My Projects & Tasks",
-          "summary": "My Projects & Tasks workflows inside Project Tracker."
+          "summary": "My Projects & Tasks workflows inside Tracker."
         },
         {
           "name": "Kanban",
-          "summary": "Kanban workflows inside Project Tracker."
+          "summary": "Kanban workflows inside Tracker."
         },
         {
           "name": "Time entry",
-          "summary": "Time entry workflows inside Project Tracker."
+          "summary": "Time entry workflows inside Tracker."
         },
         {
           "name": "Files & notifications",
-          "summary": "Files & notifications workflows inside Project Tracker."
+          "summary": "Files & notifications workflows inside Tracker."
         },
         {
           "name": "Gantt & reports (desktop)",
-          "summary": "Gantt & reports (desktop) workflows inside Project Tracker."
+          "summary": "Gantt & reports (desktop) workflows inside Tracker."
         }
       ],
       "faq": [
         {
-          "question": "Which channels does Project Tracker support?",
-          "answer": "Project Tracker is available on web, mobile, desktop. Availability by plan may vary — ask sales for your rollout."
+          "question": "Which channels does Tracker support?",
+          "answer": "Tracker is available on web, mobile, desktop. Availability by plan may vary — ask sales for your rollout."
         },
         {
-          "question": "Is Project Tracker available offline?",
-          "answer": "Field-oriented channels for Project Tracker are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+          "question": "Is Tracker available offline?",
+          "answer": "Field-oriented channels for Tracker are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
         },
         {
           "question": "How do we get started?",
@@ -1050,7 +1050,7 @@
     },
     "2026-05-roadmap": {
       "title": "نشر كتالوج المنتجات",
-      "summary": "التركيز على Project Tracker عبر الويب والجوال وسطح المكتب — مع Go Van والتوصيل والمزيد على خارطة الطريق."
+      "summary": "التركيز على Tracker عبر الويب والجوال وسطح المكتب — مع Go Van والتوصيل والمزيد على خارطة الطريق."
     }
   },
   "pricing": {
@@ -1059,7 +1059,7 @@
       "description": "وحدات أساسية للفرق الصغيرة التي تبدأ مع ZatGo.",
       "features": [
         "شركة / موقع واحد",
-        "Project Tracker (ويب + جوال)",
+        "Tracker (ويب + جوال)",
         "دعم قياسي",
         "تحديثات المنتج",
         "وثائق ودروس"
@@ -1097,7 +1097,7 @@
       "description": "Discounted campus and training deployments for schools and institutes.",
       "features": [
         "Campus / multi-lab sites",
-        "Project Tracker + selected field apps",
+        "Tracker + selected field apps",
         "Desktop tools for labs",
         "Student / staff portals (selected)",
         "Education support hours",
@@ -1122,10 +1122,10 @@
   "docsHub": {
     "guides": {
       "title": "أدلة المنتجات",
-      "description": "الإعداد والاستخدام اليومي لـ Project Tracker وGo Van والتوصيل والمزيد."
+      "description": "الإعداد والاستخدام اليومي لـ Tracker وGo Van والتوصيل والمزيد."
     },
-    "project-tracker": {
-      "title": "دليل Project Tracker",
+    "tracker": {
+      "title": "دليل Tracker",
       "description": "مشاريع ومهام وكانبان وتسجيل وقت ومزامنة متعددة القنوات."
     },
     "go-van": {
@@ -1154,8 +1154,8 @@
     }
   },
   "tutorials": {
-    "get-started-project-tracker": {
-      "title": "ابدأ مع Project Tracker",
+    "get-started-tracker": {
+      "title": "ابدأ مع Tracker",
       "description": "أنشئ مشروعك الأول وأضف المهام وزامن بين الويب والجوال.",
       "audience": "مديرو المشاريع",
       "duration": "15 دقيقة"

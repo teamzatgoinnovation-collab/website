@@ -8,7 +8,7 @@ export type DocsHubLink = {
 
 export const docsHubLinks: DocsHubLink[] = [
   { id: "guides", docsPath: "/guides", category: "guides" },
-  { id: "project-tracker", docsPath: "/guides/project-tracker", category: "guides" },
+  { id: "tracker", docsPath: "/guides/tracker", category: "guides" },
   { id: "go-van", docsPath: "/guides/go-van", category: "guides" },
   { id: "delivery", docsPath: "/guides/delivery", category: "guides" },
   { id: "integrations", docsPath: "/integrations", category: "integrations" },
