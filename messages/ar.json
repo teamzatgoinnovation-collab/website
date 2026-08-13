@@ -1,14 +1,14 @@
 {
   "meta": {
-    "titleDefault": "ZatGo Innovation — عمليات تتحرك مع فرقك.",
+    "titleDefault": "ZatGo Innovation | برمجيات وحلول رقمية للأعمال",
     "titleTemplate": "%s · ZatGo",
-    "description": "منصة عمليات للمؤسسات — تطبيقات ميدانية وأدوات مكتبية وبوابات للعملاء."
+    "description": "تبني ZatGo Innovation برمجيات أعمال حديثة — تخطيط موارد المؤسسات، والمحاسبة، والفوترة الإلكترونية، ومبيعات السيارات، وإدارة علاقات العملاء، والمخزون — للشركات في المملكة العربية السعودية ودول الخليج وخارجها."
   },
   "brand": {
     "name": "ZatGo",
     "legalName": "ZatGo Innovation",
-    "tagline": "عمليات تتحرك مع فرقك.",
-    "footerNote": "برمجيات تشغيل للفرق الحديثة"
+    "tagline": "تقنية تساعد عملك على التقدم إلى الأمام.",
+    "footerNote": "برمجيات أعمال للفرق الحديثة"
   },
   "nav": {
     "products": "المنتجات",
@@ -56,9 +56,9 @@
     "requestDemo": "اطلب عرضًا"
   },
   "home": {
-    "supporting": "تطبيقات ميدانية وأدوات مكتبية وبوابات — منصة واحدة لطريقة عمل فرقك.",
+    "supporting": "تبني ZatGo Innovation برمجيات أعمال حديثة تُبسّط العمليات وتُؤتمت سير العمل وتساعد الشركات على النمو — من تخطيط الموارد والمحاسبة إلى مبيعات السيارات والفوترة الإلكترونية.",
     "exploreProducts": "استكشف المنتجات",
-    "requestDemo": "اطلب عرضًا",
+    "requestDemo": "تواصل معنا",
     "productsEyebrow": "المنتجات",
     "productsTitle": "مبنية للعمليات، ومتاحة عبر كل القنوات",
     "productsDesc": "ابدأ بـ Tracker ثم وسّع إلى مبيعات السيارة والتوصيل والمستودع والموارد البشرية وإدارة العملاء.",
@@ -1345,9 +1345,9 @@
   },
   "aboutPage": {
     "title": "About",
-    "metaDescription": "About ZatGo Innovation — operations software for modern teams.",
+    "metaDescription": "ZatGo Innovation شركة تقنية تبني برمجيات أعمال حديثة — تخطيط موارد المؤسسات، والمحاسبة، والفوترة الإلكترونية، ومبيعات السيارات، وإدارة علاقات العملاء، وأدوات المخزون.",
     "eyebrow": "Company",
-    "heading": "Operations software built with field teams in mind",
+    "heading": "شركة تقنية تركّز على برمجيات أعمال عملية وقابلة للتوسّع",
     "intro": "ZatGo Innovation builds mobile, desktop, and web products that help organizations run projects, sales, delivery, warehouse, and back-office work in one connected family of apps.",
     "missionTitle": "Mission",
     "missionBody": "Make day-to-day operations clear for every role — on the road, on the floor, and at the desk.",

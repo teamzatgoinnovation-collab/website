@@ -26,32 +26,57 @@ export function getDocsUrl(path = "/"): string {
   return normalized.startsWith("/docs") ? normalized : `/docs${normalized}`;
 }
 
-export const primaryNav = [
-  { href: "/products", key: "products" as const },
-  { href: "/downloads", key: "downloads" as const },
-  { href: "/docs", key: "docs" as const },
-  { href: "/tutorials", key: "tutorials" as const },
-  { href: "/updates", key: "updates" as const },
-  { href: "/pricing", key: "pricing" as const },
+export type NavLinkEntry = { type: "link"; href: string; key: string };
+export type NavDropdownEntry = {
+  type: "dropdown";
+  key: string;
+  items: { href: string; key: string }[];
+};
+export type NavEntry = NavLinkEntry | NavDropdownEntry;
+
+export const primaryNav: NavEntry[] = [
+  { type: "link", href: "/products", key: "products" },
+  { type: "link", href: "/solutions", key: "solutions" },
+  { type: "link", href: "/industries", key: "industries" },
+  {
+    type: "dropdown",
+    key: "company",
+    items: [
+      { href: "/about", key: "about" },
+      { href: "/careers", key: "careers" },
+      { href: "/partners", key: "partners" },
+      { href: "/pricing", key: "pricing" },
+    ],
+  },
+  {
+    type: "dropdown",
+    key: "resources",
+    items: [
+      { href: "/downloads", key: "downloads" },
+      { href: "/docs", key: "docs" },
+      { href: "/tutorials", key: "tutorials" },
+      { href: "/updates", key: "updates" },
+      { href: "/case-studies", key: "caseStudies" },
+    ],
+  },
 ];
 
 export const footerNav = {
   products: [
     { href: "/products", key: "allProducts" as const },
+    { href: "/solutions", key: "solutions" as const },
+    { href: "/industries", key: "industries" as const },
     { href: "/products/space", productSlug: "space" },
     { href: "/products/erpnext", productSlug: "erpnext" },
     { href: "/products/tracker", productSlug: "tracker" },
     { href: "/products/go-van", productSlug: "go-van" },
-    { href: "/products/delivery", productSlug: "delivery" },
-    { href: "/downloads", key: "downloads" as const },
   ],
   resources: [
     { href: "/docs", key: "documentation" as const },
     { href: "/tutorials", key: "tutorials" as const },
     { href: "/case-studies", key: "caseStudies" as const },
     { href: "/updates", key: "changelog" as const },
-    { href: "/industries", key: "industries" as const },
-    { href: "/solutions", key: "solutions" as const },
+    { href: "/downloads", key: "downloads" as const },
   ],
   company: [
     { href: "/about", key: "about" as const },

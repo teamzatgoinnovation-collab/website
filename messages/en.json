@@ -1,23 +1,33 @@
 {
   "meta": {
-    "titleDefault": "ZatGo Innovation — Operations that move with your teams.",
+    "titleDefault": "ZatGo Innovation | Business Software & Digital Solutions",
     "titleTemplate": "%s · ZatGo",
-    "description": "Enterprise operations platform — field apps, back-office tools, and customer portals."
+    "description": "ZatGo Innovation builds modern business software — ERP, accounting, e-invoicing, van sales, CRM, and inventory — for businesses across Saudi Arabia, the GCC, and beyond."
   },
   "brand": {
     "name": "ZatGo",
     "legalName": "ZatGo Innovation",
-    "tagline": "Operations that move with your teams.",
-    "footerNote": "Operations software for modern teams"
+    "tagline": "Technology that helps your business move forward.",
+    "footerNote": "Business software for modern teams"
   },
   "nav": {
     "products": "Products",
+    "solutions": "Solutions",
+    "industries": "Industries",
+    "company": "Company",
+    "resources": "Resources",
     "downloads": "Downloads",
     "docs": "Docs",
     "tutorials": "Tutorials",
     "updates": "Updates",
+    "caseStudies": "Case studies",
     "pricing": "Pricing",
+    "about": "About",
+    "careers": "Careers",
+    "partners": "Partners",
     "contact": "Contact",
+    "getStarted": "Get started",
+    "talkToUs": "Talk to us",
     "language": "Language"
   },
   "footer": {
@@ -57,9 +67,30 @@
     "requestDemo": "Request a demo"
   },
   "home": {
-    "supporting": "Field apps, desktop tools, and portals — one platform for how your teams work.",
+    "supporting": "ZatGo Innovation builds modern business software that simplifies operations, automates workflows, and helps businesses grow — from ERP and accounting to van sales and e-invoicing.",
     "exploreProducts": "Explore products",
-    "requestDemo": "Request a demo",
+    "requestDemo": "Talk to us",
+    "trustBuilt": "Built for modern businesses",
+    "trustRegion": "Saudi Arabia & GCC focused",
+    "trustScale": "Scalable architecture",
+    "trustSecure": "Secure business data",
+    "trustCloud": "Cloud-ready",
+    "trustChannels": "Mobile & web solutions",
+    "ecosystemEyebrow": "Ecosystem",
+    "ecosystemTitle": "One connected platform for the whole business",
+    "ecosystemDesc": "ZatGo Innovation's product family covers the full operating picture — from the back office to the field.",
+    "ecosystemErpTitle": "Business Management & ERP",
+    "ecosystemErpBody": "Space, ERPNext, Admin Console",
+    "ecosystemFinanceTitle": "Accounting & E-Invoicing",
+    "ecosystemFinanceBody": "Accounting, Report Studio, BI Dashboard",
+    "ecosystemFieldTitle": "Field & Van Sales",
+    "ecosystemFieldBody": "Go Van, Delivery, Field Service",
+    "ecosystemCrmTitle": "CRM & Customer Relationships",
+    "ecosystemCrmBody": "CRM, Customer Portal, Vendor Portal",
+    "ecosystemInventoryTitle": "Inventory & Warehouse",
+    "ecosystemInventoryBody": "Warehouse, Fleet, ZatGo POS",
+    "ecosystemOpsTitle": "Projects & Workforce",
+    "ecosystemOpsBody": "Tracker, HR, Sales Executive",
     "productsEyebrow": "Products",
     "productsTitle": "Built for ops, shipped to every channel",
     "productsDesc": "Start with Tracker, then expand into van sales, delivery, warehouse, HR, CRM, and back office.",
@@ -1372,17 +1403,46 @@
   },
   "aboutPage": {
     "title": "About",
-    "metaDescription": "About ZatGo Innovation — operations software for modern teams.",
+    "metaDescription": "ZatGo Innovation is a technology company building modern business software — ERP, accounting, e-invoicing, van sales, CRM, and inventory tools.",
     "eyebrow": "Company",
-    "heading": "Operations software built with field teams in mind",
+    "heading": "A technology company focused on practical, scalable business software",
     "intro": "ZatGo Innovation builds mobile, desktop, and web products that help organizations run projects, sales, delivery, warehouse, and back-office work in one connected family of apps.",
-    "missionTitle": "Mission",
-    "missionBody": "Make day-to-day operations clear for every role — on the road, on the floor, and at the desk.",
-    "valuesTitle": "How we work",
+    "whatWeBuildTitle": "What we build",
+    "whatWeBuildBody": "One connected product family covering the full operating picture of a business:",
+    "whatWeBuildItems": [
+      "Business Management & ERP — Space, ERPNext, Admin Console",
+      "Accounting & E-Invoicing — Accounting, Report Studio, BI Dashboard",
+      "Field & Van Sales — Go Van, Delivery, Field Service",
+      "CRM & Customer Relationships — CRM, Customer Portal, Vendor Portal",
+      "Inventory & Warehouse — Warehouse, Fleet, ZatGo POS",
+      "Projects & Workforce — Tracker, HR, Sales Executive"
+    ],
+    "approachTitle": "Our approach",
+    "approachBody": "How we work when we design and ship a product:",
     "values": [
       "Products that respect offline and field reality",
       "One experience language across channels",
       "Honest roadmaps and long-term partnerships"
+    ],
+    "technologyTitle": "Our technology",
+    "technologyBody": "Modern, cloud-ready technology across every channel — mobile, desktop, and web — built to stay in sync.",
+    "technologyItems": [
+      "Flutter for mobile apps",
+      "Next.js and React for web applications",
+      "ERPNext for core business logic",
+      "PostgreSQL and SQLite for data",
+      "REST APIs for integration",
+      "Offline-first sync for field work"
+    ],
+    "missionTitle": "Mission",
+    "missionBody": "Make day-to-day operations clear for every role — on the road, on the floor, and at the desk.",
+    "visionTitle": "Vision",
+    "visionBody": "To be the technology partner businesses in Saudi Arabia, the GCC, and beyond rely on to run and grow their operations.",
+    "whyTitle": "Why ZatGo",
+    "whyItems": [
+      "Software built from real field and back-office use, not theory",
+      "One connected platform instead of disconnected point tools",
+      "A direct, long-term partnership with the teams who use it every day"
     ]
   },
   "careersPage": {

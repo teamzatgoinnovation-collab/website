@@ -1,6 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ArrowRight, BookOpen, Download, GraduationCap, Newspaper } from "lucide-react";
 
+import { EcosystemDiagram } from "@/components/ecosystem-diagram";
 import { HeroBackdrop } from "@/components/hero-backdrop";
 import { HeroMotion, MotionReveal } from "@/components/motion-reveal";
 import { ProductCard } from "@/components/product-card";
@@ -56,6 +57,34 @@ export default async function HomePage({ params }: Props) {
           </HeroMotion>
         </div>
       </section>
+
+      <MotionReveal className="border-y border-m-line px-6 py-6">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-8 gap-y-3 text-center text-xs font-semibold uppercase tracking-[0.1em] text-m-muted sm:justify-between">
+          {[
+            t("trustBuilt"),
+            t("trustRegion"),
+            t("trustScale"),
+            t("trustSecure"),
+            t("trustCloud"),
+            t("trustChannels"),
+          ].map((label) => (
+            <span key={label}>{label}</span>
+          ))}
+        </div>
+      </MotionReveal>
+
+      <Section surface>
+        <MotionReveal>
+          <SectionHeading
+            eyebrow={t("ecosystemEyebrow")}
+            title={t("ecosystemTitle")}
+            description={t("ecosystemDesc")}
+          />
+        </MotionReveal>
+        <MotionReveal delay={0.05}>
+          <EcosystemDiagram />
+        </MotionReveal>
+      </Section>
 
       <Section>
         <MotionReveal>

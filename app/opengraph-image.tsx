@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "ZatGo Innovation — Operations that move with your teams";
+export const alt = "ZatGo Innovation — Technology that helps your business move forward";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -32,8 +32,8 @@ export default function OpenGraphImage() {
               width: 56,
               height: 56,
               borderRadius: 12,
-              background: "#1c2834",
-              color: "#f4f7f9",
+              background: "#2952e3",
+              color: "#ffffff",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -59,11 +59,11 @@ export default function OpenGraphImage() {
               letterSpacing: "-0.035em",
             }}
           >
-            Operations that move with your teams.
+            Technology that helps your business move forward.
           </div>
           <div style={{ fontSize: 24, color: "#5a6a78", maxWidth: 820, lineHeight: 1.4 }}>
-            Field apps, desktop tools, and portals — one platform for how your
-            teams work.
+            Modern business software that simplifies operations, automates
+            workflows, and helps businesses grow.
           </div>
         </div>
         <div
@@ -71,13 +71,13 @@ export default function OpenGraphImage() {
             display: "flex",
             alignItems: "center",
             gap: 12,
-            color: "#0f7a7a",
+            color: "#2952e3",
             fontSize: 20,
             fontWeight: 600,
             letterSpacing: "-0.01em",
           }}
         >
-          Enterprise operations platform
+          Business software & digital solutions
         </div>
       </div>
     ),

@@ -25,7 +25,10 @@ export default async function AboutPage({ params }: Props) {
   setRequestLocale(locale);
   const t = await getTranslations("aboutPage");
   const tNav = await getTranslations("nav");
+  const whatWeBuildItems = t.raw("whatWeBuildItems") as string[];
   const values = t.raw("values") as string[];
+  const technologyItems = t.raw("technologyItems") as string[];
+  const whyItems = t.raw("whyItems") as string[];
 
   return (
     <CompanyPageShell
@@ -33,18 +36,32 @@ export default async function AboutPage({ params }: Props) {
       heading={t("heading")}
       description={t("intro")}
     >
-      <div className="grid gap-10 md:grid-cols-2">
+      <MotionReveal>
+        <h2 className="font-display text-2xl font-bold text-[var(--m-ink)]">
+          {t("whatWeBuildTitle")}
+        </h2>
+        <p className="mt-3 max-w-2xl leading-relaxed text-[var(--m-muted)]">
+          {t("whatWeBuildBody")}
+        </p>
+        <ul className="mt-5 grid gap-3 sm:grid-cols-2">
+          {whatWeBuildItems.map((item) => (
+            <li
+              key={item}
+              className="border-l-2 border-[var(--m-accent)] pl-4 text-sm leading-relaxed text-[var(--m-muted)]"
+            >
+              {item}
+            </li>
+          ))}
+        </ul>
+      </MotionReveal>
+
+      <div className="mt-14 grid gap-10 border-t border-m-line pt-12 md:grid-cols-2">
         <MotionReveal>
           <h2 className="font-display text-2xl font-bold text-[var(--m-ink)]">
-            {t("missionTitle")}
+            {t("approachTitle")}
           </h2>
-          <p className="mt-3 leading-relaxed text-[var(--m-muted)]">{t("missionBody")}</p>
-        </MotionReveal>
-        <MotionReveal delay={0.08}>
-          <h2 className="font-display text-2xl font-bold text-[var(--m-ink)]">
-            {t("valuesTitle")}
-          </h2>
-          <ul className="mt-3 space-y-2.5">
+          <p className="mt-3 leading-relaxed text-[var(--m-muted)]">{t("approachBody")}</p>
+          <ul className="mt-4 space-y-2.5">
             {values.map((value) => (
               <li key={value} className="flex gap-3 text-[var(--m-muted)]">
                 <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--m-accent)]" />
@@ -53,7 +70,55 @@ export default async function AboutPage({ params }: Props) {
             ))}
           </ul>
         </MotionReveal>
+        <MotionReveal delay={0.08}>
+          <h2 className="font-display text-2xl font-bold text-[var(--m-ink)]">
+            {t("technologyTitle")}
+          </h2>
+          <p className="mt-3 leading-relaxed text-[var(--m-muted)]">
+            {t("technologyBody")}
+          </p>
+          <ul className="mt-4 flex flex-wrap gap-2">
+            {technologyItems.map((item) => (
+              <li
+                key={item}
+                className="rounded-full border border-m-line bg-[var(--m-surface)] px-3 py-1.5 text-xs font-medium text-[var(--m-ink)]"
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+        </MotionReveal>
       </div>
+
+      <div className="mt-14 grid gap-10 border-t border-m-line pt-12 md:grid-cols-2">
+        <MotionReveal>
+          <h2 className="font-display text-2xl font-bold text-[var(--m-ink)]">
+            {t("missionTitle")}
+          </h2>
+          <p className="mt-3 leading-relaxed text-[var(--m-muted)]">{t("missionBody")}</p>
+        </MotionReveal>
+        <MotionReveal delay={0.08}>
+          <h2 className="font-display text-2xl font-bold text-[var(--m-ink)]">
+            {t("visionTitle")}
+          </h2>
+          <p className="mt-3 leading-relaxed text-[var(--m-muted)]">{t("visionBody")}</p>
+        </MotionReveal>
+      </div>
+
+      <MotionReveal className="mt-14 border-t border-m-line pt-12">
+        <h2 className="font-display text-2xl font-bold text-[var(--m-ink)]">
+          {t("whyTitle")}
+        </h2>
+        <ul className="mt-4 space-y-2.5">
+          {whyItems.map((item) => (
+            <li key={item} className="flex gap-3 text-[var(--m-muted)]">
+              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--m-accent)]" />
+              {item}
+            </li>
+          ))}
+        </ul>
+      </MotionReveal>
+
       <p className="mt-12">
         <Link
           href="/contact"

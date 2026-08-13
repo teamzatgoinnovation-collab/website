@@ -4,8 +4,8 @@
   --font-sans: var(--font-poppins, "Poppins"), ui-sans-serif, system-ui, sans-serif;
   --color-background: oklch(0.985 0.005 240);
   --color-foreground: oklch(0.22 0.028 250);
-  --color-primary: oklch(0.42 0.1 200);
-  --color-primary-foreground: oklch(0.99 0.005 200);
+  --color-primary: #2952e3;
+  --color-primary-foreground: #ffffff;
   --color-muted: oklch(0.965 0.008 240);
   --color-muted-foreground: oklch(0.48 0.02 250);
   --color-border: oklch(0.86 0.012 240);
@@ -24,21 +24,21 @@ body {
 }
 
 :root {
-  /* Enterprise cool slate + precise teal signal */
+  /* ZatGo brand — Royal Blue accent on a cool neutral slate */
   --color-background: oklch(0.985 0.005 240);
   --color-foreground: oklch(0.22 0.028 250);
-  --m-accent: oklch(0.42 0.1 200);
-  --m-accent-soft: oklch(0.94 0.03 200);
-  --m-accent-foreground: oklch(0.99 0.005 200);
+  --m-accent: #2952e3;
+  --m-accent-soft: color-mix(in oklch, #2952e3 12%, white);
+  --m-accent-foreground: #ffffff;
   --m-surface: oklch(0.972 0.006 240);
   --m-surface-elevated: oklch(1 0 0);
   --m-ink: oklch(0.22 0.028 250);
   --m-ink-muted: oklch(0.48 0.02 250);
   --m-line: oklch(0.86 0.012 240);
-  --m-hero-a: oklch(0.9 0.04 200);
-  --m-hero-b: oklch(0.955 0.018 235);
-  --m-hero-c: oklch(0.92 0.028 175);
-  --m-glow: oklch(0.62 0.1 200 / 0.28);
+  --m-hero-a: color-mix(in oklch, #2952e3 16%, white);
+  --m-hero-b: color-mix(in oklch, #5b7fff 9%, white);
+  --m-hero-c: color-mix(in oklch, #2952e3 11%, white);
+  --m-glow: color-mix(in oklch, #2952e3 28%, transparent);
   --m-font-display: var(--font-poppins, "Poppins"), ui-sans-serif, system-ui, sans-serif;
   --m-font-body: var(--font-poppins, "Poppins"), ui-sans-serif, system-ui, sans-serif;
   --m-ease: cubic-bezier(0.22, 1, 0.36, 1);
@@ -48,18 +48,18 @@ body {
 }
 
 .dark {
-  --m-accent: oklch(0.76 0.1 200);
-  --m-accent-soft: oklch(0.26 0.04 200);
+  --m-accent: #5b7fff;
+  --m-accent-soft: color-mix(in oklch, #5b7fff 20%, black);
   --m-accent-foreground: oklch(0.14 0.02 250);
   --m-surface: oklch(0.18 0.018 250);
   --m-surface-elevated: oklch(0.22 0.02 250);
   --m-ink: oklch(0.96 0.008 95);
   --m-ink-muted: oklch(0.72 0.018 250);
   --m-line: oklch(0.36 0.02 250);
-  --m-hero-a: oklch(0.24 0.045 200);
-  --m-hero-b: oklch(0.15 0.025 250);
-  --m-hero-c: oklch(0.22 0.035 175);
-  --m-glow: oklch(0.5 0.1 200 / 0.22);
+  --m-hero-a: color-mix(in oklch, #5b7fff 20%, oklch(0.13 0.018 250));
+  --m-hero-b: color-mix(in oklch, #2952e3 16%, oklch(0.13 0.018 250));
+  --m-hero-c: color-mix(in oklch, #5b7fff 14%, oklch(0.13 0.018 250));
+  --m-glow: color-mix(in oklch, #5b7fff 22%, transparent);
   --color-background: oklch(0.13 0.018 250);
   --color-foreground: oklch(0.96 0.008 95);
   --m-shadow-soft: 0 1px 0 color-mix(in oklch, white 4%, transparent),
