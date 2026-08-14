@@ -431,7 +431,7 @@
         }
       ]
     },
-    "go-van": {
+    "vansale": {
       "name": "ZatGo VanSale",
       "tagline": "مبيعات الطريق تعمل دون اتصال.",
       "description": "مبيعات السيارة والطرق مع طلبات أوفلاين والتحصيلات ونقل المخزون وزيارات العملاء ونظام تحديد المواقع.",
@@ -1224,7 +1224,7 @@
       "title": "دليل Tracker",
       "description": "مشاريع ومهام وكانبان وتسجيل وقت ومزامنة متعددة القنوات."
     },
-    "go-van": {
+    "vansale": {
       "title": "دليل ZatGo VanSale",
       "description": "مبيعات الطريق وطلبات أوفلاين والتحصيلات وGPS."
     },
@@ -1256,7 +1256,7 @@
       "audience": "مديرو المشاريع",
       "duration": "15 دقيقة"
     },
-    "go-van-offline-orders": {
+    "vansale-offline-orders": {
       "title": "خذ طلبات أوفلاين مع ZatGo VanSale",
       "description": "أعد مسار سيارة والتقط الطلبات بلا إشارة وزامن عند العودة.",
       "audience": "مبيعات ميدانية",
@@ -1468,6 +1468,37 @@
       }
     ]
   },
+  "vanSaleWorkflow": {
+    "eyebrow": "كيف يعمل",
+    "heading": "كل ما يحتاجه فريق مبيعات السيارات، في تطبيق واحد",
+    "description": "من المركبة إلى العميل إلى المكتب الخلفي — يغطي ZatGo VanSale سير عمل مبيعات الطريق بالكامل.",
+    "items": {
+      "offline": {
+        "title": "سير عمل أوفلاين وجوال",
+        "body": "مصمم للعمل الميداني. سجّل الطلبات والزيارات على الجوال حتى بدون اتصال — يتزامن كل شيء تلقائيًا عند عودة الاتصال."
+      },
+      "vanStock": {
+        "title": "إدارة مخزون المركبة",
+        "body": "اعرف بالضبط ما تم تحميله على كل سيارة. تُتبّع عمليات نقل المخزون بين المستودع والمركبة لحظة حدوثها."
+      },
+      "customers": {
+        "title": "إدارة العملاء",
+        "body": "تبقى كل زيارة وطلب وتفاصيل عميل منظمة ومتاحة من الميدان."
+      },
+      "collections": {
+        "title": "المدفوعات والتحصيلات",
+        "body": "سجّل المدفوعات وتتبع الأرصدة المستحقة كجزء من نفس الزيارة — دون الحاجة لنظام منفصل."
+      },
+      "routes": {
+        "title": "مبيعات المسارات",
+        "body": "GPS وسياق المسار لكل توقف، حتى تعرف دائمًا أين تقف كل سيارة ومبيعاتها."
+      },
+      "erpnext": {
+        "title": "تكامل مع ERPNext",
+        "body": "يعمل VanSale على نفس نواة ERPNext التي تشغّل بقية منصة ZatGo، بحيث تتصل بيانات مبيعات السيارات بنظام أعمالك الأوسع."
+      }
+    }
+  },
   "vanSalePricing": {
     "eyebrow": "أسعار ZatGo VanSale",
     "heading": "باقات مصممة لفرق مبيعات الطريق",
@@ -1590,6 +1621,11 @@
     "changelogTitle": "Recent updates",
     "changelogViewAll": "View all updates",
     "screenshotTitle": "Product screens",
-    "screenshotNote": "UI previews below show the product layout direction — replace with live screenshots when packs ship."
+    "screenshotNote": "UI previews below show the product layout direction — replace with live screenshots when packs ship.",
+    "pricingEyebrow": "الأسعار",
+    "pricingTitle": "أسعار هذا المنتج",
+    "pricingCustomLabel": "مخصص",
+    "pricingCustomBody": "تعتمد الأسعار على المواقع والأدوار والقنوات — شاركنا خطة الطرح وسنقدم لك عرض سعر.",
+    "pricingCta": "تواصل مع المبيعات"
   }
 }

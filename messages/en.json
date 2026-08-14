@@ -490,7 +490,7 @@
         }
       ]
     },
-    "go-van": {
+    "vansale": {
       "name": "ZatGo VanSale",
       "tagline": "Route sales that work offline.",
       "description": "Van and route sales with offline orders, collections, stock transfer, customer visits, and GPS.",
@@ -1283,7 +1283,7 @@
       "title": "Tracker guide",
       "description": "Projects, tasks, Kanban, time entry, and multi-channel sync."
     },
-    "go-van": {
+    "vansale": {
       "title": "ZatGo VanSale guide",
       "description": "Route sales, offline orders, collections, and GPS."
     },
@@ -1315,7 +1315,7 @@
       "audience": "Project managers",
       "duration": "15 min"
     },
-    "go-van-offline-orders": {
+    "vansale-offline-orders": {
       "title": "Take offline orders with ZatGo VanSale",
       "description": "Set up a van route, capture orders without signal, and sync when back online.",
       "audience": "Field sales",
@@ -1556,6 +1556,37 @@
       }
     ]
   },
+  "vanSaleWorkflow": {
+    "eyebrow": "How it works",
+    "heading": "Everything a van sales team needs, in one app",
+    "description": "From the vehicle to the customer to the back office — ZatGo VanSale covers the full route sales workflow.",
+    "items": {
+      "offline": {
+        "title": "Offline & mobile workflow",
+        "body": "Built for the field. Capture orders and visits on mobile, even without a connection — everything syncs automatically once you're back online."
+      },
+      "vanStock": {
+        "title": "Vehicle stock management",
+        "body": "Know exactly what's loaded on each van. Stock transfers between warehouse and vehicle are tracked as they happen."
+      },
+      "customers": {
+        "title": "Customer management",
+        "body": "Every visit, order, and customer detail stays organized and accessible from the field."
+      },
+      "collections": {
+        "title": "Payments & collections",
+        "body": "Record payments and track outstanding balances as part of the same visit — no separate system needed."
+      },
+      "routes": {
+        "title": "Route sales",
+        "body": "GPS and route context for every stop, so you always know where a van and its sales stand."
+      },
+      "erpnext": {
+        "title": "ERPNext integration",
+        "body": "VanSale runs on the same ERPNext core as the rest of ZatGo, so van sales data connects to your wider business system."
+      }
+    }
+  },
   "vanSalePricing": {
     "eyebrow": "ZatGo VanSale Pricing",
     "heading": "Plans built for route sales teams",
@@ -1688,7 +1719,12 @@
     },
     "ctaStripTitle": "Ready to see it in your operation?",
     "ctaStripBody": "Request a demo or compare plans — we will map this product into your rollout.",
-    "viewPricing": "View pricing"
+    "viewPricing": "View pricing",
+    "pricingEyebrow": "Pricing",
+    "pricingTitle": "Pricing for this product",
+    "pricingCustomLabel": "Custom",
+    "pricingCustomBody": "Pricing depends on sites, roles, and channels — share your rollout and we will put together a quote.",
+    "pricingCta": "Contact sales"
   },
   "caseStudiesPage": {
     "title": "Case studies",

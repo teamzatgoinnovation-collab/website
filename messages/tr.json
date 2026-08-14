@@ -431,7 +431,7 @@
         }
       ]
     },
-    "go-van": {
+    "vansale": {
       "name": "ZatGo VanSale",
       "tagline": "Çevrimdışı çalışan rota satışları.",
       "description": "Van ve rota satışları; çevrimdışı siparişler, tahsilatlar, stok transferi, müşteri ziyaretleri ve GPS.",
@@ -1224,7 +1224,7 @@
       "title": "Tracker kılavuzu",
       "description": "Projeler, görevler, Kanban, zaman girişi ve çok kanallı senkron."
     },
-    "go-van": {
+    "vansale": {
       "title": "ZatGo VanSale kılavuzu",
       "description": "Rota satışları, çevrimdışı siparişler, tahsilatlar ve GPS."
     },
@@ -1256,7 +1256,7 @@
       "audience": "Proje yöneticileri",
       "duration": "15 dk"
     },
-    "go-van-offline-orders": {
+    "vansale-offline-orders": {
       "title": "ZatGo VanSale ile çevrimdışı sipariş alın",
       "description": "Bir van rotası kurun, sinyal olmadan sipariş alın ve yeniden bağlanınca senkronlayın.",
       "audience": "Saha satış",

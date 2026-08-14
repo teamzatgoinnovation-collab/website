@@ -431,7 +431,7 @@
         }
       ]
     },
-    "go-van": {
+    "vansale": {
       "name": "ZatGo VanSale",
       "tagline": "Route sales that work offline.",
       "description": "Van and route sales with offline orders, collections, stock transfer, customer visits, and GPS.",
@@ -1224,7 +1224,7 @@
       "title": "Tracker guide",
       "description": "Projects, tasks, Kanban, time entry, and multi-channel sync."
     },
-    "go-van": {
+    "vansale": {
       "title": "ZatGo VanSale guide",
       "description": "Route sales, offline orders, collections, and GPS."
     },
@@ -1256,7 +1256,7 @@
       "audience": "Project managers",
       "duration": "15 min"
     },
-    "go-van-offline-orders": {
+    "vansale-offline-orders": {
       "title": "Take offline orders with ZatGo VanSale",
       "description": "Set up a van route, capture orders without signal, and sync when back online.",
       "audience": "Field sales",

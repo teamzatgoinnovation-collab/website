@@ -13,7 +13,7 @@ export const changelog: ChangelogMeta[] = [
     date: "2026-07-15",
     version: "0.1.0",
     tags: ["Platform", "Marketing"],
-    products: ["tracker", "go-van", "delivery", "admin-console"],
+    products: ["tracker", "vansale", "delivery", "admin-console"],
   },
   {
     id: "2026-06-stack",
@@ -29,7 +29,7 @@ export const changelog: ChangelogMeta[] = [
     tags: ["Roadmap"],
     products: [
       "tracker",
-      "go-van",
+      "vansale",
       "delivery",
       "warehouse",
       "crm",

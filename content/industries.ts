@@ -11,7 +11,7 @@ export type SolutionMeta = {
 export const industries: IndustryMeta[] = [
   {
     slug: "distribution",
-    products: ["go-van", "delivery", "warehouse", "vendor-portal"],
+    products: ["vansale", "delivery", "warehouse", "vendor-portal"],
   },
   {
     slug: "projects",
@@ -23,7 +23,7 @@ export const industries: IndustryMeta[] = [
   },
   {
     slug: "fleet-logistics",
-    products: ["fleet", "delivery", "go-van"],
+    products: ["fleet", "delivery", "vansale"],
   },
 ];
 
@@ -34,7 +34,7 @@ export const solutions: SolutionMeta[] = [
   },
   {
     slug: "field-ops",
-    products: ["go-van", "delivery", "field-service", "crm"],
+    products: ["vansale", "delivery", "field-service", "crm"],
   },
   {
     slug: "retail-pos",

@@ -69,7 +69,7 @@ export const footerNav = {
     { href: "/products/space", productSlug: "space" },
     { href: "/products/erpnext", productSlug: "erpnext" },
     { href: "/products/tracker", productSlug: "tracker" },
-    { href: "/products/go-van", productSlug: "go-van" },
+    { href: "/products/vansale", productSlug: "vansale" },
   ],
   resources: [
     { href: "/docs", key: "documentation" as const },

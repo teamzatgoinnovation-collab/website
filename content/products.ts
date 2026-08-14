@@ -35,7 +35,7 @@ export const products: ProductMeta[] = [
     status: "available",
     highlight: true,
   },
-  { slug: "go-van", channels: ["mobile"], status: "available" },
+  { slug: "vansale", channels: ["mobile"], status: "available" },
   { slug: "delivery", channels: ["mobile"], status: "available" },
   { slug: "warehouse", channels: ["mobile", "desktop"], status: "available" },
   { slug: "hr", channels: ["mobile"], status: "available" },

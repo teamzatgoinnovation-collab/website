@@ -11,8 +11,8 @@ export const tutorials: TutorialMeta[] = [
     docsPath: "/tutorials/tracker/get-started",
   },
   {
-    slug: "go-van-offline-orders",
-    docsPath: "/tutorials/go-van/offline-orders",
+    slug: "vansale-offline-orders",
+    docsPath: "/tutorials/vansale/offline-orders",
   },
   {
     slug: "delivery-pod",

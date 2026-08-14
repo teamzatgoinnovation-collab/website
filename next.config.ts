@@ -19,6 +19,16 @@ const nextConfig: NextConfig = {
     NEXT_PUBLIC_DOWNLOAD_BASE_URL:
       process.env.NEXT_PUBLIC_DOWNLOAD_BASE_URL?.trim() || downloadBase,
   },
+  async redirects() {
+    return [
+      {
+        // The go-van product slug was renamed to vansale.
+        source: "/:locale/products/go-van",
+        destination: "/:locale/products/vansale",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default withNextIntl(nextConfig);

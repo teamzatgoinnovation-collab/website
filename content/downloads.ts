@@ -142,8 +142,8 @@ export const downloads: DownloadItem[] = [
     fileName: "zatgo-tracker.AppImage",
   }),
   comingSoon({
-    id: "go-van-android",
-    productSlug: "go-van",
+    id: "vansale-android",
+    productSlug: "vansale",
     channel: "mobile",
     platform: "android",
     label: "Google Play",

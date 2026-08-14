@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 import { JsonLd } from "@/components/json-ld";
 import { MotionReveal } from "@/components/motion-reveal";
+import { ProductPricingCta } from "@/components/product-pricing-cta";
 import { Section } from "@/components/section";
 import { VanSalePricingSection } from "@/components/vansale-pricing-section";
+import { VanSaleWorkflowSection } from "@/components/vansale-workflow-section";
 import { getChangelogEntriesForProduct } from "@/content/product-extras";
 import { products } from "@/content/products";
 import { getDocsUrl } from "@/content/site";
@@ -36,7 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
   const product = await getLocalizedProductDetail(slug);
   if (!product) return { title: "Product" };
-  if (slug === "go-van") {
+  if (slug === "vansale") {
     const tPricing = await getTranslations({ locale, namespace: "vanSalePricing" });
     return buildPageMetadata({
       locale,
@@ -148,6 +150,8 @@ export default async function ProductDetailPage({ params }: Props) {
         </div>
       </MotionReveal>
 
+      {product.slug === "vansale" ? <VanSaleWorkflowSection /> : null}
+
       <MotionReveal className="mt-16 overflow-hidden rounded-[var(--m-radius)] border border-m-line bg-[color-mix(in_oklch,var(--m-accent-soft)_40%,var(--m-surface))]">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
@@ -183,54 +187,62 @@ export default async function ProductDetailPage({ params }: Props) {
         </div>
       </MotionReveal>
 
-      <div className="mt-16 grid gap-12 border-t border-m-line pt-12 md:grid-cols-2">
-        <MotionReveal>
+      {product.slug !== "vansale" ? (
+        <MotionReveal className="mt-16 border-t border-m-line pt-12">
           <h2 className="font-display text-xl font-semibold tracking-tight">
             {tDetail("modulesTitle")}
           </h2>
           <p className="mt-2 text-sm text-m-muted">{tDetail("modulesHint")}</p>
-          <ul className="mt-5 space-y-4">
+          <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {product.modules.map((mod) => (
-              <li key={mod.name} className="border-l-2 border-[var(--m-accent)] pl-4">
-                <p className="font-semibold text-[var(--m-ink)]">{mod.name}</p>
-                <p className="mt-1 text-sm text-m-muted">{mod.summary}</p>
-              </li>
+              <div key={mod.name} className="m-tile p-6">
+                <CheckCircle2 className="h-5 w-5 text-[var(--m-accent)]" />
+                <p className="mt-4 font-display text-base font-semibold tracking-tight text-[var(--m-ink)]">
+                  {mod.name}
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-m-muted">
+                  {mod.summary}
+                </p>
+              </div>
             ))}
-          </ul>
+          </div>
         </MotionReveal>
-        <MotionReveal delay={0.06}>
+      ) : null}
+
+      <div className="mt-16 grid gap-12 border-t border-m-line pt-12 md:grid-cols-2">
+        <MotionReveal>
           <h2 className="font-display text-xl font-semibold tracking-tight">
             {t("availableOn")}
           </h2>
           <p className="mt-5 text-sm text-m-muted">
             {product.channels.map((c) => t(c)).join(" · ")}
           </p>
-          {changelogEntries.length > 0 ? (
-            <div className="mt-10">
-              <h2 className="font-display text-xl font-semibold tracking-tight">
-                {tDetail("changelogTitle")}
-              </h2>
-              <ul className="mt-5 space-y-4">
-                {changelogEntries.map((entry) => (
-                  <li key={entry.id}>
-                    <p className="text-xs uppercase tracking-wider text-m-muted">
-                      {entry.date} · v{entry.version}
-                    </p>
-                    <p className="mt-1 font-medium text-[var(--m-ink)]">
-                      {tChangelog(`${entry.id}.title`)}
-                    </p>
-                    <p className="mt-1 text-sm text-m-muted">
-                      {tChangelog(`${entry.id}.summary`)}
-                    </p>
-                  </li>
-                ))}
-              </ul>
-              <Link href="/updates" className="m-link mt-4 inline-block text-sm">
-                {tDetail("changelogViewAll")}
-              </Link>
-            </div>
-          ) : null}
         </MotionReveal>
+        {changelogEntries.length > 0 ? (
+          <MotionReveal delay={0.06}>
+            <h2 className="font-display text-xl font-semibold tracking-tight">
+              {tDetail("changelogTitle")}
+            </h2>
+            <ul className="mt-5 space-y-4">
+              {changelogEntries.map((entry) => (
+                <li key={entry.id}>
+                  <p className="text-xs uppercase tracking-wider text-m-muted">
+                    {entry.date} · v{entry.version}
+                  </p>
+                  <p className="mt-1 font-medium text-[var(--m-ink)]">
+                    {tChangelog(`${entry.id}.title`)}
+                  </p>
+                  <p className="mt-1 text-sm text-m-muted">
+                    {tChangelog(`${entry.id}.summary`)}
+                  </p>
+                </li>
+              ))}
+            </ul>
+            <Link href="/updates" className="m-link mt-4 inline-block text-sm">
+              {tDetail("changelogViewAll")}
+            </Link>
+          </MotionReveal>
+        ) : null}
       </div>
 
       {product.faq.length > 0 ? (
@@ -271,7 +283,11 @@ export default async function ProductDetailPage({ params }: Props) {
         </div>
       </MotionReveal>
 
-      {product.slug === "go-van" ? <VanSalePricingSection /> : null}
+      {product.slug === "vansale" ? (
+        <VanSalePricingSection />
+      ) : (
+        <ProductPricingCta productName={product.name} />
+      )}
 
       <p className="mt-14">
         <Link href="/products" className="m-link text-sm">
