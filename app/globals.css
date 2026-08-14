@@ -346,3 +346,26 @@ body:not(.font-arabic):not(.font-devanagari):not(.font-malayalam):not(.font-cjk-
     transform: none;
   }
 }
+
+/* "Download PDF" prints only the VanSale pricing section via the browser's print-to-PDF. */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #vansale-pricing-print,
+  #vansale-pricing-print * {
+    visibility: visible;
+  }
+
+  #vansale-pricing-print {
+    position: absolute;
+    inset-inline-start: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  [data-print-hide] {
+    display: none !important;
+  }
+}

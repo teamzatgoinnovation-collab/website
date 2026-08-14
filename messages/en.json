@@ -1556,6 +1556,121 @@
       }
     ]
   },
+  "vanSalePricing": {
+    "eyebrow": "ZatGo VanSale Pricing",
+    "heading": "Plans built for route sales teams",
+    "description": "Simple, transparent pricing for van sales, vehicle stock, and route operations — scale from a single van to a full fleet.",
+    "metaTitle": "VanSale Pricing | Van Sales Management Software in Saudi Arabia",
+    "metaDescription": "ZatGo VanSale pricing — van sales, vehicle stock, customer visits, and collections software for businesses in Saudi Arabia and the GCC.",
+    "vatExcluded": "Prices exclude VAT.",
+    "vatIncluded": "Prices include VAT.",
+    "downloadPdf": "Download PDF",
+    "billingMonthly": "Monthly",
+    "billingYearly": "Yearly",
+    "savePrefix": "Save",
+    "perMonth": "/month",
+    "perYear": "/year",
+    "billedYearly": "billed yearly",
+    "popularBadge": "Most popular",
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "description": "For businesses running van sales with a single vehicle.",
+        "basis": "1 van",
+        "cta": "Get started"
+      },
+      "professional": {
+        "name": "Professional",
+        "description": "For growing van-sales teams running multiple routes.",
+        "basis": "Up to 5 vans",
+        "cta": "Get started"
+      },
+      "business": {
+        "name": "Business",
+        "description": "For larger van-sales operations running multiple routes and branches.",
+        "basis": "Up to 15 vans",
+        "cta": "Contact sales"
+      }
+    },
+    "featureRows": {
+      "offlineOrders": "Offline orders",
+      "vanStock": "Van stock management",
+      "customerVisits": "Customer visits",
+      "collections": "Payments & collections",
+      "gpsRouteTracking": "GPS & route tracking",
+      "multipleVans": "Multiple vans",
+      "erpnextIntegration": "ERPNext integration",
+      "prioritySupport": "Priority support"
+    },
+    "comparisonTitle": "Compare VanSale plans",
+    "comparisonIntro": "Every plan includes the core van-sales workflow — plans scale with fleet size and support.",
+    "whyTitle": "Why businesses choose ZatGo VanSale",
+    "whyItems": [
+      {
+        "title": "Manage van stock",
+        "body": "Know exactly what each vehicle carries, in real time."
+      },
+      {
+        "title": "Faster sales",
+        "body": "Capture orders and create sales directly from the field, even offline."
+      },
+      {
+        "title": "Manage customers",
+        "body": "Keep customer visits and history organized in one place."
+      },
+      {
+        "title": "Track collections",
+        "body": "Monitor payments and outstanding balances per customer and van."
+      },
+      {
+        "title": "Route visibility",
+        "body": "See GPS and route context for every van sales visit."
+      },
+      {
+        "title": "ERPNext integration",
+        "body": "VanSale runs on the same ERPNext core as the rest of ZatGo."
+      }
+    ],
+    "ctaTitle": "Ready to simplify your van sales?",
+    "ctaBody": "Manage vehicles, stock, customers, and collections from one connected system.",
+    "ctaPrimary": "Get started",
+    "ctaSecondary": "Contact sales",
+    "faqTitle": "VanSale pricing FAQ",
+    "faq": [
+      {
+        "question": "What is ZatGo VanSale?",
+        "answer": "ZatGo VanSale is route sales software for businesses that sell from vehicles — offline orders, van stock, customer visits, and collections in one app."
+      },
+      {
+        "question": "Can I manage multiple vans?",
+        "answer": "Yes. Professional supports up to 5 vans and Business supports up to 15 — contact us for larger fleets."
+      },
+      {
+        "question": "Can I manage van stock?",
+        "answer": "Yes, every plan includes van stock management so you always know what each vehicle is carrying."
+      },
+      {
+        "question": "Can I use VanSale offline?",
+        "answer": "Yes. VanSale is built for field use and supports offline orders that sync when connectivity returns."
+      },
+      {
+        "question": "Does VanSale integrate with ERPNext?",
+        "answer": "Yes, on the Business plan. VanSale runs on the same ERPNext core as the rest of the ZatGo platform."
+      },
+      {
+        "question": "Is VAT included in the price?",
+        "answer": "No, listed prices exclude VAT."
+      },
+      {
+        "question": "Can I upgrade my plan later?",
+        "answer": "Yes. Contact us to move between plans as your fleet grows."
+      },
+      {
+        "question": "Do you provide support?",
+        "answer": "Yes. All plans include support, with priority support on the Business plan."
+      }
+    ]
+  },
   "productDetail": {
     "modulesTitle": "Modules",
     "modulesHint": "Core areas included with this product.",

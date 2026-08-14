@@ -3,13 +3,16 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useLocale, useTranslations } from "next-intl";
 import { useSearchParams } from "next/navigation";
-import { useEffect, useMemo } from "react";
+import { useCallback, useEffect, useMemo } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { z } from "zod";
 
 import { Button } from "@/components/ui/button";
 import { inquiryTypes, type InquiryType } from "@/content/company";
+import { pricingTiers } from "@/content/pricing";
+
+const knownPricingTierIds = new Set(pricingTiers.map((tier) => tier.id));
 
 type ContactFormProps = {
   mailTo: string;
@@ -33,17 +36,23 @@ export function ContactForm({ mailTo }: ContactFormProps) {
     ? typeParam
     : "demo";
 
+  /** Tier ids can come from the general pricing plans or a product-specific
+   *  pricing table (e.g. VanSale) — only resolve a display name when the id
+   *  is one of the known general-pricing tiers, otherwise fall back to the
+   *  raw id instead of resolving an unrelated/missing translation key. */
+  const resolveTierName = useCallback(
+    (tier: string): string => {
+      if (!knownPricingTierIds.has(tier)) return tier;
+      return tPricing(`${tier}.name` as Parameters<typeof tPricing>[0]);
+    },
+    [tPricing],
+  );
+
   const interestDefault = useMemo(() => {
     if (interestParam) return interestParam;
-    if (tierParam) {
-      try {
-        return tPricing(`${tierParam}.name`);
-      } catch {
-        return tierParam;
-      }
-    }
+    if (tierParam) return resolveTierName(tierParam);
     return "";
-  }, [interestParam, tierParam, tPricing]);
+  }, [interestParam, tierParam, resolveTierName]);
 
   const schema = z.object({
     name: z.string().min(2, t("errors.name")),
@@ -90,21 +99,16 @@ export function ContactForm({ mailTo }: ContactFormProps) {
     const interestPart = interest
       ? t("contextInterest", { value: interest })
       : "";
-    let tierPart = "";
-    if (tierParam) {
-      try {
-        tierPart = t("contextTier", { value: tPricing(`${tierParam}.name`) });
-      } catch {
-        tierPart = t("contextTier", { value: tierParam });
-      }
-    }
+    const tierPart = tierParam
+      ? t("contextTier", { value: resolveTierName(tierParam) })
+      : "";
     return `${typeLabel}${interestPart}${tierPart}`;
   }, [
     interest,
     interestParam,
     inquiryType,
+    resolveTierName,
     t,
-    tPricing,
     tierParam,
     typeParam,
   ]);

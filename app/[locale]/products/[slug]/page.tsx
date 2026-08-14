@@ -6,6 +6,7 @@ import { ArrowRight } from "lucide-react";
 import { JsonLd } from "@/components/json-ld";
 import { MotionReveal } from "@/components/motion-reveal";
 import { Section } from "@/components/section";
+import { VanSalePricingSection } from "@/components/vansale-pricing-section";
 import { getChangelogEntriesForProduct } from "@/content/product-extras";
 import { products } from "@/content/products";
 import { getDocsUrl } from "@/content/site";
@@ -35,6 +36,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
   const product = await getLocalizedProductDetail(slug);
   if (!product) return { title: "Product" };
+  if (slug === "go-van") {
+    const tPricing = await getTranslations({ locale, namespace: "vanSalePricing" });
+    return buildPageMetadata({
+      locale,
+      path: `/products/${slug}`,
+      title: tPricing("metaTitle"),
+      description: tPricing("metaDescription"),
+    });
+  }
   return buildPageMetadata({
     locale,
     path: `/products/${slug}`,
@@ -260,6 +270,8 @@ export default async function ProductDetailPage({ params }: Props) {
           </Link>
         </div>
       </MotionReveal>
+
+      {product.slug === "go-van" ? <VanSalePricingSection /> : null}
 
       <p className="mt-14">
         <Link href="/products" className="m-link text-sm">
