@@ -4,6 +4,7 @@ import { after, NextResponse } from "next/server";
 import { z } from "zod";
 
 import { inquiryTypes } from "@/content/company";
+import { sendLeadEmail } from "@/lib/lead-email";
 import { allowLeadRequest, hashClientIp } from "@/lib/leads-rate-limit";
 import {
   deliverWebhookWithRetry,
@@ -78,12 +79,17 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: "persist_failed" }, { status: 500 });
   }
 
-  // Persist succeeded — never fail the HTTP response for webhook issues.
+  // Persist succeeded — never fail the HTTP response for webhook/email issues.
   after(async () => {
     try {
       await deliverWebhookWithRetry(record);
     } catch (error) {
       console.error("lead_webhook_background_failed", error);
+    }
+    try {
+      await sendLeadEmail(record);
+    } catch (error) {
+      console.error("lead_email_background_failed", error);
     }
   });
 
@@ -97,7 +103,7 @@ export async function POST(request: Request) {
       tier: record.tier ?? null,
       locale: record.locale ?? null,
       rateLimitBackend: backend,
-      notifyEmail: process.env.LEADS_NOTIFY_EMAIL ? "configured" : "none",
+      notifyEmail: process.env.SMTP_USER && process.env.SMTP_PASS ? "configured" : "none",
       webhook: process.env.LEADS_WEBHOOK_URL ? "queued" : "none",
     }),
   );

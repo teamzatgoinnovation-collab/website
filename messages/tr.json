@@ -67,7 +67,7 @@
     "channelsTitle": "Mobil, masaüstü ve web — aynı platform",
     "channelsDesc": "Telefon, masaüstü ve tarayıcıda tek ürün ailesi — her rol için veriler senkron kalır.",
     "channelMobileTitle": "Mobil",
-    "channelMobileBody": "Saha ve çevrimdışı öncelikli uygulamalar — Go Van, Teslimat, Depo ve daha fazlası.",
+    "channelMobileBody": "Saha ve çevrimdışı öncelikli uygulamalar — ZatGo VanSale, Teslimat, Depo ve daha fazlası.",
     "channelDesktopTitle": "Masaüstü",
     "channelDesktopBody": "Güç kullanıcıları için araçlar — Tracker Pro, ZatGo POS, Muhasebe, Filo.",
     "channelWebTitle": "Web",
@@ -93,7 +93,7 @@
   },
   "productsPage": {
     "title": "Ürünler",
-    "metaDescription": "ZatGo ürün kataloğu — Tracker, Go Van, Teslimat, depo, IK, CRM, POS ve daha fazlası.",
+    "metaDescription": "ZatGo ürün kataloğu — Tracker, ZatGo VanSale, Teslimat, depo, IK, CRM, POS ve daha fazlası.",
     "eyebrow": "Ürünler",
     "heading": "ZatGo ürün kataloğu",
     "description": "Saha, kat ve ofis için uygulamalar — tüm ekibinizin kullanabileceği tek platform.",
@@ -208,7 +208,7 @@
       },
       {
         "question": "Can we mix field and desktop apps?",
-        "answer": "Yes. Most customers start with Tracker and add Go Van, Delivery, Warehouse, or desktop tools as needed."
+        "answer": "Yes. Most customers start with Tracker and add ZatGo VanSale, Delivery, Warehouse, or desktop tools as needed."
       }
     ]
   },
@@ -432,7 +432,7 @@
       ]
     },
     "go-van": {
-      "name": "Go Van",
+      "name": "ZatGo VanSale",
       "tagline": "Çevrimdışı çalışan rota satışları.",
       "description": "Van ve rota satışları; çevrimdışı siparişler, tahsilatlar, stok transferi, müşteri ziyaretleri ve GPS.",
       "capabilities": [
@@ -445,33 +445,33 @@
       "modules": [
         {
           "name": "Offline orders",
-          "summary": "Offline orders workflows inside Go Van."
+          "summary": "Offline orders workflows inside ZatGo VanSale."
         },
         {
           "name": "Collections",
-          "summary": "Collections workflows inside Go Van."
+          "summary": "Collections workflows inside ZatGo VanSale."
         },
         {
           "name": "Stock transfer",
-          "summary": "Stock transfer workflows inside Go Van."
+          "summary": "Stock transfer workflows inside ZatGo VanSale."
         },
         {
           "name": "Customer visits",
-          "summary": "Customer visits workflows inside Go Van."
+          "summary": "Customer visits workflows inside ZatGo VanSale."
         },
         {
           "name": "GPS",
-          "summary": "GPS workflows inside Go Van."
+          "summary": "GPS workflows inside ZatGo VanSale."
         }
       ],
       "faq": [
         {
-          "question": "Which channels does Go Van support?",
-          "answer": "Go Van is available on mobile. Availability by plan may vary — ask sales for your rollout."
+          "question": "Which channels does ZatGo VanSale support?",
+          "answer": "ZatGo VanSale is available on mobile. Availability by plan may vary — ask sales for your rollout."
         },
         {
-          "question": "Is Go Van available offline?",
-          "answer": "Field-oriented channels for Go Van are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+          "question": "Is ZatGo VanSale available offline?",
+          "answer": "Field-oriented channels for ZatGo VanSale are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
         },
         {
           "question": "How do we get started?",
@@ -1146,7 +1146,7 @@
     },
     "2026-05-roadmap": {
       "title": "Ürün kataloğu yayınlandı",
-      "summary": "Web, mobil ve masaüstünde Tracker odaklı başlangıç — yol haritasında Go Van, Teslimat ve daha fazlası."
+      "summary": "Web, mobil ve masaüstünde Tracker odaklı başlangıç — yol haritasında ZatGo VanSale, Teslimat ve daha fazlası."
     }
   },
   "pricing": {
@@ -1167,7 +1167,7 @@
       "description": "Büyüyen operasyonlar için saha + ofis uygulamaları.",
       "features": [
         "Çoklu şube desteği",
-        "Go Van, Teslimat, Depo",
+        "ZatGo VanSale, Teslimat, Depo",
         "Masaüstü uygulamaları (seçili)",
         "Müşteri ve tedarikçi portalları",
         "Öncelikli destek",
@@ -1218,14 +1218,14 @@
   "docsHub": {
     "guides": {
       "title": "Ürün kılavuzları",
-      "description": "Tracker, Go Van, Teslimat ve daha fazlası için kurulum ve günlük kullanım."
+      "description": "Tracker, ZatGo VanSale, Teslimat ve daha fazlası için kurulum ve günlük kullanım."
     },
     "tracker": {
       "title": "Tracker kılavuzu",
       "description": "Projeler, görevler, Kanban, zaman girişi ve çok kanallı senkron."
     },
     "go-van": {
-      "title": "Go Van kılavuzu",
+      "title": "ZatGo VanSale kılavuzu",
       "description": "Rota satışları, çevrimdışı siparişler, tahsilatlar ve GPS."
     },
     "delivery": {
@@ -1257,7 +1257,7 @@
       "duration": "15 dk"
     },
     "go-van-offline-orders": {
-      "title": "Go Van ile çevrimdışı sipariş alın",
+      "title": "ZatGo VanSale ile çevrimdışı sipariş alın",
       "description": "Bir van rotası kurun, sinyal olmadan sipariş alın ve yeniden bağlanınca senkronlayın.",
       "audience": "Saha satış",
       "duration": "20 dk"

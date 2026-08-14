@@ -36,7 +36,29 @@ export default async function AboutPage({ params }: Props) {
       heading={t("heading")}
       description={t("intro")}
     >
-      <MotionReveal>
+      <MotionReveal className="m-tile flex flex-col gap-1.5 p-6 sm:flex-row sm:items-center sm:gap-5">
+        <div
+          aria-hidden
+          className="inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[var(--m-accent-soft)] font-display text-lg font-semibold text-[var(--m-accent)]"
+        >
+          {t("founderName")
+            .split(" ")
+            .map((part) => part[0])
+            .slice(0, 2)
+            .join("")}
+        </div>
+        <div>
+          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-[var(--m-accent)]">
+            {t("leadershipTitle")}
+          </p>
+          <p className="mt-1 font-display text-lg font-semibold tracking-tight text-[var(--m-ink)]">
+            {t("founderName")} <span className="font-normal text-[var(--m-muted)]">— {t("founderRole")}</span>
+          </p>
+          <p className="mt-1 text-sm leading-relaxed text-[var(--m-muted)]">{t("founderBio")}</p>
+        </div>
+      </MotionReveal>
+
+      <MotionReveal className="mt-14">
         <h2 className="font-display text-2xl font-bold text-[var(--m-ink)]">
           {t("whatWeBuildTitle")}
         </h2>

@@ -67,7 +67,7 @@
     "channelsTitle": "मोबाइल, डेस्कटॉप और वेब — एक ही प्लेटफ़ॉर्म",
     "channelsDesc": "फ़ोन, डेस्कटॉप और ब्राउज़र पर एक उत्पाद परिवार — हर भूमिका के लिए डेटा सिंक।",
     "channelMobileTitle": "मोबाइल",
-    "channelMobileBody": "फ़ील्ड और ऑफ़लाइन-पहले ऐप — Go Van, Delivery, Warehouse और अधिक।",
+    "channelMobileBody": "फ़ील्ड और ऑफ़लाइन-पहले ऐप — ZatGo VanSale, Delivery, Warehouse और अधिक।",
     "channelDesktopTitle": "डेस्कटॉप",
     "channelDesktopBody": "पावर उपयोगकर्ताओं के लिए टूल — Tracker Pro, ZatGo POS, Accounting, Fleet।",
     "channelWebTitle": "वेब",
@@ -93,7 +93,7 @@
   },
   "productsPage": {
     "title": "उत्पाद",
-    "metaDescription": "ZatGo उत्पाद कैटलॉग — Tracker, Go Van, Delivery और अधिक।",
+    "metaDescription": "ZatGo उत्पाद कैटलॉग — Tracker, ZatGo VanSale, Delivery और अधिक।",
     "eyebrow": "उत्पाद",
     "heading": "ZatGo उत्पाद कैटलॉग",
     "description": "फ़ील्ड, फ़्लोर और ऑफिस के लिए ऐप — पूरी टीम के लिए एक प्लेटफ़ॉर्म।",
@@ -208,7 +208,7 @@
       },
       {
         "question": "Can we mix field and desktop apps?",
-        "answer": "Yes. Most customers start with Tracker and add Go Van, Delivery, Warehouse, or desktop tools as needed."
+        "answer": "Yes. Most customers start with Tracker and add ZatGo VanSale, Delivery, Warehouse, or desktop tools as needed."
       }
     ]
   },
@@ -432,7 +432,7 @@
       ]
     },
     "go-van": {
-      "name": "Go Van",
+      "name": "ZatGo VanSale",
       "tagline": "Route sales that work offline.",
       "description": "Van and route sales with offline orders, collections, stock transfer, customer visits, and GPS.",
       "capabilities": [
@@ -445,33 +445,33 @@
       "modules": [
         {
           "name": "Offline orders",
-          "summary": "Offline orders workflows inside Go Van."
+          "summary": "Offline orders workflows inside ZatGo VanSale."
         },
         {
           "name": "Collections",
-          "summary": "Collections workflows inside Go Van."
+          "summary": "Collections workflows inside ZatGo VanSale."
         },
         {
           "name": "Stock transfer",
-          "summary": "Stock transfer workflows inside Go Van."
+          "summary": "Stock transfer workflows inside ZatGo VanSale."
         },
         {
           "name": "Customer visits",
-          "summary": "Customer visits workflows inside Go Van."
+          "summary": "Customer visits workflows inside ZatGo VanSale."
         },
         {
           "name": "GPS",
-          "summary": "GPS workflows inside Go Van."
+          "summary": "GPS workflows inside ZatGo VanSale."
         }
       ],
       "faq": [
         {
-          "question": "Which channels does Go Van support?",
-          "answer": "Go Van is available on mobile. Availability by plan may vary — ask sales for your rollout."
+          "question": "Which channels does ZatGo VanSale support?",
+          "answer": "ZatGo VanSale is available on mobile. Availability by plan may vary — ask sales for your rollout."
         },
         {
-          "question": "Is Go Van available offline?",
-          "answer": "Field-oriented channels for Go Van are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+          "question": "Is ZatGo VanSale available offline?",
+          "answer": "Field-oriented channels for ZatGo VanSale are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
         },
         {
           "question": "How do we get started?",
@@ -1146,7 +1146,7 @@
     },
     "2026-05-roadmap": {
       "title": "Product catalog published",
-      "summary": "Flagship focus on Tracker across web, mobile, and desktop — with Go Van, Delivery, and more products on the roadmap."
+      "summary": "Flagship focus on Tracker across web, mobile, and desktop — with ZatGo VanSale, Delivery, and more products on the roadmap."
     }
   },
   "pricing": {
@@ -1167,7 +1167,7 @@
       "description": "Field + back-office apps for growing operations.",
       "features": [
         "Multi-branch support",
-        "Go Van, Delivery, Warehouse",
+        "ZatGo VanSale, Delivery, Warehouse",
         "Desktop apps (selected)",
         "Customer & vendor portals",
         "Priority support",
@@ -1218,14 +1218,14 @@
   "docsHub": {
     "guides": {
       "title": "Product guides",
-      "description": "Setup and day-to-day use for Tracker, Go Van, Delivery, and more."
+      "description": "Setup and day-to-day use for Tracker, ZatGo VanSale, Delivery, and more."
     },
     "tracker": {
       "title": "Tracker guide",
       "description": "Projects, tasks, Kanban, time entry, and multi-channel sync."
     },
     "go-van": {
-      "title": "Go Van guide",
+      "title": "ZatGo VanSale guide",
       "description": "Route sales, offline orders, collections, and GPS."
     },
     "delivery": {
@@ -1257,7 +1257,7 @@
       "duration": "15 min"
     },
     "go-van-offline-orders": {
-      "title": "Take offline orders with Go Van",
+      "title": "Take offline orders with ZatGo VanSale",
       "description": "Set up a van route, capture orders without signal, and sync when back online.",
       "audience": "Field sales",
       "duration": "20 min"

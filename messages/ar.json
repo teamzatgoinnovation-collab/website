@@ -67,7 +67,7 @@
     "channelsTitle": "جوال وسطح مكتب وويب — منصة واحدة",
     "channelsDesc": "عائلة منتجات واحدة عبر الهاتف والحاسوب والمتصفح — البيانات متزامنة لكل دور.",
     "channelMobileTitle": "الجوال",
-    "channelMobileBody": "تطبيقات للعمل الميداني وأوفلاين — Go Van والتوصيل والمستودع والمزيد.",
+    "channelMobileBody": "تطبيقات للعمل الميداني وأوفلاين — ZatGo VanSale والتوصيل والمستودع والمزيد.",
     "channelDesktopTitle": "سطح المكتب",
     "channelDesktopBody": "أدوات للمستخدمين المتقدمين — Tracker Pro وZatGo POS والمحاسبة والأسطول.",
     "channelWebTitle": "الويب",
@@ -93,7 +93,7 @@
   },
   "productsPage": {
     "title": "المنتجات",
-    "metaDescription": "كتالوج منتجات ZatGo — Tracker وGo Van والتوصيل والمستودع والمزيد.",
+    "metaDescription": "كتالوج منتجات ZatGo — Tracker وZatGo VanSale والتوصيل والمستودع والمزيد.",
     "eyebrow": "المنتجات",
     "heading": "كتالوج منتجات ZatGo",
     "description": "تطبيقات للميدان والطابق والمكتب — منصة واحدة لفريقك.",
@@ -208,7 +208,7 @@
       },
       {
         "question": "Can we mix field and desktop apps?",
-        "answer": "Yes. Most customers start with Tracker and add Go Van, Delivery, Warehouse, or desktop tools as needed."
+        "answer": "Yes. Most customers start with Tracker and add ZatGo VanSale, Delivery, Warehouse, or desktop tools as needed."
       }
     ]
   },
@@ -275,7 +275,7 @@
   },
   "solutionsPage": {
     "title": "الحلول",
-    "metaDescription": "حلول ZatGo للعمليات الميدانية ونقاط البيع وتسليم المشاريع والمكتب الخلفي.",
+    "metaDescription": "حلول ZatGo لإدارة الأعمال وتخطيط الموارد والعمليات الميدانية ونقاط البيع وتسليم المشاريع والمكتب الخلفي.",
     "eyebrow": "الحلول",
     "heading": "نتائج عبر القنوات",
     "description": "اجمع المنتجات حول حركة العمل الحقيقية — الميدان والطابق والمكتب.",
@@ -432,7 +432,7 @@
       ]
     },
     "go-van": {
-      "name": "Go Van",
+      "name": "ZatGo VanSale",
       "tagline": "مبيعات الطريق تعمل دون اتصال.",
       "description": "مبيعات السيارة والطرق مع طلبات أوفلاين والتحصيلات ونقل المخزون وزيارات العملاء ونظام تحديد المواقع.",
       "capabilities": [
@@ -445,33 +445,33 @@
       "modules": [
         {
           "name": "Offline orders",
-          "summary": "Offline orders workflows inside Go Van."
+          "summary": "Offline orders workflows inside ZatGo VanSale."
         },
         {
           "name": "Collections",
-          "summary": "Collections workflows inside Go Van."
+          "summary": "Collections workflows inside ZatGo VanSale."
         },
         {
           "name": "Stock transfer",
-          "summary": "Stock transfer workflows inside Go Van."
+          "summary": "Stock transfer workflows inside ZatGo VanSale."
         },
         {
           "name": "Customer visits",
-          "summary": "Customer visits workflows inside Go Van."
+          "summary": "Customer visits workflows inside ZatGo VanSale."
         },
         {
           "name": "GPS",
-          "summary": "GPS workflows inside Go Van."
+          "summary": "GPS workflows inside ZatGo VanSale."
         }
       ],
       "faq": [
         {
-          "question": "Which channels does Go Van support?",
-          "answer": "Go Van is available on mobile. Availability by plan may vary — ask sales for your rollout."
+          "question": "Which channels does ZatGo VanSale support?",
+          "answer": "ZatGo VanSale is available on mobile. Availability by plan may vary — ask sales for your rollout."
         },
         {
-          "question": "Is Go Van available offline?",
-          "answer": "Field-oriented channels for Go Van are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+          "question": "Is ZatGo VanSale available offline?",
+          "answer": "Field-oriented channels for ZatGo VanSale are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
         },
         {
           "question": "How do we get started?",
@@ -1146,7 +1146,7 @@
     },
     "2026-05-roadmap": {
       "title": "نشر كتالوج المنتجات",
-      "summary": "التركيز على Tracker عبر الويب والجوال وسطح المكتب — مع Go Van والتوصيل والمزيد على خارطة الطريق."
+      "summary": "التركيز على Tracker عبر الويب والجوال وسطح المكتب — مع ZatGo VanSale والتوصيل والمزيد على خارطة الطريق."
     }
   },
   "pricing": {
@@ -1167,7 +1167,7 @@
       "description": "تطبيقات ميدانية ومكتبية للعمليات النامية.",
       "features": [
         "دعم فروع متعددة",
-        "Go Van والتوصيل والمستودع",
+        "ZatGo VanSale والتوصيل والمستودع",
         "تطبيقات سطح مكتب (مختارة)",
         "بوابات عملاء وموردين",
         "دعم أولوية",
@@ -1218,14 +1218,14 @@
   "docsHub": {
     "guides": {
       "title": "أدلة المنتجات",
-      "description": "الإعداد والاستخدام اليومي لـ Tracker وGo Van والتوصيل والمزيد."
+      "description": "الإعداد والاستخدام اليومي لـ Tracker وZatGo VanSale والتوصيل والمزيد."
     },
     "tracker": {
       "title": "دليل Tracker",
       "description": "مشاريع ومهام وكانبان وتسجيل وقت ومزامنة متعددة القنوات."
     },
     "go-van": {
-      "title": "دليل Go Van",
+      "title": "دليل ZatGo VanSale",
       "description": "مبيعات الطريق وطلبات أوفلاين والتحصيلات وGPS."
     },
     "delivery": {
@@ -1257,7 +1257,7 @@
       "duration": "15 دقيقة"
     },
     "go-van-offline-orders": {
-      "title": "خذ طلبات أوفلاين مع Go Van",
+      "title": "خذ طلبات أوفلاين مع ZatGo VanSale",
       "description": "أعد مسار سيارة والتقط الطلبات بلا إشارة وزامن عند العودة.",
       "audience": "مبيعات ميدانية",
       "duration": "20 دقيقة"
@@ -1306,6 +1306,15 @@
     }
   },
   "solutions": {
+    "business-management": {
+      "name": "إدارة الأعمال وتخطيط الموارد",
+      "description": "نظام سجلات موحّد للمالية والمخزون والعمليات — مصمم ليناسب الشركات من أي حجم وأي قطاع.",
+      "outcomes": [
+        "مصدر واحد موثوق للبيانات عبر الأقسام",
+        "المالية والمخزون والعمليات في تزامن",
+        "يتوسّع من موقع واحد إلى متعدد الفروع"
+      ]
+    },
     "field-ops": {
       "name": "العمليات الميدانية",
       "description": "امنح فرق الجوال تطبيقات تعمل دون اتصال وتُزامن عند إعادة الاتصال.",
@@ -1349,6 +1358,10 @@
     "eyebrow": "Company",
     "heading": "شركة تقنية تركّز على برمجيات أعمال عملية وقابلة للتوسّع",
     "intro": "ZatGo Innovation builds mobile, desktop, and web products that help organizations run projects, sales, delivery, warehouse, and back-office work in one connected family of apps.",
+    "leadershipTitle": "القيادة",
+    "founderName": "زين العابدين تي",
+    "founderRole": "المالك والرئيس التنفيذي",
+    "founderBio": "مطور برمجيات واستشاري تقني ووظيفي لـ ERPNext، يقود اتجاه المنتج والتقنية في ZatGo Innovation.",
     "missionTitle": "Mission",
     "missionBody": "Make day-to-day operations clear for every role — on the road, on the floor, and at the desk.",
     "valuesTitle": "How we work",

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
-import { buildPageMetadata } from "@/lib/seo";
+import { buildPageMetadata, getSiteUrl } from "@/lib/seo";
 
 import { Section, SectionHeading } from "@/components/section";
 import { getLocalizedChangelog } from "@/lib/localized-content";
@@ -11,12 +11,19 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "updatesPage" });
-  return buildPageMetadata({
+  const metadata = buildPageMetadata({
     locale,
     path: "/updates",
     title: t("title"),
     description: t("metaDescription"),
   });
+  return {
+    ...metadata,
+    alternates: {
+      ...metadata.alternates,
+      types: { "application/rss+xml": `${getSiteUrl()}/feed.xml` },
+    },
+  };
 }
 
 export default async function UpdatesPage({ params }: Props) {
@@ -32,6 +39,11 @@ export default async function UpdatesPage({ params }: Props) {
         title={t("heading")}
         description={t("description")}
       />
+      <p className="-mt-8 mb-10">
+        <a href="/feed.xml" className="m-link text-sm">
+          {t("rssLabel")}
+        </a>
+      </p>
       <ol className="space-y-0">
         {entries.map((entry) => (
           <li

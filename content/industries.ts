@@ -29,6 +29,10 @@ export const industries: IndustryMeta[] = [
 
 export const solutions: SolutionMeta[] = [
   {
+    slug: "business-management",
+    products: ["erpnext", "space", "admin-console", "bi-dashboard"],
+  },
+  {
     slug: "field-ops",
     products: ["go-van", "delivery", "field-service", "crm"],
   },

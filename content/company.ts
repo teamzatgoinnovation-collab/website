@@ -32,9 +32,9 @@ export const inquiryTypes = [
 export type InquiryType = (typeof inquiryTypes)[number];
 
 export const company = {
-  email: process.env.NEXT_PUBLIC_COMPANY_EMAIL ?? "hello@zatgo.local",
+  email: process.env.NEXT_PUBLIC_COMPANY_EMAIL ?? "team.zatgoinnovation@gmail.com",
   phone: process.env.NEXT_PUBLIC_PHONE ?? "",
-  whatsapp: process.env.NEXT_PUBLIC_WHATSAPP ?? "",
+  whatsapp: process.env.NEXT_PUBLIC_WHATSAPP ?? "+919061378100",
   supportUrl: process.env.NEXT_PUBLIC_SUPPORT_URL ?? "/contact",
   downloadsUrl: process.env.NEXT_PUBLIC_DOWNLOADS_URL ?? "/downloads",
   address: process.env.NEXT_PUBLIC_COMPANY_ADDRESS ?? "",
