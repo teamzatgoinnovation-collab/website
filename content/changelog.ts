@@ -27,14 +27,6 @@ export const changelog: ChangelogMeta[] = [
     date: "2026-05-12",
     version: "0.0.1",
     tags: ["Roadmap"],
-    products: [
-      "tracker",
-      "vansale",
-      "delivery",
-      "warehouse",
-      "crm",
-      "retail-pos",
-      "sales-executive",
-    ],
+    products: ["tracker", "vansale", "delivery", "warehouse", "crm"],
   },
 ];

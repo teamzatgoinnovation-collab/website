@@ -1,4 +1,4 @@
-import { products, type Channel, type ProductStatus } from "./products";
+import type { Channel, ProductStatus } from "./products";
 import {
   getDocsPublicUrl,
   getProductWebUrl,
@@ -117,37 +117,56 @@ export const downloads: DownloadItem[] = [
     id: "tracker-web",
     productSlug: "tracker",
   }),
-  installer({
+  comingSoon({
     id: "tracker-win",
     productSlug: "tracker",
     channel: "desktop",
     platform: "windows",
     label: "Windows",
     fileName: "ZatGo-Tracker-Setup.exe",
+    version: "—",
   }),
-  installer({
+  comingSoon({
     id: "tracker-mac",
     productSlug: "tracker",
     channel: "desktop",
     platform: "macos",
     label: "macOS",
     fileName: "ZatGo-Tracker.dmg",
+    version: "—",
   }),
-  installer({
+  comingSoon({
     id: "tracker-linux",
     productSlug: "tracker",
     channel: "desktop",
     platform: "linux",
     label: "Linux",
     fileName: "zatgo-tracker.AppImage",
+    version: "—",
   }),
   comingSoon({
-    id: "vansale-android",
-    productSlug: "vansale",
+    id: "chat-ai-ios",
+    productSlug: "chat-ai",
+    channel: "mobile",
+    platform: "ios",
+    label: "App Store",
+    version: "—",
+  }),
+  comingSoon({
+    id: "chat-ai-android",
+    productSlug: "chat-ai",
     channel: "mobile",
     platform: "android",
     label: "Google Play",
     version: "—",
+  }),
+  installer({
+    id: "vansale-android",
+    productSlug: "vansale",
+    channel: "mobile",
+    platform: "android",
+    label: "Download APK",
+    fileName: "zatgo-vansalex.apk",
   }),
   comingSoon({
     id: "delivery-android",
@@ -165,21 +184,23 @@ export const downloads: DownloadItem[] = [
     label: "Google Play",
     version: "—",
   }),
-  installer({
+  comingSoon({
     id: "warehouse-win",
     productSlug: "warehouse",
     channel: "desktop",
     platform: "windows",
     label: "Windows",
     fileName: "ZatGo-Warehouse-Setup.exe",
+    version: "—",
   }),
-  installer({
+  comingSoon({
     id: "zatgo-pos-win",
     productSlug: "zatgo-pos",
     channel: "desktop",
     platform: "windows",
     label: "Windows",
     fileName: "ZatGo-POS-Setup.exe",
+    version: "—",
   }),
   installer({
     id: "accounting-win",
@@ -190,12 +211,21 @@ export const downloads: DownloadItem[] = [
     fileName: "ZatGo-Accounting-Setup.exe",
   }),
   installer({
+    id: "accounting-linux",
+    productSlug: "accounting",
+    channel: "desktop",
+    platform: "linux",
+    label: "Linux (.deb)",
+    fileName: "zatgo-accounting.deb",
+  }),
+  comingSoon({
     id: "fleet-win",
     productSlug: "fleet",
     channel: "desktop",
     platform: "windows",
     label: "Windows",
     fileName: "ZatGo-Fleet-Setup.exe",
+    version: "—",
   }),
   (() => {
     const image =
@@ -288,22 +318,6 @@ export const platformRequirements: PlatformRequirement[] = [
 
 export function downloadsByChannel(channel: Channel): DownloadItem[] {
   return downloads.filter((d) => d.channel === channel);
-}
-
-export function productHasDownloads(slug: string): boolean {
-  return downloads.some((d) => d.productSlug === slug);
-}
-
-export function downloadProductSlugs(): string[] {
-  const seen = new Set<string>();
-  const slugs: string[] = [];
-  for (const d of downloads) {
-    if (!seen.has(d.productSlug)) {
-      seen.add(d.productSlug);
-      slugs.push(d.productSlug);
-    }
-  }
-  return slugs.filter((s) => products.some((p) => p.slug === s));
 }
 
 export const platformLabels: Record<DownloadPlatform, string> = {

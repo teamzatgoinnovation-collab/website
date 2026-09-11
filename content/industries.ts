@@ -38,7 +38,7 @@ export const solutions: SolutionMeta[] = [
   },
   {
     slug: "retail-pos",
-    products: ["zatgo-pos", "retail-pos", "warehouse", "accounting"],
+    products: ["zatgo-pos", "warehouse", "accounting"],
   },
   {
     slug: "project-delivery",

@@ -37,20 +37,19 @@ export const products: ProductMeta[] = [
   },
   { slug: "vansale", channels: ["mobile"], status: "available" },
   { slug: "delivery", channels: ["mobile"], status: "available" },
-  { slug: "warehouse", channels: ["mobile", "desktop"], status: "available" },
-  { slug: "hr", channels: ["mobile"], status: "available" },
-  { slug: "crm", channels: ["mobile", "web"], status: "available" },
-  { slug: "field-service", channels: ["mobile"], status: "available" },
-  { slug: "customer-portal", channels: ["web", "mobile"], status: "available" },
-  { slug: "vendor-portal", channels: ["web", "mobile"], status: "available" },
-  { slug: "zatgo-pos", channels: ["desktop"], status: "available" },
   { slug: "accounting", channels: ["desktop"], status: "available" },
-  { slug: "fleet", channels: ["desktop"], status: "available" },
-  { slug: "admin-console", channels: ["desktop", "web"], status: "available" },
-  { slug: "report-studio", channels: ["desktop"], status: "available" },
-  { slug: "bi-dashboard", channels: ["web"], status: "available" },
-  { slug: "retail-pos", channels: ["mobile", "desktop"], status: "coming-soon" },
-  { slug: "sales-executive", channels: ["mobile"], status: "coming-soon" },
+  { slug: "chat-ai", channels: ["mobile"], status: "available" },
+  { slug: "warehouse", channels: ["mobile", "desktop"], status: "coming-soon" },
+  { slug: "hr", channels: ["mobile"], status: "coming-soon" },
+  { slug: "crm", channels: ["mobile", "web"], status: "coming-soon" },
+  { slug: "field-service", channels: ["mobile"], status: "coming-soon" },
+  { slug: "customer-portal", channels: ["web", "mobile"], status: "coming-soon" },
+  { slug: "vendor-portal", channels: ["web", "mobile"], status: "coming-soon" },
+  { slug: "zatgo-pos", channels: ["desktop"], status: "coming-soon" },
+  { slug: "fleet", channels: ["desktop"], status: "coming-soon" },
+  { slug: "admin-console", channels: ["desktop", "web"], status: "coming-soon" },
+  { slug: "report-studio", channels: ["desktop"], status: "coming-soon" },
+  { slug: "bi-dashboard", channels: ["web"], status: "coming-soon" },
 ];
 
 export function getProductMeta(slug: string): ProductMeta | undefined {
@@ -60,7 +59,7 @@ export function getProductMeta(slug: string): ProductMeta | undefined {
 export function getHighlightedProductMetas(): ProductMeta[] {
   return products
     .filter((p) => p.highlight || p.status === "available")
-    .slice(0, 6);
+    .slice(0, 7);
 }
 
 export const channelKeys: Record<Channel, "mobile" | "desktop" | "web"> = {

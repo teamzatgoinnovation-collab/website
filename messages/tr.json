@@ -1000,85 +1000,42 @@
         }
       ]
     },
-    "retail-pos": {
-      "name": "Retail POS",
-      "tagline": "Barkod, nakit ve fişler.",
-      "description": "Barkod, kasa çekmecesi, fiş yazıcısı ve müşteri ekranı ile perakende satış noktası.",
+    "chat-ai": {
+      "name": "ZatGo Chat AI",
+      "tagline": "ERPNext verileriniz için bir yapay zeka asistanı.",
+      "description": "Sorular sorun, özetler alın ve iş verileriniz üzerinde sade bir dille işlem yapın — ZatGo/ERPNext uygulamalarınızla desteklenen bir yapay zeka sohbet istemcisi.",
       "capabilities": [
-        "Barkod",
-        "Kasa çekmecesi",
-        "Fişler",
-        "Müşteri ekranı"
+        "Soru sor",
+        "Özetler",
+        "Veri sorguları",
+        "Sohbet geçmişi"
       ],
       "modules": [
         {
-          "name": "Barcode",
-          "summary": "Barcode workflows inside Retail POS."
+          "name": "Ask a question",
+          "summary": "Ask a question workflows inside ZatGo Chat AI."
         },
         {
-          "name": "Cash drawer",
-          "summary": "Cash drawer workflows inside Retail POS."
+          "name": "Summaries",
+          "summary": "Summaries workflows inside ZatGo Chat AI."
         },
         {
-          "name": "Receipts",
-          "summary": "Receipts workflows inside Retail POS."
+          "name": "Data lookups",
+          "summary": "Data lookups workflows inside ZatGo Chat AI."
         },
         {
-          "name": "Customer display",
-          "summary": "Customer display workflows inside Retail POS."
+          "name": "Chat history",
+          "summary": "Chat history workflows inside ZatGo Chat AI."
         }
       ],
       "faq": [
         {
-          "question": "Which channels does Retail POS support?",
-          "answer": "Retail POS is available on mobile, desktop. Availability by plan may vary — ask sales for your rollout."
+          "question": "Which channels does ZatGo Chat AI support?",
+          "answer": "ZatGo Chat AI is available on mobile. Availability by plan may vary — ask sales for your rollout."
         },
         {
-          "question": "Is Retail POS available offline?",
-          "answer": "Field-oriented channels for Retail POS are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
-        },
-        {
-          "question": "How do we get started?",
-          "answer": "Request a demo from the Contact page. We will map roles, sites, and the right product mix for your organization."
-        }
-      ]
-    },
-    "sales-executive": {
-      "name": "Sales Executive",
-      "tagline": "Saha satış yöneticileri için CRM.",
-      "description": "Saha satışı için aday yönetimi, teklifler, ziyaretler, takipler ve notlar.",
-      "capabilities": [
-        "Adaylar",
-        "Teklifler",
-        "Ziyaretler",
-        "Takipler"
-      ],
-      "modules": [
-        {
-          "name": "Leads",
-          "summary": "Leads workflows inside Sales Executive."
-        },
-        {
-          "name": "Quotations",
-          "summary": "Quotations workflows inside Sales Executive."
-        },
-        {
-          "name": "Visits",
-          "summary": "Visits workflows inside Sales Executive."
-        },
-        {
-          "name": "Follow-ups",
-          "summary": "Follow-ups workflows inside Sales Executive."
-        }
-      ],
-      "faq": [
-        {
-          "question": "Which channels does Sales Executive support?",
-          "answer": "Sales Executive is available on mobile. Availability by plan may vary — ask sales for your rollout."
-        },
-        {
-          "question": "Is Sales Executive available offline?",
-          "answer": "Field-oriented channels for Sales Executive are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
+          "question": "Is ZatGo Chat AI available offline?",
+          "answer": "Field-oriented channels for ZatGo Chat AI are designed for unreliable connectivity where relevant. Exact offline scope depends on the module and device."
         },
         {
           "question": "How do we get started?",
