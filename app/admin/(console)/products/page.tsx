@@ -31,6 +31,11 @@ export default function ProductsPage() {
     mutationFn: () => api<Product>("/admin/products", { method: "POST", body: form }),
     onSuccess: (p) => { void qc.invalidateQueries({ queryKey: ["products"] }); router.push(`/admin/products/${p.id}`); },
   });
+  const toggle = useMutation({
+    mutationFn: (v: { id: string; status: "PUBLISHED" | "DRAFT" }) => api<Product>(`/admin/products/${v.id}`, { method: "PATCH", body: { status: v.status } }),
+    onSuccess: () => { void qc.invalidateQueries({ queryKey: ["products"] }); },
+  });
+  const canWrite = can(me.data, "products:write");
   const set = (k: keyof typeof EMPTY) => (e: { target: { value: string } }) => setForm((f) => ({ ...f, [k]: e.target.value }));
   const submit = (e: FormEvent) => { e.preventDefault(); create.mutate(); };
 
@@ -61,21 +66,33 @@ export default function ProductsPage() {
       </div>
 
       {list.isError ? <Notice kind="error">{errMsg(list.error)}</Notice> : null}
+      {toggle.isError ? <div className="mb-3"><Notice kind="error">{errMsg(toggle.error)}</Notice></div> : null}
       <div className="overflow-x-auto rounded-2xl border border-m-line">
         <table className="w-full text-sm">
           <thead className="bg-[var(--m-surface)] text-left text-xs uppercase tracking-wider text-m-muted">
-            <tr><th className="px-4 py-3">Name</th><th className="px-4 py-3">Slug</th><th className="px-4 py-3">Status</th><th className="px-4 py-3">Availability</th></tr>
+            <tr><th className="px-4 py-3">Name</th><th className="px-4 py-3">Slug</th><th className="px-4 py-3">Status</th><th className="px-4 py-3">Availability</th>{canWrite ? <th className="px-4 py-3">Action</th> : null}</tr>
           </thead>
           <tbody>
             {list.data?.items.map((p) => (
               <tr key={p.id} className="border-t border-m-line">
                 <td className="px-4 py-3 font-medium"><Link href={`/admin/products/${p.id}`} className="m-link">{p.name}</Link></td>
                 <td className="px-4 py-3 text-m-muted">{p.slug}</td>
-                <td className="px-4 py-3">{p.status}</td>
+                <td className="px-4 py-3">
+                  <span className={`inline-block rounded-full px-2.5 py-0.5 text-xs font-semibold ${p.status === "PUBLISHED" ? "bg-emerald-100 text-emerald-800" : "bg-slate-200 text-slate-700"}`}>{p.status}</span>
+                </td>
                 <td className="px-4 py-3 text-m-muted">{p.availability.replace("_", " ")}</td>
+                {canWrite ? (
+                  <td className="px-4 py-3">
+                    {p.status === "PUBLISHED" ? (
+                      <Btn variant="danger" aria-label={`Disable ${p.name}`} disabled={toggle.isPending} onClick={() => toggle.mutate({ id: p.id, status: "DRAFT" })}>Disable</Btn>
+                    ) : (
+                      <Btn variant="ghost" aria-label={`Enable ${p.name}`} disabled={toggle.isPending} onClick={() => toggle.mutate({ id: p.id, status: "PUBLISHED" })}>Enable</Btn>
+                    )}
+                  </td>
+                ) : null}
               </tr>
             ))}
-            {list.data && list.data.items.length === 0 ? <tr><td colSpan={4} className="px-4 py-8 text-center text-m-muted">No products yet.</td></tr> : null}
+            {list.data && list.data.items.length === 0 ? <tr><td colSpan={canWrite ? 5 : 4} className="px-4 py-8 text-center text-m-muted">No products yet.</td></tr> : null}
           </tbody>
         </table>
       </div>
