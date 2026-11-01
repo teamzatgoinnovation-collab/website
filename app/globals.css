@@ -11,6 +11,15 @@
   --color-border: oklch(0.86 0.012 240);
   --color-destructive: oklch(0.55 0.2 25);
   --radius-lg: 0.5rem;
+
+  /* Brand palette tokens (usable as bg-brand-cyan, text-brand-teal, …) */
+  --color-brand-primary: #2952e3;
+  --color-brand-secondary: #5b7fff;
+  --color-brand-cyan: #16b8e8;
+  --color-brand-teal: #08b69a;
+  --color-brand-purple: #7657e8;
+  --color-brand-dark: #101828;
+  --color-brand-bg: #f7f9fc;
 }
 
 * {
@@ -27,6 +36,13 @@ body {
   /* ZatGo brand — Royal Blue accent on a cool neutral slate */
   --color-background: oklch(0.985 0.005 240);
   --color-foreground: oklch(0.22 0.028 250);
+  --m-cyan: #16b8e8;
+  --m-teal: #08b69a;
+  --m-purple: #7657e8;
+  --m-dark: #101828;
+  --m-bg: #f7f9fc;
+  --m-grad-brand: linear-gradient(120deg, #2952e3 0%, #16b8e8 100%);
+  --m-grad-aurora: linear-gradient(120deg, #2952e3 0%, #7657e8 55%, #16b8e8 100%);
   --m-accent: #2952e3;
   --m-accent-soft: color-mix(in oklch, #2952e3 12%, white);
   --m-accent-foreground: #ffffff;

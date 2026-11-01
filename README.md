@@ -2,23 +2,21 @@
 
 Public marketing website for **ZatGo Innovation** — products, downloads, docs/tutorials hubs, updates, pricing, and contact.
 
-**Path:** `Clients/web/marketing/`  
+**Path:** `web/website/` (own repo; the ZatGoInnovation workspace root is not a git repo)  
 **Git remote:** https://github.com/teamzatgoinnovation-collab/website.git
 
 ## Quick start
 
 ```bash
-# from repo root
-pnpm install
-pnpm dev:marketing
-# → http://localhost:3000/en
+npm install        # or pnpm install; no lockfile is committed
+npm run dev        # → http://localhost:3000/en
 ```
 
 Build:
 
 ```bash
-pnpm --filter @zatgo/marketing build
-pnpm --filter @zatgo/marketing start
+npm run build      # needs network for next/font (Google Fonts)
+npm run start
 ```
 
 ## Stack (shipped)
@@ -27,7 +25,7 @@ pnpm --filter @zatgo/marketing start
 |-------|--------|
 | Framework | Next.js 15 App Router · React 19 · TypeScript |
 | Style | Tailwind CSS v4 · marketing tokens in `app/globals.css` |
-| UI | `@zatgo/ui` (shadcn-style) · `@zatgo/icons` (Lucide) |
+| UI | Local primitives in `components/ui` and `components/devices` · `lucide-react` icons |
 | Motion | Framer Motion |
 | Forms | React Hook Form · Zod |
 | i18n | `next-intl` (English deep-merge fallback) |
@@ -125,7 +123,7 @@ In **production**, missing or localhost URLs → download card stays **coming so
 | Variable | Role |
 |----------|------|
 | `LEADS_WEBHOOK_URL` | Optional CRM/Slack webhook |
-| `LEADS_NOTIFY_EMAIL` | Logged marker when leads arrive |
+| `LEADS_NOTIFY_EMAIL` | Recipient for lead notification email (sent via SMTP when `SMTP_*` is set) |
 | `LEADS_STORE_DIR` | JSONL directory (default `.data/leads`) |
 | `LEADS_RETRY_SECRET` | Required in production for `PUT /api/leads` queue drain |
 | `UPSTASH_REDIS_REST_URL` / `UPSTASH_REDIS_REST_TOKEN` | Preferred serverless rate limit |
@@ -162,3 +160,16 @@ See [Docs/PRODUCTION_CHECKLIST.md](../../Docs/PRODUCTION_CHECKLIST.md).
 ---
 
 Related: [FRONTEND_STACK.md](../../Docs/Foundation/FRONTEND_STACK.md) · [PRODUCT_CATALOG.md](../../Docs/Foundation/PRODUCT_CATALOG.md)
+
+## Product screenshots
+
+Real screenshots are never invented. Drop files into `public/images/products/<slug>/` named
+`desktop-*.png|jpg|webp|avif` and `mobile-*.…` (slugs: `zatgo-erp`, `vansale`, `mybis`, `prayertimer`).
+`lib/product-media.ts` reads them at build time (rebuild or restart `next dev` after adding files) and they appear in the hero carousel and the
+application showcase (with fullscreen lightbox). Folders without files show a labelled
+"Screenshot coming soon" placeholder.
+
+## Integrations
+
+Homepage integration tiles are all marked **Planned** (`content/home-sections.ts`). Change a status
+only after the backend connection exists and has been tested.

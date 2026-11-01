@@ -4,13 +4,13 @@ import { ArrowRight, BookOpen, Download, GraduationCap, Newspaper } from "lucide
 import { EcosystemDiagram } from "@/components/ecosystem-diagram";
 import { HeroBackdrop } from "@/components/hero-backdrop";
 import { HeroMotion, MotionReveal } from "@/components/motion-reveal";
-import { ProductCard } from "@/components/product-card";
+import { HeroCarousel } from "@/components/hero-carousel";
+import { FeaturedProducts, IndustriesGrid, IntegrationsSection, ShowcaseSection, SolutionsGrid, WhyGrid, getFeatured } from "@/components/home-sections";
 import { Section, SectionHeading } from "@/components/section";
 import { caseStudies } from "@/content/case-studies";
 import { Link } from "@/i18n/navigation";
 import { contactHref } from "@/lib/contact-href";
 import { getLocalizedChangelog } from "@/lib/localized-content";
-import { getLocalizedHighlightedProducts } from "@/lib/localized-products";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -19,41 +19,40 @@ export default async function HomePage({ params }: Props) {
   setRequestLocale(locale);
 
   const t = await getTranslations("home");
-  const tBrand = await getTranslations("brand");
   const tCases = await getTranslations("caseStudies");
   const tCasesPage = await getTranslations("caseStudiesPage");
-  const featured = await getLocalizedHighlightedProducts();
+  const t2 = await getTranslations("home2");
+  const featured = await getFeatured();
   const latest = (await getLocalizedChangelog()).slice(0, 2);
   const featuredCase = caseStudies[0];
 
   return (
     <>
-      <section className="relative min-h-[min(100svh,48rem)] overflow-hidden hero-plane">
+      <section className="relative overflow-hidden hero-plane">
         <HeroBackdrop />
-        <div className="relative mx-auto flex min-h-[min(100svh,48rem)] max-w-6xl flex-col justify-center px-6 pb-24 pt-20 md:pb-28">
-          <HeroMotion>
-            <p className="font-display text-[clamp(2.85rem,10vw,5.75rem)] font-semibold leading-[0.94] tracking-tight text-[var(--m-ink)]">
-              {tBrand("name")}
-            </p>
-          </HeroMotion>
-          <HeroMotion delay={0.1}>
-            <h1 className="mt-6 max-w-[24ch] font-display text-[clamp(1.4rem,2.8vw,2rem)] font-medium leading-snug tracking-tight text-[var(--m-ink)]">
-              {tBrand("tagline")}
-            </h1>
-          </HeroMotion>
-          <HeroMotion delay={0.16}>
-            <p className="mt-5 max-w-lg text-[1.05rem] leading-relaxed text-m-muted md:text-lg">
-              {t("supporting")}
-            </p>
-          </HeroMotion>
-          <HeroMotion delay={0.24} className="mt-10 flex flex-wrap gap-3">
-            <Link href="/products" className="m-btn m-btn-primary">
-              {t("exploreProducts")}
-              <ArrowRight className="h-4 w-4 rtl:rotate-180" />
-            </Link>
-            <Link href={contactHref({ type: "demo" }) as "/contact"} className="m-btn m-btn-ghost">
-              {t("requestDemo")}
-            </Link>
+        <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 pb-20 pt-16 md:pb-28 lg:grid-cols-[1.05fr_1fr]">
+          <div>
+            <HeroMotion>
+              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[var(--m-accent)]">{t2("heroEyebrow")}</p>
+              <h1 className="mt-4 font-display text-[clamp(2.6rem,7vw,4.6rem)] font-semibold leading-[1] tracking-tight">
+                <span className="bg-[image:var(--m-grad-aurora)] bg-clip-text text-transparent">{t2("heroTitle")}</span>
+              </h1>
+            </HeroMotion>
+            <HeroMotion delay={0.12}>
+              <p className="mt-6 max-w-lg text-base leading-relaxed text-m-muted md:text-lg">{t2("heroBody")}</p>
+            </HeroMotion>
+            <HeroMotion delay={0.22} className="mt-9 flex flex-wrap gap-3">
+              <Link href="/products" className="m-btn m-btn-primary">{t2("ctaExplore")}<ArrowRight className="h-4 w-4 rtl:rotate-180" /></Link>
+              <Link href={contactHref({ type: "demo" }) as "/contact"} className="m-btn m-btn-ghost">{t2("ctaDemo")}</Link>
+              <Link href="/downloads" className="m-btn m-btn-ghost"><Download className="h-4 w-4" />{t2("ctaDownload")}</Link>
+            </HeroMotion>
+          </div>
+          <HeroMotion delay={0.18}>
+            <HeroCarousel
+              slides={featured.map((p) => ({ slug: p.slug, name: p.name, tagline: p.tagline, desktop: p.media.desktop[0], mobile: p.media.mobile[0] }))}
+              learnMore={t2("learnMore")}
+              slideLabel={t2("slideLabel")}
+            />
           </HeroMotion>
         </div>
       </section>
@@ -86,23 +85,12 @@ export default async function HomePage({ params }: Props) {
         </MotionReveal>
       </Section>
 
-      <Section>
-        <MotionReveal>
-          <SectionHeading
-            eyebrow={t("productsEyebrow")}
-            title={t("productsTitle")}
-            description={t("productsDesc")}
-            action={{ href: "/products", label: t("allProducts") }}
-          />
-        </MotionReveal>
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {featured.map((product, i) => (
-            <MotionReveal key={product.slug} delay={i * 0.05}>
-              <ProductCard product={product} className="h-full" />
-            </MotionReveal>
-          ))}
-        </div>
-      </Section>
+      <FeaturedProducts />
+      <SolutionsGrid />
+      <IndustriesGrid />
+      <ShowcaseSection />
+      <WhyGrid />
+      <IntegrationsSection />
 
       <Section surface>
         <MotionReveal>

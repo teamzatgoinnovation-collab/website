@@ -11,7 +11,7 @@ export function HeroBackdrop() {
       <div className="absolute inset-0 hero-glow" />
       <div className="absolute inset-0 hero-grain" />
       <motion.svg
-        className="absolute -right-[8%] top-[8%] h-[85%] w-[70%] text-[var(--m-accent)] opacity-40 dark:opacity-45 rtl:-left-[8%] rtl:right-auto rtl:-scale-x-100"
+        className="absolute -right-[8%] top-[8%] h-[85%] w-[70%] text-[var(--m-accent)] opacity-15 dark:opacity-25 rtl:-left-[8%] rtl:right-auto rtl:-scale-x-100"
         viewBox="0 0 640 640"
         fill="none"
         initial={reduceMotion ? false : { opacity: 0, scale: 0.96 }}

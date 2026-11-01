@@ -36,6 +36,8 @@ export const products: ProductMeta[] = [
     highlight: true,
   },
   { slug: "vansale", channels: ["mobile"], status: "available" },
+  { slug: "mybis", channels: ["mobile", "web"], status: "coming-soon" },
+  { slug: "prayertimer", channels: ["mobile", "web"], status: "available" },
   { slug: "delivery", channels: ["mobile"], status: "available" },
   { slug: "accounting", channels: ["desktop"], status: "available" },
   { slug: "chat-ai", channels: ["mobile"], status: "available" },

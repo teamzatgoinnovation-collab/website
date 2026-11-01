@@ -395,9 +395,9 @@
       ]
     },
     "erpnext": {
-      "name": "ERPNext",
+      "name": "ZatGo ERP",
       "tagline": "Enterprise ERP — finance, supply chain, and HR on a single, secure platform.",
-      "description": "ERPNext is the enterprise resource planning system behind every ZatGo deployment: accounting, sales and purchasing, inventory and manufacturing, projects, and HR, unified in a single auditable system of record. It runs on Space, ZatGo's hosting platform, with provisioning, monitoring, and backups handled automatically.",
+      "description": "ZatGo ERP, built on ERPNext, is the enterprise resource planning system behind every ZatGo deployment: accounting, sales and purchasing, inventory and manufacturing, projects, and HR, unified in a single auditable system of record. It runs on Space, ZatGo's hosting platform, with provisioning, monitoring, and backups handled automatically.",
       "capabilities": [
         "Financial accounting & compliance",
         "Sales, purchasing & supply chain",
@@ -1149,6 +1149,51 @@
           "answer": "Request a demo from the Contact page. We will map roles, sites, and the right product mix for your organization."
         }
       ]
+    },
+    "mybis": {
+      "name": "MyBis",
+      "tagline": "Business intelligence, reporting and forecasting.",
+      "description": "MyBis gives management a read-only view of the business: business intelligence, reporting and forecasting on top of your ZatGo data.",
+      "capabilities": [
+        "Business intelligence",
+        "Reporting",
+        "Forecasting"
+      ],
+      "modules": [
+        {
+          "name": "Business intelligence",
+          "summary": "Business intelligence"
+        },
+        {
+          "name": "Reporting",
+          "summary": "Reporting"
+        },
+        {
+          "name": "Forecasting",
+          "summary": "Forecasting"
+        }
+      ],
+      "faq": []
+    },
+    "prayertimer": {
+      "name": "PrayerTimer",
+      "tagline": "Mosque and prayer timetable management.",
+      "description": "PrayerTimer helps mosques manage and publish their prayer timetables.",
+      "capabilities": [
+        "Prayer timetables",
+        "Mosque management"
+      ],
+      "modules": [
+        {
+          "name": "Prayer timetables",
+          "summary": "Prayer timetables"
+        },
+        {
+          "name": "Mosque management",
+          "summary": "Mosque management"
+        }
+      ],
+      "faq": []
     }
   },
   "changelog": {
@@ -1732,5 +1777,41 @@
       "approach": "Warehouse and ZatGo POS for sites, HR for time, and admin console for role-based access across branches.",
       "outcome": "Transfers and sales land in one system; managers trust the same stock and hours view across locations."
     }
+  },
+  "home2": {
+    "heroEyebrow": "Enterprise software",
+    "heroTitle": "Innovate. Integrate. Grow.",
+    "heroBody": "Powerful ERP systems, business applications and digital solutions designed to simplify business operations and accelerate growth.",
+    "ctaExplore": "Explore Products",
+    "ctaDemo": "Book a Demo",
+    "ctaDownload": "Download Applications",
+    "slideLabel": "Slide",
+    "featuredEyebrow": "Our products",
+    "featuredTitle": "Software built for how you run your business",
+    "featuredDesc": "Four products, one platform approach. Open a product to see features, platforms and downloads.",
+    "learnMore": "Learn more",
+    "comingSoon": "Coming soon",
+    "platforms": "Platforms",
+    "solutionsEyebrow": "Business solutions",
+    "solutionsTitle": "Everything a growing business needs",
+    "solutionsDesc": "From the general ledger to the van on the road, ZatGo connects the work that runs your company.",
+    "industriesEyebrow": "Industries",
+    "industriesTitle": "Built for the way you trade",
+    "showcaseEyebrow": "Application showcase",
+    "showcaseTitle": "See the applications",
+    "showcaseDesc": "Switch between products and devices. Screenshots appear here as they are published.",
+    "whyEyebrow": "Why ZatGo",
+    "whyTitle": "Practical software, engineered to last",
+    "integrationsEyebrow": "Integrations",
+    "integrationsTitle": "Connect the tools you already use",
+    "integrationsDesc": "Only integrations that are live are shown as available. The rest are clearly marked as planned.",
+    "live": "Available",
+    "planned": "Planned",
+    "labelDesktop": "Desktop",
+    "labelMobile": "Mobile",
+    "labelFullscreen": "View fullscreen",
+    "labelClose": "Close",
+    "labelPrev": "Previous",
+    "labelNext": "Next"
   }
 }
