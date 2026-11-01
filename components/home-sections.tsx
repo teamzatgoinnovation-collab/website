@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { getSiteT } from "@/lib/site-content";
 import {
   ArrowRight, BarChart3, Boxes, Calculator, Calendar, Cloud, CreditCard, Download, HardDrive, Languages,
   Layers, LayoutDashboard, Mail, MapPin, MessageCircle, MoonStar, Package, Plug, Plus, ShieldCheck, ShoppingBag,
@@ -43,7 +44,7 @@ export async function getFeatured(): Promise<CatalogProduct[]> {
 }
 
 export async function SolutionsGrid() {
-  const t = await getTranslations("home2");
+  const { t } = await getSiteT("home", "home2");
   return (
     <Section surface>
       <MotionReveal>
@@ -70,7 +71,7 @@ export async function SolutionsGrid() {
 }
 
 export async function IndustriesGrid() {
-  const t = await getTranslations("home2");
+  const { t } = await getSiteT("home", "home2");
   return (
     <Section>
       <MotionReveal>
@@ -92,7 +93,7 @@ export async function IndustriesGrid() {
 }
 
 export async function ShowcaseSection() {
-  const t = await getTranslations("home2");
+  const { t } = await getSiteT("home", "home2");
   const featured = await getFeatured();
   const products: ShowcaseProduct[] = featured
     .map((p) => ({ slug: p.slug, name: p.name, tagline: p.tagline, desktop: screenshotsOf(p, "desktop"), mobile: screenshotsOf(p, "mobile") }))
@@ -115,7 +116,7 @@ export async function ShowcaseSection() {
 }
 
 export async function WhyGrid() {
-  const t = await getTranslations("home2");
+  const { t } = await getSiteT("home", "home2");
   return (
     <Section>
       <MotionReveal>
@@ -140,7 +141,7 @@ export async function WhyGrid() {
 }
 
 export async function IntegrationsSection() {
-  const t = await getTranslations("home2");
+  const { t } = await getSiteT("home", "home2");
   const ti = await getTranslations("integrationsPage");
   return (
     <Section surface>
@@ -166,7 +167,7 @@ export async function IntegrationsSection() {
 
 /** The product names with their marks (logo from the admin, or initials on the brand colour). */
 export async function ProductFamilyStrip() {
-  const t = await getTranslations("home2");
+  const { t } = await getSiteT("home", "home2");
   const featured = await getFeatured();
   if (!featured.length) return null;
   return (
@@ -202,7 +203,7 @@ const connectTiles: { Icon: LucideIcon; tone: string }[] = [
  * the admin; otherwise it is a clean card with the product mark, name and tagline.
  */
 export async function ProductsAndConnections() {
-  const t = await getTranslations("home2");
+  const { t } = await getSiteT("home", "home2");
   const featured = await getFeatured();
   return (
     <Section className="!pb-10 !pt-12 md:!pt-14">
@@ -274,7 +275,7 @@ export async function ProductsAndConnections() {
 
 /** Gradient band: only counts that come straight from the data (published products, industries, services, languages). */
 export async function StatsBand() {
-  const t = await getTranslations("home2");
+  const { t } = await getSiteT("home", "home2");
   const products = await getCatalog();
   const facts: { n: number; label: string; Icon: LucideIcon }[] = [
     ...(products.length ? [{ n: products.length, label: t("factProducts"), Icon: Package }] : []),
@@ -311,7 +312,7 @@ export async function StatsBand() {
 
 /** Only products with mobile screenshots uploaded in the admin appear here; with none, the whole section is omitted. */
 export async function IphoneShowcaseSection() {
-  const t = await getTranslations("home2");
+  const { t } = await getSiteT("home", "home2");
   const featured = await getFeatured();
   const products: PhoneProduct[] = featured
     .map((p) => ({ slug: p.slug, name: p.name, tagline: p.tagline, features: p.capabilities.slice(0, 5), mobile: screenshotsOf(p, "mobile"), accent: p.accent ?? "#2952E3" }))

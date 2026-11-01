@@ -1,4 +1,5 @@
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
+import { getSiteT } from "@/lib/site-content";
 import { ArrowRight, BookOpen, CheckCircle2, Download, Globe, GraduationCap, Monitor, Newspaper, PlayCircle, Rocket, Smartphone } from "lucide-react";
 
 import { EcosystemDiagram } from "@/components/ecosystem-diagram";
@@ -19,15 +20,20 @@ export default async function HomePage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const t = await getTranslations("home");
-  const t2 = await getTranslations("home2");
+  const { t, images } = await getSiteT("home", "home");
+  const { t: t2 } = await getSiteT("home", "home2");
   const featured = await getFeatured();
   const latest = (await getLocalizedChangelog()).slice(0, 2);
 
   return (
     <>
       <section className="hero-aurora relative overflow-hidden">
-        <Skyline className="pointer-events-none absolute bottom-0 start-0 h-[46%] w-[68%] opacity-70" />
+        {images.heroBackground ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={images.heroBackground} alt="" aria-hidden className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-40" />
+        ) : (
+          <Skyline className="pointer-events-none absolute bottom-0 start-0 h-[46%] w-[68%] opacity-70" />
+        )}
         <div className="relative mx-auto grid max-w-7xl items-center gap-6 px-5 pb-28 pt-10 md:pt-14 lg:grid-cols-[1fr_1.05fr] lg:pb-32">
           <div className="relative z-10">
             <HeroMotion>
@@ -36,7 +42,7 @@ export default async function HomePage({ params }: Props) {
               </span>
               <HeroHeadline
                 className="mt-5 font-display text-[clamp(2.6rem,6.2vw,4.7rem)] font-extrabold leading-[1.02] tracking-tight text-[var(--m-ink)]"
-                words={[{ text: "Innovate." }, { text: "Integrate." }, { text: "Grow.", gradient: true }]}
+                words={[{ text: t2("heroWord1") }, { text: t2("heroWord2") }, { text: t2("heroWord3"), gradient: true }]}
               />
             </HeroMotion>
             <HeroMotion delay={0.12}>
@@ -79,7 +85,7 @@ export default async function HomePage({ params }: Props) {
           <SectionHeading eyebrow={t("ecosystemEyebrow")} title={t("ecosystemTitle")} description={t("ecosystemDesc")} />
         </MotionReveal>
         <MotionReveal delay={0.05}>
-          <EcosystemDiagram />
+          <EcosystemDiagram labels={Object.fromEntries(["Erp","Finance","Field","Crm","Inventory","Ops"].flatMap((k) => [[`${k}Title`, t(`ecosystem${k}Title`)], [`${k}Body`, t(`ecosystem${k}Body`)]]))} />
         </MotionReveal>
       </Section>
 
@@ -93,12 +99,16 @@ export default async function HomePage({ params }: Props) {
         </MotionReveal>
         <div className="grid gap-7 md:grid-cols-3 md:gap-8">
           {[
-            { title: t("storyFieldTitle"), body: t("storyFieldBody"), num: "01" },
-            { title: t("storyDeskTitle"), body: t("storyDeskBody"), num: "02" },
-            { title: t("storyPortalTitle"), body: t("storyPortalBody"), num: "03" },
+            { title: t("storyFieldTitle"), body: t("storyFieldBody"), num: "01", image: images.storyFieldImage },
+            { title: t("storyDeskTitle"), body: t("storyDeskBody"), num: "02", image: images.storyDeskImage },
+            { title: t("storyPortalTitle"), body: t("storyPortalBody"), num: "03", image: images.storyPortalImage },
           ].map((step, i) => (
             <MotionReveal key={step.num} delay={i * 0.07}>
               <div className="border-t border-m-line pt-6">
+                {step.image ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={step.image} alt="" loading="lazy" decoding="async" className="mb-5 aspect-[16/9] w-full rounded-2xl object-cover" />
+                ) : null}
                 <p className="font-display text-sm font-semibold text-[var(--m-accent)]">
                   {step.num}
                 </p>

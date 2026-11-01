@@ -19,8 +19,7 @@ const categories = [
   { key: "Ops", icon: ClipboardList },
 ] as const;
 
-export function EcosystemDiagram() {
-  const t = useTranslations("home");
+export function EcosystemDiagram({ labels }: { labels: Record<string, string> }) {
   const tBrand = useTranslations("brand");
 
   return (
@@ -44,10 +43,10 @@ export function EcosystemDiagram() {
           >
             <Icon className="h-5 w-5 text-[var(--m-accent)]" />
             <p className="font-display text-base font-semibold tracking-tight text-[var(--m-ink)]">
-              {t(`ecosystem${key}Title` as Parameters<typeof t>[0])}
+              {labels[`${key}Title`]}
             </p>
             <p className="text-sm leading-relaxed text-m-muted">
-              {t(`ecosystem${key}Body` as Parameters<typeof t>[0])}
+              {labels[`${key}Body`]}
             </p>
           </div>
         ))}

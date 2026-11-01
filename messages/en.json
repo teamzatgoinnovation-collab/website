@@ -943,6 +943,9 @@
   "home2": {
     "heroEyebrow": "Enterprise software",
     "heroTitle": "Innovate. Integrate. Grow.",
+    "heroWord1": "Innovate.",
+    "heroWord2": "Integrate.",
+    "heroWord3": "Grow.",
     "heroBody": "Powerful ERP systems, business applications and digital solutions designed to simplify business operations and accelerate growth.",
     "ctaExplore": "Explore Products",
     "ctaDemo": "Book a Demo",

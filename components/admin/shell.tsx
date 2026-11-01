@@ -1,7 +1,7 @@
 "use client";
 
 import { useQueryClient } from "@tanstack/react-query";
-import { BarChart3, ClipboardList, Image as ImageIcon, LogOut, Package, Users, Inbox } from "lucide-react";
+import { BarChart3, ClipboardList, FileText, Image as ImageIcon, LogOut, Package, Users, Inbox } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, type ReactNode } from "react";
@@ -14,6 +14,7 @@ import { cn } from "@/lib/cn";
 const NAV = [
   { href: "/admin", label: "Overview", icon: BarChart3, perm: null },
   { href: "/admin/products", label: "Products", icon: Package, perm: "products:read" },
+  { href: "/admin/content/home", label: "Content", icon: FileText, perm: "content:read" },
   { href: "/admin/media", label: "Media", icon: ImageIcon, perm: "media:read" },
   { href: "/admin/leads", label: "Leads", icon: Inbox, perm: "leads:read" },
   { href: "/admin/users", label: "Users", icon: Users, perm: "users:read" },
