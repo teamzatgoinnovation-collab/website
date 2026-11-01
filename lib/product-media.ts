@@ -3,6 +3,9 @@ import path from "node:path";
 
 export type ProductMedia = { desktop: string[]; mobile: string[] };
 
+/** Product slug -> screenshot folder name (the ERP product is stored as `erpnext` in content). */
+const FOLDER: Record<string, string> = { erpnext: "zatgo-erp" };
+
 const IMAGE_EXT = /\.(png|jpe?g|webp|avif)$/i;
 
 /**
@@ -11,14 +14,15 @@ const IMAGE_EXT = /\.(png|jpe?g|webp|avif)$/i;
  * and the UI then shows an explicit "screenshot coming soon" placeholder.
  */
 export function getProductMedia(slug: string): ProductMedia {
-  const dir = path.join(process.cwd(), "public", "images", "products", slug);
+  const folder = FOLDER[slug] ?? slug;
+  const dir = path.join(process.cwd(), "public", "images", "products", folder);
   let files: string[] = [];
   try {
     files = readdirSync(dir).filter((f) => IMAGE_EXT.test(f)).sort();
   } catch {
     return { desktop: [], mobile: [] };
   }
-  const url = (f: string) => `/images/products/${slug}/${f}`;
+  const url = (f: string) => `/images/products/${folder}/${f}`;
   return {
     desktop: files.filter((f) => f.startsWith("desktop")).map(url),
     mobile: files.filter((f) => f.startsWith("mobile")).map(url),

@@ -1723,7 +1723,7 @@
     "changelogTitle": "Recent updates",
     "changelogViewAll": "View all updates",
     "screenshotTitle": "Product screens",
-    "screenshotNote": "UI previews below show the product layout direction — replace with live screenshots when packs ship.",
+    "screenshotNote": "Real application screenshots appear here as they are published.",
     "audienceTitle": "Who it’s for",
     "outcomesTitle": "What teams get",
     "audienceByChannel": {
@@ -1826,7 +1826,12 @@
     "labelClose": "Close",
     "labelPrev": "Previous",
     "labelNext": "Next",
-    "moreProducts": "More products"
+    "moreProducts": "More products",
+    "factsLabel": "ZatGo at a glance",
+    "factProducts": "Products in the catalog",
+    "factIndustries": "Industries covered",
+    "factServices": "Services offered",
+    "factLanguages": "Languages"
   },
   "servicesPage": {
     "title": "Services",

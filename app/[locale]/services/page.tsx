@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
+import { Timeline } from "@/components/motion/timeline";
 import { MotionReveal } from "@/components/motion-reveal";
 import { Section, SectionHeading } from "@/components/section";
 import { serviceSlugs } from "@/content/services";
@@ -43,15 +44,7 @@ export default async function ServicesPage({ params }: Props) {
       </Section>
       <Section surface>
         <SectionHeading title={t("processTitle")} />
-        <ol className="grid gap-8 md:grid-cols-4">
-          {steps.map((s, n) => (
-            <li key={s.title} className="border-t border-m-line pt-5">
-              <p className="font-display text-sm font-semibold text-[var(--m-accent)]">0{n + 1}</p>
-              <h3 className="mt-2 font-display text-lg font-semibold">{s.title}</h3>
-              <p className="mt-1 text-sm text-m-muted">{s.body}</p>
-            </li>
-          ))}
-        </ol>
+        <div className="max-w-xl"><Timeline steps={steps} /></div>
       </Section>
     </>
   );

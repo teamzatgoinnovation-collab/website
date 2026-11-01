@@ -5,7 +5,7 @@ import { EcosystemDiagram } from "@/components/ecosystem-diagram";
 import { HeroBackdrop } from "@/components/hero-backdrop";
 import { HeroMotion, MotionReveal } from "@/components/motion-reveal";
 import { HeroCarousel } from "@/components/hero-carousel";
-import { FeaturedProducts, IndustriesGrid, IntegrationsSection, ShowcaseSection, SolutionsGrid, WhyGrid, getFeatured } from "@/components/home-sections";
+import { FactsStrip, FeaturedProducts, IndustriesGrid, IntegrationsSection, ShowcaseSection, SolutionsGrid, WhyGrid, getFeatured } from "@/components/home-sections";
 import { Section, SectionHeading } from "@/components/section";
 import { Link } from "@/i18n/navigation";
 import { contactHref } from "@/lib/contact-href";
@@ -81,6 +81,7 @@ export default async function HomePage({ params }: Props) {
         </MotionReveal>
       </Section>
 
+      <FactsStrip />
       <FeaturedProducts />
       <SolutionsGrid />
       <IndustriesGrid />

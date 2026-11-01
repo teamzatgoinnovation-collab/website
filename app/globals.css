@@ -385,3 +385,21 @@ body:not(.font-arabic):not(.font-devanagari):not(.font-malayalam):not(.font-cjk-
     display: none !important;
   }
 }
+
+/* Animated connection lines (integration hub). Static for reduced-motion users. */
+@keyframes zg-flow {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+
+.zg-flow {
+  stroke-dasharray: 4 8;
+  animation: zg-flow 1.8s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .zg-flow {
+    animation: none;
+  }
+}

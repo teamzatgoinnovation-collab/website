@@ -1,7 +1,7 @@
 "use client";
 
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { AnimatePresence, motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 
 import { AppleIPhoneFrame, MacBookFrame, ScreenshotSlot } from "@/components/devices";
 import { Link } from "@/i18n/navigation";
@@ -19,6 +19,9 @@ export function HeroCarousel({ slides, learnMore, slideLabel }: { slides: HeroSl
   const [i, setI] = useState(0);
   const [paused, setPaused] = useState(false);
   const reduce = useReducedMotion();
+  const rootRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({ target: rootRef, offset: ["start end", "end start"] });
+  const parallaxY = useTransform(scrollYProgress, [0, 1], [24, -48]);
 
   useEffect(() => {
     if (paused || reduce || slides.length < 2) return;
@@ -31,6 +34,7 @@ export function HeroCarousel({ slides, learnMore, slideLabel }: { slides: HeroSl
 
   return (
     <div
+      ref={rootRef}
       className="relative"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
@@ -51,13 +55,13 @@ export function HeroCarousel({ slides, learnMore, slideLabel }: { slides: HeroSl
             <MacBookFrame className="mx-auto max-w-[34rem]">
               <ScreenshotSlot src={slide.desktop} alt={`${slide.name} desktop`} label={slide.name} priority={i === 0} />
             </MacBookFrame>
-            <div className="absolute -bottom-6 end-0 w-[26%] min-w-[5.5rem] sm:end-2">
+            <motion.div style={reduce ? undefined : { y: parallaxY }} className="absolute -bottom-6 end-0 w-[26%] min-w-[5.5rem] sm:end-2">
               <motion.div animate={reduce ? undefined : { y: [0, -8, 0] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}>
                 <AppleIPhoneFrame>
                   <ScreenshotSlot src={slide.mobile} alt={`${slide.name} mobile`} label={slide.name} />
                 </AppleIPhoneFrame>
               </motion.div>
-            </div>
+            </motion.div>
           </motion.div>
         </AnimatePresence>
       </div>

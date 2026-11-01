@@ -27,6 +27,12 @@ const nextConfig: NextConfig = {
         destination: "/:locale/products/vansale",
         permanent: true,
       },
+      {
+        // Crawlers and older browsers still request /favicon.ico; the icon is app/icon.svg.
+        source: "/favicon.ico",
+        destination: "/icon.svg",
+        permanent: false,
+      },
     ];
   },
 };

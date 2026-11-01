@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
+import { IntegrationHub } from "@/components/integration-hub";
 import { MotionReveal } from "@/components/motion-reveal";
 import { Section, SectionHeading } from "@/components/section";
 import { integrationPages } from "@/content/integration-pages";
@@ -28,6 +29,13 @@ export default async function IntegrationsPage({ params }: Props) {
   return (
     <Section>
       <SectionHeading eyebrow={t("eyebrow")} title={t("heading")} description={t("description")} />
+      <div className="mb-14">
+        <IntegrationHub
+          names={integrationPages.map((i) => t(`items.${i.slug}.name`))}
+          centerLabel="ZatGo"
+          plannedLabel={t("statusPlanned")}
+        />
+      </div>
       <div className="space-y-12">
         {[...groups.entries()].map(([category, list]) => (
           <div key={category}>

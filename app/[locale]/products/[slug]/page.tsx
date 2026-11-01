@@ -3,6 +3,9 @@ import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
+import { Accordion } from "@/components/motion/accordion";
+import { ScreenshotGallery } from "@/components/screenshot-gallery";
+import { getProductMedia } from "@/lib/product-media";
 import { JsonLd } from "@/components/json-ld";
 import { MotionReveal } from "@/components/motion-reveal";
 import { ProductPricingCta } from "@/components/product-pricing-cta";
@@ -14,10 +17,8 @@ import { products } from "@/content/products";
 import { getDocsUrl } from "@/content/site";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
-import { cn } from "@/lib/cn";
 import { contactHref } from "@/lib/contact-href";
 import { getLocalizedProductDetail } from "@/lib/localized-products";
-import { getProductImage } from "@/lib/product-images";
 import {
   absoluteUrl,
   breadcrumbJsonLd,
@@ -64,6 +65,8 @@ export default async function ProductDetailPage({ params }: Props) {
   const t = await getTranslations("common");
   const tDetail = await getTranslations("productDetail");
   const tChangelog = await getTranslations("changelog");
+  const tHome = await getTranslations("home2");
+  const media = getProductMedia(slug);
   const docsHref = getDocsUrl(`/guides/${product.slug}`);
   const productUrl = absoluteUrl(locale, `/products/${slug}`);
   const changelogEntries = getChangelogEntriesForProduct(slug, 3);
@@ -152,39 +155,22 @@ export default async function ProductDetailPage({ params }: Props) {
 
       {product.slug === "vansale" ? <VanSaleWorkflowSection /> : null}
 
-      <MotionReveal className="mt-16 overflow-hidden rounded-[var(--m-radius)] border border-m-line bg-[color-mix(in_oklch,var(--m-accent-soft)_40%,var(--m-surface))]">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={getProductImage(product.slug)}
-          alt={`${product.name} interface preview`}
-          className="mx-auto max-h-[28rem] w-full object-contain object-top md:max-h-[34rem]"
-        />
-      </MotionReveal>
-
       <MotionReveal className="mt-16 border-t border-m-line pt-12">
         <h2 className="font-display text-xl font-semibold tracking-tight">
           {tDetail("screenshotTitle")}
         </h2>
-        <p className="mt-2 text-sm text-m-muted">{tDetail("screenshotNote")}</p>
-        <div className="mt-6 grid gap-3 sm:grid-cols-3">
-          {(["modules", "workflow", "overview"] as const).map((variant, i) => (
-            <div
-              key={variant}
-              className="overflow-hidden border border-m-line bg-[var(--m-surface)]"
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={getProductImage(product.slug)}
-                alt=""
-                className={cn(
-                  "aspect-[4/3] w-full object-cover",
-                  i === 1 && "object-left",
-                  i === 2 && "object-right scale-110",
-                )}
-              />
-            </div>
-          ))}
-        </div>
+        <p className="mt-2 mb-6 text-sm text-m-muted">{tDetail("screenshotNote")}</p>
+        <ScreenshotGallery
+          name={product.name}
+          desktop={media.desktop}
+          mobile={media.mobile}
+          labels={{
+            fullscreen: tHome("labelFullscreen"),
+            close: tHome("labelClose"),
+            prev: tHome("labelPrev"),
+            next: tHome("labelNext"),
+          }}
+        />
       </MotionReveal>
 
       {product.slug !== "vansale" ? (
@@ -250,16 +236,7 @@ export default async function ProductDetailPage({ params }: Props) {
           <h2 className="font-display text-xl font-semibold tracking-tight">
             {tDetail("faqTitle")}
           </h2>
-          <dl className="mt-6 max-w-3xl space-y-6">
-            {product.faq.map((item) => (
-              <div key={item.question}>
-                <dt className="font-semibold text-[var(--m-ink)]">{item.question}</dt>
-                <dd className="mt-2 text-sm leading-relaxed text-m-muted">
-                  {item.answer}
-                </dd>
-              </div>
-            ))}
-          </dl>
+          <div className="mt-6 max-w-3xl"><Accordion items={product.faq} /></div>
         </MotionReveal>
       ) : null}
 

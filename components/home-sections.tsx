@@ -6,6 +6,7 @@ import {
 } from "lucide-react";
 
 import { AppShowcase, type ShowcaseProduct } from "@/components/app-showcase";
+import { CountUp } from "@/components/motion/count-up";
 import { MotionReveal } from "@/components/motion-reveal";
 import { Section, SectionHeading } from "@/components/section";
 import {
@@ -13,6 +14,10 @@ import {
 } from "@/content/home-sections";
 import { integrationPages } from "@/content/integration-pages";
 import { Link } from "@/i18n/navigation";
+import { products as productCatalog } from "@/content/products";
+import { serviceSlugs } from "@/content/services";
+import { industryPages } from "@/content/industry-pages";
+import { locales } from "@/i18n/routing";
 import { getLocalizedProducts } from "@/lib/localized-products";
 import { getProductMedia } from "@/lib/product-media";
 
@@ -34,7 +39,7 @@ export async function getFeatured() {
   return featuredSlugs
     .map((slug) => all.find((p) => p.slug === slug))
     .filter((p): p is NonNullable<typeof p> => Boolean(p))
-    .map((p) => ({ ...p, media: getProductMedia(p.slug === "erpnext" ? "zatgo-erp" : p.slug) }));
+    .map((p) => ({ ...p, media: getProductMedia(p.slug) }));
 }
 
 export async function FeaturedProducts() {
@@ -203,5 +208,28 @@ export async function IntegrationsSection() {
         ))}
       </ul>
     </Section>
+  );
+}
+
+/** Counts come straight from the catalog data, so they cannot drift from what the site actually lists. */
+export async function FactsStrip() {
+  const t = await getTranslations("home2");
+  const facts = [
+    { n: productCatalog.length, label: t("factProducts") },
+    { n: industryPages.length, label: t("factIndustries") },
+    { n: serviceSlugs.length, label: t("factServices") },
+    { n: locales.length, label: t("factLanguages") },
+  ];
+  return (
+    <section aria-label={t("factsLabel")} className="px-6 py-14">
+      <dl className="mx-auto grid max-w-4xl grid-cols-2 gap-8 text-center md:grid-cols-4">
+        {facts.map((f) => (
+          <div key={f.label}>
+            <dt className="order-2 mt-1 text-sm text-m-muted">{f.label}</dt>
+            <dd className="font-display text-4xl font-semibold tracking-tight text-[var(--m-accent)]"><CountUp to={f.n} /></dd>
+          </div>
+        ))}
+      </dl>
+    </section>
   );
 }
