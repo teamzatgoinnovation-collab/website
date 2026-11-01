@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getSiteContent } from "@/lib/site-content";
 import { Suspense } from "react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
@@ -27,6 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ContactPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const heroImage = (await getSiteContent("contact")).images.heroImage;
   const t = await getTranslations("contactPage");
   const social = getSocialLinks();
   const hasPhone = Boolean(company.phone);
@@ -35,7 +37,7 @@ export default async function ContactPage({ params }: Props) {
 
   return (
     <>
-    <PageHero eyebrow={t("eyebrow")} title={t("heading")} description={t("description")} tone="blue" icon={Mail} icons={[Mail, MessageCircle, Phone, Calendar, MapPin, Headset]} />
+    <PageHero image={heroImage} eyebrow={t("eyebrow")} title={t("heading")} description={t("description")} tone="blue" icon={Mail} icons={[Mail, MessageCircle, Phone, Calendar, MapPin, Headset]} />
     <Section>
       <div className="grid gap-8 lg:grid-cols-2">
         <div>

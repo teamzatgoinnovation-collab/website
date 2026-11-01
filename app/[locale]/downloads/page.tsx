@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getSiteContent } from "@/lib/site-content";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { buildPageMetadata } from "@/lib/seo";
@@ -70,6 +71,7 @@ async function ChannelGroup({
 export default async function DownloadsPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const heroImage = (await getSiteContent("downloads")).images.heroImage;
   const t = await getTranslations("downloadsPage");
   const tc = await getTranslations("common");
   const localized = await getCatalog();
@@ -86,7 +88,7 @@ export default async function DownloadsPage({ params }: Props) {
 
   return (
     <>
-      <PageHero eyebrow={t("eyebrow")} title={t("heading")} description={t("description")} tone="blue" icon={Download} icons={[Download, Smartphone, Monitor, Globe, HardDrive, Package]} />
+      <PageHero image={heroImage} eyebrow={t("eyebrow")} title={t("heading")} description={t("description")} tone="blue" icon={Download} icons={[Download, Smartphone, Monitor, Globe, HardDrive, Package]} />
       <Section>
       
       <MotionReveal className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">

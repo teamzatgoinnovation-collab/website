@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getSiteContent } from "@/lib/site-content";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { buildPageMetadata } from "@/lib/seo";
@@ -27,6 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function SolutionsPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const heroImage = (await getSiteContent("solutions")).images.heroImage;
   const t = await getTranslations("solutionsPage");
   const solutions = await getLocalizedSolutions();
   const products = await getCatalog();
@@ -34,7 +36,7 @@ export default async function SolutionsPage({ params }: Props) {
 
   return (
     <>
-      <PageHero eyebrow={t("eyebrow")} title={t("heading")} description={t("description")} tone="violet" icon={Puzzle} icons={[Layers, Workflow, Target, Puzzle, Rocket, ShieldCheck]} />
+      <PageHero image={heroImage} eyebrow={t("eyebrow")} title={t("heading")} description={t("description")} tone="violet" icon={Puzzle} icons={[Layers, Workflow, Target, Puzzle, Rocket, ShieldCheck]} />
       <Section>
             <div className="space-y-0">
         {solutions.map((solution) => (

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getSiteContent } from "@/lib/site-content";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { buildPageMetadata } from "@/lib/seo";
@@ -31,12 +32,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function DocsPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const heroImage = (await getSiteContent("docs")).images.heroImage;
   const t = await getTranslations("docsPage");
   const links = await getLocalizedDocsHub();
 
   return (
     <>
-      <PageHero eyebrow={t("eyebrow")} title={t("heading")} description={t("description")} tone="teal" icon={BookOpen} icons={[BookOpen, FileText, Code2, LifeBuoy, Search, Library]} />
+      <PageHero image={heroImage} eyebrow={t("eyebrow")} title={t("heading")} description={t("description")} tone="teal" icon={BookOpen} icons={[BookOpen, FileText, Code2, LifeBuoy, Search, Library]} />
       <Section>
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {links.map((link, i) => (

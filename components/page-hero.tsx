@@ -14,17 +14,19 @@ type PageHeroProps = {
   /** Up to six decorative icons for the right-hand cluster (hidden on small screens). */
   icons?: LucideIcon[];
   icon?: LucideIcon;
+  /** Admin-chosen picture; replaces the icon cluster when set. */
+  image?: string;
   children?: ReactNode;
   className?: string;
 };
 
 /** Page header for every inner page: tinted band, h1, and a colourful icon cluster that uses the otherwise empty right half. */
-export function PageHero({ eyebrow, title, description, tone = "blue", icons = [], icon: Icon, children, className }: PageHeroProps) {
+export function PageHero({ eyebrow, title, description, tone = "blue", icons = [], icon: Icon, image, children, className }: PageHeroProps) {
   const tiles = icons.slice(0, 6);
   const start = ["blue", "violet", "teal", "amber", "cyan", "rose"].indexOf(tone);
   return (
     <header className={cn("page-hero", `tone-${tone}`, className)}>
-      <div className={cn("relative mx-auto grid max-w-6xl items-center gap-8 px-5 py-10 md:py-14", tiles.length ? "lg:grid-cols-[1.1fr_0.9fr]" : "")}>
+      <div className={cn("relative mx-auto grid max-w-6xl items-center gap-8 px-5 py-10 md:py-14", tiles.length || image ? "lg:grid-cols-[1.1fr_0.9fr]" : "")}>
         <HeroMotion>
           {eyebrow ? (
             <p className="tone-chip mb-4 inline-flex !rounded-full px-3.5 py-1.5 text-xs font-bold uppercase tracking-[0.14em]">
@@ -36,7 +38,10 @@ export function PageHero({ eyebrow, title, description, tone = "blue", icons = [
           {description ? <p className="mt-4 max-w-2xl text-base leading-relaxed text-m-muted md:text-lg">{description}</p> : null}
           {children ? <div className="mt-6 flex flex-wrap gap-3">{children}</div> : null}
         </HeroMotion>
-        {tiles.length ? (
+        {image ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={image} alt="" decoding="async" className="aspect-[4/3] w-full rounded-3xl border border-white/60 object-cover shadow-[0_30px_60px_-34px_var(--tone)]" />
+        ) : tiles.length ? (
           <div aria-hidden className="hidden grid-cols-3 gap-4 lg:grid">
             {tiles.map((TileIcon, i) => (
               <div key={i} className={cn("page-hero-tile", `tone-${toneAt(start + i)}`, i % 3 === 1 && "translate-y-5")} style={{ animationDelay: `${i * 0.5}s` }}>

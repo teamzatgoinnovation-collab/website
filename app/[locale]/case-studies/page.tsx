@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getSiteContent } from "@/lib/site-content";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ArrowRight, Award, Briefcase, MapPin, Target, TrendingUp, Users } from "lucide-react";
 
@@ -30,6 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function CaseStudiesPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const heroImage = (await getSiteContent("case-studies")).images.heroImage;
   const t = await getTranslations("caseStudiesPage");
   const tCases = await getTranslations("caseStudies");
   const active = await getActiveSlugs();
@@ -37,7 +39,7 @@ export default async function CaseStudiesPage({ params }: Props) {
 
   return (
     <>
-      <PageHero eyebrow={t("eyebrow")} title={t("heading")} description={t("description")} tone="rose" icon={Briefcase} icons={[Briefcase, TrendingUp, Target, Users, Award, MapPin]} />
+      <PageHero image={heroImage} eyebrow={t("eyebrow")} title={t("heading")} description={t("description")} tone="rose" icon={Briefcase} icons={[Briefcase, TrendingUp, Target, Users, Award, MapPin]} />
       <Section>
       <p role="note" className="mb-6 rounded-xl border border-dashed border-m-line bg-[var(--m-surface)] px-4 py-3 text-sm text-m-muted">{t("illustrativeNotice")}</p>
             <div className="space-y-0">

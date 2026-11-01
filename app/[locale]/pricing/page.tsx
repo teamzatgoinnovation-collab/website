@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getSiteContent } from "@/lib/site-content";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ArrowRight, BadgeCheck, Check, Layers, Receipt, ShieldCheck, Sparkles, Users } from "lucide-react";
 import { cn } from "@/lib/cn";
@@ -60,13 +61,14 @@ function tierContactHref(tierId: string): "/contact" {
 export default async function PricingPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const heroImage = (await getSiteContent("pricing")).images.heroImage;
   const t = await getTranslations("pricingPage");
   const tiers = await getLocalizedPricing();
   const faq = t.raw("faq") as FaqItem[];
 
   return (
     <>
-      <PageHero eyebrow={t("eyebrow")} title={t("heading")} description={t("description")} tone="violet" icon={BadgeCheck} icons={[BadgeCheck, Layers, Users, ShieldCheck, Sparkles, Receipt]} />
+      <PageHero image={heroImage} eyebrow={t("eyebrow")} title={t("heading")} description={t("description")} tone="violet" icon={BadgeCheck} icons={[BadgeCheck, Layers, Users, ShieldCheck, Sparkles, Receipt]} />
       <Section>
       <JsonLd data={faqJsonLd(faq)} />
             <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">

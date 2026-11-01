@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getSiteContent } from "@/lib/site-content";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { buildPageMetadata } from "@/lib/seo";
@@ -25,10 +26,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function CareersPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const heroImage = (await getSiteContent("careers")).images.heroImage;
   const t = await getTranslations("careersPage");
 
   return (
     <CompanyPageShell
+      image={heroImage}
       tone="teal"
       icon={Briefcase}
       icons={[Briefcase, Users, Rocket, Heart, GraduationCap, Sparkles]}

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getSiteContent } from "@/lib/site-content";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { buildPageMetadata, getSiteUrl } from "@/lib/seo";
@@ -32,12 +33,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function UpdatesPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const heroImage = (await getSiteContent("updates")).images.heroImage;
   const t = await getTranslations("updatesPage");
   const entries = await getLocalizedChangelog();
 
   return (
     <>
-      <PageHero eyebrow={t("eyebrow")} title={t("heading")} description={t("description")} tone="rose" icon={Newspaper} icons={[Newspaper, Sparkles, GitBranch, Rocket, Bell, Tag]} />
+      <PageHero image={heroImage} eyebrow={t("eyebrow")} title={t("heading")} description={t("description")} tone="rose" icon={Newspaper} icons={[Newspaper, Sparkles, GitBranch, Rocket, Bell, Tag]} />
       <Section>
             <p className="mb-8">
         <a href="/feed.xml" className="m-link text-sm">

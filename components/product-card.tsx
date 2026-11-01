@@ -10,10 +10,12 @@ import type { CatalogProduct } from "@/lib/catalog-types";
 
 type ProductCardProps = {
   product: CatalogProduct;
+  /** Admin-chosen cover picture (Content > Cards); wins over the screenshot. */
+  cover?: string;
   className?: string;
 };
 
-export function ProductCard({ product, className }: ProductCardProps) {
+export function ProductCard({ product, cover, className }: ProductCardProps) {
   const t = useTranslations("common");
   const shot = product.gallery[0];
   const isMobile = shot?.device === "MOBILE";
@@ -27,7 +29,10 @@ export function ProductCard({ product, className }: ProductCardProps) {
         className="relative flex aspect-[16/10] items-center justify-center overflow-hidden"
         style={{ background: `linear-gradient(135deg, color-mix(in oklch, ${product.accent ?? "var(--m-accent)"} 22%, white), color-mix(in oklch, ${product.accent ?? "var(--m-accent)"} 6%, white))` }}
       >
-        {shot ? (
+        {cover ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={cover} alt="" loading="lazy" decoding="async" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" />
+        ) : shot ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={shot.src}

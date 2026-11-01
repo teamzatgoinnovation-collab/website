@@ -43,13 +43,22 @@ export async function getFeatured(): Promise<CatalogProduct[]> {
   return featured.length ? featured : all.slice(0, 4);
 }
 
+function SectionBanner({ src }: { src?: string }) {
+  if (!src) return null;
+  return (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img src={src} alt="" loading="lazy" decoding="async" className="mb-7 aspect-[21/6] w-full rounded-3xl object-cover shadow-[0_24px_50px_-34px_rgba(41,82,227,0.5)]" />
+  );
+}
+
 export async function SolutionsGrid() {
-  const { t } = await getSiteT("home", "home2");
+  const { t, images } = await getSiteT("home", "home2");
   return (
     <Section surface>
       <MotionReveal>
         <SectionHeading eyebrow={t("solutionsEyebrow")} title={t("solutionsTitle")} description={t("solutionsDesc")} />
       </MotionReveal>
+      <SectionBanner src={images.solutionsBanner} />
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {solutionTiles.map((s, i) => {
           const Icon = icons[s.icon] ?? Boxes;
@@ -71,12 +80,13 @@ export async function SolutionsGrid() {
 }
 
 export async function IndustriesGrid() {
-  const { t } = await getSiteT("home", "home2");
+  const { t, images } = await getSiteT("home", "home2");
   return (
     <Section>
       <MotionReveal>
         <SectionHeading eyebrow={t("industriesEyebrow")} title={t("industriesTitle")} action={{ href: "/industries", label: t("learnMore") }} />
       </MotionReveal>
+      <SectionBanner src={images.industriesBanner} />
       <div className="grid grid-cols-2 gap-3 md:grid-cols-5">
         {industryTiles.map((s, i) => (
           <MotionReveal key={s.slug} delay={(i % 5) * 0.04}>
@@ -116,12 +126,13 @@ export async function ShowcaseSection() {
 }
 
 export async function WhyGrid() {
-  const { t } = await getSiteT("home", "home2");
+  const { t, images } = await getSiteT("home", "home2");
   return (
     <Section>
       <MotionReveal>
         <SectionHeading eyebrow={t("whyEyebrow")} title={t("whyTitle")} />
       </MotionReveal>
+      <SectionBanner src={images.whyBanner} />
       <div className="grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
         {whyTiles.map((w, i) => {
           const Icon = icons[w.icon] ?? Layers;
@@ -141,13 +152,14 @@ export async function WhyGrid() {
 }
 
 export async function IntegrationsSection() {
-  const { t } = await getSiteT("home", "home2");
+  const { t, images } = await getSiteT("home", "home2");
   const ti = await getTranslations("integrationsPage");
   return (
     <Section surface>
       <MotionReveal>
         <SectionHeading eyebrow={t("integrationsEyebrow")} title={t("integrationsTitle")} description={t("integrationsDesc")} action={{ href: "/integrations", label: t("learnMore") }} />
       </MotionReveal>
+      <SectionBanner src={images.integrationsBanner} />
       <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
         {integrationPages.map((g) => (
           <li key={g.slug}>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getSiteContent } from "@/lib/site-content";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { buildPageMetadata } from "@/lib/seo";
@@ -31,12 +32,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function TutorialsPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const heroImage = (await getSiteContent("tutorials")).images.heroImage;
   const t = await getTranslations("tutorialsPage");
   const items = await getLocalizedTutorials();
 
   return (
     <>
-      <PageHero eyebrow={t("eyebrow")} title={t("heading")} description={t("description")} tone="amber" icon={GraduationCap} icons={[GraduationCap, PlayCircle, ListChecks, Lightbulb, BookOpen, Video]} />
+      <PageHero image={heroImage} eyebrow={t("eyebrow")} title={t("heading")} description={t("description")} tone="amber" icon={GraduationCap} icons={[GraduationCap, PlayCircle, ListChecks, Lightbulb, BookOpen, Video]} />
       <Section>
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {items.map((tutorial, i) => (

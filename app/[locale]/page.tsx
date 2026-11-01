@@ -140,6 +140,7 @@ export default async function HomePage({ params }: Props) {
               href: "/downloads" as const,
               num: "01",
               Icon: Smartphone,
+              image: images.channelMobileImage,
             },
             {
               title: t("channelDesktopTitle"),
@@ -147,6 +148,7 @@ export default async function HomePage({ params }: Props) {
               href: "/downloads" as const,
               num: "02",
               Icon: Monitor,
+              image: images.channelDesktopImage,
             },
             {
               title: t("channelWebTitle"),
@@ -154,12 +156,18 @@ export default async function HomePage({ params }: Props) {
               href: "/products" as const,
               num: "03",
               Icon: Globe,
+              image: images.channelWebImage,
             },
           ].map((item, i) => (
             <MotionReveal key={item.num} delay={i * 0.07}>
               <div>
                 <div className="mb-5 flex aspect-[16/8] items-center justify-center overflow-hidden rounded-3xl bg-gradient-to-br from-[#2952E3]/15 via-[#16B8E8]/15 to-[#08B69A]/15">
-                  <span className="inline-flex h-20 w-20 items-center justify-center rounded-3xl bg-white text-[var(--m-accent)] shadow-[0_18px_40px_-18px_rgba(41,82,227,0.6)] dark:bg-white/10"><item.Icon className="h-9 w-9" aria-hidden /></span>
+                  {item.image ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={item.image} alt="" loading="lazy" decoding="async" className="h-full w-full object-cover" />
+                  ) : (
+                    <span className="inline-flex h-20 w-20 items-center justify-center rounded-3xl bg-white text-[var(--m-accent)] shadow-[0_18px_40px_-18px_rgba(41,82,227,0.6)] dark:bg-white/10"><item.Icon className="h-9 w-9" aria-hidden /></span>
+                  )}
                 </div>
                 <div className="border-t border-m-line pt-6">
                   <p className="font-display text-sm font-semibold text-[var(--m-accent)]">

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getSiteContent } from "@/lib/site-content";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { buildPageMetadata } from "@/lib/seo";
@@ -25,11 +26,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function PrivacyPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const heroImage = (await getSiteContent("privacy")).images.heroImage;
   const t = await getTranslations("privacyPage");
   const sections = t.raw("sections") as Section[];
 
   return (
-    <CompanyPageShell eyebrow={t("eyebrow")} heading={t("heading")} tone="blue" icon={Shield} icons={[Shield, Lock, Eye, FileText, KeyRound, ShieldCheck]} cta={false}>
+    <CompanyPageShell image={heroImage} eyebrow={t("eyebrow")} heading={t("heading")} tone="blue" icon={Shield} icons={[Shield, Lock, Eye, FileText, KeyRound, ShieldCheck]} cta={false}>
       <p className="text-sm text-[var(--m-muted)]">{t("updated")}</p>
       <div className="mt-8 max-w-3xl space-y-10">
         {sections.map((section, i) => (

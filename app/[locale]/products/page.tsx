@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getSiteContent } from "@/lib/site-content";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { buildPageMetadata } from "@/lib/seo";
@@ -26,6 +27,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ProductsPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const heroImage = (await getSiteContent("products")).images.heroImage;
+  const covers = (await getSiteContent("cards")).images;
   const t = await getTranslations("productsPage");
   const all = await getCatalog();
   const available = all.filter((p) => p.status === "available");
@@ -33,11 +36,11 @@ export default async function ProductsPage({ params }: Props) {
 
   return (
     <>
-      <PageHero eyebrow={t("eyebrow")} title={t("heading")} description={t("description")} tone="blue" icon={Package} icons={[Package, Smartphone, Monitor, Globe, Boxes, Layers]} />
+      <PageHero image={heroImage} eyebrow={t("eyebrow")} title={t("heading")} description={t("description")} tone="blue" icon={Package} icons={[Package, Smartphone, Monitor, Globe, Boxes, Layers]} />
       <Section>
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {available.map((product) => (
-          <ProductCard key={product.slug} product={product} />
+          <ProductCard key={product.slug} product={product} cover={covers[`product-${product.slug}`]} />
         ))}
       </div>
       {soon.length > 0 ? (
@@ -47,7 +50,7 @@ export default async function ProductsPage({ params }: Props) {
           </h2>
           <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {soon.map((product) => (
-              <ProductCard key={product.slug} product={product} />
+              <ProductCard key={product.slug} product={product} cover={covers[`product-${product.slug}`]} />
             ))}
           </div>
         </div>

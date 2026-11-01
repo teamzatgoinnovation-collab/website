@@ -1,11 +1,14 @@
 "use client";
 
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import Link from "next/link";
+import { useParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 
 import { Btn, Card, errMsg, Input, Notice, PageTitle, Textarea } from "@/components/admin/ui";
 import { can, useMe } from "@/components/admin/use-me";
 import { api, API_URL, mediaUrl, type MediaItem, type Paged } from "@/lib/admin/api";
+import { PAGE_LABELS, slotsFor, type ImageSlot } from "@/content/image-slots";
 import { locales } from "@/i18n/routing";
 import { home, home2 } from "@/messages/en.json";
 
@@ -13,12 +16,6 @@ type Texts = Record<string, Record<string, string>>;
 type Images = Record<string, { id: string; url: string; fileName: string | null }>;
 type Doc = { texts: Texts; images: Images };
 
-const IMAGE_SLOTS = [
-  { slot: "heroBackground", label: "Hero background", hint: "Replaces the decorative skyline behind the headline. A wide, light image works best." },
-  { slot: "storyFieldImage", label: "Story step 1 image", hint: "Shown above the first step of the story section." },
-  { slot: "storyDeskImage", label: "Story step 2 image", hint: "Shown above the second step." },
-  { slot: "storyPortalImage", label: "Story step 3 image", hint: "Shown above the third step." },
-];
 
 const LABEL: Record<string, string> = { en: "English", ar: "العربية", es: "Español", hi: "हिन्दी", ja: "日本語", ml: "മലയാളം", tr: "Türkçe", ur: "اردو", zh: "中文" };
 
@@ -37,7 +34,9 @@ function buildGroups() {
   return [...groups.entries()];
 }
 
-export default function HomeContentPage() {
+export default function ContentPage() {
+  const { page } = useParams<{ page: string }>();
+  const isHome = page === "home";
   const me = useMe();
   const qc = useQueryClient();
   const canWrite = can(me.data, "content:write");
@@ -48,15 +47,20 @@ export default function HomeContentPage() {
   const [picking, setPicking] = useState<string | null>(null);
   const [saved, setSaved] = useState(false);
 
-  const doc = useQuery({ queryKey: ["content", "home"], queryFn: () => api<Doc>("/admin/content/home") });
+  const products = useQuery({ queryKey: ["products", "all-names"], queryFn: () => api<Paged<{ slug: string; name: string }>>("/admin/products?pageSize=100"), enabled: page === "cards" });
+  const slots: ImageSlot[] = useMemo(
+    () => [...slotsFor(page), ...(page === "cards" ? (products.data?.items ?? []).map((p) => ({ slot: `product-${p.slug}`, label: `Product: ${p.name}`, hint: "Cover picture on its card in Products (16:10); replaces the screenshot." })) : [])],
+    [page, products.data],
+  );
+  const doc = useQuery({ queryKey: ["content", page], queryFn: () => api<Doc>(`/admin/content/${page}`), enabled: Boolean(page) });
   const library = useQuery({ queryKey: ["media", "content-picker"], queryFn: () => api<Paged<MediaItem>>("/admin/media?pageSize=48"), enabled: picking !== null });
   useEffect(() => {
     if (doc.data) { setTexts(doc.data.texts); setImages(doc.data.images); }
   }, [doc.data]);
 
   const save = useMutation({
-    mutationFn: () => api<Doc>("/admin/content/home", { method: "PUT", body: { texts, images: Object.fromEntries(Object.entries(images).map(([slot, v]) => [slot, v.id])) } }),
-    onSuccess: (d) => { qc.setQueryData(["content", "home"], d); setSaved(true); },
+    mutationFn: () => api<Doc>(`/admin/content/${page}`, { method: "PUT", body: { texts, images: Object.fromEntries(Object.entries(images).map(([slot, v]) => [slot, v.id])) } }),
+    onSuccess: (d) => { qc.setQueryData(["content", page], d); setSaved(true); },
   });
 
   const value = (id: string) => texts[locale]?.[id] ?? "";
@@ -66,17 +70,24 @@ export default function HomeContentPage() {
   return (
     <>
       <PageTitle
-        title="Home page content"
-        sub="Edit the text and images on the public home page. Leave a field empty to keep the built-in text. Changes appear on the site within seconds."
+        title={`${PAGE_LABELS.find((p) => p.page === page)?.label ?? page} content`}
+        sub={isHome ? "Edit the text and images on the public home page. Leave a field empty to keep the built-in text. Changes appear on the site within seconds." : "Choose pictures for this page from the Media library. An empty slot keeps the built-in look. Changes appear within seconds."}
         actions={canWrite ? <Btn variant="primary" disabled={save.isPending || !doc.data} onClick={() => save.mutate()}>{save.isPending ? "Saving…" : "Save changes"}</Btn> : null}
       />
       {doc.isError ? <Notice kind="error">{errMsg(doc.error)}</Notice> : null}
       {save.isError ? <div className="mb-3"><Notice kind="error">{errMsg(save.error)}</Notice></div> : null}
       {saved ? <div className="mb-3"><Notice kind="ok">Saved. {overridden} custom text{overridden === 1 ? "" : "s"} across all languages.</Notice></div> : null}
 
+      <nav aria-label="Pages" className="mb-4 flex flex-wrap gap-2">
+        {PAGE_LABELS.map((p) => (
+          <Link key={p.page} href={`/admin/content/${p.page}`} className={`rounded-full border px-3 py-1 text-xs font-semibold ${p.page === page ? "border-[var(--m-accent)] bg-[var(--m-accent)] text-white" : "border-m-line"}`}>{p.label}</Link>
+        ))}
+      </nav>
+      <p className="mb-4 text-sm text-m-muted">Generate pictures with any AI image tool, upload them under <Link href="/admin/media" className="m-link">Media</Link>, then choose them here. Use illustrations of products, teams and workflows; do not show invented customers, logos or screenshots.</p>
+
       <Card title="Images" className="mb-6">
         <div className="grid gap-5 sm:grid-cols-2">
-          {IMAGE_SLOTS.map(({ slot, label, hint }) => (
+          {slots.map(({ slot, label, hint }) => (
             <div key={slot}>
               <span className="mb-1 block text-sm font-semibold">{label}</span>
               <p className="mb-2 text-xs text-m-muted">{hint}</p>
@@ -104,6 +115,7 @@ export default function HomeContentPage() {
         </div>
       </Card>
 
+      {isHome ? (<>
       <div role="tablist" aria-label="Language" className="mb-4 flex flex-wrap gap-2">
         {locales.map((l) => (
           <button key={l} role="tab" aria-selected={locale === l} type="button" onClick={() => setLocale(l)} className={`rounded-full border px-3.5 py-1.5 text-sm font-semibold ${locale === l ? "border-[var(--m-accent)] bg-[var(--m-accent)] text-white" : "border-m-line"}`}>
@@ -134,6 +146,7 @@ export default function HomeContentPage() {
           </Card>
         ))}
       </div>
+      </>) : null}
     </>
   );
 }

@@ -12,15 +12,16 @@ type CompanyPageShellProps = {
   tone?: Tone;
   icon?: LucideIcon;
   icons?: LucideIcon[];
+  image?: string;
   /** Closing call-to-action band (off for legal pages). */
   cta?: boolean;
   children: ReactNode;
 };
 
-export async function CompanyPageShell({ eyebrow, heading, description, tone, icon, icons, cta = true, children }: CompanyPageShellProps) {
+export async function CompanyPageShell({ eyebrow, heading, description, tone, icon, icons, image, cta = true, children }: CompanyPageShellProps) {
   return (
     <>
-      <PageHero eyebrow={eyebrow} title={heading} description={description} tone={tone} icon={icon} icons={icons} />
+      <PageHero eyebrow={eyebrow} title={heading} description={description} tone={tone} icon={icon} icons={icons} image={image} />
       <div className="mx-auto max-w-6xl px-5 py-8 md:py-10">{children}</div>
       {cta ? <CtaBand /> : null}
     </>

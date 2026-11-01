@@ -53,7 +53,7 @@ export function AdminShell({ children }: { children: ReactNode }) {
         </div>
         <nav aria-label="Admin" className="flex gap-1 overflow-x-auto lg:flex-col">
           {NAV.filter((n) => !n.perm || can(user, n.perm)).map((n) => {
-            const active = n.href === "/admin" ? pathname === "/admin" : pathname.startsWith(n.href);
+            const active = n.href === "/admin" ? pathname === "/admin" : pathname.startsWith(n.href.startsWith("/admin/content") ? "/admin/content" : n.href);
             return (
               <Link
                 key={n.href}

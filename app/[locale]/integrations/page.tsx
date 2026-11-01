@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getSiteContent } from "@/lib/site-content";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { IntegrationHub } from "@/components/integration-hub";
@@ -22,6 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function IntegrationsPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const heroImage = (await getSiteContent("integrations")).images.heroImage;
   const t = await getTranslations("integrationsPage");
   const groups = new Map<string, typeof integrationPages>();
   for (const i of integrationPages) {
@@ -31,7 +33,7 @@ export default async function IntegrationsPage({ params }: Props) {
 
   return (
     <>
-      <PageHero eyebrow={t("eyebrow")} title={t("heading")} description={t("description")} tone="cyan" icon={Plug} icons={[Plug, Cable, Webhook, Cloud, Link2, Database]} />
+      <PageHero image={heroImage} eyebrow={t("eyebrow")} title={t("heading")} description={t("description")} tone="cyan" icon={Plug} icons={[Plug, Cable, Webhook, Cloud, Link2, Database]} />
       <Section>
             <div className="mb-14">
         <IntegrationHub
