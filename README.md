@@ -183,3 +183,11 @@ attempts are made; if the API is unreachable or returns 5xx the lead goes to `ap
 `PUT /api/leads` (guarded by `LEADS_RETRY_SECRET` in production) with backoff up to 8 attempts. Payloads the API
 rejects (4xx) go to `api-rejected.jsonl` for manual review instead of retrying forever. Only a hash of the client
 IP is sent. With the variables unset nothing changes.
+
+## Admin console (`/admin`)
+
+A permission-aware console for website-api: products (details, features, platforms, screenshots), media library,
+leads inbox, users and the audit log. It lives outside the localized routes, is `noindex`, and holds no secrets:
+authentication is entirely the API's httpOnly cookies, with a silent refresh on 401. The menu hides sections a role
+cannot use, but the API enforces every permission regardless. Set `NEXT_PUBLIC_API_URL` (see `.env.example`).
+Run website-api locally first (see its README), seed it with `SEED_ADMIN_EMAIL`/`SEED_ADMIN_PASSWORD`, then sign in.
