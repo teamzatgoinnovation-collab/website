@@ -32,12 +32,32 @@ export type NavDropdownEntry = {
   key: string;
   items: { href: string; key: string }[];
 };
-export type NavEntry = NavLinkEntry | NavDropdownEntry;
+/** Wide panel whose items are built from content data (see components/mega-menu.tsx). */
+export type NavMegaEntry = {
+  type: "mega";
+  key: string;
+  href: string;
+  panel: "products" | "industries" | "integrations";
+};
+export type NavEntry = NavLinkEntry | NavDropdownEntry | NavMegaEntry;
 
 export const primaryNav: NavEntry[] = [
-  { type: "link", href: "/products", key: "products" },
+  { type: "mega", key: "products", href: "/products", panel: "products" },
   { type: "link", href: "/solutions", key: "solutions" },
-  { type: "link", href: "/industries", key: "industries" },
+  { type: "link", href: "/services", key: "services" },
+  { type: "mega", key: "industries", href: "/industries", panel: "industries" },
+  { type: "mega", key: "integrations", href: "/integrations", panel: "integrations" },
+  { type: "link", href: "/downloads", key: "downloads" },
+  {
+    type: "dropdown",
+    key: "resources",
+    items: [
+      { href: "/docs", key: "docs" },
+      { href: "/tutorials", key: "tutorials" },
+      { href: "/updates", key: "updates" },
+      { href: "/pricing", key: "pricing" },
+    ],
+  },
   {
     type: "dropdown",
     key: "company",
@@ -45,18 +65,7 @@ export const primaryNav: NavEntry[] = [
       { href: "/about", key: "about" },
       { href: "/careers", key: "careers" },
       { href: "/partners", key: "partners" },
-      { href: "/pricing", key: "pricing" },
-    ],
-  },
-  {
-    type: "dropdown",
-    key: "resources",
-    items: [
-      { href: "/downloads", key: "downloads" },
-      { href: "/docs", key: "docs" },
-      { href: "/tutorials", key: "tutorials" },
-      { href: "/updates", key: "updates" },
-      { href: "/case-studies", key: "caseStudies" },
+      { href: "/contact", key: "contact" },
     ],
   },
 ];
@@ -74,7 +83,6 @@ export const footerNav = {
   resources: [
     { href: "/docs", key: "documentation" as const },
     { href: "/tutorials", key: "tutorials" as const },
-    { href: "/case-studies", key: "caseStudies" as const },
     { href: "/updates", key: "changelog" as const },
     { href: "/downloads", key: "downloads" as const },
   ],

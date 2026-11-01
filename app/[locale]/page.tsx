@@ -7,7 +7,6 @@ import { HeroMotion, MotionReveal } from "@/components/motion-reveal";
 import { HeroCarousel } from "@/components/hero-carousel";
 import { FeaturedProducts, IndustriesGrid, IntegrationsSection, ShowcaseSection, SolutionsGrid, WhyGrid, getFeatured } from "@/components/home-sections";
 import { Section, SectionHeading } from "@/components/section";
-import { caseStudies } from "@/content/case-studies";
 import { Link } from "@/i18n/navigation";
 import { contactHref } from "@/lib/contact-href";
 import { getLocalizedChangelog } from "@/lib/localized-content";
@@ -19,12 +18,9 @@ export default async function HomePage({ params }: Props) {
   setRequestLocale(locale);
 
   const t = await getTranslations("home");
-  const tCases = await getTranslations("caseStudies");
-  const tCasesPage = await getTranslations("caseStudiesPage");
   const t2 = await getTranslations("home2");
   const featured = await getFeatured();
   const latest = (await getLocalizedChangelog()).slice(0, 2);
-  const featuredCase = caseStudies[0];
 
   return (
     <>
@@ -183,42 +179,6 @@ export default async function HomePage({ params }: Props) {
           ))}
         </div>
       </Section>
-
-      {featuredCase ? (
-        <Section surface>
-          <MotionReveal>
-            <SectionHeading
-              eyebrow={t("casesEyebrow")}
-              title={t("casesTitle")}
-              action={{ href: "/case-studies", label: t("casesViewAll") }}
-            />
-          </MotionReveal>
-          <MotionReveal>
-            <div className="grid gap-8 border-t border-m-line pt-10 md:grid-cols-[1fr_1.4fr] md:gap-14">
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[var(--m-accent)]">
-                  {tCases(`${featuredCase.id}.industry`)}
-                </p>
-                <h3 className="mt-4 font-display text-2xl font-semibold tracking-tight md:text-3xl">
-                  {tCases(`${featuredCase.id}.title`)}
-                </h3>
-              </div>
-              <div>
-                <p className="text-base leading-relaxed text-m-muted md:text-lg">
-                  {tCases(`${featuredCase.id}.summary`)}
-                </p>
-                <Link
-                  href={`/case-studies/${featuredCase.slug}`}
-                  className="m-link mt-6 inline-flex items-center gap-1 text-sm"
-                >
-                  {tCasesPage("readStudy")}
-                  <ArrowRight className="h-4 w-4 rtl:rotate-180" />
-                </Link>
-              </div>
-            </div>
-          </MotionReveal>
-        </Section>
-      ) : null}
 
       <Section>
         <MotionReveal>

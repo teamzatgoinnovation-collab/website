@@ -18,6 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     path: "/case-studies",
     title: t("title"),
     description: t("metaDescription"),
+    noIndex: true,
   });
 }
 
@@ -29,6 +30,7 @@ export default async function CaseStudiesPage({ params }: Props) {
 
   return (
     <Section>
+      <p role="note" className="mb-8 rounded-xl border border-dashed border-m-line bg-[var(--m-surface)] px-4 py-3 text-sm text-m-muted">{t("illustrativeNotice")}</p>
       <SectionHeading
         eyebrow={t("eyebrow")}
         title={t("heading")}

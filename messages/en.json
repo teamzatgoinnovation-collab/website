@@ -28,7 +28,18 @@
     "contact": "Contact",
     "getStarted": "Get started",
     "talkToUs": "Talk to us",
-    "language": "Language"
+    "language": "Language",
+    "services": "Services",
+    "integrations": "Integrations",
+    "search": "Search",
+    "bookDemo": "Book a Demo",
+    "downloadSoftware": "Download Software",
+    "menuLabel": "Main menu",
+    "closeSearch": "Close search",
+    "noResults": "No results",
+    "allProductsLink": "All products",
+    "allIndustriesLink": "All industries",
+    "allIntegrationsLink": "All integrations"
   },
   "footer": {
     "products": "Products",
@@ -305,7 +316,8 @@
       "support": "Product support",
       "partnership": "Partnership",
       "careers": "Careers",
-      "other": "Other"
+      "other": "Other",
+      "quotation": "Request a quotation"
     },
     "emailLabel": "Email",
     "phoneLabel": "Phone",
@@ -1733,7 +1745,7 @@
     "metaDescription": "How teams use ZatGo across field, desk, and portal operations.",
     "eyebrow": "Case studies",
     "heading": "Operations that moved with their teams",
-    "description": "Short stories from distribution, projects, and multi-site ops — products named, outcomes measured in plain language.",
+    "description": "Illustrative scenarios from distribution, projects and multi-site operations, showing which ZatGo products fit together.",
     "challenge": "Challenge",
     "approach": "Approach",
     "outcome": "Outcome",
@@ -1742,7 +1754,8 @@
     "ctaBody": "Tell us about your sites and roles — we will map products and a demo path.",
     "ctaButton": "Request a demo",
     "backToList": "All case studies",
-    "readStudy": "Read study"
+    "readStudy": "Read study",
+    "illustrativeNotice": "Illustrative scenarios. These pages show how ZatGo products can be combined. They are not customer testimonials, and no real customer or measured result is described."
   },
   "caseStudies": {
     "regional-distribution": {
@@ -1812,6 +1825,541 @@
     "labelFullscreen": "View fullscreen",
     "labelClose": "Close",
     "labelPrev": "Previous",
-    "labelNext": "Next"
+    "labelNext": "Next",
+    "moreProducts": "More products"
+  },
+  "servicesPage": {
+    "title": "Services",
+    "metaDescription": "Custom software, ERP implementation, mobile, web and desktop development, APIs, integrations, hosting and consulting from ZatGo Innovation.",
+    "eyebrow": "Services",
+    "heading": "Software services, from idea to production",
+    "description": "Tell us what you need built or connected. We will reply with questions and a quotation.",
+    "requestQuote": "Request a quotation",
+    "enquire": "Enquire about this service",
+    "processTitle": "How an engagement works",
+    "steps": [
+      {
+        "title": "Discuss",
+        "body": "We learn your process, systems and constraints."
+      },
+      {
+        "title": "Quote",
+        "body": "You receive scope, approach and a quotation."
+      },
+      {
+        "title": "Build",
+        "body": "Work is delivered in stages you can review."
+      },
+      {
+        "title": "Support",
+        "body": "We stay available for fixes and upgrades."
+      }
+    ],
+    "items": {
+      "custom-software": {
+        "title": "Custom Software Development",
+        "body": "Software designed around your processes, built and maintained by the team that builds ZatGo products."
+      },
+      "erp-implementation": {
+        "title": "ERP Implementation",
+        "body": "Set up ZatGo ERP for your company: chart of accounts, stock, sales, purchasing and user roles."
+      },
+      "mobile-apps": {
+        "title": "Mobile App Development",
+        "body": "Android and iOS applications for field teams, including offline-capable workflows where the job needs them."
+      },
+      "web-apps": {
+        "title": "Web Application Development",
+        "body": "Secure web applications and portals for customers, suppliers and staff."
+      },
+      "desktop-apps": {
+        "title": "Desktop Application Development",
+        "body": "Cross-platform desktop software for Windows, Linux and macOS."
+      },
+      "api-development": {
+        "title": "API Development",
+        "body": "Well-documented REST APIs that expose your business data safely to other systems."
+      },
+      "integrations": {
+        "title": "Third-party Integrations",
+        "body": "Connect ZatGo and your existing tools through APIs, webhooks and scheduled sync."
+      },
+      "cloud-hosting": {
+        "title": "Cloud Hosting",
+        "body": "Managed hosting for your ZatGo sites with backups and monitoring."
+      },
+      "database-management": {
+        "title": "Database Management",
+        "body": "Schema design, migrations, performance tuning, backup and restore."
+      },
+      "it-consulting": {
+        "title": "IT Consulting",
+        "body": "Practical advice on systems, architecture and rollout planning."
+      },
+      "maintenance": {
+        "title": "Software Maintenance",
+        "body": "Bug fixes, upgrades and ongoing support for software you already run."
+      },
+      "digital-transformation": {
+        "title": "Digital Transformation",
+        "body": "A staged plan for moving paper and spreadsheet processes onto reliable systems."
+      }
+    }
+  },
+  "industryPages": {
+    "title": "Industries",
+    "metaDescription": "How ZatGo software fits retail, wholesale, supermarkets, manufacturing, restaurants, jewellery, textile, distribution, healthcare and service businesses.",
+    "eyebrow": "Industries",
+    "heading": "Software that fits how you trade",
+    "description": "Pick your industry to see the challenges we address and the ZatGo products that fit.",
+    "challenges": "Common challenges",
+    "products": "Recommended products",
+    "features": "What you get",
+    "workflow": "A typical workflow",
+    "benefits": "Business benefits",
+    "cta": "Talk to us about your business",
+    "ctaDemo": "Book a demo",
+    "all": "All industries",
+    "comingSoon": "Coming soon",
+    "screenshotsNote": "Product screenshots are on each product page.",
+    "items": {
+      "retail": {
+        "name": "Retail",
+        "summary": "Point of sale, stock and customer records for shops.",
+        "challenges": [
+          "Stock differs between the shelf and the system",
+          "Slow checkout during busy hours",
+          "Little visibility across several branches"
+        ],
+        "features": [
+          "Point of sale with live stock",
+          "Multi-branch stock and pricing",
+          "Sales and margin reporting"
+        ],
+        "workflow": [
+          "Receive stock against a purchase order",
+          "Sell at the counter and deduct stock automatically",
+          "Review daily sales and re-order"
+        ],
+        "benefits": [
+          "One stock figure across branches",
+          "Faster, auditable billing",
+          "Management reporting without spreadsheets"
+        ]
+      },
+      "wholesale": {
+        "name": "Wholesale",
+        "summary": "Bulk orders, credit control and route-based delivery.",
+        "challenges": [
+          "Credit limits tracked by hand",
+          "Orders taken by phone and re-keyed",
+          "Collections chased from memory"
+        ],
+        "features": [
+          "Sales orders and invoices",
+          "Customer credit and outstanding balances",
+          "Van sales and collections"
+        ],
+        "workflow": [
+          "Take the order in the field or at the desk",
+          "Deliver and invoice",
+          "Record the collection and update the balance"
+        ],
+        "benefits": [
+          "Fewer re-keyed orders",
+          "Clear outstanding balances",
+          "Orders and payments in one system"
+        ]
+      },
+      "supermarkets": {
+        "name": "Supermarkets",
+        "summary": "Fast-moving stock across tills and stores.",
+        "challenges": [
+          "High item counts and frequent price changes",
+          "Stock variance between counts",
+          "Multiple tills and stores"
+        ],
+        "features": [
+          "Barcode-friendly item masters",
+          "Store-level stock and transfers",
+          "Purchasing and supplier bills"
+        ],
+        "workflow": [
+          "Receive goods and update stock",
+          "Sell through the till",
+          "Transfer between stores and reconcile"
+        ],
+        "benefits": [
+          "Consistent item and price data",
+          "Traceable stock movements",
+          "Supplier payables in one place"
+        ]
+      },
+      "manufacturing": {
+        "name": "Manufacturing",
+        "summary": "Bills of materials, production and quality.",
+        "challenges": [
+          "Raw material shortages found late",
+          "Costs not linked to production",
+          "Quality issues without a record"
+        ],
+        "features": [
+          "Bills of materials",
+          "Production planning and work orders",
+          "Inventory and costing"
+        ],
+        "workflow": [
+          "Plan production from demand",
+          "Issue materials and record output",
+          "Cost the finished goods"
+        ],
+        "benefits": [
+          "Materials planned before they run out",
+          "Cost visibility per product",
+          "One ledger for finance and production"
+        ]
+      },
+      "restaurants": {
+        "name": "Restaurants",
+        "summary": "Tables, orders and stock for food service.",
+        "challenges": [
+          "Orders lost between floor and kitchen",
+          "Ingredient stock not tracked",
+          "Slow end-of-day reconciliation"
+        ],
+        "features": [
+          "Table and order handling",
+          "Menu items linked to stock",
+          "Daily sales summaries"
+        ],
+        "workflow": [
+          "Take the order at the table",
+          "Send it to the kitchen",
+          "Close the bill and update stock"
+        ],
+        "benefits": [
+          "Fewer order mistakes",
+          "Ingredient usage visibility",
+          "Faster closing"
+        ]
+      },
+      "jewellery": {
+        "name": "Jewellery",
+        "summary": "Weight-based stock and item-level valuation.",
+        "challenges": [
+          "Stock tracked by weight and purity",
+          "Price depends on daily rates",
+          "High-value items need tight audit trails"
+        ],
+        "features": [
+          "Item-level stock records",
+          "Flexible pricing rules",
+          "Audit trail on every movement"
+        ],
+        "workflow": [
+          "Register items with weight and attributes",
+          "Price and invoice the sale",
+          "Reconcile stock at close"
+        ],
+        "benefits": [
+          "Item-level accountability",
+          "Consistent pricing",
+          "Reliable audit history"
+        ]
+      },
+      "textile": {
+        "name": "Textile",
+        "summary": "Variants by size and colour with batch tracking.",
+        "challenges": [
+          "Many size and colour variants",
+          "Batch and roll tracking",
+          "Seasonal stock build-up"
+        ],
+        "features": [
+          "Item variants and attributes",
+          "Batch tracking",
+          "Purchase and sales management"
+        ],
+        "workflow": [
+          "Receive fabric or garments by batch",
+          "Sell by variant",
+          "Review slow-moving stock"
+        ],
+        "benefits": [
+          "Accurate variant stock",
+          "Batch traceability",
+          "Better purchasing decisions"
+        ]
+      },
+      "distribution": {
+        "name": "Distribution",
+        "summary": "Van sales, route plans and collections.",
+        "challenges": [
+          "Field orders delayed until the van returns",
+          "Cash and cheque collections not reconciled",
+          "Van stock differs from system stock"
+        ],
+        "features": [
+          "Mobile van sales with offline orders",
+          "Collections and customer visits",
+          "Stock transfer to vans"
+        ],
+        "workflow": [
+          "Load the van from the warehouse",
+          "Sell and collect on the route, online or offline",
+          "Sync and reconcile at day end"
+        ],
+        "benefits": [
+          "Sales and collections recorded at the point of sale",
+          "Van stock visibility",
+          "Fewer end-of-day corrections"
+        ]
+      },
+      "healthcare": {
+        "name": "Healthcare",
+        "summary": "Supplies, assets and service billing.",
+        "challenges": [
+          "Expiry-sensitive supplies",
+          "Equipment maintenance schedules",
+          "Billing for services and consumables"
+        ],
+        "features": [
+          "Inventory with batch and expiry",
+          "Purchasing and supplier management",
+          "Invoicing and accounting"
+        ],
+        "workflow": [
+          "Receive supplies by batch",
+          "Issue to departments",
+          "Invoice services and review costs"
+        ],
+        "benefits": [
+          "Controlled stock rotation",
+          "Clear cost per department",
+          "Auditable accounts"
+        ]
+      },
+      "service-businesses": {
+        "name": "Service Businesses",
+        "summary": "Projects, tasks and recurring billing.",
+        "challenges": [
+          "Time and tasks tracked in spreadsheets",
+          "Invoices raised late",
+          "Unclear project profitability"
+        ],
+        "features": [
+          "Project and task tracking",
+          "Customer records and follow-ups",
+          "Invoicing and accounting"
+        ],
+        "workflow": [
+          "Scope the project and assign tasks",
+          "Track progress",
+          "Invoice and review profitability"
+        ],
+        "benefits": [
+          "Work and billing in one place",
+          "Faster invoicing",
+          "Project-level visibility"
+        ]
+      }
+    }
+  },
+  "integrationsPage": {
+    "title": "Integrations",
+    "metaDescription": "ZatGo integrations: Gmail, WhatsApp Business, Google Maps, payments, SMS, email, accounting systems and APIs. Status shown honestly.",
+    "eyebrow": "Integrations",
+    "heading": "Integrations directory",
+    "description": "Every integration below is planned. We mark an integration Available only once its backend connection is built and tested.",
+    "statusPlanned": "Planned",
+    "statusNote": "Not yet available",
+    "benefits": "Benefits",
+    "features": "Planned features",
+    "permissions": "Required permissions (planned)",
+    "setup": "Setup instructions",
+    "setupBody": "Setup instructions will be published when this integration ships.",
+    "connected": "Connected products",
+    "all": "All integrations",
+    "interest": "Ask about this integration",
+    "items": {
+      "gmail": {
+        "name": "Gmail",
+        "category": "Communication",
+        "description": "Send and track business email from ZatGo.",
+        "benefits": [
+          "Email automation from documents",
+          "Sign in with Google OAuth",
+          "Less copy-and-paste between mail and ERP"
+        ],
+        "features": [
+          "Send invoices and statements by email",
+          "Log outgoing messages against the record"
+        ],
+        "permissions": [
+          "Google OAuth consent",
+          "Gmail send scope (to be finalised)"
+        ]
+      },
+      "whatsapp-business": {
+        "name": "WhatsApp Business",
+        "category": "Communication",
+        "description": "Notify customers on WhatsApp through the WhatsApp Business Platform.",
+        "benefits": [
+          "Message templates for orders and reminders",
+          "Notification workflows",
+          "Reach customers where they already are"
+        ],
+        "features": [
+          "Template messages (Meta Cloud API)",
+          "Order and payment notifications"
+        ],
+        "permissions": [
+          "WhatsApp Business account",
+          "Meta Cloud API access token (stored server-side)"
+        ]
+      },
+      "google-maps": {
+        "name": "Google Maps",
+        "category": "Maps and Location",
+        "description": "Location selection and geocoding for customers and routes.",
+        "benefits": [
+          "Pick customer locations on a map",
+          "Geocode addresses",
+          "Support route planning"
+        ],
+        "features": [
+          "Maps API",
+          "Geocoding",
+          "Location services"
+        ],
+        "permissions": [
+          "Google Maps API key (restricted, server-side)"
+        ]
+      },
+      "google-drive": {
+        "name": "Google Drive",
+        "category": "Cloud Storage",
+        "description": "Store and share business documents in Drive.",
+        "benefits": [
+          "Attach Drive files to records",
+          "Central document storage",
+          "Share with colleagues"
+        ],
+        "features": [
+          "File attachment",
+          "Folder organisation"
+        ],
+        "permissions": [
+          "Google OAuth consent",
+          "Drive file scope (to be finalised)"
+        ]
+      },
+      "google-calendar": {
+        "name": "Google Calendar",
+        "category": "Google Workspace",
+        "description": "Put visits, tasks and follow-ups on your calendar.",
+        "benefits": [
+          "See tasks and visits in one calendar",
+          "Fewer missed follow-ups",
+          "Works with your existing Google account"
+        ],
+        "features": [
+          "Create events from tasks",
+          "Visit reminders"
+        ],
+        "permissions": [
+          "Google OAuth consent",
+          "Calendar events scope (to be finalised)"
+        ]
+      },
+      "payment-gateways": {
+        "name": "Payment gateways",
+        "category": "Payments",
+        "description": "Accept online payments and reconcile them with invoices.",
+        "benefits": [
+          "Pay-by-link on invoices",
+          "Automatic reconciliation",
+          "Provider choice by region"
+        ],
+        "features": [
+          "Payment links",
+          "Webhook-based confirmation"
+        ],
+        "permissions": [
+          "Merchant account with the chosen provider",
+          "API keys (stored server-side)"
+        ]
+      },
+      "sms-services": {
+        "name": "SMS services",
+        "category": "Communication",
+        "description": "Send transactional SMS through an SMS provider.",
+        "benefits": [
+          "Order and delivery alerts",
+          "One-time codes",
+          "No app needed for recipients"
+        ],
+        "features": [
+          "Notification SMS",
+          "Delivery status"
+        ],
+        "permissions": [
+          "SMS provider account",
+          "API credentials (stored server-side)"
+        ]
+      },
+      "email-services": {
+        "name": "Email services",
+        "category": "Marketing",
+        "description": "Send bulk and transactional email through an email provider.",
+        "benefits": [
+          "Reliable delivery",
+          "Newsletters and announcements",
+          "Separate transactional and marketing streams"
+        ],
+        "features": [
+          "Transactional email",
+          "Newsletter sending"
+        ],
+        "permissions": [
+          "Email provider account",
+          "API key or SMTP credentials (stored server-side)"
+        ]
+      },
+      "accounting-systems": {
+        "name": "Accounting systems",
+        "category": "Accounting",
+        "description": "Exchange ledger data with external accounting software.",
+        "benefits": [
+          "Avoid double entry",
+          "Keep an accountant's tool in sync",
+          "Auditable exchange"
+        ],
+        "features": [
+          "Export and import of ledger data",
+          "Scheduled sync"
+        ],
+        "permissions": [
+          "Access to the external system's API"
+        ]
+      },
+      "external-apis": {
+        "name": "External APIs",
+        "category": "Developer APIs",
+        "description": "Connect any system through ZatGo's REST API and webhooks.",
+        "benefits": [
+          "Build your own connections",
+          "Webhooks on business events",
+          "Authenticated, rate-limited access"
+        ],
+        "features": [
+          "REST API access",
+          "Webhooks"
+        ],
+        "permissions": [
+          "API credentials issued per integration"
+        ]
+      }
+    }
   }
 }

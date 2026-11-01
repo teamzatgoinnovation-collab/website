@@ -1,0 +1,1 @@
+export const serviceSlugs = ["custom-software", "erp-implementation", "mobile-apps", "web-apps", "desktop-apps", "api-development", "integrations", "cloud-hosting", "database-management", "it-consulting", "maintenance", "digital-transformation"] as const;

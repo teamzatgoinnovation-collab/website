@@ -9,8 +9,9 @@ import { AppShowcase, type ShowcaseProduct } from "@/components/app-showcase";
 import { MotionReveal } from "@/components/motion-reveal";
 import { Section, SectionHeading } from "@/components/section";
 import {
-  featuredSlugs, industryTiles, integrationTiles, solutionTiles, whyTiles, type Accent,
+  featuredSlugs, industryTiles, solutionTiles, whyTiles, type Accent,
 } from "@/content/home-sections";
+import { integrationPages } from "@/content/integration-pages";
 import { Link } from "@/i18n/navigation";
 import { getLocalizedProducts } from "@/lib/localized-products";
 import { getProductMedia } from "@/lib/product-media";
@@ -121,7 +122,7 @@ export async function IndustriesGrid() {
       <div className="grid grid-cols-2 gap-3 md:grid-cols-5">
         {industryTiles.map((s, i) => (
           <MotionReveal key={s.slug} delay={(i % 5) * 0.04}>
-            <Link href="/industries" className="group relative block h-full overflow-hidden rounded-2xl border border-m-line bg-[var(--m-surface-elevated)] p-4 transition-colors hover:border-[var(--m-accent)]">
+            <Link href={`/industries/${s.slug}` as "/industries"} className="group relative block h-full overflow-hidden rounded-2xl border border-m-line bg-[var(--m-surface-elevated)] p-4 transition-colors hover:border-[var(--m-accent)]">
               <span aria-hidden className={`absolute inset-x-0 top-0 h-1 ${["bg-[var(--m-accent)]","bg-[var(--m-cyan)]","bg-[var(--m-teal)]","bg-[var(--m-purple)]"][i % 4]}`} />
               <h3 className="mt-2 font-display text-sm font-semibold">{s.title}</h3>
               <p className="mt-1 text-xs leading-relaxed text-m-muted">{s.body}</p>
@@ -182,19 +183,22 @@ export async function WhyGrid() {
 
 export async function IntegrationsSection() {
   const t = await getTranslations("home2");
+  const ti = await getTranslations("integrationsPage");
   return (
     <Section surface>
       <MotionReveal>
-        <SectionHeading eyebrow={t("integrationsEyebrow")} title={t("integrationsTitle")} description={t("integrationsDesc")} />
+        <SectionHeading eyebrow={t("integrationsEyebrow")} title={t("integrationsTitle")} description={t("integrationsDesc")} action={{ href: "/integrations", label: t("learnMore") }} />
       </MotionReveal>
       <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
-        {integrationTiles.map((g) => (
-          <li key={g.name} className="rounded-2xl border border-dashed border-m-line bg-[var(--m-surface-elevated)] p-4">
-            <p className="font-display text-sm font-semibold">{g.name}</p>
-            <p className="mt-0.5 text-xs text-m-muted">{g.group}</p>
-            <span className="mt-3 inline-block rounded-full bg-[color-mix(in_oklch,var(--m-purple)_14%,transparent)] px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wider text-[var(--m-purple)]">
-              {t("planned")}
-            </span>
+        {integrationPages.map((g) => (
+          <li key={g.slug}>
+            <Link href={`/integrations/${g.slug}` as "/integrations"} className="block h-full rounded-2xl border border-dashed border-m-line bg-[var(--m-surface-elevated)] p-4 transition-colors hover:border-[var(--m-accent)]">
+              <p className="font-display text-sm font-semibold">{ti(`items.${g.slug}.name`)}</p>
+              <p className="mt-0.5 text-xs text-m-muted">{ti(`items.${g.slug}.category`)}</p>
+              <span className="mt-3 inline-block rounded-full bg-[color-mix(in_oklch,var(--m-purple)_14%,transparent)] px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wider text-[var(--m-purple)]">
+                {g.status === "planned" ? t("planned") : t("live")}
+              </span>
+            </Link>
           </li>
         ))}
       </ul>

@@ -25,6 +25,7 @@ export const inquiryTypes = [
   "sales",
   "support",
   "partnership",
+  "quotation",
   "careers",
   "other",
 ] as const;

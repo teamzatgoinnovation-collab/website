@@ -171,5 +171,5 @@ application showcase (with fullscreen lightbox). Folders without files show a la
 
 ## Integrations
 
-Homepage integration tiles are all marked **Planned** (`content/home-sections.ts`). Change a status
+Integration tiles and pages are all marked **Planned** (`content/integration-pages.ts`). Change a status
 only after the backend connection exists and has been tested.

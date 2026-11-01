@@ -1,7 +1,5 @@
 /**
  * Homepage section data. English copy; other locales fall back to it until translated.
- * Integration statuses are deliberately conservative: nothing is "live" until its backend
- * connection has been implemented and tested (see docs/architecture.md).
  */
 export type Accent = "primary" | "cyan" | "teal" | "purple";
 
@@ -42,18 +40,4 @@ export const whyTiles: { icon: string; title: string; body: string }[] = [
   { icon: "ShieldCheck", title: "Enterprise security", body: "Role-based access and server-side validation." },
   { icon: "SlidersHorizontal", title: "Flexible customization", body: "Extend by configuration and custom apps." },
   { icon: "LayoutDashboard", title: "Centralized management", body: "Users, sites and settings managed in one place." },
-];
-
-export type IntegrationStatus = "planned";
-export const integrationTiles: { name: string; group: string; status: IntegrationStatus }[] = [
-  { name: "Gmail", group: "Communication", status: "planned" },
-  { name: "WhatsApp Business", group: "Communication", status: "planned" },
-  { name: "Google Maps", group: "Maps and Location", status: "planned" },
-  { name: "Google Drive", group: "Cloud Storage", status: "planned" },
-  { name: "Google Calendar", group: "Google Workspace", status: "planned" },
-  { name: "Payment gateways", group: "Payments", status: "planned" },
-  { name: "SMS services", group: "Communication", status: "planned" },
-  { name: "Email services", group: "Communication", status: "planned" },
-  { name: "Accounting systems", group: "Accounting", status: "planned" },
-  { name: "External APIs", group: "Developer APIs", status: "planned" },
 ];

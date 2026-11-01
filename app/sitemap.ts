@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 
-import { caseStudies } from "@/content/case-studies";
+import { industryPages } from "@/content/industry-pages";
+import { integrationPages } from "@/content/integration-pages";
 import { products } from "@/content/products";
 import { locales } from "@/i18n/routing";
 import { absoluteUrl, sitemapPaths } from "@/lib/seo";
@@ -26,13 +27,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.8,
       });
     }
-    for (const study of caseStudies) {
-      entries.push({
-        url: absoluteUrl(locale, `/case-studies/${study.slug}`),
-        lastModified: now,
-        changeFrequency: "monthly",
-        priority: 0.75,
-      });
+    for (const i of industryPages) {
+      entries.push({ url: absoluteUrl(locale, `/industries/${i.slug}`), lastModified: now, changeFrequency: "monthly", priority: 0.7 });
+    }
+    for (const i of integrationPages) {
+      entries.push({ url: absoluteUrl(locale, `/integrations/${i.slug}`), lastModified: now, changeFrequency: "monthly", priority: 0.6 });
     }
   }
 

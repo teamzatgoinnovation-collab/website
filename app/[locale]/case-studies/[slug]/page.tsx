@@ -31,6 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     path: `/case-studies/${slug}`,
     title: t(`${study.id}.title`),
     description: t(`${study.id}.summary`),
+    noIndex: true,
   });
 }
 
@@ -53,6 +54,7 @@ export default async function CaseStudyDetailPage({ params }: Props) {
 
   return (
     <Section>
+      <p role="note" className="mb-8 rounded-xl border border-dashed border-m-line bg-[var(--m-surface)] px-4 py-3 text-sm text-m-muted">{t("illustrativeNotice")}</p>
       <JsonLd
         data={{
           "@context": "https://schema.org",
