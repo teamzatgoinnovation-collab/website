@@ -173,3 +173,13 @@ application showcase (with fullscreen lightbox). Folders without files show a la
 
 Integration tiles and pages are all marked **Planned** (`content/integration-pages.ts`). Change a status
 only after the backend connection exists and has been tested.
+
+## Forwarding leads to website-api
+
+`POST /api/leads` still writes every lead to the local JSONL file first, so a visitor's submission is never lost.
+When `LEADS_API_URL` and `LEADS_API_KEY` are set (server-side only), the lead is then forwarded to website-api in the
+background using the lead's own UUID as `submissionId`, which makes retries and duplicates idempotent. Two quick
+attempts are made; if the API is unreachable or returns 5xx the lead goes to `api-queue.jsonl` and is retried by
+`PUT /api/leads` (guarded by `LEADS_RETRY_SECRET` in production) with backoff up to 8 attempts. Payloads the API
+rejects (4xx) go to `api-rejected.jsonl` for manual review instead of retrying forever. Only a hash of the client
+IP is sent. With the variables unset nothing changes.

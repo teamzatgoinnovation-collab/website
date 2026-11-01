@@ -5,6 +5,7 @@ import { z } from "zod";
 
 import { inquiryTypes } from "@/content/company";
 import { sendLeadEmail } from "@/lib/lead-email";
+import { forwardLeadWithRetry, processApiQueue } from "@/lib/leads-api";
 import { allowLeadRequest, hashClientIp } from "@/lib/leads-rate-limit";
 import {
   deliverWebhookWithRetry,
@@ -82,6 +83,11 @@ export async function POST(request: Request) {
   // Persist succeeded — never fail the HTTP response for webhook/email issues.
   after(async () => {
     try {
+      await forwardLeadWithRetry(record);
+    } catch (error) {
+      console.error("lead_api_background_failed", error);
+    }
+    try {
       await deliverWebhookWithRetry(record);
     } catch (error) {
       console.error("lead_webhook_background_failed", error);
@@ -105,6 +111,7 @@ export async function POST(request: Request) {
       rateLimitBackend: backend,
       notifyEmail: process.env.SMTP_USER && process.env.SMTP_PASS ? "configured" : "none",
       webhook: process.env.LEADS_WEBHOOK_URL ? "queued" : "none",
+      api: process.env.LEADS_API_URL && process.env.LEADS_API_KEY ? "forwarding" : "none",
     }),
   );
 
@@ -126,6 +133,7 @@ export async function PUT(request: Request) {
     );
   }
 
-  const result = await processWebhookQueue();
-  return NextResponse.json({ ok: true, ...result });
+  const webhook = await processWebhookQueue();
+  const api = await processApiQueue();
+  return NextResponse.json({ ok: true, ...webhook, api });
 }
