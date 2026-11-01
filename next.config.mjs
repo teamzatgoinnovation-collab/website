@@ -1,4 +1,3 @@
-import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -10,7 +9,8 @@ const downloadBase =
   process.env.DOWNLOAD_BASE_URL?.trim() ||
   "";
 
-const nextConfig: NextConfig = {
+/** @type {import("next").NextConfig} */
+const nextConfig = {
   reactStrictMode: true,
   // Keep tracing rooted at this app when a parent monorepo lockfile exists locally.
   outputFileTracingRoot: path.join(path.dirname(fileURLToPath(import.meta.url))),

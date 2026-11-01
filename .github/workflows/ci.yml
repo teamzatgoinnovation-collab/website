@@ -26,8 +26,8 @@ jobs:
         with:
           node-version: 22
 
-      # No lockfile is committed in this repo yet, so installs are not pinned.
-      - run: npm install --no-audit --no-fund
+      # Lockfile is committed: installs are pinned to the versions that were tested and deployed.
+      - run: npm ci --no-audit --no-fund
 
       - run: npm run typecheck
       - run: npx eslint app components lib content

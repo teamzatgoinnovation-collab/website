@@ -8,7 +8,7 @@ Public marketing website for **ZatGo Innovation** — products, downloads, docs/
 ## Quick start
 
 ```bash
-npm install        # or pnpm install; no lockfile is committed
+npm ci             # package-lock.json is committed
 npm run dev        # → http://localhost:3000/en
 ```
 
