@@ -12,19 +12,19 @@ export function hashClientIp(request: Request): string {
   return createHash("sha256").update(raw).digest("hex").slice(0, 24);
 }
 
-function memoryAllow(key: string): boolean {
+function memoryAllow(key: string, windowMs = WINDOW_MS, max = MAX_HITS): boolean {
   const now = Date.now();
   const entry = memoryMap.get(key);
   if (!entry || now > entry.resetAt) {
-    memoryMap.set(key, { count: 1, resetAt: now + WINDOW_MS });
+    memoryMap.set(key, { count: 1, resetAt: now + windowMs });
     return true;
   }
-  if (entry.count >= MAX_HITS) return false;
+  if (entry.count >= max) return false;
   entry.count += 1;
   return true;
 }
 
-async function upstashAllow(key: string): Promise<boolean | null> {
+async function upstashAllow(key: string, windowMs = WINDOW_MS, max = MAX_HITS): Promise<boolean | null> {
   const url = process.env.UPSTASH_REDIS_REST_URL?.trim();
   const token = process.env.UPSTASH_REDIS_REST_TOKEN?.trim();
   if (!url || !token) return null;
@@ -32,7 +32,7 @@ async function upstashAllow(key: string): Promise<boolean | null> {
   const redisKey = `marketing:leads:rl:${key}`;
   const pipe = [
     ["INCR", redisKey],
-    ["PEXPIRE", redisKey, String(WINDOW_MS), "NX"],
+    ["PEXPIRE", redisKey, String(windowMs), "NX"],
   ];
 
   try {
@@ -51,14 +51,14 @@ async function upstashAllow(key: string): Promise<boolean | null> {
     }
     const data = (await res.json()) as { result?: number }[];
     const count = Number(data?.[0]?.result ?? 0);
-    return count <= MAX_HITS;
+    return count <= max;
   } catch (error) {
     console.warn("upstash_ratelimit_error", error);
     return null;
   }
 }
 
-async function ioredisAllow(key: string): Promise<boolean | null> {
+async function ioredisAllow(key: string, windowMs = WINDOW_MS, max = MAX_HITS): Promise<boolean | null> {
   const redisUrl = process.env.REDIS_URL?.trim();
   if (!redisUrl) return null;
 
@@ -75,9 +75,9 @@ async function ioredisAllow(key: string): Promise<boolean | null> {
       const redisKey = `marketing:leads:rl:${key}`;
       const count = await redis.incr(redisKey);
       if (count === 1) {
-        await redis.pexpire(redisKey, WINDOW_MS);
+        await redis.pexpire(redisKey, windowMs);
       }
-      return count <= MAX_HITS;
+      return count <= max;
     } finally {
       redis.disconnect();
     }
@@ -106,4 +106,19 @@ export async function allowLeadRequest(key: string): Promise<{
   }
 
   return { allowed: memoryAllow(key), backend: "memory" };
+}
+
+async function allowWith(key: string, windowMs: number, max: number): Promise<boolean> {
+  return (await upstashAllow(key, windowMs, max)) ?? (await ioredisAllow(key, windowMs, max)) ?? memoryAllow(`${windowMs}:${key}`, windowMs, max);
+}
+
+/**
+ * The visitor confirmation goes to an address a stranger typed, so one address may receive at most 1 per hour and 5 per day.
+ * The address is hashed before it is used as a key. Both windows are consumed together.
+ */
+export async function allowConfirmationEmail(email: string): Promise<boolean> {
+  const key = createHash("sha256").update(email.trim().toLowerCase()).digest("hex").slice(0, 24);
+  const hour = await allowWith(`confirm:h:${key}`, 3_600_000, 1);
+  const day = await allowWith(`confirm:d:${key}`, 86_400_000, 5);
+  return hour && day;
 }

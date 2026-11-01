@@ -9,11 +9,13 @@ import {
   platformLabels,
   type DownloadItem,
 } from "@/content/downloads";
-import { getProductImage } from "@/lib/product-images";
+import { ProductMark } from "@/components/product-mark";
 
 type DownloadCardProps = {
   item: DownloadItem;
   productName: string;
+  accent?: string | null;
+  logoUrl?: string | null;
   className?: string;
 };
 
@@ -21,21 +23,13 @@ function isExternalHref(href: string): boolean {
   return /^https?:\/\//i.test(href) || href.startsWith("//");
 }
 
-export function DownloadCard({ item, productName, className }: DownloadCardProps) {
+export function DownloadCard({ item, productName, accent, logoUrl, className }: DownloadCardProps) {
   const t = useTranslations("common");
   const td = useTranslations("downloadsPage");
   const disabled = item.status === "coming-soon" || !item.href;
-  const thumb = getProductImage(item.productSlug);
   const inner = (
     <>
-      <div className="mb-4 aspect-[16/9] overflow-hidden border border-m-line/60 bg-[color-mix(in_oklch,var(--m-accent-soft)_40%,var(--m-surface))]">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={thumb}
-          alt=""
-          className="h-full w-full object-cover object-top"
-        />
-      </div>
+      <ProductMark name={productName} accent={accent} logoUrl={logoUrl} className="mb-4 h-12 w-12 text-base" />
       <div className="flex items-start justify-between gap-3">
         <div>
           <p className="font-display text-base font-semibold tracking-tight">

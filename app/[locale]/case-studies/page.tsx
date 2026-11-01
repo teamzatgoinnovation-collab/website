@@ -30,7 +30,7 @@ export default async function CaseStudiesPage({ params }: Props) {
 
   return (
     <Section>
-      <p role="note" className="mb-8 rounded-xl border border-dashed border-m-line bg-[var(--m-surface)] px-4 py-3 text-sm text-m-muted">{t("illustrativeNotice")}</p>
+      <p role="note" className="mb-6 rounded-xl border border-dashed border-m-line bg-[var(--m-surface)] px-4 py-3 text-sm text-m-muted">{t("illustrativeNotice")}</p>
       <SectionHeading
         eyebrow={t("eyebrow")}
         title={t("heading")}
@@ -39,7 +39,7 @@ export default async function CaseStudiesPage({ params }: Props) {
       <div className="space-y-0">
         {caseStudies.map((study, i) => (
           <MotionReveal key={study.id} delay={i * 0.05}>
-            <article className="grid gap-4 border-t border-m-line py-10 md:grid-cols-[10rem_1fr_auto] md:items-start md:gap-10">
+            <article className="grid gap-4 border-t border-m-line py-7 md:grid-cols-[10rem_1fr_auto] md:items-start md:gap-7">
               <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[var(--m-accent)]">
                 {tCases(`${study.id}.industry`)}
               </p>

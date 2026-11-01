@@ -11,9 +11,9 @@ export async function ProductPricingCta({ productName }: { productName: string }
   const ctaHref = contactHref({ type: "sales", interest: productName }) as "/contact";
 
   return (
-    <MotionReveal className="mt-16 border-t border-m-line pt-16">
+    <MotionReveal className="mt-10 border-t border-m-line pt-16">
       <SectionHeading eyebrow={t("pricingEyebrow")} title={t("pricingTitle")} />
-      <div className="m-tile max-w-md p-7">
+      <div className="m-tile max-w-md p-5">
         <p className="font-display text-3xl font-semibold tracking-tight">
           {t("pricingCustomLabel")}
         </p>

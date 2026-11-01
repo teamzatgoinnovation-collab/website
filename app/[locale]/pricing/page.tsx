@@ -74,7 +74,7 @@ export default async function PricingPage({ params }: Props) {
           <div
             key={tier.id}
             className={cn(
-              "m-tile relative flex flex-col p-7",
+              "m-tile relative flex flex-col p-5",
               tier.highlighted &&
                 "!border-[var(--m-accent)] bg-[color-mix(in_oklch,var(--m-accent-soft)_55%,var(--m-surface-elevated))]",
             )}
@@ -121,7 +121,7 @@ export default async function PricingPage({ params }: Props) {
         ))}
       </div>
 
-      <MotionReveal className="mt-20">
+      <MotionReveal className="mt-12">
         <h2 className="font-display text-2xl font-semibold">
           {t("comparisonTitle")}
         </h2>
@@ -161,7 +161,7 @@ export default async function PricingPage({ params }: Props) {
         </div>
       </MotionReveal>
 
-      <MotionReveal className="mt-16 overflow-hidden rounded-[var(--m-radius)] bg-[var(--m-ink)] px-8 py-12 text-[var(--color-background)] md:flex md:items-center md:justify-between md:gap-8 md:px-12">
+      <MotionReveal className="mt-10 overflow-hidden rounded-[var(--m-radius)] bg-[var(--m-ink)] px-6 py-12 text-[var(--color-background)] md:flex md:items-center md:justify-between md:gap-6 md:px-8">
         <div className="max-w-xl">
           <h2 className="font-display text-2xl font-semibold tracking-tight md:text-3xl">
             {t("ctaBandTitle")}
@@ -179,7 +179,7 @@ export default async function PricingPage({ params }: Props) {
         </Link>
       </MotionReveal>
 
-      <MotionReveal className="mt-20">
+      <MotionReveal className="mt-12">
         <h2 className="font-display text-2xl font-semibold">{t("faqTitle")}</h2>
         <dl className="mt-8 max-w-3xl space-y-6">
           {faq.map((item) => (

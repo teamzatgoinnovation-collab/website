@@ -6,7 +6,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 
 import { industryPages } from "@/content/industry-pages";
 import { integrationPages } from "@/content/integration-pages";
-import { products } from "@/content/products";
+import { useNavProducts } from "@/components/catalog-context";
 import { serviceSlugs } from "@/content/services";
 import { Link } from "@/i18n/navigation";
 
@@ -14,7 +14,7 @@ type Entry = { href: string; label: string; group: string };
 
 export function SiteSearch() {
   const t = useTranslations("nav");
-  const tp = useTranslations("products");
+  const catalog = useNavProducts();
   const ti = useTranslations("industryPages");
   const tg = useTranslations("integrationsPage");
   const ts = useTranslations("servicesPage");
@@ -24,13 +24,13 @@ export function SiteSearch() {
 
   const index = useMemo<Entry[]>(
     () => [
-      ...products.map((p) => ({ href: `/products/${p.slug}`, label: tp(`${p.slug}.name`), group: t("products") })),
+      ...catalog.map((p) => ({ href: `/products/${p.slug}`, label: p.name, group: t("products") })),
       ...serviceSlugs.map((s) => ({ href: "/services", label: ts(`items.${s}.title`), group: t("services") })),
       ...industryPages.map((i) => ({ href: `/industries/${i.slug}`, label: ti(`items.${i.slug}.name`), group: t("industries") })),
       ...integrationPages.map((i) => ({ href: `/integrations/${i.slug}`, label: tg(`items.${i.slug}.name`), group: t("integrations") })),
       ...(["downloads", "docs", "tutorials", "updates", "pricing", "about", "contact"] as const).map((k) => ({ href: `/${k}`, label: t(k), group: t("search") })),
     ],
-    [t, tp, ti, tg, ts],
+    [t, catalog, ti, tg, ts],
   );
 
   const results = q.trim()

@@ -12,6 +12,8 @@ export function ApplicationLightbox({
   onClose,
   alt,
   labels,
+  captions,
+  ofLabel = "of",
 }: {
   items: string[];
   index: number;
@@ -19,6 +21,8 @@ export function ApplicationLightbox({
   onClose: () => void;
   alt: string;
   labels: LightboxLabels;
+  captions?: (string | undefined)[];
+  ofLabel?: string;
 }) {
   const closeRef = useRef<HTMLButtonElement>(null);
   const go = useCallback(
@@ -90,8 +94,11 @@ export function ApplicationLightbox({
         src={items[index]}
         alt={`${alt} ${index + 1}/${items.length}`}
         onClick={(e) => e.stopPropagation()}
-        className="max-h-[90vh] max-w-[92vw] rounded-lg object-contain"
+        className="max-h-[84vh] max-w-[92vw] rounded-lg object-contain"
       />
+      <p className="pointer-events-none absolute bottom-4 start-1/2 -translate-x-1/2 rounded-full bg-black/60 px-4 py-1.5 text-sm text-white">
+        {captions?.[index] ? `${captions[index]} · ` : ""}{index + 1} {ofLabel} {items.length}
+      </p>
     </div>
   );
 }

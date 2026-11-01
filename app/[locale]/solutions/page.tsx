@@ -6,7 +6,7 @@ import { buildPageMetadata } from "@/lib/seo";
 import { Section, SectionHeading } from "@/components/section";
 import { Link } from "@/i18n/navigation";
 import { getLocalizedSolutions } from "@/lib/localized-content";
-import { getLocalizedProducts } from "@/lib/localized-products";
+import { getCatalog } from "@/lib/catalog";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -26,7 +26,7 @@ export default async function SolutionsPage({ params }: Props) {
   setRequestLocale(locale);
   const t = await getTranslations("solutionsPage");
   const solutions = await getLocalizedSolutions();
-  const products = await getLocalizedProducts();
+  const products = await getCatalog();
   const bySlug = Object.fromEntries(products.map((p) => [p.slug, p]));
 
   return (
@@ -40,7 +40,7 @@ export default async function SolutionsPage({ params }: Props) {
         {solutions.map((solution) => (
           <article
             key={solution.slug}
-            className="border-t border-m-line py-10 last:border-b"
+            className="border-t border-m-line py-7 last:border-b"
           >
             <h2 className="font-display text-2xl font-semibold tracking-tight">
               {solution.name}

@@ -36,7 +36,7 @@ export default async function AboutPage({ params }: Props) {
       heading={t("heading")}
       description={t("intro")}
     >
-      <MotionReveal className="m-tile flex flex-col gap-1.5 p-6 sm:flex-row sm:items-center sm:gap-5">
+      <MotionReveal className="m-tile flex flex-col gap-1.5 p-5 sm:flex-row sm:items-center sm:gap-5">
         <div
           aria-hidden
           className="inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[var(--m-accent-soft)] font-display text-lg font-semibold text-[var(--m-accent)]"
@@ -58,7 +58,7 @@ export default async function AboutPage({ params }: Props) {
         </div>
       </MotionReveal>
 
-      <MotionReveal className="mt-14">
+      <MotionReveal className="mt-9">
         <h2 className="font-display text-2xl font-bold text-[var(--m-ink)]">
           {t("whatWeBuildTitle")}
         </h2>
@@ -77,7 +77,7 @@ export default async function AboutPage({ params }: Props) {
         </ul>
       </MotionReveal>
 
-      <div className="mt-14 grid gap-10 border-t border-m-line pt-12 md:grid-cols-2">
+      <div className="mt-9 grid gap-7 border-t border-m-line pt-8 md:grid-cols-2">
         <MotionReveal>
           <h2 className="font-display text-2xl font-bold text-[var(--m-ink)]">
             {t("approachTitle")}
@@ -112,7 +112,7 @@ export default async function AboutPage({ params }: Props) {
         </MotionReveal>
       </div>
 
-      <div className="mt-14 grid gap-10 border-t border-m-line pt-12 md:grid-cols-2">
+      <div className="mt-9 grid gap-7 border-t border-m-line pt-8 md:grid-cols-2">
         <MotionReveal>
           <h2 className="font-display text-2xl font-bold text-[var(--m-ink)]">
             {t("missionTitle")}
@@ -127,7 +127,7 @@ export default async function AboutPage({ params }: Props) {
         </MotionReveal>
       </div>
 
-      <MotionReveal className="mt-14 border-t border-m-line pt-12">
+      <MotionReveal className="mt-9 border-t border-m-line pt-8">
         <h2 className="font-display text-2xl font-bold text-[var(--m-ink)]">
           {t("whyTitle")}
         </h2>
@@ -141,7 +141,7 @@ export default async function AboutPage({ params }: Props) {
         </ul>
       </MotionReveal>
 
-      <p className="mt-12">
+      <p className="mt-8">
         <Link
           href="/contact"
           className="inline-flex rounded-md bg-[var(--m-accent)] px-5 py-2.5 text-sm font-semibold text-[var(--m-accent-foreground)] transition-opacity hover:opacity-90"

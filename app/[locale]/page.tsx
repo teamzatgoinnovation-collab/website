@@ -1,15 +1,17 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ArrowRight, BookOpen, Download, GraduationCap, Newspaper } from "lucide-react";
+import { ArrowRight, BookOpen, CheckCircle2, Download, Globe, GraduationCap, Monitor, Newspaper, PlayCircle, Rocket, Smartphone } from "lucide-react";
 
 import { EcosystemDiagram } from "@/components/ecosystem-diagram";
-import { HeroBackdrop } from "@/components/hero-backdrop";
 import { HeroMotion, MotionReveal } from "@/components/motion-reveal";
 import { HeroCarousel } from "@/components/hero-carousel";
-import { FactsStrip, FeaturedProducts, IndustriesGrid, IntegrationsSection, ShowcaseSection, SolutionsGrid, WhyGrid, getFeatured } from "@/components/home-sections";
+import { HeroHeadline } from "@/components/hero-headline";
+import { Skyline } from "@/components/illustrations/skyline";
+import { IphoneShowcaseSection, IndustriesGrid, ProductFamilyStrip, ProductsAndConnections, StatsBand, IntegrationsSection, ShowcaseSection, SolutionsGrid, WhyGrid, getFeatured } from "@/components/home-sections";
 import { Section, SectionHeading } from "@/components/section";
 import { Link } from "@/i18n/navigation";
-import { contactHref } from "@/lib/contact-href";
+import { screenshotsOf } from "@/lib/catalog";
 import { getLocalizedChangelog } from "@/lib/localized-content";
+import { BookDemoLink } from "@/components/demo-dialog";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -24,70 +26,62 @@ export default async function HomePage({ params }: Props) {
 
   return (
     <>
-      <section className="relative overflow-hidden hero-plane">
-        <HeroBackdrop />
-        <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 pb-20 pt-16 md:pb-28 lg:grid-cols-[1.05fr_1fr]">
-          <div>
+      <section className="hero-aurora relative overflow-hidden">
+        <Skyline className="pointer-events-none absolute bottom-0 start-0 h-[46%] w-[68%] opacity-70" />
+        <div className="relative mx-auto grid max-w-7xl items-center gap-6 px-5 pb-28 pt-10 md:pt-14 lg:grid-cols-[1fr_1.05fr] lg:pb-32">
+          <div className="relative z-10">
             <HeroMotion>
-              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[var(--m-accent)]">{t2("heroEyebrow")}</p>
-              <h1 className="mt-4 font-display text-[clamp(2.6rem,7vw,4.6rem)] font-semibold leading-[1] tracking-tight">
-                <span className="bg-[image:var(--m-grad-aurora)] bg-clip-text text-transparent">{t2("heroTitle")}</span>
-              </h1>
+              <span className="inline-flex items-center gap-2 rounded-full bg-[#EDE9FF] px-4 py-1.5 text-sm font-semibold text-[#4B33C8] dark:bg-white/10 dark:text-[#C9BEFF]">
+                <Rocket className="h-4 w-4" aria-hidden />{t2("heroBadge")}
+              </span>
+              <HeroHeadline
+                className="mt-5 font-display text-[clamp(2.6rem,6.2vw,4.7rem)] font-extrabold leading-[1.02] tracking-tight text-[var(--m-ink)]"
+                words={[{ text: "Innovate." }, { text: "Integrate." }, { text: "Grow.", gradient: true }]}
+              />
             </HeroMotion>
             <HeroMotion delay={0.12}>
-              <p className="mt-6 max-w-lg text-base leading-relaxed text-m-muted md:text-lg">{t2("heroBody")}</p>
+              <p className="mt-6 max-w-xl text-base leading-relaxed text-[color-mix(in_oklch,var(--m-ink)_78%,transparent)] md:text-lg">{t2("heroBody")}</p>
+              <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2.5 text-sm font-semibold">
+                {[t2("heroCheck1"), t2("heroCheck2"), t2("heroCheck3")].map((c) => (
+                  <li key={c} className="inline-flex items-center gap-2"><CheckCircle2 className="h-5 w-5 text-[var(--m-teal)]" aria-hidden />{c}</li>
+                ))}
+              </ul>
             </HeroMotion>
             <HeroMotion delay={0.22} className="mt-9 flex flex-wrap gap-3">
-              <Link href="/products" className="m-btn m-btn-primary">{t2("ctaExplore")}<ArrowRight className="h-4 w-4 rtl:rotate-180" /></Link>
-              <Link href={contactHref({ type: "demo" }) as "/contact"} className="m-btn m-btn-ghost">{t2("ctaDemo")}</Link>
-              <Link href="/downloads" className="m-btn m-btn-ghost"><Download className="h-4 w-4" />{t2("ctaDownload")}</Link>
+              <Link href="/products" className="inline-flex items-center gap-2 rounded-full bg-[var(--m-accent)] px-7 py-3.5 text-sm font-bold text-white shadow-[0_14px_30px_-12px_rgba(41,82,227,0.8)] transition-transform hover:-translate-y-0.5"><Download className="h-4 w-4" aria-hidden />{t2("ctaExplore")}<ArrowRight className="h-4 w-4 rtl:rotate-180" aria-hidden /></Link>
+              <a href="#showcase" className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-bold text-[var(--m-ink)] shadow-[0_10px_26px_-14px_rgba(16,24,40,0.5)] ring-1 ring-black/5 transition-transform hover:-translate-y-0.5 dark:bg-white/10 dark:text-white dark:ring-white/10"><PlayCircle className="h-5 w-5 text-[var(--m-accent)]" aria-hidden />{t2("ctaSeeApps")}</a>
             </HeroMotion>
           </div>
           <HeroMotion delay={0.18}>
             <HeroCarousel
-              slides={featured.map((p) => ({ slug: p.slug, name: p.name, tagline: p.tagline, desktop: p.media.desktop[0], mobile: p.media.mobile[0] }))}
+              slides={featured.map((p) => ({ slug: p.slug, name: p.name, tagline: p.tagline, desktop: screenshotsOf(p, "desktop")[0], mobile: screenshotsOf(p, "mobile"), accent: p.accent, logoUrl: p.logoUrl }))}
               learnMore={t2("learnMore")}
               slideLabel={t2("slideLabel")}
+              prevLabel={t2("slidePrev")}
+              nextLabel={t2("slideNext")}
             />
           </HeroMotion>
         </div>
       </section>
 
-      <MotionReveal className="border-y border-m-line px-6 py-6">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-8 gap-y-3 text-center text-xs font-semibold uppercase tracking-[0.1em] text-m-muted sm:justify-between">
-          {[
-            t("trustBuilt"),
-            t("trustRegion"),
-            t("trustScale"),
-            t("trustSecure"),
-            t("trustCloud"),
-            t("trustChannels"),
-          ].map((label) => (
-            <span key={label}>{label}</span>
-          ))}
-        </div>
-      </MotionReveal>
-
-      <Section surface>
-        <MotionReveal>
-          <SectionHeading
-            eyebrow={t("ecosystemEyebrow")}
-            title={t("ecosystemTitle")}
-            description={t("ecosystemDesc")}
-          />
-        </MotionReveal>
-        <MotionReveal delay={0.05}>
-          <EcosystemDiagram />
-        </MotionReveal>
-      </Section>
-
-      <FactsStrip />
-      <FeaturedProducts />
+      <ProductFamilyStrip />
+      <ProductsAndConnections />
+      <StatsBand />
+      <IphoneShowcaseSection />
       <SolutionsGrid />
       <IndustriesGrid />
       <ShowcaseSection />
       <WhyGrid />
       <IntegrationsSection />
+
+      <Section surface>
+        <MotionReveal>
+          <SectionHeading eyebrow={t("ecosystemEyebrow")} title={t("ecosystemTitle")} description={t("ecosystemDesc")} />
+        </MotionReveal>
+        <MotionReveal delay={0.05}>
+          <EcosystemDiagram />
+        </MotionReveal>
+      </Section>
 
       <Section surface>
         <MotionReveal>
@@ -97,7 +91,7 @@ export default async function HomePage({ params }: Props) {
             description={t("storyDesc")}
           />
         </MotionReveal>
-        <div className="grid gap-10 md:grid-cols-3 md:gap-12">
+        <div className="grid gap-7 md:grid-cols-3 md:gap-8">
           {[
             { title: t("storyFieldTitle"), body: t("storyFieldBody"), num: "01" },
             { title: t("storyDeskTitle"), body: t("storyDeskBody"), num: "02" },
@@ -135,32 +129,27 @@ export default async function HomePage({ params }: Props) {
               body: t("channelMobileBody"),
               href: "/downloads" as const,
               num: "01",
-              image: "/images/channels/mobile.svg",
+              Icon: Smartphone,
             },
             {
               title: t("channelDesktopTitle"),
               body: t("channelDesktopBody"),
               href: "/downloads" as const,
               num: "02",
-              image: "/images/channels/desktop.svg",
+              Icon: Monitor,
             },
             {
               title: t("channelWebTitle"),
               body: t("channelWebBody"),
               href: "/products" as const,
               num: "03",
-              image: "/images/channels/web.svg",
+              Icon: Globe,
             },
           ].map((item, i) => (
             <MotionReveal key={item.num} delay={i * 0.07}>
               <div>
-                <div className="mb-5 aspect-[16/10] overflow-hidden border border-m-line bg-[color-mix(in_oklch,var(--m-accent-soft)_40%,var(--m-surface))]">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={item.image}
-                    alt=""
-                    className="h-full w-full object-cover object-top"
-                  />
+                <div className="mb-5 flex aspect-[16/8] items-center justify-center overflow-hidden rounded-3xl bg-gradient-to-br from-[#2952E3]/15 via-[#16B8E8]/15 to-[#08B69A]/15">
+                  <span className="inline-flex h-20 w-20 items-center justify-center rounded-3xl bg-white text-[var(--m-accent)] shadow-[0_18px_40px_-18px_rgba(41,82,227,0.6)] dark:bg-white/10"><item.Icon className="h-9 w-9" aria-hidden /></span>
                 </div>
                 <div className="border-t border-m-line pt-6">
                   <p className="font-display text-sm font-semibold text-[var(--m-accent)]">
@@ -249,7 +238,7 @@ export default async function HomePage({ params }: Props) {
         <div className="space-y-0">
           {latest.map((entry, i) => (
             <MotionReveal key={entry.id} delay={i * 0.05}>
-              <article className="grid gap-3 border-t border-m-line py-8 md:grid-cols-[8rem_1fr] md:gap-10">
+              <article className="grid gap-3 border-t border-m-line py-8 md:grid-cols-[8rem_1fr] md:gap-7">
                 <p className="text-xs font-semibold uppercase tracking-[0.12em] text-m-muted">
                   {entry.date}
                   <span className="mt-1 block font-medium normal-case tracking-normal text-[var(--m-accent)]">
@@ -270,11 +259,11 @@ export default async function HomePage({ params }: Props) {
         </div>
       </Section>
 
-      <Section className="!py-28 md:!py-36">
-        <MotionReveal className="relative overflow-hidden rounded-[var(--m-radius)] bg-[var(--m-ink)] px-8 py-16 text-center text-[var(--color-background)] md:px-16 md:py-20">
+      <Section className="!py-14 md:!py-16">
+        <MotionReveal className="relative overflow-hidden rounded-[2rem] bg-gradient-to-r from-[#2952E3] via-[#16B8E8] to-[#08B69A] px-6 py-10 text-center text-white md:px-10 md:py-12">
           <div
             aria-hidden
-            className="pointer-events-none absolute -end-10 -top-10 h-56 w-56 rounded-full bg-[var(--m-accent)] opacity-30 blur-3xl"
+            className="pointer-events-none absolute -end-10 -top-10 h-56 w-56 rounded-full bg-white opacity-25 blur-3xl"
           />
           <h2 className="relative font-display text-3xl font-semibold tracking-tight md:text-4xl">
             {t("ctaTitle")}
@@ -283,13 +272,10 @@ export default async function HomePage({ params }: Props) {
             {t("ctaBody")}
           </p>
           <div className="relative mt-9 flex flex-wrap items-center justify-center gap-3">
-            <Link
-              href={contactHref({ type: "demo" }) as "/contact"}
-              className="m-btn !bg-[var(--m-accent)] !text-[var(--m-accent-foreground)]"
-            >
+            <BookDemoLink className="m-btn !bg-white !text-[#1B3FBF] shadow-lg">
               {t("ctaButton")}
               <ArrowRight className="h-4 w-4 rtl:rotate-180" />
-            </Link>
+            </BookDemoLink>
             <Link
               href="/products"
               className="m-btn border border-white/25 bg-transparent text-[var(--color-background)] hover:bg-white/10"

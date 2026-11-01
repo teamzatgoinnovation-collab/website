@@ -49,7 +49,7 @@ export default async function PartnersPage({ params }: Props) {
           </MotionReveal>
         ))}
       </div>
-      <p className="mt-12">
+      <p className="mt-8">
         <Link
           href="/contact"
           className="inline-flex rounded-md bg-[var(--m-accent)] px-5 py-2.5 text-sm font-semibold text-[var(--m-accent-foreground)] transition-opacity hover:opacity-90"

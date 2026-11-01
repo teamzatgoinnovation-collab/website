@@ -15,7 +15,7 @@ export function Section({ id, className, children, surface }: SectionProps) {
     <section
       id={id}
       className={cn(
-        "relative px-6 py-20 md:py-28",
+        "relative px-5 py-10 md:py-14",
         surface && "bg-m-surface",
         className,
       )}
@@ -39,7 +39,7 @@ export function SectionHeading({
   action,
 }: SectionHeadingProps) {
   return (
-    <div className="mb-12 flex flex-col gap-5 md:mb-14 md:flex-row md:items-end md:justify-between md:gap-8">
+    <div className="mb-7 flex flex-col gap-5 md:mb-9 md:flex-row md:items-end md:justify-between md:gap-6">
       <div className="max-w-2xl">
         {eyebrow ? (
           <>

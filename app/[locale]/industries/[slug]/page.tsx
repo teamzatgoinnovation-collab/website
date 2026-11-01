@@ -9,8 +9,9 @@ import { industryPages } from "@/content/industry-pages";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { contactHref } from "@/lib/contact-href";
-import { getLocalizedProducts } from "@/lib/localized-products";
+import { getCatalog } from "@/lib/catalog";
 import { absoluteUrl, breadcrumbJsonLd, buildPageMetadata } from "@/lib/seo";
+import { BookDemoLink } from "@/components/demo-dialog";
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
@@ -53,7 +54,7 @@ export default async function IndustryPage({ params }: Props) {
   if (!meta) notFound();
 
   const t = await getTranslations("industryPages");
-  const all = await getLocalizedProducts();
+  const all = await getCatalog();
   const products = meta.products.map((s) => all.find((p) => p.slug === s)).filter((p) => p !== undefined);
   const raw = (k: string) => t.raw(`items.${slug}.${k}`) as string[];
   const name = t(`items.${slug}.name`);
@@ -66,7 +67,7 @@ export default async function IndustryPage({ params }: Props) {
         <div className="mt-6">
           <SectionHeading eyebrow={t("eyebrow")} title={name} description={t(`items.${slug}.summary`)} />
         </div>
-        <div className="grid gap-10 md:grid-cols-2">
+        <div className="grid gap-7 md:grid-cols-2">
           <List title={t("challenges")} items={raw("challenges")} />
           <List title={t("features")} items={raw("features")} />
           <div>
@@ -83,7 +84,7 @@ export default async function IndustryPage({ params }: Props) {
           <List title={t("benefits")} items={raw("benefits")} />
         </div>
 
-        <h2 className="mt-14 font-display text-lg font-semibold">{t("products")}</h2>
+        <h2 className="mt-9 font-display text-lg font-semibold">{t("products")}</h2>
         <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {products.map((p) => (
             <Link key={p.slug} href={`/products/${p.slug}` as "/products"} className="rounded-2xl border border-m-line bg-[var(--m-surface-elevated)] p-5 transition-colors hover:border-[var(--m-accent)]">
@@ -95,8 +96,8 @@ export default async function IndustryPage({ params }: Props) {
         </div>
         <p className="mt-4 text-xs text-m-muted">{t("screenshotsNote")}</p>
 
-        <div className="mt-12 flex flex-wrap gap-3">
-          <Link href={contactHref({ type: "demo", interest: name }) as "/contact"} className="m-btn m-btn-primary">{t("ctaDemo")}</Link>
+        <div className="mt-8 flex flex-wrap gap-3">
+          <BookDemoLink interest={name} className="m-btn m-btn-primary">{t("ctaDemo")}</BookDemoLink>
           <Link href={contactHref({ type: "sales", interest: name }) as "/contact"} className="m-btn m-btn-ghost">{t("cta")}</Link>
         </div>
       </Section>

@@ -9,9 +9,9 @@ import { Section } from "@/components/section";
 import { caseStudies, getCaseStudyMeta } from "@/content/case-studies";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
-import { contactHref } from "@/lib/contact-href";
-import { getLocalizedProduct } from "@/lib/localized-products";
+import { getCatalogProduct } from "@/lib/catalog";
 import { absoluteUrl, buildPageMetadata } from "@/lib/seo";
+import { BookDemoLink } from "@/components/demo-dialog";
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
@@ -44,17 +44,12 @@ export default async function CaseStudyDetailPage({ params }: Props) {
   const t = await getTranslations("caseStudiesPage");
   const tCases = await getTranslations("caseStudies");
   const products = (
-    await Promise.all(study.productSlugs.map((s) => getLocalizedProduct(s)))
+    await Promise.all(study.productSlugs.map((s) => getCatalogProduct(s)))
   ).filter(Boolean);
-
-  const demoHref = contactHref({
-    type: "demo",
-    interest: tCases(`${study.id}.title`),
-  }) as "/contact";
 
   return (
     <Section>
-      <p role="note" className="mb-8 rounded-xl border border-dashed border-m-line bg-[var(--m-surface)] px-4 py-3 text-sm text-m-muted">{t("illustrativeNotice")}</p>
+      <p role="note" className="mb-6 rounded-xl border border-dashed border-m-line bg-[var(--m-surface)] px-4 py-3 text-sm text-m-muted">{t("illustrativeNotice")}</p>
       <JsonLd
         data={{
           "@context": "https://schema.org",
@@ -73,7 +68,7 @@ export default async function CaseStudyDetailPage({ params }: Props) {
         {tCases(`${study.id}.summary`)}
       </p>
 
-      <div className="mt-14 grid gap-12 border-t border-m-line pt-12 md:grid-cols-3">
+      <div className="mt-9 grid gap-8 border-t border-m-line pt-8 md:grid-cols-3">
         {(
           [
             ["challenge", t("challenge")],
@@ -93,7 +88,7 @@ export default async function CaseStudyDetailPage({ params }: Props) {
       </div>
 
       {products.length > 0 ? (
-        <MotionReveal className="mt-14 border-t border-m-line pt-12">
+        <MotionReveal className="mt-9 border-t border-m-line pt-8">
           <h2 className="font-display text-xl font-semibold tracking-tight">
             {t("productsUsed")}
           </h2>
@@ -114,23 +109,20 @@ export default async function CaseStudyDetailPage({ params }: Props) {
         </MotionReveal>
       ) : null}
 
-      <MotionReveal className="mt-16 overflow-hidden rounded-[var(--m-radius)] bg-[var(--m-ink)] px-8 py-12 text-[var(--color-background)] md:px-12">
+      <MotionReveal className="mt-10 overflow-hidden rounded-[var(--m-radius)] bg-[var(--m-ink)] px-6 py-12 text-[var(--color-background)] md:px-8">
         <h2 className="font-display text-2xl font-semibold tracking-tight md:text-3xl">
           {t("ctaTitle")}
         </h2>
         <p className="mt-3 max-w-xl text-sm leading-relaxed opacity-75 md:text-base">
           {t("ctaBody")}
         </p>
-        <Link
-          href={demoHref}
-          className="m-btn mt-8 !bg-[var(--m-accent)] !text-[var(--m-accent-foreground)]"
-        >
+        <BookDemoLink interest={tCases(`${study.id}.title`)} className="m-btn mt-8 !bg-[var(--m-accent)] !text-[var(--m-accent-foreground)]">
           {t("ctaButton")}
           <ArrowRight className="h-4 w-4 rtl:rotate-180" />
-        </Link>
+        </BookDemoLink>
       </MotionReveal>
 
-      <p className="mt-12">
+      <p className="mt-8">
         <Link href="/case-studies" className="m-link text-sm">
           ← {t("backToList")}
         </Link>

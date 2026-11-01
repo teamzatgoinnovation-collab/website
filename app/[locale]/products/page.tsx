@@ -5,7 +5,7 @@ import { buildPageMetadata } from "@/lib/seo";
 
 import { ProductCard } from "@/components/product-card";
 import { Section, SectionHeading } from "@/components/section";
-import { getLocalizedProducts } from "@/lib/localized-products";
+import { getCatalog } from "@/lib/catalog";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -24,7 +24,7 @@ export default async function ProductsPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("productsPage");
-  const all = await getLocalizedProducts();
+  const all = await getCatalog();
   const available = all.filter((p) => p.status === "available");
   const soon = all.filter((p) => p.status === "coming-soon");
 
@@ -41,7 +41,7 @@ export default async function ProductsPage({ params }: Props) {
         ))}
       </div>
       {soon.length > 0 ? (
-        <div className="mt-16">
+        <div className="mt-10">
           <h2 className="font-display text-2xl font-semibold">
             {t("comingSoonHeading")}
           </h2>

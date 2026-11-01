@@ -48,7 +48,7 @@ export default function UsersPage() {
           <form onSubmit={submit} className="grid gap-4 sm:grid-cols-2">
             <Field label="Name"><Input required minLength={2} value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} /></Field>
             <Field label="Email"><Input required type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} /></Field>
-            <Field label="Temporary password" hint="At least 12 characters with upper-case, lower-case and a digit."><Input required type="password" autoComplete="new-password" minLength={12} value={form.password} onChange={(e) => setForm({ ...form, password: e.target.value })} /></Field>
+            <Field label="Temporary password" hint="At least 8 characters with upper-case, lower-case and a digit."><Input required type="password" autoComplete="new-password" minLength={8} value={form.password} onChange={(e) => setForm({ ...form, password: e.target.value })} /></Field>
             <Field label="Role"><Select value={form.roleKey} onChange={(e) => setForm({ ...form, roleKey: e.target.value })}>{roleList.map((r) => <option key={r.key} value={r.key}>{r.name}</option>)}</Select></Field>
             <div className="sm:col-span-2"><Btn type="submit" variant="primary" disabled={create.isPending}>{create.isPending ? "Creating…" : "Create user"}</Btn></div>
           </form>
@@ -72,7 +72,7 @@ export default function UsersPage() {
                 <td className="whitespace-nowrap px-4 py-3 text-end">
                   {canWrite && u.id !== me.data?.id ? (
                     <div className="flex justify-end gap-2">
-                      <Btn onClick={() => { const pw = window.prompt(`New password for ${u.email} (12+ chars, mixed case, a digit):`); if (pw) setPassword.mutate({ id: u.id, password: pw }); }}>Set password</Btn>
+                      <Btn onClick={() => { const pw = window.prompt(`New password for ${u.email} (8+ chars, mixed case, a digit):`); if (pw) setPassword.mutate({ id: u.id, password: pw }); }}>Set password</Btn>
                       <Btn variant={u.status === "ACTIVE" ? "danger" : "ghost"} onClick={() => patch.mutate({ id: u.id, body: { status: u.status === "ACTIVE" ? "DISABLED" : "ACTIVE" } })}>{u.status === "ACTIVE" ? "Disable" : "Enable"}</Btn>
                     </div>
                   ) : null}

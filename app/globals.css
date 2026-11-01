@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* `dark:` follows the site's own theme class (next-themes), not the OS preference. */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-sans: var(--font-poppins, "Poppins"), ui-sans-serif, system-ui, sans-serif;
   --color-background: oklch(0.985 0.005 240);
@@ -400,6 +403,100 @@ body:not(.font-arabic):not(.font-devanagari):not(.font-malayalam):not(.font-cjk-
 
 @media (prefers-reduced-motion: reduce) {
   .zg-flow {
+    animation: none;
+  }
+}
+
+/* Hero aurora: vivid blue -> cyan -> teal wash on the right, soft white on the left (matches the design reference). */
+.hero-aurora {
+  background:
+    radial-gradient(58% 85% at 92% 18%, rgb(22 184 232 / 0.62), transparent 62%),
+    radial-gradient(52% 75% at 104% 88%, rgb(8 182 154 / 0.5), transparent 62%),
+    radial-gradient(70% 95% at 66% -10%, rgb(41 82 227 / 0.4), transparent 62%),
+    linear-gradient(180deg, #f8fbff 0%, #eef4ff 100%);
+}
+
+.dark .hero-aurora {
+  background:
+    radial-gradient(58% 85% at 92% 18%, rgb(22 184 232 / 0.38), transparent 62%),
+    radial-gradient(52% 75% at 104% 88%, rgb(8 182 154 / 0.3), transparent 62%),
+    radial-gradient(70% 95% at 66% -10%, rgb(41 82 227 / 0.45), transparent 62%),
+    linear-gradient(180deg, #0b1220 0%, #101828 100%);
+}
+
+.grad-text {
+  background-image: linear-gradient(100deg, #2952e3 0%, #16b8e8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Animated hero: two blurred colour blobs drift slowly behind the content (transform-only, GPU friendly). */
+.hero-aurora {
+  isolation: isolate;
+}
+
+.hero-aurora::before,
+.hero-aurora::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 9999px;
+  filter: blur(70px);
+  pointer-events: none;
+  will-change: transform;
+}
+
+.hero-aurora::before {
+  width: 34rem;
+  height: 34rem;
+  inset-inline-end: -9rem;
+  top: -8rem;
+  background: #16b8e8;
+  opacity: 0.4;
+  animation: aurora-a 19s ease-in-out infinite alternate;
+}
+
+.hero-aurora::after {
+  width: 30rem;
+  height: 30rem;
+  inset-inline-end: 8rem;
+  bottom: -14rem;
+  background: #08b69a;
+  opacity: 0.32;
+  animation: aurora-b 23s ease-in-out infinite alternate;
+}
+
+.dark .hero-aurora::before,
+.dark .hero-aurora::after {
+  opacity: 0.22;
+}
+
+@keyframes aurora-a {
+  to {
+    transform: translate3d(-5rem, 4rem, 0) scale(1.12);
+  }
+}
+
+@keyframes aurora-b {
+  to {
+    transform: translate3d(6rem, -3rem, 0) scale(1.16);
+  }
+}
+
+/* Autoplay progress on the active carousel dot; its end triggers the next slide. */
+@keyframes dot-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-aurora::before,
+  .hero-aurora::after {
     animation: none;
   }
 }

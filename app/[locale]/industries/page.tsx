@@ -29,7 +29,7 @@ export default async function IndustriesPage({ params }: Props) {
           <MotionReveal key={ind.slug} delay={(i % 3) * 0.05}>
             <Link
               href={`/industries/${ind.slug}` as "/industries"}
-              className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-m-line bg-[var(--m-surface-elevated)] p-6 transition-colors hover:border-[var(--m-accent)]"
+              className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-m-line bg-[var(--m-surface-elevated)] p-5 transition-colors hover:border-[var(--m-accent)]"
             >
               <span aria-hidden className={`absolute inset-x-0 top-0 h-1 ${accents[i % 4]}`} />
               <h2 className="font-display text-lg font-semibold tracking-tight">{t(`items.${ind.slug}.name`)}</h2>

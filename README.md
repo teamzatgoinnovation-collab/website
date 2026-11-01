@@ -161,13 +161,15 @@ See [Docs/PRODUCTION_CHECKLIST.md](../../Docs/PRODUCTION_CHECKLIST.md).
 
 Related: [FRONTEND_STACK.md](../../Docs/Foundation/FRONTEND_STACK.md) · [PRODUCT_CATALOG.md](../../Docs/Foundation/PRODUCT_CATALOG.md)
 
-## Product screenshots
+## Product content comes only from the admin
 
-Real screenshots are never invented. Drop files into `public/images/products/<slug>/` named
-`desktop-*.png|jpg|webp|avif` and `mobile-*.…` (slugs: `zatgo-erp`, `vansale`, `mybis`, `prayertimer`).
-`lib/product-media.ts` reads them at build time (rebuild or restart `next dev` after adding files) and they appear in the hero carousel and the
-application showcase (with fullscreen lightbox). Folders without files show a labelled
-"Screenshot coming soon" placeholder.
+The site ships **no product copy, product images or screenshots**. Products, their text in every language, logos, brand colours,
+features, FAQ and screenshots are created and edited in `/admin` and served by website-api (`lib/catalog.ts`; cached for 60 s, so
+changes appear within about a minute and a short API outage keeps serving the last good data). A product without screenshots
+is shown as a clean card (logo or initials on its brand colour); the hero, phone showcase, desktop/mobile showcase and gallery sections
+appear only when something was uploaded. Server config: `LEADS_API_URL` (internal API address) or `CATALOG_API_URL` (e.g. on the build
+machine) plus `NEXT_PUBLIC_API_URL` (public origin for image URLs). The first catalog was seeded with the importer in website-api
+(`deploy/seed/catalog.json`).
 
 ## Integrations
 

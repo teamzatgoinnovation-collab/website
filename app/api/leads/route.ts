@@ -4,9 +4,9 @@ import { after, NextResponse } from "next/server";
 import { z } from "zod";
 
 import { inquiryTypes } from "@/content/company";
-import { sendLeadEmail } from "@/lib/lead-email";
+import { emailConfigured, sendLeadEmail, sendVisitorConfirmation } from "@/lib/lead-email";
 import { forwardLeadWithRetry, processApiQueue } from "@/lib/leads-api";
-import { allowLeadRequest, hashClientIp } from "@/lib/leads-rate-limit";
+import { allowConfirmationEmail, allowLeadRequest, hashClientIp } from "@/lib/leads-rate-limit";
 import {
   deliverWebhookWithRetry,
   persistLead,
@@ -25,6 +25,9 @@ const leadSchema = z.object({
   message: z.string().min(10).max(4000),
   tier: z.string().max(80).optional(),
   locale: z.string().max(12).optional(),
+  /** YYYY-MM-DD, optional (demo popup) */
+  preferredDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).optional(),
+  productSlug: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/).max(80).optional(),
   /** Honeypot — bots fill this; humans leave it empty */
   website: z.string().max(200).optional(),
 });
@@ -69,6 +72,8 @@ export async function POST(request: Request) {
     message: payload.message,
     tier: payload.tier,
     locale: payload.locale,
+    preferredDate: payload.preferredDate,
+    productSlug: payload.productSlug,
     receivedAt: new Date().toISOString(),
     ipHash,
   };
@@ -79,6 +84,9 @@ export async function POST(request: Request) {
     console.error("lead_persist_failed", error);
     return NextResponse.json({ ok: false, error: "persist_failed" }, { status: 500 });
   }
+
+  // Visitor confirmation: only when SMTP is configured and this address has not been mailed recently (it is a stranger-typed address).
+  const confirm = emailConfigured() && (await allowConfirmationEmail(record.email));
 
   // Persist succeeded — never fail the HTTP response for webhook/email issues.
   after(async () => {
@@ -94,6 +102,7 @@ export async function POST(request: Request) {
     }
     try {
       await sendLeadEmail(record);
+      if (confirm) await sendVisitorConfirmation(record);
     } catch (error) {
       console.error("lead_email_background_failed", error);
     }
@@ -115,7 +124,7 @@ export async function POST(request: Request) {
     }),
   );
 
-  return NextResponse.json({ ok: true, id: record.id });
+  return NextResponse.json({ ok: true, id: record.id, confirmationEmail: confirm });
 }
 
 /** Optional queue drain — protect with LEADS_RETRY_SECRET when exposed. */

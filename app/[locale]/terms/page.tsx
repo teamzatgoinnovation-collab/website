@@ -30,7 +30,7 @@ export default async function TermsPage({ params }: Props) {
   return (
     <CompanyPageShell eyebrow={t("eyebrow")} heading={t("heading")}>
       <p className="text-sm text-[var(--m-muted)]">{t("updated")}</p>
-      <div className="mt-10 max-w-3xl space-y-10">
+      <div className="mt-8 max-w-3xl space-y-10">
         {sections.map((section, i) => (
           <MotionReveal key={section.title} delay={i * 0.04}>
             <h2 className="font-display text-xl font-bold text-[var(--m-ink)]">

@@ -14,8 +14,8 @@ import {
   type DownloadItem,
   type DownloadPlatform,
 } from "@/content/downloads";
-import type { Channel } from "@/content/products";
-import { getLocalizedProducts } from "@/lib/localized-products";
+import type { Channel } from "@/lib/catalog-types";
+import { getCatalog } from "@/lib/catalog";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -35,16 +35,18 @@ async function ChannelGroup({
   items,
   title,
   names,
+  marks,
 }: {
   channel: Channel;
   intro: string;
   items: DownloadItem[];
   title: string;
   names: Record<string, string>;
+  marks: Record<string, { accent: string | null; logoUrl: string | null }>;
 }) {
   if (items.length === 0) return null;
   return (
-    <div className="mt-14 first:mt-0">
+    <div className="mt-9 first:mt-0">
       <h2 className="font-display text-2xl font-semibold">{title}</h2>
       <p className="mt-2 text-sm text-m-muted">{intro}</p>
       <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -53,6 +55,8 @@ async function ChannelGroup({
             key={item.id}
             item={item}
             productName={names[item.productSlug] ?? item.productSlug}
+            accent={marks[item.productSlug]?.accent}
+            logoUrl={marks[item.productSlug]?.logoUrl}
           />
         ))}
       </div>
@@ -65,8 +69,9 @@ export default async function DownloadsPage({ params }: Props) {
   setRequestLocale(locale);
   const t = await getTranslations("downloadsPage");
   const tc = await getTranslations("common");
-  const localized = await getLocalizedProducts();
+  const localized = await getCatalog();
   const names = Object.fromEntries(localized.map((p) => [p.slug, p.name]));
+  const marks = Object.fromEntries(localized.map((p) => [p.slug, { accent: p.accent, logoUrl: p.logoUrl }]));
   names.documentation = t("documentationName");
 
   const groups: { channel: Channel; intro: string }[] = [
@@ -83,7 +88,7 @@ export default async function DownloadsPage({ params }: Props) {
         description={t("description")}
       />
 
-      <MotionReveal className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      <MotionReveal className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {(
           [
             ["mobile", "ios", "android"],
@@ -113,10 +118,11 @@ export default async function DownloadsPage({ params }: Props) {
           title={tc(channel)}
           items={downloadsByChannel(channel)}
           names={names}
+          marks={marks}
         />
       ))}
 
-      <MotionReveal className="mt-16 border-t border-m-line pt-12">
+      <MotionReveal className="mt-10 border-t border-m-line pt-8">
         <h2 className="font-display text-2xl font-semibold">
           {t("requirementsTitle")}
         </h2>
@@ -138,7 +144,7 @@ export default async function DownloadsPage({ params }: Props) {
         <p className="mt-8 text-xs text-m-muted">{t("checksumNote")}</p>
       </MotionReveal>
 
-      <p className="mt-12 text-sm text-m-muted">
+      <p className="mt-8 text-sm text-m-muted">
         {t("helpPrefix")}{" "}
         <Link href="/docs" className="m-link">
           {t("docsHub")}

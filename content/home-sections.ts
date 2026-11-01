@@ -3,8 +3,6 @@
  */
 export type Accent = "primary" | "cyan" | "teal" | "purple";
 
-export const featuredSlugs = ["erpnext", "vansale", "mybis", "prayertimer"] as const;
-
 export const solutionTiles: { icon: string; title: string; body: string; accent: Accent }[] = [
   { icon: "Boxes", title: "ERP Management", body: "One system of record across finance, stock, sales and HR.", accent: "primary" },
   { icon: "Calculator", title: "Accounting", body: "General ledger, VAT-aware invoicing and audit trails.", accent: "teal" },

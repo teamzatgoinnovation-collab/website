@@ -18,6 +18,7 @@ import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/cn";
 import { contactHref } from "@/lib/contact-href";
 import { faqJsonLd } from "@/lib/seo";
+import { BookDemoLink } from "@/components/demo-dialog";
 
 type Billing = "monthly" | "yearly";
 
@@ -45,7 +46,7 @@ function PricingCard({
   return (
     <div
       className={cn(
-        "m-tile relative flex flex-col p-7",
+        "m-tile relative flex flex-col p-5",
         plan.popular &&
           "!border-[var(--m-accent)] bg-[color-mix(in_oklch,var(--m-accent-soft)_55%,var(--m-surface-elevated))]",
       )}
@@ -148,7 +149,7 @@ export function VanSalePricingSection() {
   const vatKey = vanSalePricingPlans[0]?.vatIncluded ? "vatIncluded" : "vatExcluded";
 
   return (
-    <div id="vansale-pricing-print" className="mt-16 border-t border-m-line pt-16">
+    <div id="vansale-pricing-print" className="mt-10 border-t border-m-line pt-16">
       <JsonLd data={faqJsonLd(faq)} />
 
       <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
@@ -181,7 +182,7 @@ export function VanSalePricingSection() {
         ))}
       </div>
 
-      <MotionReveal className="mt-20">
+      <MotionReveal className="mt-12">
         <h2 className="font-display text-2xl font-semibold">{t("comparisonTitle")}</h2>
         <p className="mt-2 max-w-2xl text-sm text-m-muted">{t("comparisonIntro")}</p>
         <div className="mt-8 overflow-x-auto">
@@ -224,11 +225,11 @@ export function VanSalePricingSection() {
         </div>
       </MotionReveal>
 
-      <MotionReveal className="mt-20" data-print-hide>
+      <MotionReveal className="mt-12" data-print-hide>
         <h2 className="font-display text-2xl font-semibold">{t("whyTitle")}</h2>
         <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {whyItems.map((item) => (
-            <div key={item.title} className="m-tile p-6">
+            <div key={item.title} className="m-tile p-5">
               <p className="font-display text-base font-semibold tracking-tight text-[var(--m-ink)]">
                 {item.title}
               </p>
@@ -239,7 +240,7 @@ export function VanSalePricingSection() {
       </MotionReveal>
 
       <MotionReveal
-        className="mt-16 overflow-hidden rounded-[var(--m-radius)] bg-[var(--m-ink)] px-8 py-12 text-[var(--color-background)] md:flex md:items-center md:justify-between md:gap-8 md:px-12"
+        className="mt-10 overflow-hidden rounded-[var(--m-radius)] bg-[var(--m-ink)] px-6 py-12 text-[var(--color-background)] md:flex md:items-center md:justify-between md:gap-6 md:px-8"
         data-print-hide
       >
         <div className="max-w-xl">
@@ -251,12 +252,9 @@ export function VanSalePricingSection() {
           </p>
         </div>
         <div className="mt-6 flex flex-wrap gap-3 md:mt-0 md:shrink-0">
-          <Link
-            href={contactHref({ type: "demo", interest: "ZatGo VanSale" }) as "/contact"}
-            className="m-btn !bg-[var(--m-accent)] !text-[var(--m-accent-foreground)]"
-          >
+          <BookDemoLink interest="ZatGo VanSale" productSlug="vansale" className="m-btn !bg-[var(--m-accent)] !text-[var(--m-accent-foreground)]">
             {t("ctaPrimary")}
-          </Link>
+          </BookDemoLink>
           <Link
             href={contactHref({ type: "sales", interest: "ZatGo VanSale" }) as "/contact"}
             className="m-btn border border-white/25 bg-transparent text-[var(--color-background)] hover:bg-white/10"
@@ -266,7 +264,7 @@ export function VanSalePricingSection() {
         </div>
       </MotionReveal>
 
-      <MotionReveal className="mt-20" data-print-hide>
+      <MotionReveal className="mt-12" data-print-hide>
         <h2 className="font-display text-2xl font-semibold">{t("faqTitle")}</h2>
         <dl className="mt-8 max-w-3xl space-y-6">
           {faq.map((item) => (

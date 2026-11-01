@@ -25,7 +25,7 @@ export function EcosystemDiagram() {
 
   return (
     <div className="relative">
-      <div className="mx-auto mb-8 flex w-fit items-center gap-2.5 rounded-full border border-m-line bg-[var(--m-surface-elevated)] px-5 py-2.5 shadow-[var(--m-shadow-soft)]">
+      <div className="mx-auto mb-6 flex w-fit items-center gap-2.5 rounded-full border border-m-line bg-[var(--m-surface-elevated)] px-5 py-2.5 shadow-[var(--m-shadow-soft)]">
         <span
           aria-hidden
           className="inline-flex h-6 w-6 items-center justify-center rounded-[0.3rem] bg-[var(--m-accent)] text-[0.55rem] font-bold text-[var(--m-accent-foreground)]"

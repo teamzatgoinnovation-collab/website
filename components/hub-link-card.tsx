@@ -27,7 +27,7 @@ export function HubLinkCard({
     <a
       href={href}
       {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-      className={cn("m-tile group flex flex-col p-6", className)}
+      className={cn("m-tile group flex flex-col p-5", className)}
     >
       {meta ? <p className="m-eyebrow mb-3">{meta}</p> : null}
       <h3 className="font-display text-lg font-semibold tracking-tight">{title}</h3>

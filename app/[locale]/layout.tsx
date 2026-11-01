@@ -12,11 +12,14 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 
+import { DemoProvider } from "@/components/demo-dialog";
+import { CatalogProvider, type NavProduct } from "@/components/catalog-context";
 import { JsonLd } from "@/components/json-ld";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { site } from "@/content/site";
 import { isRtlLocale, routing, type Locale } from "@/i18n/routing";
+import { getCatalogSafe } from "@/lib/catalog";
 import {
   absoluteUrl,
   getSiteUrl,
@@ -144,6 +147,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   setRequestLocale(locale);
   const messages = await getMessages();
+  const navProducts: NavProduct[] = (await getCatalogSafe(locale)).map((p) => ({ slug: p.slug, name: p.name, tagline: p.tagline, comingSoon: p.status === "coming-soon", highlight: p.highlight, accent: p.accent, logoUrl: p.logoUrl }));
   const dir = isRtlLocale(locale) ? "rtl" : "ltr";
   const bodyScript = scriptClass[locale as Locale] ?? "";
 
@@ -170,12 +174,16 @@ export default async function LocaleLayout({ children, params }: Props) {
       >
         <NextIntlClientProvider messages={messages}>
           <Providers>
-            <JsonLd data={[organizationJsonLd(), websiteJsonLd(locale as Locale)]} />
-            <div className="flex min-h-screen flex-col">
-              <SiteHeader />
-              <main className="flex-1">{children}</main>
-              <SiteFooter />
-            </div>
+            <CatalogProvider products={navProducts}>
+              <DemoProvider>
+                <JsonLd data={[organizationJsonLd(), websiteJsonLd(locale as Locale)]} />
+                <div className="flex min-h-screen flex-col">
+                  <SiteHeader />
+                  <main className="flex-1">{children}</main>
+                  <SiteFooter />
+                </div>
+              </DemoProvider>
+            </CatalogProvider>
           </Providers>
         </NextIntlClientProvider>
       </body>

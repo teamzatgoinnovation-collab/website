@@ -10,6 +10,8 @@ export type LeadRecord = {
   message: string;
   tier?: string;
   locale?: string;
+  preferredDate?: string;
+  productSlug?: string;
   receivedAt: string;
   ipHash: string;
   id: string;

@@ -2,12 +2,13 @@ import type { MetadataRoute } from "next";
 
 import { industryPages } from "@/content/industry-pages";
 import { integrationPages } from "@/content/integration-pages";
-import { products } from "@/content/products";
 import { locales } from "@/i18n/routing";
+import { getCatalogSafe } from "@/lib/catalog";
 import { absoluteUrl, sitemapPaths } from "@/lib/seo";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
+  const products = await getCatalogSafe("en");
   const entries: MetadataRoute.Sitemap = [];
 
   for (const locale of locales) {

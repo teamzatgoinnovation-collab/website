@@ -12,8 +12,8 @@ import { SiteSearch } from "@/components/site-search";
 import { Button } from "@/components/ui/button";
 import { primaryNav, type NavDropdownEntry, type NavMegaEntry } from "@/content/site";
 import { Link, usePathname } from "@/i18n/navigation";
-import { contactHref } from "@/lib/contact-href";
 import { cn } from "@/lib/cn";
+import { BookDemoLink } from "@/components/demo-dialog";
 
 /** Hover + click + Escape + outside-click behaviour shared by dropdowns and mega panels. */
 function useMenu() {
@@ -209,7 +209,7 @@ export function SiteHeader() {
           : "border-b border-transparent bg-transparent",
       )}
     >
-      <div className="mx-auto flex h-[4.35rem] max-w-7xl items-center justify-between gap-3 px-6">
+      <div className="mx-auto flex h-[3.75rem] max-w-7xl items-center justify-between gap-3 px-5">
         <Link href="/" className="group flex shrink-0 items-center gap-2.5 font-display text-[1.15rem] font-semibold tracking-tight">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/images/branding/zg-mark.svg" alt="" width={44} height={24} className="h-6 w-auto transition-transform duration-300 group-hover:scale-105" />
@@ -271,9 +271,9 @@ export function SiteHeader() {
             <Download className="h-4 w-4" />
             {t("downloadSoftware")}
           </Link>
-          <Link href={contactHref({ type: "demo" }) as "/contact"} className="m-btn m-btn-primary !hidden sm:!inline-flex !px-4 !py-2">
+          <BookDemoLink className="m-btn m-btn-primary !hidden sm:!inline-flex !px-4 !py-2">
             {t("bookDemo")}
-          </Link>
+          </BookDemoLink>
           <button
             type="button"
             className="inline-flex h-9 w-9 items-center justify-center rounded-md text-[var(--m-ink)] xl:hidden"
@@ -287,7 +287,7 @@ export function SiteHeader() {
       </div>
 
       {open ? (
-        <div className="max-h-[calc(100svh-4.35rem)] overflow-y-auto border-t border-m-line bg-[var(--color-background)] px-6 py-5 xl:hidden">
+        <div className="max-h-[calc(100svh-3.75rem)] overflow-y-auto border-t border-m-line bg-[var(--color-background)] px-5 py-5 xl:hidden">
           <nav aria-label={t("menuLabel")} className="flex flex-col gap-1">
             {primaryNav.map((entry) => {
               if (entry.type === "link") {
@@ -326,9 +326,9 @@ export function SiteHeader() {
               );
             })}
             <div className="mt-3 flex flex-wrap gap-2 px-3">
-              <Link href={contactHref({ type: "demo" }) as "/contact"} className="m-btn m-btn-primary !px-4 !py-2">
+              <BookDemoLink className="m-btn m-btn-primary !px-4 !py-2">
                 {t("bookDemo")}
-              </Link>
+              </BookDemoLink>
               <Link href="/downloads" className="m-btn m-btn-ghost !px-4 !py-2">
                 <Download className="h-4 w-4" />
                 {t("downloadSoftware")}

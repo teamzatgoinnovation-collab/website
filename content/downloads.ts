@@ -1,4 +1,4 @@
-import type { Channel, ProductStatus } from "./products";
+import type { Channel, ProductStatus } from "../lib/catalog-types";
 import {
   getDocsPublicUrl,
   getProductWebUrl,

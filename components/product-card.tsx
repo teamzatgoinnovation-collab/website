@@ -1,43 +1,46 @@
 "use client";
 
-import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/cn";
 import { useTranslations } from "next-intl";
 
 import { Link } from "@/i18n/navigation";
-import type { LocalizedProduct } from "@/content/products";
-import { getProductImage } from "@/lib/product-images";
+import { ProductMark } from "@/components/product-mark";
+import type { CatalogProduct } from "@/lib/catalog-types";
 
 type ProductCardProps = {
-  product: LocalizedProduct;
+  product: CatalogProduct;
   className?: string;
 };
 
 export function ProductCard({ product, className }: ProductCardProps) {
   const t = useTranslations("common");
-  const imageSrc = getProductImage(product.slug);
-  const isMobile = product.channels.length === 1 && product.channels[0] === "mobile";
+  const shot = product.gallery[0];
+  const isMobile = shot?.device === "MOBILE";
 
   return (
     <Link
       href={`/products/${product.slug}`}
       className={cn("m-tile group flex flex-col overflow-hidden p-0", className)}
     >
-      <div className="relative aspect-[16/10] overflow-hidden bg-[color-mix(in_oklch,var(--m-accent-soft)_55%,var(--m-surface))]">
-        <Image
-          src={imageSrc}
-          alt=""
-          fill
-          unoptimized
-          className={cn(
-            "object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]",
-            isMobile && "object-contain p-3",
-          )}
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-        />
+      <div
+        className="relative flex aspect-[16/10] items-center justify-center overflow-hidden"
+        style={{ background: `linear-gradient(135deg, color-mix(in oklch, ${product.accent ?? "var(--m-accent)"} 22%, white), color-mix(in oklch, ${product.accent ?? "var(--m-accent)"} 6%, white))` }}
+      >
+        {shot ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={shot.src}
+            alt={shot.alt ?? ""}
+            loading="lazy"
+            decoding="async"
+            className={cn("h-full w-full transition-transform duration-500 group-hover:scale-[1.03]", isMobile ? "object-contain p-3" : "object-cover object-top")}
+          />
+        ) : (
+          <ProductMark name={product.name} accent={product.accent} logoUrl={product.logoUrl} className="h-20 w-20 text-2xl transition-transform duration-500 group-hover:scale-105" />
+        )}
       </div>
-      <div className="flex flex-1 flex-col p-6 md:p-7">
+      <div className="flex flex-1 flex-col p-5 md:p-6">
         <div className="flex items-start justify-between gap-3">
           <h3 className="font-display text-xl font-semibold tracking-tight">
             {product.name}

@@ -30,3 +30,8 @@ export const changelog: ChangelogMeta[] = [
     products: ["tracker", "vansale", "delivery", "warehouse", "crm"],
   },
 ];
+
+export function getChangelogEntriesForProduct(slug: string, limit = 3) {
+  const matched = changelog.filter((entry) => !entry.products || entry.products.includes(slug));
+  return matched.slice(0, limit);
+}

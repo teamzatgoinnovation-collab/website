@@ -16,7 +16,7 @@ export function CompanyPageShell({
   children,
 }: CompanyPageShellProps) {
   return (
-    <div className="mx-auto max-w-6xl px-6 py-16 md:py-24">
+    <div className="mx-auto max-w-6xl px-5 py-10 md:py-14">
       <MotionReveal>
         <p className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-[var(--m-accent)]">
           {eyebrow}
@@ -30,7 +30,7 @@ export function CompanyPageShell({
           </p>
         ) : null}
       </MotionReveal>
-      <div className="mt-12">{children}</div>
+      <div className="mt-8">{children}</div>
     </div>
   );
 }

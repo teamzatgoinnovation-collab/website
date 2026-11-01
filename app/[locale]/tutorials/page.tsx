@@ -46,7 +46,7 @@ export default async function TutorialsPage({ params }: Props) {
           />
         ))}
       </div>
-      <p className="mt-12 text-sm text-m-muted">
+      <p className="mt-8 text-sm text-m-muted">
         {t("needDocs")}{" "}
         <Link href="/docs" className="m-link">
           {t("docsHub")}

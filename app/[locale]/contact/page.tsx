@@ -33,7 +33,7 @@ export default async function ContactPage({ params }: Props) {
 
   return (
     <Section>
-      <div className="grid gap-12 lg:grid-cols-2">
+      <div className="grid gap-8 lg:grid-cols-2">
         <div>
           <SectionHeading
             eyebrow={t("eyebrow")}
@@ -46,7 +46,7 @@ export default async function ContactPage({ params }: Props) {
             <li>· {t("bullet3")}</li>
           </ul>
 
-          <MotionReveal className="mt-10 space-y-3 text-sm">
+          <MotionReveal className="mt-8 space-y-3 text-sm">
             <p>
               <span className="text-m-muted">{t("emailLabel")}: </span>
               <a

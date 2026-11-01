@@ -9,7 +9,7 @@ import { integrationPages } from "@/content/integration-pages";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { contactHref } from "@/lib/contact-href";
-import { getLocalizedProducts } from "@/lib/localized-products";
+import { getCatalog } from "@/lib/catalog";
 import { absoluteUrl, breadcrumbJsonLd, buildPageMetadata } from "@/lib/seo";
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
@@ -53,7 +53,7 @@ export default async function IntegrationPage({ params }: Props) {
   if (!meta) notFound();
 
   const t = await getTranslations("integrationsPage");
-  const all = await getLocalizedProducts();
+  const all = await getCatalog();
   const products = meta.products.map((s) => all.find((p) => p.slug === s)).filter((p) => p !== undefined);
   const raw = (k: string) => t.raw(`items.${slug}.${k}`) as string[];
   const name = t(`items.${slug}.name`);
@@ -70,7 +70,7 @@ export default async function IntegrationPage({ params }: Props) {
           <span className="font-semibold uppercase tracking-wider text-[var(--m-purple)]">{t("statusPlanned")}</span>
           · {t("statusNote")}
         </p>
-        <div className="grid gap-10 md:grid-cols-2">
+        <div className="grid gap-7 md:grid-cols-2">
           <List title={t("benefits")} items={raw("benefits")} />
           <List title={t("features")} items={raw("features")} />
           <List title={t("permissions")} items={raw("permissions")} />
@@ -85,7 +85,7 @@ export default async function IntegrationPage({ params }: Props) {
             </ul>
           </div>
         </div>
-        <div className="mt-12">
+        <div className="mt-8">
           <Link href={contactHref({ type: "sales", interest: name }) as "/contact"} className="m-btn m-btn-primary">{t("interest")}</Link>
         </div>
       </Section>

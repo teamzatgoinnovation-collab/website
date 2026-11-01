@@ -24,7 +24,7 @@ export async function VanSaleWorkflowSection() {
   const t = await getTranslations("vanSaleWorkflow");
 
   return (
-    <MotionReveal className="mt-16 border-t border-m-line pt-16">
+    <MotionReveal className="mt-10 border-t border-m-line pt-16">
       <SectionHeading
         eyebrow={t("eyebrow")}
         title={t("heading")}
@@ -32,7 +32,7 @@ export async function VanSaleWorkflowSection() {
       />
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {workflowItems.map(({ key, icon: Icon }) => (
-          <div key={key} className="m-tile p-6">
+          <div key={key} className="m-tile p-5">
             <Icon className="h-5 w-5 text-[var(--m-accent)]" />
             <p className="mt-4 font-display text-base font-semibold tracking-tight text-[var(--m-ink)]">
               {t(`items.${key}.title`)}

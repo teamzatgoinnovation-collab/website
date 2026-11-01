@@ -48,7 +48,7 @@ export default async function UpdatesPage({ params }: Props) {
         {entries.map((entry) => (
           <li
             key={entry.id}
-            className="grid gap-3 border-t border-m-line py-10 last:border-b md:grid-cols-[9rem_1fr] md:gap-12"
+            className="grid gap-3 border-t border-m-line py-7 last:border-b md:grid-cols-[9rem_1fr] md:gap-8"
           >
             <p className="text-xs font-semibold uppercase tracking-[0.12em] text-m-muted">
               {entry.date}

@@ -27,15 +27,19 @@ export function AppShowcase({
 }) {
   const uid = useId();
   const [slug, setSlug] = useState(products[0]?.slug);
-  const [device, setDevice] = useState<"desktop" | "mobile">("desktop");
+  const [deviceChoice, setDevice] = useState<"desktop" | "mobile">("desktop");
   const [shot, setShot] = useState(0);
   const [lightbox, setLightbox] = useState(false);
 
   const product = products.find((p) => p.slug === slug) ?? products[0];
   if (!product) return null;
+  // Only offer devices this product actually has screenshots for.
+  const available = (["desktop", "mobile"] as const).filter((d) => product[d].length > 0);
+  const device = available.includes(deviceChoice) ? deviceChoice : (available[0] ?? "desktop");
   const items = product[device];
   const safeShot = Math.min(shot, Math.max(items.length - 1, 0));
   const current = items[safeShot];
+  if (!current) return null;
   const alt = `${product.name} ${device}`;
 
   const pick = (s: string) => {
@@ -66,14 +70,14 @@ export function AppShowcase({
       </div>
 
       <div
-        className="rounded-3xl border border-m-line bg-[var(--m-surface)] p-5 sm:p-8"
+        className="rounded-3xl border border-m-line bg-[var(--m-surface)] p-5 sm:p-6"
         role="tabpanel"
         aria-labelledby={`${uid}-${product.slug}`}
       >
         <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
           <p className="text-sm text-m-muted">{product.tagline}</p>
           <div className="inline-flex rounded-full border border-m-line p-0.5" role="group">
-            {(["desktop", "mobile"] as const).map((d) => (
+            {available.length > 1 ? (["desktop", "mobile"] as const).map((d) => (
               <button
                 key={d}
                 type="button"
@@ -96,7 +100,7 @@ export function AppShowcase({
                 )}
                 {labels[d]}
               </button>
-            ))}
+            )) : null}
           </div>
         </div>
 
@@ -111,11 +115,11 @@ export function AppShowcase({
           >
             {device === "desktop" ? (
               <BrowserFrame url="zatgoinnovation.com" className="max-w-3xl">
-                <ScreenshotSlot src={current} alt={alt} label={product.name} />
+                <ScreenshotSlot src={current} alt={alt} />
               </BrowserFrame>
             ) : (
               <AppleIPhoneFrame>
-                <ScreenshotSlot src={current} alt={alt} label={product.name} />
+                <ScreenshotSlot src={current} alt={alt} />
               </AppleIPhoneFrame>
             )}
             {current ? (

@@ -33,7 +33,7 @@ export default async function ServicesPage({ params }: Props) {
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {serviceSlugs.map((slug, i) => (
             <MotionReveal key={slug} delay={(i % 3) * 0.05}>
-              <div className="flex h-full flex-col rounded-2xl border border-m-line bg-[var(--m-surface-elevated)] p-6">
+              <div className="flex h-full flex-col rounded-2xl border border-m-line bg-[var(--m-surface-elevated)] p-5">
                 <h2 className="font-display text-base font-semibold">{t(`items.${slug}.title`)}</h2>
                 <p className="mt-2 flex-1 text-sm leading-relaxed text-m-muted">{t(`items.${slug}.body`)}</p>
                 <Link href={contactHref({ type: "quotation", interest: t(`items.${slug}.title`) }) as "/contact"} className="m-link mt-4 text-sm">{t("enquire")}</Link>

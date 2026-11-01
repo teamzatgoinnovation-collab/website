@@ -1,23 +1,21 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 
 import { Link } from "@/i18n/navigation";
 import { footerNav, site } from "@/content/site";
+import { getCatalogSafe } from "@/lib/catalog";
 
 export async function SiteFooter() {
   const tBrand = await getTranslations("brand");
   const tFooter = await getTranslations("footer");
   const tNav = await getTranslations("nav");
-  const tProducts = await getTranslations("products");
+  const catalog = (await getCatalogSafe(await getLocale())).slice(0, 4);
 
   const labelFor = (
     item:
       | { href: string; key: string }
-      | { href: string; productSlug: string }
-      | { href: string; key: string },
+      | { href: string; productSlug: string; label: string },
   ) => {
-    if ("productSlug" in item) {
-      return tProducts(`${item.productSlug}.name`);
-    }
+    if ("productSlug" in item) return item.label;
     if (
       item.key === "downloads" ||
       item.key === "pricing" ||
@@ -31,7 +29,7 @@ export async function SiteFooter() {
 
   return (
     <footer className="border-t border-m-line bg-[var(--m-ink)] text-[color-mix(in_oklch,var(--color-background)_94%,white)]">
-      <div className="mx-auto grid max-w-6xl gap-12 px-6 py-16 md:grid-cols-4 md:gap-10 md:py-20">
+      <div className="mx-auto grid max-w-6xl gap-8 px-5 py-10 md:grid-cols-4 md:gap-7 md:py-12">
         <div className="md:col-span-1">
           <p className="flex items-center gap-2.5 font-display text-lg font-semibold tracking-tight">
             <span
@@ -48,7 +46,7 @@ export async function SiteFooter() {
         </div>
         {(
           [
-            ["products", footerNav.products],
+            ["products", [...footerNav.products, ...catalog.map((p) => ({ href: `/products/${p.slug}`, productSlug: p.slug, label: p.name }))]],
             ["resources", footerNav.resources],
             ["company", footerNav.company],
           ] as const
@@ -73,7 +71,7 @@ export async function SiteFooter() {
         ))}
       </div>
       <div className="border-t border-white/10">
-        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-6 py-6 text-xs opacity-50 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-5 py-6 text-xs opacity-50 sm:flex-row sm:items-center sm:justify-between">
           <span>
             © {new Date().getFullYear()} {site.legalName}
           </span>

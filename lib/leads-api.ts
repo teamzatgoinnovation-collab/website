@@ -41,7 +41,13 @@ export function toApiRequest(lead: LeadRecord): { path: string; body: Record<str
   if (lead.inquiryType === "demo") {
     return {
       path: "/public/demo",
-      body: { ...common, company: cut(lead.company, 160), message: cut(`${interest}\n\n${lead.message}`, 5000) },
+      body: {
+        ...common,
+        company: cut(lead.company, 160),
+        message: cut(`${interest}\n\n${lead.message}`, 5000),
+        productSlug: lead.productSlug ? cut(lead.productSlug, 80) : undefined,
+        preferredDate: lead.preferredDate ? `${lead.preferredDate}T00:00:00.000Z` : undefined,
+      },
     };
   }
   return {
