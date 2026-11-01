@@ -54,7 +54,7 @@ async function ChannelGroup({
           <DownloadCard
             key={item.id}
             item={item}
-            productName={names[item.productSlug] ?? item.productSlug}
+            productName={names[item.productSlug]}
             accent={marks[item.productSlug]?.accent}
             logoUrl={marks[item.productSlug]?.logoUrl}
           />
@@ -70,6 +70,7 @@ export default async function DownloadsPage({ params }: Props) {
   const t = await getTranslations("downloadsPage");
   const tc = await getTranslations("common");
   const localized = await getCatalog();
+  const active = new Set(localized.map((p) => p.slug));
   const names = Object.fromEntries(localized.map((p) => [p.slug, p.name]));
   const marks = Object.fromEntries(localized.map((p) => [p.slug, { accent: p.accent, logoUrl: p.logoUrl }]));
   names.documentation = t("documentationName");
@@ -116,7 +117,7 @@ export default async function DownloadsPage({ params }: Props) {
           channel={channel}
           intro={intro}
           title={tc(channel)}
-          items={downloadsByChannel(channel)}
+          items={downloadsByChannel(channel).filter((d) => d.productSlug === "documentation" || active.has(d.productSlug))}
           names={names}
           marks={marks}
         />

@@ -35,3 +35,13 @@ test("tolerates missing optional arrays", () => {
   const p = adaptProduct(api({ features: undefined as never, modules: undefined as never, faq: undefined as never, platforms: undefined as never, channels: undefined as never }), "https://a.test");
   assert.deepEqual([p.capabilities, p.modules, p.faq, p.channels], [[], [], [], []]);
 });
+
+import { relatesToActive } from "./catalog-adapt.ts";
+
+test("content tied to products shows only while one of them is published", () => {
+  const active = new Set(["vansale"]);
+  assert.equal(relatesToActive(["tracker", "vansale"], active), true);
+  assert.equal(relatesToActive(["tracker"], active), false);
+  assert.equal(relatesToActive(undefined, active), true);
+  assert.equal(relatesToActive([], new Set()), true);
+});

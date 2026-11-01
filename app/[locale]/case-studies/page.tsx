@@ -5,6 +5,8 @@ import { ArrowRight } from "lucide-react";
 import { MotionReveal } from "@/components/motion-reveal";
 import { Section, SectionHeading } from "@/components/section";
 import { caseStudies } from "@/content/case-studies";
+import { getActiveSlugs } from "@/lib/catalog";
+import { relatesToActive } from "@/lib/catalog-adapt";
 import { Link } from "@/i18n/navigation";
 import { buildPageMetadata } from "@/lib/seo";
 
@@ -27,6 +29,8 @@ export default async function CaseStudiesPage({ params }: Props) {
   setRequestLocale(locale);
   const t = await getTranslations("caseStudiesPage");
   const tCases = await getTranslations("caseStudies");
+  const active = await getActiveSlugs();
+  const studies = caseStudies.filter((s) => relatesToActive(s.productSlugs, active));
 
   return (
     <Section>
@@ -37,7 +41,7 @@ export default async function CaseStudiesPage({ params }: Props) {
         description={t("description")}
       />
       <div className="space-y-0">
-        {caseStudies.map((study, i) => (
+        {studies.map((study, i) => (
           <MotionReveal key={study.id} delay={i * 0.05}>
             <article className="grid gap-4 border-t border-m-line py-7 md:grid-cols-[10rem_1fr_auto] md:items-start md:gap-7">
               <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[var(--m-accent)]">

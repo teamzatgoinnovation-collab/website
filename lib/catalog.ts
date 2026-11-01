@@ -24,6 +24,9 @@ export class CatalogUnavailableError extends Error {
   }
 }
 
+/** Cache tag on every catalog fetch; the revalidate route drops it when the admin changes the catalog. */
+export const CATALOG_TAG = "catalog";
+
 function endpoints() {
   const server = (process.env.CATALOG_API_URL || process.env.LEADS_API_URL || "").trim().replace(/\/$/, "");
   const publicBase = (process.env.NEXT_PUBLIC_API_URL || "").trim().replace(/\/$/, "");
@@ -38,7 +41,7 @@ async function request<T>(path: string): Promise<T | null> {
   let res: Response | undefined;
   for (let i = 0; i < attempts; i++) {
     try {
-      res = await fetch(`${server}${path}`, { next: { revalidate: REVALIDATE_S }, signal: AbortSignal.timeout(8000) });
+      res = await fetch(`${server}${path}`, { next: { revalidate: REVALIDATE_S, tags: [CATALOG_TAG] }, signal: AbortSignal.timeout(8000) });
     } catch (e) {
       if (i === attempts - 1) throw new CatalogUnavailableError(e);
       res = undefined;
@@ -62,6 +65,11 @@ export async function getCatalog(locale?: string): Promise<CatalogProduct[]> {
   const body = await request<{ items: ApiProduct[] }>(`/products?pageSize=100&locale=${encodeURIComponent(l)}`);
   const { publicBase } = endpoints();
   return (body?.items ?? []).map((p) => adaptProduct(p, publicBase));
+}
+
+/** Slugs of the published products: static content tied to a product is hidden when the product is disabled. */
+export async function getActiveSlugs(locale?: string): Promise<Set<string>> {
+  return new Set((await getCatalog(locale)).map((p) => p.slug));
 }
 
 /** One published product, or undefined when it does not exist (the page should 404). */

@@ -38,3 +38,11 @@ export function adaptProduct(p: ApiProduct, publicBase: string): CatalogProduct 
     gallery: fromApi(p.screenshots, publicBase),
   };
 }
+
+/**
+ * Static content (downloads, docs links, tutorials, changelog, case studies) that is tied to products stays visible only while at
+ * least one of those products is published. Content tied to no product is platform-wide and always stays.
+ */
+export function relatesToActive(slugs: readonly string[] | undefined, active: ReadonlySet<string>): boolean {
+  return !slugs || slugs.length === 0 || slugs.some((s) => active.has(s));
+}

@@ -9,16 +9,18 @@ import { Section } from "@/components/section";
 import { caseStudies, getCaseStudyMeta } from "@/content/case-studies";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
-import { getCatalogProduct } from "@/lib/catalog";
+import { getActiveSlugs, getCatalogProduct, getCatalogSafe } from "@/lib/catalog";
+import { relatesToActive } from "@/lib/catalog-adapt";
 import { absoluteUrl, buildPageMetadata } from "@/lib/seo";
 import { BookDemoLink } from "@/components/demo-dialog";
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
-export function generateStaticParams() {
-  return caseStudies.flatMap((study) =>
-    routing.locales.map((locale) => ({ locale, slug: study.slug })),
-  );
+export async function generateStaticParams() {
+  const active = new Set((await getCatalogSafe("en")).map((p) => p.slug));
+  return caseStudies
+    .filter((study) => relatesToActive(study.productSlugs, active))
+    .flatMap((study) => routing.locales.map((locale) => ({ locale, slug: study.slug })));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -39,7 +41,7 @@ export default async function CaseStudyDetailPage({ params }: Props) {
   const { locale, slug } = await params;
   setRequestLocale(locale);
   const study = getCaseStudyMeta(slug);
-  if (!study) notFound();
+  if (!study || !relatesToActive(study.productSlugs, await getActiveSlugs())) notFound();
 
   const t = await getTranslations("caseStudiesPage");
   const tCases = await getTranslations("caseStudies");

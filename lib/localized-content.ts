@@ -1,5 +1,7 @@
 import { getTranslations, getMessages } from "next-intl/server";
 
+import { getActiveSlugs } from "@/lib/catalog";
+import { relatesToActive } from "@/lib/catalog-adapt";
 import { changelog as changelogMeta } from "@/content/changelog";
 import { docsHubLinks as docsMeta } from "@/content/docs-hub";
 import {
@@ -11,7 +13,8 @@ import { tutorials as tutorialMeta } from "@/content/tutorials";
 
 export async function getLocalizedChangelog() {
   const t = await getTranslations("changelog");
-  return changelogMeta.map((entry) => ({
+  const active = await getActiveSlugs();
+  return changelogMeta.filter((entry) => relatesToActive(entry.products, active)).map((entry) => ({
     ...entry,
     title: t(`${entry.id}.title`),
     summary: t(`${entry.id}.summary`),
@@ -21,7 +24,8 @@ export async function getLocalizedChangelog() {
 export async function getLocalizedDocsHub() {
   const t = await getTranslations("docsHub");
   const cat = await getTranslations("docsPage.categories");
-  return docsMeta.map((link) => ({
+  const active = await getActiveSlugs();
+  return docsMeta.filter((link) => relatesToActive(link.productSlug ? [link.productSlug] : undefined, active)).map((link) => ({
     ...link,
     title: t(`${link.id}.title`),
     description: t(`${link.id}.description`),
@@ -31,7 +35,8 @@ export async function getLocalizedDocsHub() {
 
 export async function getLocalizedTutorials() {
   const t = await getTranslations("tutorials");
-  return tutorialMeta.map((item) => ({
+  const active = await getActiveSlugs();
+  return tutorialMeta.filter((item) => relatesToActive(item.productSlug ? [item.productSlug] : undefined, active)).map((item) => ({
     ...item,
     title: t(`${item.slug}.title`),
     description: t(`${item.slug}.description`),
