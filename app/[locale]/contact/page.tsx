@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
+import { Headset, Mail, MessageCircle, Phone, MapPin, Calendar } from "lucide-react";
+import { PageHero } from "@/components/page-hero";
 import { ContactForm } from "@/components/contact-form";
 import { MotionReveal } from "@/components/motion-reveal";
-import { Section, SectionHeading } from "@/components/section";
+import { Section } from "@/components/section";
 import { company, getSocialLinks } from "@/content/company";
 import { Link } from "@/i18n/navigation";
 import { buildPageMetadata } from "@/lib/seo";
@@ -32,70 +34,51 @@ export default async function ContactPage({ params }: Props) {
   const hasAddress = Boolean(company.address);
 
   return (
+    <>
+    <PageHero eyebrow={t("eyebrow")} title={t("heading")} description={t("description")} tone="blue" icon={Mail} icons={[Mail, MessageCircle, Phone, Calendar, MapPin, Headset]} />
     <Section>
       <div className="grid gap-8 lg:grid-cols-2">
         <div>
-          <SectionHeading
-            eyebrow={t("eyebrow")}
-            title={t("heading")}
-            description={t("description")}
-          />
-          <ul className="mt-2 space-y-2 text-sm text-m-muted">
+          <ul className="space-y-2 text-sm text-m-muted">
             <li>· {t("bullet1")}</li>
             <li>· {t("bullet2")}</li>
             <li>· {t("bullet3")}</li>
           </ul>
 
-          <MotionReveal className="mt-8 space-y-3 text-sm">
-            <p>
-              <span className="text-m-muted">{t("emailLabel")}: </span>
-              <a
-                href={`mailto:${company.email}`}
-                className="m-link font-medium"
-              >
-                {company.email}
-              </a>
-            </p>
+          <MotionReveal className="mt-8 grid gap-3 text-sm sm:grid-cols-2">
+            <div className="tone-card tone-blue flex items-start gap-3 p-4 sm:col-span-2">
+              <span aria-hidden className="tone-rule" />
+              <span className="tone-chip h-10 w-10 shrink-0"><Mail className="h-5 w-5" /></span>
+              <p className="min-w-0"><span className="block text-xs text-m-muted">{t("emailLabel")}</span><a href={`mailto:${company.email}`} className="m-link break-words font-medium">{company.email}</a></p>
+            </div>
             {hasPhone ? (
-              <p>
-                <span className="text-m-muted">{t("phoneLabel")}: </span>
-                <a href={`tel:${company.phone}`} className="m-link font-medium">
-                  {company.phone}
-                </a>
-              </p>
+              <div className="tone-card tone-teal flex items-start gap-3 p-4">
+                <span aria-hidden className="tone-rule" />
+                <span className="tone-chip h-10 w-10 shrink-0"><Phone className="h-5 w-5" /></span>
+                <p className="min-w-0"><span className="block text-xs text-m-muted">{t("phoneLabel")}</span><a href={`tel:${company.phone}`} className="m-link font-medium">{company.phone}</a></p>
+              </div>
             ) : null}
             {hasWhatsapp ? (
-              <p>
-                <span className="text-m-muted">{t("whatsappLabel")}: </span>
-                <a
-                  href={`https://wa.me/${company.whatsapp.replace(/\D/g, "")}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="m-link font-medium"
-                >
-                  {company.whatsapp}
-                </a>
-              </p>
+              <div className="tone-card tone-teal flex items-start gap-3 p-4">
+                <span aria-hidden className="tone-rule" />
+                <span className="tone-chip h-10 w-10 shrink-0"><MessageCircle className="h-5 w-5" /></span>
+                <p className="min-w-0"><span className="block text-xs text-m-muted">{t("whatsappLabel")}</span><a href={`https://wa.me/${company.whatsapp.replace(/\D/g, "")}`} target="_blank" rel="noopener noreferrer" className="m-link font-medium">{company.whatsapp}</a></p>
+              </div>
             ) : null}
-            {hasAddress ? (
-              <p>
-                <span className="text-m-muted">{t("addressLabel")}: </span>
-                <span className="font-medium text-[var(--m-ink)]">
-                  {company.address}
-                </span>
+            <div className="tone-card tone-amber flex items-start gap-3 p-4">
+              <span aria-hidden className="tone-rule" />
+              <span className="tone-chip h-10 w-10 shrink-0"><MapPin className="h-5 w-5" /></span>
+              <p className="min-w-0"><span className="block text-xs text-m-muted">{t("addressLabel")}</span>{hasAddress ? <span className="font-medium text-[var(--m-ink)]">{company.address}</span> : <span className="text-m-muted">{t("addressFallback")}</span>}</p>
+            </div>
+            <div className="tone-card tone-violet flex items-start gap-3 p-4 sm:col-span-2">
+              <span aria-hidden className="tone-rule" />
+              <span className="tone-chip h-10 w-10 shrink-0"><Headset className="h-5 w-5" /></span>
+              <p className="min-w-0 pt-2.5">
+                <Link href="/downloads" className="m-link">{t("downloadsLink")}</Link>
+                {" · "}
+                <Link href="/docs" className="m-link">{t("supportLink")}</Link>
               </p>
-            ) : (
-              <p className="text-m-muted">{t("addressFallback")}</p>
-            )}
-            <p>
-              <Link href="/downloads" className="m-link">
-                {t("downloadsLink")}
-              </Link>
-              {" · "}
-              <Link href="/docs" className="m-link">
-                {t("supportLink")}
-              </Link>
-            </p>
+            </div>
           </MotionReveal>
 
           {social.length > 0 ? (
@@ -118,9 +101,7 @@ export default async function ContactPage({ params }: Props) {
                 ))}
               </ul>
             </MotionReveal>
-          ) : (
-            <p className="mt-8 text-xs text-m-muted">{t("socialFallback")}</p>
-          )}
+          ) : null}
         </div>
         <Suspense
           fallback={
@@ -131,5 +112,6 @@ export default async function ContactPage({ params }: Props) {
         </Suspense>
       </div>
     </Section>
+    </>
   );
 }

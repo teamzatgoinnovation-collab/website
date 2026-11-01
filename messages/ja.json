@@ -256,7 +256,7 @@
     "downloadsLink": "Downloads",
     "supportLink": "Documentation",
     "socialTitle": "Social",
-    "socialFallback": "Set NEXT_PUBLIC_LINKEDIN / NEXT_PUBLIC_X / NEXT_PUBLIC_YOUTUBE / NEXT_PUBLIC_FACEBOOK to show social links.",
+    "socialFallback": "",
     "social": {
       "linkedin": "LinkedIn",
       "x": "X",

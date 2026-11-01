@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { buildPageMetadata } from "@/lib/seo";
 
+import { Briefcase, GraduationCap, Heart, Rocket, Sparkles, Users } from "lucide-react";
 import { CompanyPageShell } from "@/components/company-page-shell";
 import { MotionReveal } from "@/components/motion-reveal";
 import { careerRoles } from "@/content/company";
@@ -28,6 +29,9 @@ export default async function CareersPage({ params }: Props) {
 
   return (
     <CompanyPageShell
+      tone="teal"
+      icon={Briefcase}
+      icons={[Briefcase, Users, Rocket, Heart, GraduationCap, Sparkles]}
       eyebrow={t("eyebrow")}
       heading={t("heading")}
       description={t("description")}

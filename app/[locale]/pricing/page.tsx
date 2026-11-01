@@ -1,16 +1,19 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight, BadgeCheck, Check, Layers, Receipt, ShieldCheck, Sparkles, Users } from "lucide-react";
 import { cn } from "@/lib/cn";
 
 import { JsonLd } from "@/components/json-ld";
 import { MotionReveal } from "@/components/motion-reveal";
-import { Section, SectionHeading } from "@/components/section";
+import { CtaBand } from "@/components/cta-band";
+import { PageHero } from "@/components/page-hero";
+import { Section } from "@/components/section";
 import {
   pricingComparisonRows,
   type PricingComparisonRow,
 } from "@/content/pricing";
 import { Link } from "@/i18n/navigation";
+import { toneAt } from "@/lib/tone";
 import { contactHref } from "@/lib/contact-href";
 import { getLocalizedPricing } from "@/lib/localized-content";
 import { buildPageMetadata, faqJsonLd } from "@/lib/seo";
@@ -62,23 +65,20 @@ export default async function PricingPage({ params }: Props) {
   const faq = t.raw("faq") as FaqItem[];
 
   return (
-    <Section>
+    <>
+      <PageHero eyebrow={t("eyebrow")} title={t("heading")} description={t("description")} tone="violet" icon={BadgeCheck} icons={[BadgeCheck, Layers, Users, ShieldCheck, Sparkles, Receipt]} />
+      <Section>
       <JsonLd data={faqJsonLd(faq)} />
-      <SectionHeading
-        eyebrow={t("eyebrow")}
-        title={t("heading")}
-        description={t("description")}
-      />
-      <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
-        {tiers.map((tier) => (
+            <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+        {tiers.map((tier, ti) => (
           <div
             key={tier.id}
             className={cn(
-              "m-tile relative flex flex-col p-5",
-              tier.highlighted &&
-                "!border-[var(--m-accent)] bg-[color-mix(in_oklch,var(--m-accent-soft)_55%,var(--m-surface-elevated))]",
+              `tone-card tone-${tier.highlighted ? "violet" : toneAt(ti * 2)} flex flex-col p-5`,
+              tier.highlighted && "!border-[var(--tone)] shadow-[0_24px_50px_-30px_var(--tone)]",
             )}
           >
+            <span aria-hidden className="tone-rule" />
             {tier.highlighted ? (
               <p className="mb-3 text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-[var(--m-accent)]">
                 {t("recommendedBadge")}
@@ -103,7 +103,7 @@ export default async function PricingPage({ params }: Props) {
                   key={f}
                   className="flex gap-2.5 text-sm leading-relaxed text-m-muted"
                 >
-                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-[var(--m-accent)]" />
+                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-[var(--tone-ink)]" />
                   {f}
                 </li>
               ))}
@@ -193,5 +193,7 @@ export default async function PricingPage({ params }: Props) {
         </dl>
       </MotionReveal>
     </Section>
+      <CtaBand />
+    </>
   );
 }

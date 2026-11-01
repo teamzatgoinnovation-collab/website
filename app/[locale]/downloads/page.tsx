@@ -5,7 +5,10 @@ import { buildPageMetadata } from "@/lib/seo";
 
 import { DownloadCard } from "@/components/download-card";
 import { MotionReveal } from "@/components/motion-reveal";
-import { Section, SectionHeading } from "@/components/section";
+import { Download, Globe, HardDrive, Monitor, Package, Smartphone } from "lucide-react";
+import { CtaBand } from "@/components/cta-band";
+import { PageHero } from "@/components/page-hero";
+import { Section } from "@/components/section";
 import { Link } from "@/i18n/navigation";
 import {
   downloadsByChannel,
@@ -82,13 +85,10 @@ export default async function DownloadsPage({ params }: Props) {
   ];
 
   return (
-    <Section>
-      <SectionHeading
-        eyebrow={t("eyebrow")}
-        title={t("heading")}
-        description={t("description")}
-      />
-
+    <>
+      <PageHero eyebrow={t("eyebrow")} title={t("heading")} description={t("description")} tone="blue" icon={Download} icons={[Download, Smartphone, Monitor, Globe, HardDrive, Package]} />
+      <Section>
+      
       <MotionReveal className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {(
           [
@@ -156,5 +156,7 @@ export default async function DownloadsPage({ params }: Props) {
         </Link>
       </p>
     </Section>
+      <CtaBand />
+    </>
   );
 }

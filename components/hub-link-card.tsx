@@ -1,8 +1,10 @@
 "use client";
 
 import { ArrowRight, ExternalLink } from "lucide-react";
+import type { ReactNode } from "react";
 import { cn } from "@/lib/cn";
 import { useTranslations } from "next-intl";
+import type { Tone } from "@/lib/tone";
 
 type HubLinkCardProps = {
   title: string;
@@ -11,6 +13,8 @@ type HubLinkCardProps = {
   meta?: string;
   external?: boolean;
   className?: string;
+  tone?: Tone;
+  icon?: ReactNode;
 };
 
 export function HubLinkCard({
@@ -20,6 +24,8 @@ export function HubLinkCard({
   meta,
   external = true,
   className,
+  tone = "blue",
+  icon,
 }: HubLinkCardProps) {
   const t = useTranslations("common");
 
@@ -27,8 +33,10 @@ export function HubLinkCard({
     <a
       href={href}
       {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-      className={cn("m-tile group flex flex-col p-5", className)}
+      className={cn(`tone-card tone-${tone} group flex flex-col p-5`, className)}
     >
+      <span aria-hidden className="tone-rule" />
+      {icon ? <span className="tone-chip mb-4 h-10 w-10">{icon}</span> : null}
       {meta ? <p className="m-eyebrow mb-3">{meta}</p> : null}
       <h3 className="font-display text-lg font-semibold tracking-tight">{title}</h3>
       <p className="mt-2 flex-1 text-sm leading-relaxed text-m-muted">{description}</p>

@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { buildPageMetadata } from "@/lib/seo";
 
+import { BadgeCheck, Globe, Handshake, Link2, Network, Users } from "lucide-react";
 import { CompanyPageShell } from "@/components/company-page-shell";
 import { MotionReveal } from "@/components/motion-reveal";
 import { partnerTiers } from "@/content/company";
@@ -28,6 +29,9 @@ export default async function PartnersPage({ params }: Props) {
 
   return (
     <CompanyPageShell
+      tone="cyan"
+      icon={Handshake}
+      icons={[Handshake, Link2, Network, Globe, BadgeCheck, Users]}
       eyebrow={t("eyebrow")}
       heading={t("heading")}
       description={t("description")}

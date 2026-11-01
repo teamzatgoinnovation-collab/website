@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { buildPageMetadata } from "@/lib/seo";
 
+import { BadgeCheck, ClipboardList, FileText, Gavel, Scale, ShieldCheck } from "lucide-react";
 import { CompanyPageShell } from "@/components/company-page-shell";
 import { MotionReveal } from "@/components/motion-reveal";
 
@@ -28,7 +29,7 @@ export default async function TermsPage({ params }: Props) {
   const sections = t.raw("sections") as Section[];
 
   return (
-    <CompanyPageShell eyebrow={t("eyebrow")} heading={t("heading")}>
+    <CompanyPageShell eyebrow={t("eyebrow")} heading={t("heading")} tone="blue" icon={Scale} icons={[FileText, Scale, ShieldCheck, ClipboardList, BadgeCheck, Gavel]} cta={false}>
       <p className="text-sm text-[var(--m-muted)]">{t("updated")}</p>
       <div className="mt-8 max-w-3xl space-y-10">
         {sections.map((section, i) => (

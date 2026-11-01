@@ -1,36 +1,28 @@
+import type { LucideIcon } from "lucide-react";
 import type { ReactNode } from "react";
 
-import { MotionReveal } from "@/components/motion-reveal";
+import { CtaBand } from "@/components/cta-band";
+import { PageHero } from "@/components/page-hero";
+import type { Tone } from "@/lib/tone";
 
 type CompanyPageShellProps = {
   eyebrow: string;
   heading: string;
   description?: string;
+  tone?: Tone;
+  icon?: LucideIcon;
+  icons?: LucideIcon[];
+  /** Closing call-to-action band (off for legal pages). */
+  cta?: boolean;
   children: ReactNode;
 };
 
-export function CompanyPageShell({
-  eyebrow,
-  heading,
-  description,
-  children,
-}: CompanyPageShellProps) {
+export async function CompanyPageShell({ eyebrow, heading, description, tone, icon, icons, cta = true, children }: CompanyPageShellProps) {
   return (
-    <div className="mx-auto max-w-6xl px-5 py-10 md:py-14">
-      <MotionReveal>
-        <p className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-[var(--m-accent)]">
-          {eyebrow}
-        </p>
-        <h1 className="mt-3 max-w-3xl font-display text-4xl font-bold tracking-tight text-[var(--m-ink)] md:text-5xl">
-          {heading}
-        </h1>
-        {description ? (
-          <p className="mt-5 max-w-2xl text-lg leading-relaxed text-[var(--m-muted)]">
-            {description}
-          </p>
-        ) : null}
-      </MotionReveal>
-      <div className="mt-8">{children}</div>
-    </div>
+    <>
+      <PageHero eyebrow={eyebrow} title={heading} description={description} tone={tone} icon={icon} icons={icons} />
+      <div className="mx-auto max-w-6xl px-5 py-8 md:py-10">{children}</div>
+      {cta ? <CtaBand /> : null}
+    </>
   );
 }

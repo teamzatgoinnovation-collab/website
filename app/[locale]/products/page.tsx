@@ -4,7 +4,10 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { buildPageMetadata } from "@/lib/seo";
 
 import { ProductCard } from "@/components/product-card";
-import { Section, SectionHeading } from "@/components/section";
+import { Boxes, Globe, Layers, Monitor, Package, Smartphone } from "lucide-react";
+import { CtaBand } from "@/components/cta-band";
+import { PageHero } from "@/components/page-hero";
+import { Section } from "@/components/section";
 import { getCatalog } from "@/lib/catalog";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -29,13 +32,10 @@ export default async function ProductsPage({ params }: Props) {
   const soon = all.filter((p) => p.status === "coming-soon");
 
   return (
-    <Section>
-      <SectionHeading
-        eyebrow={t("eyebrow")}
-        title={t("heading")}
-        description={t("description")}
-      />
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    <>
+      <PageHero eyebrow={t("eyebrow")} title={t("heading")} description={t("description")} tone="blue" icon={Package} icons={[Package, Smartphone, Monitor, Globe, Boxes, Layers]} />
+      <Section>
+            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {available.map((product) => (
           <ProductCard key={product.slug} product={product} />
         ))}
@@ -53,5 +53,7 @@ export default async function ProductsPage({ params }: Props) {
         </div>
       ) : null}
     </Section>
+      <CtaBand />
+    </>
   );
 }

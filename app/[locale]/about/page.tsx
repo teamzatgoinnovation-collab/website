@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { buildPageMetadata } from "@/lib/seo";
 
+import { Building2, Globe, Heart, Lightbulb, Target, Users } from "lucide-react";
 import { CompanyPageShell } from "@/components/company-page-shell";
 import { MotionReveal } from "@/components/motion-reveal";
 import { Link } from "@/i18n/navigation";
@@ -32,6 +33,9 @@ export default async function AboutPage({ params }: Props) {
 
   return (
     <CompanyPageShell
+      tone="violet"
+      icon={Building2}
+      icons={[Building2, Users, Target, Heart, Globe, Lightbulb]}
       eyebrow={t("eyebrow")}
       heading={t("heading")}
       description={t("intro")}

@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { buildPageMetadata } from "@/lib/seo";
 
+import { Eye, FileText, KeyRound, Lock, Shield, ShieldCheck } from "lucide-react";
 import { CompanyPageShell } from "@/components/company-page-shell";
 import { MotionReveal } from "@/components/motion-reveal";
 
@@ -28,7 +29,7 @@ export default async function PrivacyPage({ params }: Props) {
   const sections = t.raw("sections") as Section[];
 
   return (
-    <CompanyPageShell eyebrow={t("eyebrow")} heading={t("heading")}>
+    <CompanyPageShell eyebrow={t("eyebrow")} heading={t("heading")} tone="blue" icon={Shield} icons={[Shield, Lock, Eye, FileText, KeyRound, ShieldCheck]} cta={false}>
       <p className="text-sm text-[var(--m-muted)]">{t("updated")}</p>
       <div className="mt-8 max-w-3xl space-y-10">
         {sections.map((section, i) => (

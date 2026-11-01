@@ -3,7 +3,10 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { buildPageMetadata, getSiteUrl } from "@/lib/seo";
 
-import { Section, SectionHeading } from "@/components/section";
+import { Bell, GitBranch, Newspaper, Rocket, Sparkles, Tag } from "lucide-react";
+import { CtaBand } from "@/components/cta-band";
+import { PageHero } from "@/components/page-hero";
+import { Section } from "@/components/section";
 import { getLocalizedChangelog } from "@/lib/localized-content";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -33,13 +36,10 @@ export default async function UpdatesPage({ params }: Props) {
   const entries = await getLocalizedChangelog();
 
   return (
-    <Section>
-      <SectionHeading
-        eyebrow={t("eyebrow")}
-        title={t("heading")}
-        description={t("description")}
-      />
-      <p className="-mt-8 mb-10">
+    <>
+      <PageHero eyebrow={t("eyebrow")} title={t("heading")} description={t("description")} tone="rose" icon={Newspaper} icons={[Newspaper, Sparkles, GitBranch, Rocket, Bell, Tag]} />
+      <Section>
+            <p className="mb-8">
         <a href="/feed.xml" className="m-link text-sm">
           {t("rssLabel")}
         </a>
@@ -75,5 +75,7 @@ export default async function UpdatesPage({ params }: Props) {
         ))}
       </ol>
     </Section>
+      <CtaBand />
+    </>
   );
 }

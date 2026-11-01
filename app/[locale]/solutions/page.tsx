@@ -3,7 +3,10 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { buildPageMetadata } from "@/lib/seo";
 
-import { Section, SectionHeading } from "@/components/section";
+import { Layers, Puzzle, Rocket, ShieldCheck, Target, Workflow } from "lucide-react";
+import { CtaBand } from "@/components/cta-band";
+import { PageHero } from "@/components/page-hero";
+import { Section } from "@/components/section";
 import { Link } from "@/i18n/navigation";
 import { getLocalizedSolutions } from "@/lib/localized-content";
 import { getCatalog } from "@/lib/catalog";
@@ -30,13 +33,10 @@ export default async function SolutionsPage({ params }: Props) {
   const bySlug = Object.fromEntries(products.map((p) => [p.slug, p]));
 
   return (
-    <Section>
-      <SectionHeading
-        eyebrow={t("eyebrow")}
-        title={t("heading")}
-        description={t("description")}
-      />
-      <div className="space-y-0">
+    <>
+      <PageHero eyebrow={t("eyebrow")} title={t("heading")} description={t("description")} tone="violet" icon={Puzzle} icons={[Layers, Workflow, Target, Puzzle, Rocket, ShieldCheck]} />
+      <Section>
+            <div className="space-y-0">
         {solutions.map((solution) => (
           <article
             key={solution.slug}
@@ -83,5 +83,7 @@ export default async function SolutionsPage({ params }: Props) {
         </Link>
       </p>
     </Section>
+      <CtaBand />
+    </>
   );
 }

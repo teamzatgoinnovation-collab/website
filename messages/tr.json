@@ -130,7 +130,7 @@
     "metaDescription": "ZatGo doküman merkezi — kılavuzlar, entegrasyonlar, geliştiriciler ve yardım.",
     "eyebrow": "Dokümantasyon",
     "heading": "Kılavuzlar, entegrasyonlar ve yardım",
-    "description": "Bağlantılar özel doküman sitesini açar. Yayınlandığında NEXT_PUBLIC_DOCS_URL ayarlayın.",
+    "description": "Bağlantılar özel doküman sitesini açar.",
     "preferTutorials": "Uygulamalı anlatımı mı tercih edersiniz?",
     "browseTutorials": "Eğitimlere göz atın",
     "categories": {
@@ -256,7 +256,7 @@
     "downloadsLink": "Downloads",
     "supportLink": "Documentation",
     "socialTitle": "Social",
-    "socialFallback": "Set NEXT_PUBLIC_LINKEDIN / NEXT_PUBLIC_X / NEXT_PUBLIC_YOUTUBE / NEXT_PUBLIC_FACEBOOK to show social links.",
+    "socialFallback": "",
     "social": {
       "linkedin": "LinkedIn",
       "x": "X",

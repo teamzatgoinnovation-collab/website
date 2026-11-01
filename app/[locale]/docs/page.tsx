@@ -4,10 +4,16 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { buildPageMetadata } from "@/lib/seo";
 
 import { HubLinkCard } from "@/components/hub-link-card";
-import { Section, SectionHeading } from "@/components/section";
+import { BookOpen, Code2, FileText, Library, LifeBuoy, Search } from "lucide-react";
+import { CtaBand } from "@/components/cta-band";
+import { PageHero } from "@/components/page-hero";
+import { Section } from "@/components/section";
 import { Link } from "@/i18n/navigation";
+import { toneAt } from "@/lib/tone";
 import { docsHubHref } from "@/content/docs-hub";
 import { getLocalizedDocsHub } from "@/lib/localized-content";
+
+const DOC_ICONS = [BookOpen, FileText, Code2, LifeBuoy, Search, Library].map((I, n) => <I key={n} className="h-5 w-5" />);
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -29,20 +35,19 @@ export default async function DocsPage({ params }: Props) {
   const links = await getLocalizedDocsHub();
 
   return (
-    <Section>
-      <SectionHeading
-        eyebrow={t("eyebrow")}
-        title={t("heading")}
-        description={t("description")}
-      />
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {links.map((link) => (
+    <>
+      <PageHero eyebrow={t("eyebrow")} title={t("heading")} description={t("description")} tone="teal" icon={BookOpen} icons={[BookOpen, FileText, Code2, LifeBuoy, Search, Library]} />
+      <Section>
+            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {links.map((link, i) => (
           <HubLinkCard
             key={link.id}
             title={link.title}
             description={link.description}
             href={docsHubHref(link)}
             meta={link.categoryLabel}
+            tone={toneAt(i)}
+            icon={DOC_ICONS[i % 6]}
           />
         ))}
       </div>
@@ -53,5 +58,7 @@ export default async function DocsPage({ params }: Props) {
         </Link>
       </p>
     </Section>
+      <CtaBand />
+    </>
   );
 }

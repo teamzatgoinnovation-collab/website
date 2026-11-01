@@ -162,7 +162,7 @@
     "heading": "Get the apps",
     "description": "Open live web apps now. Mobile stores and desktop installers appear here as soon as release packages are published.",
     "mobileIntro": "Mobile apps for iOS and Android — field and warehouse first.",
-    "desktopIntro": "Desktop installers for Windows and macOS power users. Set NEXT_PUBLIC_RELEASES_BASE_URL when binaries are published.",
+    "desktopIntro": "Desktop installers for Windows and macOS power users.",
     "webIntro": "Browser apps and portals — open in a new tab when your environment is running.",
     "openApp": "Open in browser",
     "documentationName": "Documentation",
@@ -188,7 +188,7 @@
     "metaDescription": "Marketing hub for ZatGo docs — guides, integrations, developers, and help.",
     "eyebrow": "Documentation",
     "heading": "Guides, integrations, and help",
-    "description": "Deep links open the dedicated docs site. Set NEXT_PUBLIC_DOCS_URL when that app is deployed.",
+    "description": "Deep links open the dedicated docs site.",
     "preferTutorials": "Prefer hands-on walkthroughs?",
     "browseTutorials": "Browse tutorials",
     "categories": {
@@ -327,7 +327,7 @@
     "downloadsLink": "Downloads",
     "supportLink": "Documentation",
     "socialTitle": "Social",
-    "socialFallback": "Set NEXT_PUBLIC_LINKEDIN / NEXT_PUBLIC_X / NEXT_PUBLIC_YOUTUBE / NEXT_PUBLIC_FACEBOOK to show social links.",
+    "socialFallback": "",
     "social": {
       "linkedin": "LinkedIn",
       "x": "X",
@@ -1569,5 +1569,11 @@
       "email": "Enter a valid email address",
       "company": "Please enter your company"
     }
+  },
+  "ctaBand": {
+    "title": "Ready to see ZatGo for your business?",
+    "body": "Tell us about your sites, teams and channels and we will map the products and rollout that fit.",
+    "primary": "Book a demo",
+    "secondary": "Contact us"
   }
 }

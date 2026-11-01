@@ -130,7 +130,7 @@
     "metaDescription": "مركز وثائق ZatGo — أدلة وتكاملات ومطورون ومساعدة.",
     "eyebrow": "الوثائق",
     "heading": "أدلة وتكاملات ومساعدة",
-    "description": "الروابط تفتح موقع الوثائق المخصص. عيّن NEXT_PUBLIC_DOCS_URL عند نشره.",
+    "description": "الروابط تفتح موقع الوثائق المخصص.",
     "preferTutorials": "تفضل الشرح العملي؟",
     "browseTutorials": "تصفح الدروس",
     "categories": {
@@ -256,7 +256,7 @@
     "downloadsLink": "Downloads",
     "supportLink": "Documentation",
     "socialTitle": "Social",
-    "socialFallback": "Set NEXT_PUBLIC_LINKEDIN / NEXT_PUBLIC_X / NEXT_PUBLIC_YOUTUBE / NEXT_PUBLIC_FACEBOOK to show social links.",
+    "socialFallback": "",
     "social": {
       "linkedin": "LinkedIn",
       "x": "X",

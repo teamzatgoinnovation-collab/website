@@ -3,7 +3,10 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { IntegrationHub } from "@/components/integration-hub";
 import { MotionReveal } from "@/components/motion-reveal";
-import { Section, SectionHeading } from "@/components/section";
+import { Cable, Cloud, Database, Link2, Plug, Webhook } from "lucide-react";
+import { CtaBand } from "@/components/cta-band";
+import { PageHero } from "@/components/page-hero";
+import { Section } from "@/components/section";
 import { integrationPages } from "@/content/integration-pages";
 import { Link } from "@/i18n/navigation";
 import { buildPageMetadata } from "@/lib/seo";
@@ -27,9 +30,10 @@ export default async function IntegrationsPage({ params }: Props) {
   }
 
   return (
-    <Section>
-      <SectionHeading eyebrow={t("eyebrow")} title={t("heading")} description={t("description")} />
-      <div className="mb-14">
+    <>
+      <PageHero eyebrow={t("eyebrow")} title={t("heading")} description={t("description")} tone="cyan" icon={Plug} icons={[Plug, Cable, Webhook, Cloud, Link2, Database]} />
+      <Section>
+            <div className="mb-14">
         <IntegrationHub
           names={integrationPages.map((i) => t(`items.${i.slug}.name`))}
           centerLabel="ZatGo"
@@ -57,5 +61,7 @@ export default async function IntegrationsPage({ params }: Props) {
         ))}
       </div>
     </Section>
+      <CtaBand />
+    </>
   );
 }
