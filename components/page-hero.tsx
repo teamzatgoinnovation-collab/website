@@ -40,7 +40,7 @@ export function PageHero({ eyebrow, title, description, tone = "blue", icons = [
         </HeroMotion>
         {image ? (
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={image} alt="" decoding="async" className="aspect-[4/3] w-full rounded-3xl border border-white/60 object-cover shadow-[0_30px_60px_-34px_var(--tone)]" />
+          <img src={image} alt="" decoding="async" className="aspect-[16/10] w-full rounded-3xl border border-white/60 object-cover shadow-[0_30px_60px_-34px_var(--tone)]" />
         ) : tiles.length ? (
           <div aria-hidden className="hidden grid-cols-3 gap-4 lg:grid">
             {tiles.map((TileIcon, i) => (

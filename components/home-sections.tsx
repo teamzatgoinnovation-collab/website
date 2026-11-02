@@ -47,7 +47,7 @@ function SectionBanner({ src }: { src?: string }) {
   if (!src) return null;
   return (
     // eslint-disable-next-line @next/next/no-img-element
-    <img src={src} alt="" loading="lazy" decoding="async" className="mb-7 aspect-[21/6] w-full rounded-3xl object-cover shadow-[0_24px_50px_-34px_rgba(41,82,227,0.5)]" />
+    <img src={src} alt="" loading="lazy" decoding="async" className="mx-auto mb-7 h-auto w-full max-w-4xl rounded-3xl shadow-[0_24px_50px_-34px_rgba(41,82,227,0.5)]" />
   );
 }
 

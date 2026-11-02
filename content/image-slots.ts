@@ -29,14 +29,14 @@ export const PAGE_LABELS: { page: string; label: string }[] = [
   { page: "cards", label: "Cards (industries, services, products)" },
 ];
 
-const HERO: ImageSlot = { slot: "heroImage", label: "Page header picture", hint: "Shown at the right of the page header instead of the icon tiles. Landscape (4:3) works best." };
+const HERO: ImageSlot = { slot: "heroImage", label: "Page header picture", hint: "Shown at the right of the page header instead of the icon tiles. Landscape (16:10) works best." };
 
 const HOME: ImageSlot[] = [
   { slot: "heroBackground", label: "Hero background", hint: "Replaces the decorative skyline behind the headline. A wide, light image works best." },
-  { slot: "solutionsBanner", label: "Solutions banner", hint: "Wide picture under the Solutions heading (about 21:6)." },
-  { slot: "industriesBanner", label: "Industries banner", hint: "Wide picture under the Industries heading." },
-  { slot: "whyBanner", label: "Why ZatGo banner", hint: "Wide picture under the Why heading." },
-  { slot: "integrationsBanner", label: "Integrations banner", hint: "Wide picture under the Integrations heading." },
+  { slot: "solutionsBanner", label: "Solutions banner", hint: "Picture shown in full under the Solutions heading (landscape, about 16:9)." },
+  { slot: "industriesBanner", label: "Industries banner", hint: "Picture shown in full under the Industries heading (landscape)." },
+  { slot: "whyBanner", label: "Why ZatGo banner", hint: "Picture shown in full under the Why heading (landscape)." },
+  { slot: "integrationsBanner", label: "Integrations banner", hint: "Picture shown in full under the Integrations heading (landscape)." },
   { slot: "channelMobileImage", label: "Channel: Mobile", hint: "Replaces the icon panel of the Mobile channel (16:8)." },
   { slot: "channelDesktopImage", label: "Channel: Desktop", hint: "Replaces the icon panel of the Desktop channel." },
   { slot: "channelWebImage", label: "Channel: Web", hint: "Replaces the icon panel of the Web channel." },
