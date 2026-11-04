@@ -38,6 +38,15 @@ test("tolerates missing optional arrays", () => {
 
 import { relatesToActive } from "./catalog-adapt.ts";
 
+test("keeps only well-formed downloads that point at the API download route", () => {
+  const good = { id: ID, platform: "ANDROID", architecture: "UNIVERSAL", version: "1.0.0", fileName: "a.apk", sizeBytes: 10, sha256: "a".repeat(64), url: `/api/v1/downloads/${ID}/file` };
+  const p = adaptProduct(api({ downloads: [good, { ...good, url: "https://evil.example/a.apk" }, { ...good, platform: "IOS" }, { ...good, sha256: "nope" }] }), "https://api.example.com");
+  assert.equal(p.downloads.length, 2);
+  assert.equal(p.downloads[0].url, `https://api.example.com/api/v1/downloads/${ID}/file`);
+  assert.equal(p.downloads[1].sha256, null);
+  assert.deepEqual(adaptProduct(api(), "https://a.test").downloads, []);
+});
+
 test("content tied to products shows only while one of them is published", () => {
   const active = new Set(["vansale"]);
   assert.equal(relatesToActive(["tracker", "vansale"], active), true);

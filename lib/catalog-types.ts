@@ -7,6 +7,9 @@ export type ProductStatus = "available" | "coming-soon";
 export type ProductModule = { name: string; summary: string };
 export type ProductFaq = { question: string; answer: string };
 
+/** One downloadable app file uploaded in the admin. `url` is absolute and always points at the API's download route. */
+export type ProductDownload = { id: string; platform: "ANDROID" | "WINDOWS" | "MACOS" | "LINUX"; architecture: string; version: string; fileName: string; sizeBytes: number; sha256: string | null; url: string };
+
 export type CatalogProduct = {
   id: string;
   slug: string;
@@ -33,4 +36,6 @@ export type CatalogProduct = {
   pricingNote: string | null;
   /** Screenshots uploaded in the admin, in the admin's order. Empty means "show no device pictures". */
   gallery: GalleryItem[];
+  /** Newest enabled file per platform, uploaded in the admin. Empty means nothing to download yet. */
+  downloads: ProductDownload[];
 };

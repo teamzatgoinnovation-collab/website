@@ -7,6 +7,7 @@ import { Accordion } from "@/components/motion/accordion";
 import { ScreenshotGallery } from "@/components/screenshot-gallery";
 import { JsonLd } from "@/components/json-ld";
 import { MotionReveal } from "@/components/motion-reveal";
+import { ProductDownloads } from "@/components/product-downloads";
 import { ProductPricingCta } from "@/components/product-pricing-cta";
 import { Section } from "@/components/section";
 import { VanSalePricingSection } from "@/components/vansale-pricing-section";
@@ -174,6 +175,8 @@ export default async function ProductDetailPage({ params }: Props) {
         />
       </MotionReveal>
       ) : null}
+
+      <ProductDownloads downloads={product.downloads} productName={product.name} />
 
       {product.slug !== "vansale" ? (
         <MotionReveal className="mt-10 border-t border-m-line pt-8">

@@ -7,6 +7,7 @@ import { useParams } from "next/navigation";
 import { useEffect, useState, type FormEvent } from "react";
 
 import { Btn, Card, errMsg, Field, Input, Notice, PageTitle, Select, Textarea } from "@/components/admin/ui";
+import { DownloadsManager } from "@/components/admin/downloads-manager";
 import { ScreenshotsManager } from "@/components/admin/screenshots-manager";
 import { can, useMe } from "@/components/admin/use-me";
 import { api, API_URL, mediaUrl, type MediaItem, type Paged } from "@/lib/admin/api";
@@ -71,6 +72,8 @@ export default function ProductEditPage() {
     onSuccess: () => { setNote({ kind: "ok", text: "Saved." }); void qc.invalidateQueries({ queryKey: ["product", id] }); void qc.invalidateQueries({ queryKey: ["products"] }); },
     onError: (e) => setNote({ kind: "error", text: errMsg(e) }),
   });
+  const [confirmSlug, setConfirmSlug] = useState("");
+  const [confirming, setConfirming] = useState(false);
   const archive = useMutation({
     mutationFn: () => api(`/admin/products/${id}`, { method: "DELETE" }),
     onSuccess: () => { void qc.invalidateQueries({ queryKey: ["products"] }); window.location.assign("/admin/products"); },
@@ -101,6 +104,7 @@ export default function ProductEditPage() {
             <Field label="Sort order"><Input disabled={dis} type="number" value={form.sortOrder ?? 0} onChange={(e) => set("sortOrder", Number(e.target.value))} /></Field>
             <Field label="Docs URL"><Input disabled={dis} type="url" value={form.docsUrl ?? ""} onChange={(e) => set("docsUrl", e.target.value)} /></Field>
             <Field label="Support URL"><Input disabled={dis} type="url" value={form.supportUrl ?? ""} onChange={(e) => set("supportUrl", e.target.value)} /></Field>
+            <Field label="Pricing note" hint="Short text shown with the pricing call to action, e.g. Quote based."><Input disabled={dis} maxLength={300} value={form.pricingNote ?? ""} onChange={(e) => set("pricingNote", e.target.value)} /></Field>
             <label className="flex items-center gap-2 text-sm"><input type="checkbox" disabled={dis} checked={form.isFeatured ?? false} onChange={(e) => set("isFeatured", e.target.checked)} />Featured on the homepage</label>
           </div>
         </Card>
@@ -222,12 +226,24 @@ export default function ProductEditPage() {
         {canWrite ? (
           <div className="flex flex-wrap gap-3">
             <Btn type="submit" variant="primary" disabled={save.isPending}>{save.isPending ? "Saving…" : "Save changes"}</Btn>
-            <Btn variant="danger" disabled={archive.isPending} onClick={() => { if (window.confirm(`Archive "${q.data.name}"? It will disappear from the website.`)) archive.mutate(); }}>Archive product</Btn>
+            <Btn variant="danger" onClick={() => setConfirming((v) => !v)}>{confirming ? "Cancel delete" : "Delete product"}</Btn>
           </div>
         ) : <Notice>You have read-only access to products.</Notice>}
       </form>
 
+      {canWrite && confirming ? (
+        <div className="mt-4 rounded-2xl border border-red-300 p-4" role="alert">
+          <p className="text-sm font-semibold">Delete this product permanently?</p>
+          <p className="mt-1 text-sm text-m-muted">The product, its features, translations and uploaded download files are removed and the page disappears from the website. This cannot be undone. To only hide it, set the status to Draft instead.</p>
+          <div className="mt-3 flex flex-wrap items-end gap-3">
+            <Field label={`Type ${q.data.slug} to confirm`}><Input value={confirmSlug} onChange={(e) => setConfirmSlug(e.target.value)} className="max-w-xs" /></Field>
+            <Btn variant="danger" disabled={archive.isPending || confirmSlug !== q.data.slug} onClick={() => archive.mutate()}>{archive.isPending ? "Deleting…" : "Delete permanently"}</Btn>
+          </div>
+        </div>
+      ) : null}
+
       <div className="mt-6"><ScreenshotsManager productId={id} canWrite={canWrite} /></div>
+      <div className="mt-6"><DownloadsManager productId={id} platforms={q.data.platforms.map((p) => p.platform)} canWrite={canWrite} /></div>
     </>
   );
 }

@@ -1,4 +1,4 @@
-import type { CatalogProduct, Channel } from "./catalog-types.ts";
+import type { CatalogProduct, Channel, ProductDownload } from "./catalog-types.ts";
 import { fromApi } from "./gallery-merge.ts";
 
 export type ApiProduct = {
@@ -9,7 +9,20 @@ export type ApiProduct = {
   modules: { name: string; summary: string }[]; faq: { question: string; answer: string }[];
   platforms: { platform: string; storeUrl: string | null }[];
   screenshots: unknown;
+  downloads?: { id: string; platform: string; architecture: string; version: string; fileName: string; sizeBytes: number; sha256: string | null; url: string }[];
 };
+
+const DOWNLOAD_PLATFORMS = new Set<string>(["ANDROID", "WINDOWS", "MACOS", "LINUX"]);
+const DOWNLOAD_URL = /^\/api\/v1\/downloads\/[0-9a-f-]{36}\/file$/;
+
+/** Only well-formed entries whose URL is the API's own download route survive; the URL is made absolute here. */
+function adaptDownloads(list: ApiProduct["downloads"], publicBase: string): ProductDownload[] {
+  return (Array.isArray(list) ? list : []).flatMap((d) =>
+    d && DOWNLOAD_PLATFORMS.has(d.platform) && typeof d.url === "string" && DOWNLOAD_URL.test(d.url) && typeof d.fileName === "string" && typeof d.version === "string"
+      ? [{ id: d.id, platform: d.platform as ProductDownload["platform"], architecture: d.architecture, version: d.version, fileName: d.fileName, sizeBytes: Number(d.sizeBytes) || 0, sha256: typeof d.sha256 === "string" && /^[0-9a-f]{64}$/.test(d.sha256) ? d.sha256 : null, url: `${publicBase}${d.url}` }]
+      : [],
+  );
+}
 
 const CHANNELS = new Set<string>(["mobile", "desktop", "web"]);
 
@@ -36,6 +49,7 @@ export function adaptProduct(p: ApiProduct, publicBase: string): CatalogProduct 
     supportUrl: p.supportUrl,
     pricingNote: p.pricingNote,
     gallery: fromApi(p.screenshots, publicBase),
+    downloads: adaptDownloads(p.downloads, publicBase),
   };
 }
 

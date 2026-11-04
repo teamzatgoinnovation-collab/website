@@ -64,6 +64,33 @@ export async function uploadImage(file: File, alt = ""): Promise<{ media: MediaI
   return (await res.json()) as { media: MediaItem; created: boolean };
 }
 
+export type DownloadItem = { id: string; platform: string; architecture: string; version: string; fileName: string; sizeBytes: number; sha256: string | null; enabled: boolean; downloadCount: number; installNotes: string | null; minRequirements: string | null; createdAt: string; url: string };
+
+/** Uploads an installer as the raw body with progress (fetch cannot report upload progress). Retries once after a silent session refresh. */
+export function uploadDownload(productId: string, file: File, meta: { platform: string; version: string; arch?: string }, onProgress: (fraction: number) => void, retry = true): Promise<DownloadItem> {
+  return new Promise((resolve, reject) => {
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", `${V1}/admin/products/${productId}/downloads`);
+    xhr.withCredentials = true;
+    xhr.setRequestHeader("content-type", "application/octet-stream");
+    xhr.setRequestHeader("x-file-name", encodeURIComponent(file.name));
+    xhr.setRequestHeader("x-platform", meta.platform);
+    xhr.setRequestHeader("x-version", encodeURIComponent(meta.version));
+    xhr.setRequestHeader("x-arch", meta.arch ?? "UNIVERSAL");
+    xhr.upload.onprogress = (e) => { if (e.lengthComputable) onProgress(e.loaded / e.total); };
+    xhr.onerror = () => reject(new ApiError(0, "Network error while uploading"));
+    xhr.onload = async () => {
+      if (xhr.status === 401 && retry && (await refreshSession())) return uploadDownload(productId, file, meta, onProgress, false).then(resolve, reject);
+      let body: { message?: string | string[] } & Partial<DownloadItem> = {};
+      try { body = JSON.parse(xhr.responseText); } catch { /* non-JSON error body */ }
+      if (xhr.status >= 200 && xhr.status < 300) return resolve(body as DownloadItem);
+      const message = Array.isArray(body.message) ? body.message.join(", ") : (body.message ?? (xhr.status === 413 ? "File is too large" : xhr.statusText || "Upload failed"));
+      reject(new ApiError(xhr.status, message));
+    };
+    xhr.send(file);
+  });
+}
+
 export const mediaUrl = (m: { url: string }) => `${API_URL}${m.url}`;
 
 export type Me = { id: string; email: string; name: string; roleKey: string; permissions: string[] };

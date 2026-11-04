@@ -35,6 +35,10 @@ export default function ProductsPage() {
     mutationFn: (v: { id: string; status: "PUBLISHED" | "DRAFT" }) => api<Product>(`/admin/products/${v.id}`, { method: "PATCH", body: { status: v.status } }),
     onSuccess: () => { void qc.invalidateQueries({ queryKey: ["products"] }); },
   });
+  const remove = useMutation({
+    mutationFn: (id: string) => api(`/admin/products/${id}`, { method: "DELETE" }),
+    onSuccess: () => { void qc.invalidateQueries({ queryKey: ["products"] }); },
+  });
   const canWrite = can(me.data, "products:write");
   const set = (k: keyof typeof EMPTY) => (e: { target: { value: string } }) => setForm((f) => ({ ...f, [k]: e.target.value }));
   const submit = (e: FormEvent) => { e.preventDefault(); create.mutate(); };
@@ -67,6 +71,7 @@ export default function ProductsPage() {
 
       {list.isError ? <Notice kind="error">{errMsg(list.error)}</Notice> : null}
       {toggle.isError ? <div className="mb-3"><Notice kind="error">{errMsg(toggle.error)}</Notice></div> : null}
+      {remove.isError ? <div className="mb-3"><Notice kind="error">{errMsg(remove.error)}</Notice></div> : null}
       <div className="overflow-x-auto rounded-2xl border border-m-line">
         <table className="w-full text-sm">
           <thead className="bg-[var(--m-surface)] text-left text-xs uppercase tracking-wider text-m-muted">
@@ -83,11 +88,15 @@ export default function ProductsPage() {
                 <td className="px-4 py-3 text-m-muted">{p.availability.replace("_", " ")}</td>
                 {canWrite ? (
                   <td className="px-4 py-3">
-                    {p.status === "PUBLISHED" ? (
-                      <Btn variant="danger" aria-label={`Disable ${p.name}`} disabled={toggle.isPending} onClick={() => toggle.mutate({ id: p.id, status: "DRAFT" })}>Disable</Btn>
-                    ) : (
-                      <Btn variant="ghost" aria-label={`Enable ${p.name}`} disabled={toggle.isPending} onClick={() => toggle.mutate({ id: p.id, status: "PUBLISHED" })}>Enable</Btn>
-                    )}
+                    <div className="flex flex-wrap gap-2">
+                      <Link href={`/admin/products/${p.id}`} aria-label={`Edit ${p.name}`} className="m-btn m-btn-ghost !px-3.5 !py-2 text-sm">Edit</Link>
+                      {p.status === "PUBLISHED" ? (
+                        <Btn variant="ghost" aria-label={`Disable ${p.name}`} disabled={toggle.isPending} onClick={() => toggle.mutate({ id: p.id, status: "DRAFT" })}>Disable</Btn>
+                      ) : (
+                        <Btn variant="ghost" aria-label={`Enable ${p.name}`} disabled={toggle.isPending} onClick={() => toggle.mutate({ id: p.id, status: "PUBLISHED" })}>Enable</Btn>
+                      )}
+                      <Btn variant="danger" aria-label={`Delete ${p.name}`} disabled={remove.isPending} onClick={() => { if (window.confirm(`Delete "${p.name}" permanently? Its page, features and uploaded download files are removed. This cannot be undone.`)) remove.mutate(p.id); }}>Delete</Btn>
+                    </div>
                   </td>
                 ) : null}
               </tr>

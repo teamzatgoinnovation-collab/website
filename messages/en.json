@@ -877,6 +877,11 @@
     "changelogViewAll": "View all updates",
     "screenshotTitle": "Product screens",
     "screenshotNote": "Screenshots of the real application.",
+    "downloadsTitle": "Download",
+    "downloadsNote": "Get the app for your device.",
+    "downloadVersion": "Version {version}",
+    "downloadAction": "Download for {platform}",
+    "downloadsDisclaimer": "Files are provided by ZatGo as they are. Compare the SHA-256 checksum before installing, and only install apps you trust.",
     "audienceTitle": "Who it’s for",
     "outcomesTitle": "What teams get",
     "audienceByChannel": {
