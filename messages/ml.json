@@ -614,5 +614,9 @@
     "changelogViewAll": "View all updates",
     "screenshotTitle": "Product screens",
     "screenshotNote": "UI previews below show the product layout direction — replace with live screenshots when packs ship."
+  },
+  "whatsapp": {
+    "label": "WhatsApp-ൽ ഞങ്ങളോട് ചാറ്റ് ചെയ്യൂ",
+    "message": "ഹലോ ZatGo, നിങ്ങളുടെ ഉൽപ്പന്നങ്ങളെക്കുറിച്ച് കൂടുതൽ അറിയാൻ ആഗ്രഹിക്കുന്നു."
   }
 }

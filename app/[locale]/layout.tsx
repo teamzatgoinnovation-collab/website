@@ -19,6 +19,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { site } from "@/content/site";
 import { isRtlLocale, routing, type Locale } from "@/i18n/routing";
+import { WhatsAppButton } from "@/components/whatsapp-button";
 import { getCatalogSafe } from "@/lib/catalog";
 import {
   absoluteUrl,
@@ -181,6 +182,7 @@ export default async function LocaleLayout({ children, params }: Props) {
                   <SiteHeader />
                   <main className="flex-1">{children}</main>
                   <SiteFooter />
+                  <WhatsAppButton />
                 </div>
               </DemoProvider>
             </CatalogProvider>

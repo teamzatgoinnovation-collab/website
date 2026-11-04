@@ -1575,5 +1575,9 @@
     "body": "Tell us about your sites, teams and channels and we will map the products and rollout that fit.",
     "primary": "Book a demo",
     "secondary": "Contact us"
+  },
+  "whatsapp": {
+    "label": "Chat with us on WhatsApp",
+    "message": "Hello ZatGo, I would like to know more about your products."
   }
 }
