@@ -576,6 +576,10 @@
         "body": "Inquiry records are kept only as long as needed to handle your request and related follow-up, unless a longer period is required by law."
       },
       {
+        "title": "AI assistant",
+        "body": "If you use the chat assistant on this site, the messages you type are sent to our servers and to our AI provider, Anthropic, only to produce a reply. Please do not enter passwords, payment details or ID numbers. We do not store the conversation on our servers; your browser keeps it only for the current visit."
+      },
+      {
         "title": "Contact",
         "body": "For privacy questions, contact us through the Contact page on this site."
       }

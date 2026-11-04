@@ -576,6 +576,10 @@
         "body": "Inquiry records are kept only as long as needed to handle your request and related follow-up, unless a longer period is required by law."
       },
       {
+        "title": "AI असिस्टेंट",
+        "body": "यदि आप इस साइट पर चैट असिस्टेंट का उपयोग करते हैं, तो आपके टाइप किए संदेश केवल उत्तर देने के लिए हमारे सर्वर और हमारे AI प्रदाता Anthropic को भेजे जाते हैं। कृपया पासवर्ड, भुगतान विवरण या पहचान संख्या न डालें। हम बातचीत अपने सर्वर पर संग्रहीत नहीं करते; आपका ब्राउज़र उसे केवल इस विज़िट के लिए रखता है।"
+      },
+      {
         "title": "Contact",
         "body": "For privacy questions, contact us through the Contact page on this site."
       }
@@ -618,5 +622,24 @@
   "whatsapp": {
     "label": "WhatsApp पर हमसे चैट करें",
     "message": "नमस्ते ZatGo, मैं आपके उत्पादों के बारे में और जानना चाहता/चाहती हूँ।"
+  },
+  "chat": {
+    "title": "ZatGo असिस्टेंट",
+    "subtitle": "AI असिस्टेंट · आपकी भाषा में जवाब",
+    "greeting": "नमस्ते! मैं ZatGo के उत्पादों, सेवाओं और शुरुआत के बारे में सवालों के जवाब दे सकता हूँ। आप क्या जानना चाहेंगे?",
+    "placeholder": "अपना सवाल लिखें",
+    "send": "भेजें",
+    "open": "हमारे AI असिस्टेंट से चैट करें",
+    "close": "चैट बंद करें",
+    "newChat": "नई चैट",
+    "typing": "लिख रहा है…",
+    "chipProducts": "आप कौन से उत्पाद देते हैं?",
+    "chipServices": "आप कौन सी सेवाएँ देते हैं?",
+    "chipPricing": "मूल्य कैसे तय होता है?",
+    "disclaimer": "AI असिस्टेंट: जवाब अधूरे हो सकते हैं। कोटेशन या फैसलों के लिए हमारी टीम से बात करें।",
+    "bookDemo": "डेमो बुक करें",
+    "whatsappMessage": "नमस्ते ZatGo, मैं आपकी टीम से बात करना चाहता/चाहती हूँ।",
+    "rateLimited": "आपने बहुत संदेश भेजे हैं। कुछ मिनट रुकें या WhatsApp पर संपर्क करें।",
+    "unavailable": "असिस्टेंट अभी उपलब्ध नहीं है। कृपया डेमो बुक करें या WhatsApp पर संदेश भेजें।"
   }
 }

@@ -122,3 +122,12 @@ export async function allowConfirmationEmail(email: string): Promise<boolean> {
   const day = await allowWith(`confirm:d:${key}`, 86_400_000, 5);
   return hour && day;
 }
+
+/** Chat assistant limits: per visitor (hashed IP) 15 messages / 10 min and 80 / day, plus one global daily cap that bounds the API bill. */
+export async function allowChatMessage(clientKey: string, globalDailyCap: number): Promise<"ok" | "visitor" | "global"> {
+  const burst = await allowWith(`chat:b:${clientKey}`, 600_000, 15);
+  const day = await allowWith(`chat:d:${clientKey}`, 86_400_000, 80);
+  if (!burst || !day) return "visitor";
+  const global = await allowWith("chat:global", 86_400_000, globalDailyCap);
+  return global ? "ok" : "global";
+}

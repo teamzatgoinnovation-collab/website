@@ -689,6 +689,10 @@
         "body": "Inquiry records are kept only as long as needed to handle your request and related follow-up, unless a longer period is required by law."
       },
       {
+        "title": "AI assistant",
+        "body": "If you use the chat assistant on this site, the messages you type are sent to our servers and to our AI provider, Anthropic, only to produce a reply. Please do not enter passwords, payment details or ID numbers. We do not store the conversation on our servers; your browser keeps it only for the current visit."
+      },
+      {
         "title": "Contact",
         "body": "For privacy questions, contact us through the Contact page on this site."
       }
@@ -1579,5 +1583,24 @@
   "whatsapp": {
     "label": "Chat with us on WhatsApp",
     "message": "Hello ZatGo, I would like to know more about your products."
+  },
+  "chat": {
+    "title": "ZatGo Assistant",
+    "subtitle": "AI assistant · replies in your language",
+    "greeting": "Hi! I can answer questions about ZatGo products, services and how to get started. What would you like to know?",
+    "placeholder": "Type your question",
+    "send": "Send",
+    "open": "Chat with our AI assistant",
+    "close": "Close chat",
+    "newChat": "New chat",
+    "typing": "Typing…",
+    "chipProducts": "What products do you offer?",
+    "chipServices": "What services do you provide?",
+    "chipPricing": "How does pricing work?",
+    "disclaimer": "AI assistant: answers may be imperfect. For quotes or decisions, talk to our team.",
+    "bookDemo": "Book a demo",
+    "whatsappMessage": "Hello ZatGo, I would like to talk to your team.",
+    "rateLimited": "You have sent many messages. Please wait a few minutes or contact us on WhatsApp.",
+    "unavailable": "The assistant is unavailable right now. Please book a demo or message us on WhatsApp."
   }
 }
