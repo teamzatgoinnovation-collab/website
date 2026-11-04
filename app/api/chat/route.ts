@@ -9,7 +9,7 @@ import { allowChatMessage, hashClientIp } from "@/lib/leads-rate-limit";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-const DEFAULT_MODEL = "gemini-2.5-flash";
+const DEFAULT_MODEL = "gemini-3.5-flash";
 const DEFAULT_BASE = "https://generativelanguage.googleapis.com/v1beta";
 const MAX_BODY = 20_000;
 
@@ -74,8 +74,8 @@ export async function POST(req: Request) {
         generationConfig: {
           maxOutputTokens: 600,
           temperature: 0.4,
-          // Flash models otherwise spend the output budget on hidden reasoning.
-          ...(model.includes("flash") ? { thinkingConfig: { thinkingBudget: 0 } } : {}),
+          // Otherwise the output budget is spent on hidden reasoning and replies get cut off.
+          thinkingConfig: { thinkingLevel: "minimal" },
         },
       }),
       signal: AbortSignal.timeout(25_000),
@@ -107,8 +107,8 @@ export async function POST(req: Request) {
             buffer = buffer.slice(nl + 1);
             if (!line.startsWith("data:")) continue;
             try {
-              const evt = JSON.parse(line.slice(5).trim()) as { candidates?: { content?: { parts?: { text?: string }[] } }[] };
-              const text = (evt.candidates?.[0]?.content?.parts ?? []).map((x) => x.text ?? "").join("");
+              const evt = JSON.parse(line.slice(5).trim()) as { candidates?: { content?: { parts?: { text?: string; thought?: boolean }[] } }[] };
+              const text = (evt.candidates?.[0]?.content?.parts ?? []).map((x) => (x.thought ? "" : x.text ?? "")).join("");
               if (text) controller.enqueue(encoder.encode(text));
             } catch {
               /* ignore keep-alive or partial lines */
