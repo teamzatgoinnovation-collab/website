@@ -9,11 +9,12 @@ import { allowChatMessage, hashClientIp } from "@/lib/leads-rate-limit";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-const DEFAULT_MODEL = "claude-haiku-5-5";
+const DEFAULT_MODEL = "gemini-2.5-flash";
+const DEFAULT_BASE = "https://generativelanguage.googleapis.com/v1beta";
 const MAX_BODY = 20_000;
 
 function configured() {
-  return Boolean(process.env.ANTHROPIC_API_KEY?.trim());
+  return Boolean(process.env.GEMINI_API_KEY?.trim());
 }
 
 function sameOrigin(req: Request): boolean {
@@ -34,7 +35,7 @@ export async function GET() {
 
 /** Streams the assistant's reply as plain text. Messages are never logged; only counts and status codes are. */
 export async function POST(req: Request) {
-  const key = process.env.ANTHROPIC_API_KEY?.trim();
+  const key = process.env.GEMINI_API_KEY?.trim();
   if (!key) return NextResponse.json({ error: "unavailable" }, { status: 503 });
   if (!sameOrigin(req)) return NextResponse.json({ error: "forbidden" }, { status: 403 });
 
@@ -60,17 +61,22 @@ export async function POST(req: Request) {
     site: process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://zatgoinnovation.com",
   });
 
+  const model = process.env.CHAT_MODEL?.trim() || DEFAULT_MODEL;
+  const base = (process.env.GEMINI_API_URL?.trim() || DEFAULT_BASE).replace(/\/$/, "");
   let upstream: Response;
   try {
-    upstream = await fetch(process.env.ANTHROPIC_API_URL?.trim() || "https://api.anthropic.com/v1/messages", {
+    upstream = await fetch(`${base}/models/${encodeURIComponent(model)}:streamGenerateContent?alt=sse`, {
       method: "POST",
-      headers: { "x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json" },
+      headers: { "x-goog-api-key": key, "content-type": "application/json" },
       body: JSON.stringify({
-        model: process.env.CHAT_MODEL?.trim() || DEFAULT_MODEL,
-        max_tokens: 400,
-        stream: true,
-        system: [{ type: "text", text: system, cache_control: { type: "ephemeral" } }],
-        messages: checked.messages,
+        systemInstruction: { parts: [{ text: system }] },
+        contents: checked.messages.map((m) => ({ role: m.role === "assistant" ? "model" : "user", parts: [{ text: m.content }] })),
+        generationConfig: {
+          maxOutputTokens: 600,
+          temperature: 0.4,
+          // Flash models otherwise spend the output budget on hidden reasoning.
+          ...(model.includes("flash") ? { thinkingConfig: { thinkingBudget: 0 } } : {}),
+        },
       }),
       signal: AbortSignal.timeout(25_000),
     });
@@ -80,7 +86,8 @@ export async function POST(req: Request) {
   }
   if (!upstream.ok || !upstream.body) {
     console.warn("chat_upstream_status", upstream.status);
-    return NextResponse.json({ error: upstream.status === 429 || upstream.status === 529 ? "busy" : "upstream" }, { status: upstream.status === 429 || upstream.status === 529 ? 503 : 502 });
+    const busy = upstream.status === 429 || upstream.status === 503;
+    return NextResponse.json({ error: busy ? "busy" : "upstream" }, { status: busy ? 503 : 502 });
   }
 
   const reader = upstream.body.getReader();
@@ -100,8 +107,9 @@ export async function POST(req: Request) {
             buffer = buffer.slice(nl + 1);
             if (!line.startsWith("data:")) continue;
             try {
-              const evt = JSON.parse(line.slice(5).trim()) as { type?: string; delta?: { type?: string; text?: string } };
-              if (evt.type === "content_block_delta" && evt.delta?.type === "text_delta" && evt.delta.text) controller.enqueue(encoder.encode(evt.delta.text));
+              const evt = JSON.parse(line.slice(5).trim()) as { candidates?: { content?: { parts?: { text?: string }[] } }[] };
+              const text = (evt.candidates?.[0]?.content?.parts ?? []).map((x) => x.text ?? "").join("");
+              if (text) controller.enqueue(encoder.encode(text));
             } catch {
               /* ignore keep-alive or partial lines */
             }

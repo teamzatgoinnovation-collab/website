@@ -577,7 +577,7 @@
       },
       {
         "title": "AI assistant",
-        "body": "If you use the chat assistant on this site, the messages you type are sent to our servers and to our AI provider, Anthropic, only to produce a reply. Please do not enter passwords, payment details or ID numbers. We do not store the conversation on our servers; your browser keeps it only for the current visit."
+        "body": "If you use the chat assistant on this site, the messages you type are sent to our servers and to our AI provider, Google (Gemini), only to produce a reply. Please do not enter passwords, payment details or ID numbers. We do not store the conversation on our servers; your browser keeps it only for the current visit."
       },
       {
         "title": "Contact",

@@ -22,7 +22,7 @@ function load(): Msg[] {
   }
 }
 
-/** Floating AI assistant. Messages go to our own /api/chat route (the Anthropic key never reaches the browser); plain text only. */
+/** Floating AI assistant. Messages go to our own /api/chat route (the API key never reaches the browser); plain text only. */
 export function ChatWidget() {
   const t = useTranslations("chat");
   const demo = useDemo();
