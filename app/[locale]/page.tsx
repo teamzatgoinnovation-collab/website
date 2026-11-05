@@ -7,7 +7,7 @@ import { HeroMotion, MotionReveal } from "@/components/motion-reveal";
 import { HeroCarousel } from "@/components/hero-carousel";
 import { HeroHeadline } from "@/components/hero-headline";
 import { Skyline } from "@/components/illustrations/skyline";
-import { IphoneShowcaseSection, IndustriesGrid, ProductFamilyStrip, ProductsAndConnections, StatsBand, IntegrationsSection, ShowcaseSection, SolutionsGrid, WhyGrid, getFeatured } from "@/components/home-sections";
+import { PhoneShowcaseSection, IndustriesGrid, ProductFamilyStrip, ProductsAndConnections, StatsBand, IntegrationsSection, ShowcaseSection, SolutionsGrid, WhyGrid, getFeatured } from "@/components/home-sections";
 import { Section, SectionHeading } from "@/components/section";
 import { Link } from "@/i18n/navigation";
 import { screenshotsOf } from "@/lib/catalog";
@@ -73,7 +73,7 @@ export default async function HomePage({ params }: Props) {
       <ProductFamilyStrip />
       <ProductsAndConnections />
       <StatsBand />
-      <IphoneShowcaseSection />
+      <PhoneShowcaseSection />
       <SolutionsGrid />
       <IndustriesGrid />
       <ShowcaseSection />

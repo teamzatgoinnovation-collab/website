@@ -1,4 +1,4 @@
-import { AppleIPhoneFrame } from "./iphone-frame";
+import { OppoPhoneFrame } from "./oppo-frame";
 import { BrowserFrame } from "./macbook-frame";
 import { ScreenshotSlot } from "./screenshot-slot";
 
@@ -12,8 +12,8 @@ export function ProductDesktopPreview({ src, name, url = "zatgoinnovation.com", 
 
 export function ProductMobilePreview({ src, name, className }: { src: string; name: string; className?: string }) {
   return (
-    <AppleIPhoneFrame className={className}>
+    <OppoPhoneFrame className={className}>
       <ScreenshotSlot src={src} alt={`${name} mobile`} />
-    </AppleIPhoneFrame>
+    </OppoPhoneFrame>
   );
 }

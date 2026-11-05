@@ -4,7 +4,7 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Maximize2, Monitor, Smartphone, Tablet } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 
-import { AppleIPhoneFrame, ApplicationLightbox, BrowserFrame, ScreenshotSlot, TabletFrame, type LightboxLabels } from "@/components/devices";
+import { OppoPhoneFrame, ApplicationLightbox, BrowserFrame, ScreenshotSlot, TabletFrame, type LightboxLabels } from "@/components/devices";
 import type { Device, GalleryItem } from "@/lib/gallery-merge";
 import { cn } from "@/lib/cn";
 
@@ -78,7 +78,7 @@ export function ScreenshotGallery({ name, items, labels }: Props) {
             className="flex justify-center"
           >
             {active === "MOBILE" ? (
-              <div className="w-56 sm:w-64"><AppleIPhoneFrame>{img}</AppleIPhoneFrame></div>
+              <div className="w-56 sm:w-64"><OppoPhoneFrame>{img}</OppoPhoneFrame></div>
             ) : active === "TABLET" ? (
               <TabletFrame className="max-w-xl">{img}</TabletFrame>
             ) : (

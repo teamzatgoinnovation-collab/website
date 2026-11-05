@@ -4,7 +4,7 @@ import { AnimatePresence, motion, useMotionValue, useReducedMotion, useSpring, u
 import { ChevronLeft, ChevronRight, Cloud, HardDrive, Mail, MapPin, MessageCircle, type LucideIcon } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-import { AppleIPhoneFrame, MacBookFrame, ScreenshotSlot } from "@/components/devices";
+import { OppoPhoneFrame, MacBookFrame, ScreenshotSlot } from "@/components/devices";
 import { ProductMark } from "@/components/product-mark";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/cn";
@@ -54,7 +54,7 @@ function Devices({ slide, first }: { slide: HeroSlide; first: boolean }) {
         </div>
         {slide.mobile[0] ? (
           <div className="absolute -bottom-6 end-[-2%] w-[26%] min-w-[5.5rem] rotate-[6deg]">
-            <AppleIPhoneFrame><ScreenshotSlot src={slide.mobile[0]} alt={`${slide.name} mobile`} /></AppleIPhoneFrame>
+            <OppoPhoneFrame><ScreenshotSlot src={slide.mobile[0]} alt={`${slide.name} mobile`} /></OppoPhoneFrame>
           </div>
         ) : null}
       </div>
@@ -65,11 +65,11 @@ function Devices({ slide, first }: { slide: HeroSlide; first: boolean }) {
     return (
       <div className="relative mx-auto h-[26rem] w-full max-w-[30rem] sm:h-[31rem]">
         <div className={b ? "absolute start-[2%] top-[10%] w-[44%] rotate-[-9deg]" : "absolute start-1/2 top-[4%] w-[48%] -translate-x-1/2 rotate-[-4deg]"}>
-          <AppleIPhoneFrame><ScreenshotSlot src={a} alt={`${slide.name} mobile`} priority={first} /></AppleIPhoneFrame>
+          <OppoPhoneFrame><ScreenshotSlot src={a} alt={`${slide.name} mobile`} priority={first} /></OppoPhoneFrame>
         </div>
         {b ? (
           <div className="absolute end-[4%] top-0 w-[48%] rotate-[7deg]">
-            <AppleIPhoneFrame><ScreenshotSlot src={b} alt={`${slide.name} mobile`} /></AppleIPhoneFrame>
+            <OppoPhoneFrame><ScreenshotSlot src={b} alt={`${slide.name} mobile`} /></OppoPhoneFrame>
           </div>
         ) : null}
       </div>

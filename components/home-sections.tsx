@@ -7,7 +7,7 @@ import {
 } from "lucide-react";
 
 import { AppShowcase, type ShowcaseProduct } from "@/components/app-showcase";
-import { IphoneShowcase, type PhoneProduct } from "@/components/iphone-showcase";
+import { PhoneShowcase, type PhoneProduct } from "@/components/phone-showcase";
 import { CountUp } from "@/components/motion/count-up";
 import { MotionReveal } from "@/components/motion-reveal";
 import { Section, SectionHeading } from "@/components/section";
@@ -15,7 +15,7 @@ import {
   industryTiles, solutionTiles, whyTiles, type Accent,
 } from "@/content/home-sections";
 import { integrationPages } from "@/content/integration-pages";
-import { AppleIPhoneFrame, MacBookFrame, ScreenshotSlot } from "@/components/devices";
+import { OppoPhoneFrame, MacBookFrame, ScreenshotSlot } from "@/components/devices";
 import { Link } from "@/i18n/navigation";
 import { serviceSlugs } from "@/content/services";
 import { industryPages } from "@/content/industry-pages";
@@ -255,7 +255,7 @@ export async function ProductsAndConnections() {
                         {layout === "laptop" && desktop ? (
                           <div className="w-[92%] translate-y-3 transition-transform duration-500 group-hover:-translate-y-0.5"><MacBookFrame><ScreenshotSlot src={desktop} alt={`${p.name} desktop`} /></MacBookFrame></div>
                         ) : mobile ? (
-                          <div className="w-[42%] translate-y-8 transition-transform duration-500 group-hover:translate-y-5"><AppleIPhoneFrame><ScreenshotSlot src={mobile} alt={`${p.name} mobile`} /></AppleIPhoneFrame></div>
+                          <div className="w-[42%] translate-y-8 transition-transform duration-500 group-hover:translate-y-5"><OppoPhoneFrame><ScreenshotSlot src={mobile} alt={`${p.name} mobile`} /></OppoPhoneFrame></div>
                         ) : null}
                       </div>
                     )}
@@ -323,7 +323,7 @@ export async function StatsBand() {
 }
 
 /** Only products with mobile screenshots uploaded in the admin appear here; with none, the whole section is omitted. */
-export async function IphoneShowcaseSection() {
+export async function PhoneShowcaseSection() {
   const { t } = await getSiteT("home", "home2");
   const featured = await getFeatured();
   const products: PhoneProduct[] = featured
@@ -336,7 +336,7 @@ export async function IphoneShowcaseSection() {
         <SectionHeading eyebrow={t("phoneEyebrow")} title={t("phoneTitle")} description={t("phoneDesc")} />
       </MotionReveal>
       <MotionReveal delay={0.05}>
-        <IphoneShowcase products={products} ariaLabel={t("phoneTitle")} />
+        <PhoneShowcase products={products} ariaLabel={t("phoneTitle")} />
       </MotionReveal>
     </Section>
   );

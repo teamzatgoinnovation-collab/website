@@ -3,7 +3,7 @@
 import { AnimatePresence, motion, useMotionValue, useReducedMotion, useSpring, useTransform } from "framer-motion";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-import { AppleIPhoneFrame, ScreenshotSlot } from "@/components/devices";
+import { OppoPhoneFrame, ScreenshotSlot } from "@/components/devices";
 import { cn } from "@/lib/cn";
 
 export type PhoneProduct = {
@@ -19,7 +19,7 @@ export type PhoneProduct = {
 
 const STEP_MS = 5200;
 
-export function IphoneShowcase({ products, ariaLabel }: { products: PhoneProduct[]; ariaLabel: string }) {
+export function PhoneShowcase({ products, ariaLabel }: { products: PhoneProduct[]; ariaLabel: string }) {
   const reduce = useReducedMotion();
   const [pi, setPi] = useState(0);
   const [fi, setFi] = useState(0);
@@ -108,13 +108,13 @@ export function IphoneShowcase({ products, ariaLabel }: { products: PhoneProduct
             dragElastic={0.25}
             onDragEnd={(_, info) => { if (Math.abs(info.offset.x) > 50) step(info.offset.x < 0 ? 1 : -1); }}
           >
-            <AppleIPhoneFrame>
+            <OppoPhoneFrame>
               <AnimatePresence mode="wait">
-                <motion.div key={`${product.slug}-${safeFi}`} className="absolute inset-0" initial={{ opacity: 0, scale: 1.03 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} transition={{ duration: reduce ? 0 : 0.35 }} aria-live="polite">
+                <motion.div key={`${product.slug}-${safeFi}`} className="absolute inset-0" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: reduce ? 0 : 0.35 }} aria-live="polite">
                   <ScreenshotSlot src={shot} alt={`${product.name}: ${features[safeFi]}`} />
                 </motion.div>
               </AnimatePresence>
-            </AppleIPhoneFrame>
+            </OppoPhoneFrame>
           </motion.div>
         </div>
       </div>

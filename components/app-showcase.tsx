@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Maximize2, Monitor, Smartphone } from "lucide-react";
 import { useId, useState } from "react";
 
-import { ApplicationLightbox, AppleIPhoneFrame, BrowserFrame, ScreenshotSlot } from "@/components/devices";
+import { ApplicationLightbox, OppoPhoneFrame, BrowserFrame, ScreenshotSlot } from "@/components/devices";
 import type { LightboxLabels } from "@/components/devices/application-lightbox";
 import { cn } from "@/lib/cn";
 
@@ -118,9 +118,9 @@ export function AppShowcase({
                 <ScreenshotSlot src={current} alt={alt} />
               </BrowserFrame>
             ) : (
-              <AppleIPhoneFrame>
+              <OppoPhoneFrame>
                 <ScreenshotSlot src={current} alt={alt} />
-              </AppleIPhoneFrame>
+              </OppoPhoneFrame>
             )}
             {current ? (
               <button

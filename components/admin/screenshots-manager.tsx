@@ -72,7 +72,7 @@ export function ScreenshotsManager({ productId, canWrite }: { productId: string;
         <Btn onClick={() => setPickOpen((v) => !v)}>{pickOpen ? "Close library" : "From library"}</Btn>
       </div>
     ) : null}>
-      <p className="mb-4 text-sm text-m-muted">Only real application screenshots. Until some exist the site shows a clearly labelled placeholder.</p>
+      <p className="mb-4 text-sm text-m-muted">Only real application screenshots. Until some exist the site shows a clearly labelled placeholder. For phones, portrait screenshots around 9:20 (for example 1080×2400) fit the phone best; other shapes are still shown whole.</p>
       {msg ? <div className="mb-4"><Notice kind={msg.kind}>{msg.text}</Notice></div> : null}
 
       {pickOpen ? (
