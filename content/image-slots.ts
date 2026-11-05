@@ -33,16 +33,7 @@ const HERO: ImageSlot = { slot: "heroImage", label: "Page header picture", hint:
 
 const HOME: ImageSlot[] = [
   { slot: "heroBackground", label: "Hero background", hint: "Replaces the decorative skyline behind the headline. A wide, light image works best." },
-  { slot: "solutionsBanner", label: "Solutions banner", hint: "Picture shown in full under the Solutions heading (landscape, about 16:9)." },
-  { slot: "industriesBanner", label: "Industries banner", hint: "Picture shown in full under the Industries heading (landscape)." },
   { slot: "whyBanner", label: "Why ZatGo banner", hint: "Picture shown in full under the Why heading (landscape)." },
-  { slot: "integrationsBanner", label: "Integrations banner", hint: "Picture shown in full under the Integrations heading (landscape)." },
-  { slot: "channelMobileImage", label: "Channel: Mobile", hint: "Replaces the icon panel of the Mobile channel (16:8)." },
-  { slot: "channelDesktopImage", label: "Channel: Desktop", hint: "Replaces the icon panel of the Desktop channel." },
-  { slot: "channelWebImage", label: "Channel: Web", hint: "Replaces the icon panel of the Web channel." },
-  { slot: "storyFieldImage", label: "Story step 1 image", hint: "Shown above the first step of the story section." },
-  { slot: "storyDeskImage", label: "Story step 2 image", hint: "Shown above the second step." },
-  { slot: "storyPortalImage", label: "Story step 3 image", hint: "Shown above the third step." },
 ];
 
 export function slotsFor(page: string): ImageSlot[] {
