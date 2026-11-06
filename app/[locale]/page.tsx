@@ -32,14 +32,14 @@ export default async function HomePage({ params }: Props) {
         ) : (
           <Skyline className="pointer-events-none absolute bottom-0 start-0 h-[46%] w-[68%] opacity-70" />
         )}
-        <div className="relative mx-auto grid max-w-7xl items-center gap-6 px-5 pb-14 pt-10 md:pt-14 lg:grid-cols-[1fr_1.05fr] lg:pb-16">
+        <div className="relative mx-auto grid max-w-[92rem] items-center gap-8 px-5 pb-14 pt-10 md:pt-14 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.4fr)] lg:gap-10 lg:pb-16 xl:px-8">
           <div className="relative z-10">
             <HeroMotion>
               <span className="inline-flex items-center gap-2 rounded-full bg-[#EDE9FF] px-4 py-1.5 text-sm font-semibold text-[#4B33C8] dark:bg-white/10 dark:text-[#C9BEFF]">
                 <Rocket className="h-4 w-4" aria-hidden />{t2("spaceBadge")}
               </span>
               <HeroHeadline
-                className="mt-5 font-display text-[clamp(2.6rem,6.2vw,4.7rem)] font-extrabold leading-[1.02] tracking-tight text-[var(--m-ink)]"
+                className="mt-5 font-display text-[clamp(2.4rem,4.8vw,4.1rem)] font-extrabold leading-[1.02] tracking-tight text-[var(--m-ink)]"
                 words={[{ text: t2("spaceWord1") }, { text: t2("spaceWord2") }, { text: t2("spaceWord3"), gradient: true }]}
               />
             </HeroMotion>
