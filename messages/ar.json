@@ -18,7 +18,8 @@
     "updates": "التحديثات",
     "pricing": "الأسعار",
     "contact": "تواصل",
-    "language": "اللغة"
+    "language": "اللغة",
+    "createSite": "أنشئ موقعك"
   },
   "footer": {
     "products": "المنتجات",
@@ -805,5 +806,32 @@
     "whatsappMessage": "مرحبًا ZatGo، أود التحدث مع فريقكم.",
     "rateLimited": "أرسلت رسائل كثيرة. انتظر بضع دقائق أو تواصل معنا عبر واتساب.",
     "unavailable": "المساعد غير متاح حاليًا. احجز عرضًا تجريبيًا أو راسلنا عبر واتساب."
+  },
+  "home2": {
+    "spaceBadge": "ERPNext مع ZatGo",
+    "spaceWord1": "أنشئ",
+    "spaceWord2": "موقع ERPNext",
+    "spaceWord3": "الخاص بك.",
+    "spaceBody": "تمنح ZatGo Space عملك موقع ERPNext خاصاً به. اختر اسماً، واختر باقة، ثم اتبع خطوات الإعداد الموجَّهة.",
+    "spaceCheck1": "عنوان موقع خاص بك",
+    "spaceCheck2": "إعداد موجَّه خطوة بخطوة",
+    "spaceCheck3": "متابعة مباشرة لتقدّم التثبيت",
+    "spaceCta": "أنشئ موقعك",
+    "spaceCtaSecondary": "استكشف المنتجات",
+    "spaceNote": "يتم الإعداد على خوادمنا وقد يستغرق عدة دقائق.",
+    "spaceSlideLabel": "الخطوة",
+    "spaceStepWord": "الخطوة",
+    "slidePrev": "الشريحة السابقة",
+    "slideNext": "الشريحة التالية",
+    "spaceStep1Title": "أنشئ حسابك",
+    "spaceStep1Caption": "سجّل باسمك وبريدك الإلكتروني وكلمة مرور.",
+    "spaceStep2Title": "سمِّ موقعك",
+    "spaceStep2Caption": "اختر الاسم الذي سيصبح عنوان موقعك.",
+    "spaceStep3Title": "اختر باقة",
+    "spaceStep3Caption": "قارن الباقات واختر ما يناسب فريقك.",
+    "spaceStep4Title": "التطبيقات والمسؤول",
+    "spaceStep4Caption": "راجع التطبيقات المضمَّنة وعيّن كلمة مرور المسؤول.",
+    "spaceStep5Title": "التثبيت والفتح",
+    "spaceStep5Caption": "تابع التقدّم مباشرة ثم افتح صفحة دخول ERPNext الخاصة بك."
   }
 }

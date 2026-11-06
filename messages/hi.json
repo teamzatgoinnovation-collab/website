@@ -18,7 +18,8 @@
     "updates": "अपडेट",
     "pricing": "मूल्य",
     "contact": "संपर्क",
-    "language": "भाषा"
+    "language": "भाषा",
+    "createSite": "अपनी साइट बनाएँ"
   },
   "footer": {
     "products": "उत्पाद",
@@ -641,5 +642,32 @@
     "whatsappMessage": "नमस्ते ZatGo, मैं आपकी टीम से बात करना चाहता/चाहती हूँ।",
     "rateLimited": "आपने बहुत संदेश भेजे हैं। कुछ मिनट रुकें या WhatsApp पर संपर्क करें।",
     "unavailable": "असिस्टेंट अभी उपलब्ध नहीं है। कृपया डेमो बुक करें या WhatsApp पर संदेश भेजें।"
+  },
+  "home2": {
+    "spaceBadge": "ZatGo के साथ ERPNext",
+    "spaceWord1": "बनाएँ",
+    "spaceWord2": "अपनी ERPNext",
+    "spaceWord3": "साइट।",
+    "spaceBody": "ZatGo Space आपके व्यवसाय को उसकी अपनी ERPNext साइट देता है। एक नाम चुनें, प्लान चुनें और गाइडेड चरणों का पालन करें।",
+    "spaceCheck1": "आपकी अपनी साइट का पता",
+    "spaceCheck2": "चरण-दर-चरण गाइडेड सेटअप",
+    "spaceCheck3": "इंस्टॉल की लाइव प्रगति",
+    "spaceCta": "अपनी साइट बनाएँ",
+    "spaceCtaSecondary": "प्रोडक्ट देखें",
+    "spaceNote": "सेटअप हमारे सर्वर पर चलता है और इसमें कई मिनट लग सकते हैं।",
+    "spaceSlideLabel": "चरण",
+    "spaceStepWord": "चरण",
+    "slidePrev": "पिछली स्लाइड",
+    "slideNext": "अगली स्लाइड",
+    "spaceStep1Title": "अपना खाता बनाएँ",
+    "spaceStep1Caption": "अपने नाम, ईमेल और पासवर्ड से साइन अप करें।",
+    "spaceStep2Title": "अपनी साइट का नाम चुनें",
+    "spaceStep2Caption": "वह नाम चुनें जो आपकी साइट का पता बनेगा।",
+    "spaceStep3Title": "प्लान चुनें",
+    "spaceStep3Caption": "प्लान की तुलना करें और अपनी टीम के अनुकूल प्लान चुनें।",
+    "spaceStep4Title": "ऐप्स और एडमिनिस्ट्रेटर",
+    "spaceStep4Caption": "शामिल ऐप्स देखें और एडमिनिस्ट्रेटर का पासवर्ड सेट करें।",
+    "spaceStep5Title": "इंस्टॉल करें और खोलें",
+    "spaceStep5Caption": "लाइव प्रगति देखें, फिर अपना ERPNext लॉगिन खोलें।"
   }
 }

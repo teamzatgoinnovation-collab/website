@@ -267,15 +267,15 @@ export function SiteHeader() {
           ) : (
             <span className="inline-flex h-9 w-9" />
           )}
-          <Link href="/downloads" className="m-btn m-btn-ghost !hidden 2xl:!inline-flex !px-3.5 !py-2">
+          <Link href="/downloads" className="m-btn m-btn-ghost !hidden min-[1800px]:!inline-flex !px-3.5 !py-2">
             <Download className="h-4 w-4" />
             {t("downloadSoftware")}
           </Link>
-          <a href={`${spaceUrl}/signup`} rel="noopener" className="m-btn m-btn-ghost !hidden whitespace-nowrap 2xl:!inline-flex !px-3.5 !py-2">
+          <a href={`${spaceUrl}/signup`} rel="noopener" className="m-btn m-btn-ghost !hidden whitespace-nowrap min-[1700px]:!inline-flex !px-3.5 !py-2">
             <Rocket className="h-4 w-4" aria-hidden />
             {t("createSite")}
           </a>
-          <BookDemoLink className="m-btn m-btn-primary !hidden whitespace-nowrap sm:!inline-flex !px-4 !py-2">
+          <BookDemoLink className="m-btn m-btn-primary !hidden sm:!inline-flex !px-4 !py-2">
             {t("bookDemo")}
           </BookDemoLink>
           <button
