@@ -171,6 +171,7 @@ export function VanSalePricingSection() {
 
       <MotionReveal className="mt-2 flex flex-col items-center gap-3" data-print-hide>
         <BillingToggle billing={billing} onChange={setBilling} t={t} />
+        <p className="text-sm font-medium text-[var(--m-accent)]">{t("trialNote")}</p>
       </MotionReveal>
       <p className="mt-4 text-center text-xs text-m-muted">{t(vatKey)}</p>
 

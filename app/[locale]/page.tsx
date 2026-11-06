@@ -46,7 +46,7 @@ export default async function HomePage({ params }: Props) {
             <HeroMotion delay={0.12}>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-[color-mix(in_oklch,var(--m-ink)_78%,transparent)] md:text-lg">{t2("spaceBody")}</p>
               <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2.5 text-sm font-semibold">
-                {[t2("spaceCheck1"), t2("spaceCheck2"), t2("spaceCheck3")].map((c) => (
+                {[t2("spaceCheck1"), t2("spaceCheck2"), t2("spaceCheck3"), t2("spaceCheck4")].map((c) => (
                   <li key={c} className="inline-flex items-center gap-2"><CheckCircle2 className="h-5 w-5 text-[var(--m-teal)]" aria-hidden />{c}</li>
                 ))}
               </ul>

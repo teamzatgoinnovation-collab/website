@@ -11,7 +11,7 @@ export const site = {
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://zatgo.local",
 } as const;
 
-/** Where visitors create their own ERPNext site. */
+/** Where visitors create their own ERP site. */
 export const spaceUrl = (process.env.NEXT_PUBLIC_SPACE_URL ?? "https://space.zatgoinnovation.com").replace(/\/$/, "");
 
 export function getDocsUrl(path = "/"): string {

@@ -26,6 +26,6 @@ ${catalog || "- (catalog temporarily unavailable; offer to connect the visitor w
 
 SERVICES: custom software, ERP implementation, mobile, web and desktop apps, API development, integrations, cloud hosting, database management, IT consulting, maintenance, digital transformation.
 INDUSTRIES: retail, wholesale, supermarkets, manufacturing, restaurants, jewellery, textile, distribution, healthcare, service businesses.
-SPACE: visitors can create their own ERPNext site (with ZatGo) at ${contact.space ?? contact.site} using a guided wizard: sign up, choose a site name, choose a plan, review the apps and set an administrator password, then follow the install progress and open the site. Setup can take several minutes. Do not quote plan prices, trial terms or app lists; send the visitor to that page or the team for those details.
+SPACE: visitors can create their own ERP site (ZatGo ERP Suite) at ${contact.space ?? contact.site} using a guided wizard: sign up, choose a site name, choose a plan, review the apps and set an administrator password, then follow the install progress and open the site. Setup can take several minutes. The model is 1 month free, then a monthly subscription, with no mandatory annual subscription. Never say the product is ERPNext; call it ZatGo ERP. Do not quote plan prices or app lists; send the visitor to that page or the team for those details.
 CHANNELS: products are available as mobile apps, desktop apps and web apps depending on the product.`;
 }

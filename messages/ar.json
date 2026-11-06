@@ -19,7 +19,7 @@
     "pricing": "الأسعار",
     "contact": "تواصل",
     "language": "اللغة",
-    "createSite": "أنشئ موقعك"
+    "createSite": "أنشئ موقع ERP الخاص بك"
   },
   "footer": {
     "products": "المنتجات",
@@ -88,9 +88,10 @@
     "updatesEyebrow": "التحديثات",
     "updatesTitle": "ما صدر مؤخرًا",
     "fullChangelog": "سجل التغييرات كاملًا",
-    "ctaTitle": "شاهد ZatGo في عملك",
-    "ctaBody": "أخبرنا عن مواقعك وأدوارك وقنواتك — وسنربط المنتجات بخطة طرح.",
-    "ctaButton": "تواصل معنا"
+    "ctaTitle": "ZatGo ERP — برنامج متكامل لإدارة الأعمال",
+    "ctaBody": "ابدأ بشهر مجاني. ادفع شهرياً. وطوّر عملك.",
+    "ctaButton": "احجز عرضاً تجريبياً",
+    "ctaSecondary": "استكشف المنتجات"
   },
   "productsPage": {
     "title": "المنتجات",
@@ -513,7 +514,7 @@
     "leadershipTitle": "القيادة",
     "founderName": "زين العابدين تي",
     "founderRole": "المالك والرئيس التنفيذي",
-    "founderBio": "مطور برمجيات واستشاري تقني ووظيفي لـ ERPNext، يقود اتجاه المنتج والتقنية في ZatGo Innovation.",
+    "founderBio": "مطور برمجيات واستشاري تقني ووظيفي لأنظمة ERP، يقود اتجاه المنتج والتقنية في ZatGo Innovation.",
     "missionTitle": "Mission",
     "missionBody": "Make day-to-day operations clear for every role — on the road, on the floor, and at the desk.",
     "valuesTitle": "How we work",
@@ -650,8 +651,8 @@
         "body": "GPS وسياق المسار لكل توقف، حتى تعرف دائمًا أين تقف كل سيارة ومبيعاتها."
       },
       "erpnext": {
-        "title": "تكامل مع ERPNext",
-        "body": "يعمل VanSale على نفس نواة ERPNext التي تشغّل بقية منصة ZatGo، بحيث تتصل بيانات مبيعات السيارات بنظام أعمالك الأوسع."
+        "title": "تكامل مع ZatGo ERP",
+        "body": "يعمل VanSale على نفس نواة ZatGo ERP التي تشغّل بقية منصة ZatGo، بحيث تتصل بيانات مبيعات السيارات بنظام أعمالك الأوسع."
       }
     }
   },
@@ -676,13 +677,13 @@
         "name": "Starter",
         "description": "للشركات التي تدير مبيعات السيارات بمركبة واحدة.",
         "basis": "سيارة واحدة",
-        "cta": "ابدأ الآن"
+        "cta": "ابدأ التجربة المجانية"
       },
       "professional": {
         "name": "Professional",
         "description": "لفرق مبيعات السيارات النامية التي تدير عدة مسارات.",
         "basis": "حتى 5 سيارات",
-        "cta": "ابدأ الآن"
+        "cta": "ابدأ التجربة المجانية"
       },
       "business": {
         "name": "Business",
@@ -698,7 +699,7 @@
       "collections": "المدفوعات والتحصيلات",
       "gpsRouteTracking": "تتبع GPS والمسار",
       "multipleVans": "عدة سيارات",
-      "erpnextIntegration": "تكامل مع ERPNext",
+      "erpnextIntegration": "تكامل مع ZatGo ERP",
       "prioritySupport": "دعم ذو أولوية"
     },
     "comparisonTitle": "مقارنة باقات VanSale",
@@ -726,8 +727,8 @@
         "body": "اطّلع على GPS وسياق المسار لكل زيارة مبيعات."
       },
       {
-        "title": "تكامل مع ERPNext",
-        "body": "يعمل VanSale على نفس نواة ERPNext التي تشغّل بقية منصة ZatGo."
+        "title": "تكامل مع ZatGo ERP",
+        "body": "يعمل VanSale على نفس نواة ZatGo ERP التي تشغّل بقية منصة ZatGo."
       }
     ],
     "ctaTitle": "جاهز لتبسيط مبيعات سياراتك؟",
@@ -753,8 +754,8 @@
         "answer": "نعم. VanSale مصمم للعمل الميداني ويدعم الطلبات دون اتصال التي تتزامن عند عودة الاتصال."
       },
       {
-        "question": "هل يتكامل VanSale مع ERPNext؟",
-        "answer": "نعم، في باقة Business. يعمل VanSale على نفس نواة ERPNext التي تشغّل بقية منصة ZatGo."
+        "question": "هل يتكامل VanSale مع ZatGo ERP؟",
+        "answer": "نعم، في باقة Business. يعمل VanSale على نفس نواة ZatGo ERP التي تشغّل بقية منصة ZatGo."
       },
       {
         "question": "هل ضريبة القيمة المضافة مشمولة في السعر؟",
@@ -768,7 +769,8 @@
         "question": "هل تقدمون الدعم؟",
         "answer": "نعم. كل الباقات تشمل الدعم، مع دعم ذو أولوية في باقة Business."
       }
-    ]
+    ],
+    "trialNote": "شهر تجريبي مجاني. الفوترة شهرياً. لا اشتراك سنوي إلزامي."
   },
   "productDetail": {
     "modulesTitle": "Modules",
@@ -808,15 +810,15 @@
     "unavailable": "المساعد غير متاح حاليًا. احجز عرضًا تجريبيًا أو راسلنا عبر واتساب."
   },
   "home2": {
-    "spaceBadge": "ERPNext مع ZatGo",
-    "spaceWord1": "ابدأ شركتك",
-    "spaceWord2": "في دقائق",
-    "spaceWord3": "معدودة.",
-    "spaceBody": "تمنح ZatGo Space عملك موقع ERPNext خاصاً به. اختر اسماً، واختر باقة، ثم اتبع خطوات الإعداد الموجَّهة.",
-    "spaceCheck1": "عنوان موقع خاص بك",
-    "spaceCheck2": "إعداد موجَّه خطوة بخطوة",
-    "spaceCheck3": "متابعة مباشرة لتقدّم التثبيت",
-    "spaceCta": "أنشئ موقعك",
+    "spaceBadge": "مجموعة ZatGo ERP",
+    "spaceWord1": "ابدأ عملك",
+    "spaceWord2": "مع",
+    "spaceWord3": "ZatGo ERP",
+    "spaceBody": "احصل على نظام إدارة أعمالك الخاص مع ZatGo ERP. ابدأ بشهر مجاني، واختر باقتك، وأدر عملك باشتراك شهري بسيط.",
+    "spaceCheck1": "شهر تجريبي مجاني",
+    "spaceCheck2": "دفعات شهرية بسيطة",
+    "spaceCheck3": "نظام ERP خاص بنشاطك",
+    "spaceCta": "ابدأ شهراً مجاناً",
     "spaceCtaSecondary": "استكشف المنتجات",
     "spaceNote": "يتم الإعداد على خوادمنا وقد يستغرق عدة دقائق.",
     "spaceSlideLabel": "الخطوة",
@@ -832,6 +834,7 @@
     "spaceStep4Title": "التطبيقات والمسؤول",
     "spaceStep4Caption": "راجع التطبيقات المضمَّنة وعيّن كلمة مرور المسؤول.",
     "spaceStep5Title": "التثبيت والفتح",
-    "spaceStep5Caption": "تابع التقدّم مباشرة ثم افتح صفحة دخول ERPNext الخاصة بك."
+    "spaceStep5Caption": "تابع التقدّم مباشرة ثم افتح صفحة دخول نظام ERP الخاصة بك.",
+    "spaceCheck4": "إعداد موجَّه"
   }
 }

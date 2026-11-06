@@ -1,8 +1,8 @@
 {
   "meta": {
-    "titleDefault": "ZatGo Innovation | Create Your ERPNext Site & Business Software",
+    "titleDefault": "ZatGo Innovation | ZatGo ERP — Business Management Software, 1 Month Free",
     "titleTemplate": "%s · ZatGo",
-    "description": "Create your own ERPNext site with ZatGo Space, and get modern business software — ERP, accounting, e-invoicing, van sales, CRM, and inventory — from ZatGo Innovation."
+    "description": "Start your business with ZatGo ERP: 1 month free, then a simple monthly subscription. Your own ERP site plus accounting, e-invoicing, van sales, CRM, and inventory software from ZatGo Innovation."
   },
   "brand": {
     "name": "ZatGo",
@@ -34,7 +34,7 @@
     "search": "Search",
     "bookDemo": "Book a Demo",
     "downloadSoftware": "Download Software",
-    "createSite": "Create your site",
+    "createSite": "Create Your ERP Site",
     "menuLabel": "Main menu",
     "closeSearch": "Close search",
     "noResults": "No results",
@@ -92,7 +92,7 @@
     "ecosystemTitle": "One connected platform for the whole business",
     "ecosystemDesc": "ZatGo Innovation's product family covers the full operating picture — from the back office to the field.",
     "ecosystemErpTitle": "Business Management & ERP",
-    "ecosystemErpBody": "Space, ERPNext, Admin Console",
+    "ecosystemErpBody": "Space, ZatGo ERP, Admin Console",
     "ecosystemFinanceTitle": "Accounting & E-Invoicing",
     "ecosystemFinanceBody": "Accounting, Report Studio, BI Dashboard",
     "ecosystemFieldTitle": "Field & Van Sales",
@@ -143,10 +143,10 @@
     "updatesEyebrow": "Updates",
     "updatesTitle": "What shipped recently",
     "fullChangelog": "Full changelog",
-    "ctaTitle": "See ZatGo in your operation",
-    "ctaBody": "Tell us about your sites, roles, and channels — we will map products to a rollout plan.",
-    "ctaButton": "Request a demo",
-    "ctaSecondary": "Explore products"
+    "ctaTitle": "ZatGo ERP — Complete Business Management Software",
+    "ctaBody": "Start with 1 Month Free. Pay Monthly. Grow Your Business.",
+    "ctaButton": "Book a Demo",
+    "ctaSecondary": "Explore Products"
   },
   "productsPage": {
     "title": "Products",
@@ -584,11 +584,11 @@
     "leadershipTitle": "Leadership",
     "founderName": "Zainul Abid T",
     "founderRole": "Owner & CEO",
-    "founderBio": "Software developer and ERPNext techno-functional consultant, leading ZatGo Innovation's product and technology direction.",
+    "founderBio": "Software developer and ERP techno-functional consultant, leading ZatGo Innovation's product and technology direction.",
     "whatWeBuildTitle": "What we build",
     "whatWeBuildBody": "One connected product family covering the full operating picture of a business:",
     "whatWeBuildItems": [
-      "Business Management & ERP — Space, ERPNext, Admin Console",
+      "Business Management & ERP — Space, ZatGo ERP, Admin Console",
       "Accounting & E-Invoicing — Accounting, Report Studio, BI Dashboard",
       "Field & Van Sales — ZatGo VanSale, Delivery, Field Service",
       "CRM & Customer Relationships — CRM, Customer Portal, Vendor Portal",
@@ -607,7 +607,7 @@
     "technologyItems": [
       "Flutter for mobile apps",
       "Next.js and React for web applications",
-      "ERPNext for core business logic",
+      "ZatGo ERP for core business logic",
       "PostgreSQL and SQLite for data",
       "REST APIs for integration",
       "Offline-first sync for field work"
@@ -750,8 +750,8 @@
         "body": "GPS and route context for every stop, so you always know where a van and its sales stand."
       },
       "erpnext": {
-        "title": "ERPNext integration",
-        "body": "VanSale runs on the same ERPNext core as the rest of ZatGo, so van sales data connects to your wider business system."
+        "title": "ZatGo ERP integration",
+        "body": "VanSale runs on the same ZatGo ERP core as the rest of ZatGo, so van sales data connects to your wider business system."
       }
     }
   },
@@ -776,13 +776,13 @@
         "name": "Starter",
         "description": "For businesses running van sales with a single vehicle.",
         "basis": "1 van",
-        "cta": "Get started"
+        "cta": "Start Free Trial"
       },
       "professional": {
         "name": "Professional",
         "description": "For growing van-sales teams running multiple routes.",
         "basis": "Up to 5 vans",
-        "cta": "Get started"
+        "cta": "Start Free Trial"
       },
       "business": {
         "name": "Business",
@@ -798,7 +798,7 @@
       "collections": "Payments & collections",
       "gpsRouteTracking": "GPS & route tracking",
       "multipleVans": "Multiple vans",
-      "erpnextIntegration": "ERPNext integration",
+      "erpnextIntegration": "ZatGo ERP integration",
       "prioritySupport": "Priority support"
     },
     "comparisonTitle": "Compare VanSale plans",
@@ -826,8 +826,8 @@
         "body": "See GPS and route context for every van sales visit."
       },
       {
-        "title": "ERPNext integration",
-        "body": "VanSale runs on the same ERPNext core as the rest of ZatGo."
+        "title": "ZatGo ERP integration",
+        "body": "VanSale runs on the same ZatGo ERP core as the rest of ZatGo."
       }
     ],
     "ctaTitle": "Ready to simplify your van sales?",
@@ -853,8 +853,8 @@
         "answer": "Yes. VanSale is built for field use and supports offline orders that sync when connectivity returns."
       },
       {
-        "question": "Does VanSale integrate with ERPNext?",
-        "answer": "Yes, on the Business plan. VanSale runs on the same ERPNext core as the rest of the ZatGo platform."
+        "question": "Does VanSale integrate with ZatGo ERP?",
+        "answer": "Yes, on the Business plan. VanSale runs on the same ZatGo ERP core as the rest of the ZatGo platform."
       },
       {
         "question": "Is VAT included in the price?",
@@ -868,7 +868,8 @@
         "question": "Do you provide support?",
         "answer": "Yes. All plans include support, with priority support on the Business plan."
       }
-    ]
+    ],
+    "trialNote": "1 month free trial. Billed monthly. No mandatory annual subscription."
   },
   "productDetail": {
     "modulesTitle": "Modules",
@@ -995,16 +996,16 @@
     "factServices": "Services offered",
     "factLanguages": "Languages",
     "heroBadge": "Complete ERP & Business Solutions",
-    "spaceBadge": "ERPNext with ZatGo",
-    "spaceWord1": "Start your company",
-    "spaceWord2": "in a few",
-    "spaceWord3": "minutes.",
-    "spaceBody": "ZatGo Space gives your business its own ERPNext site. Choose a name, pick a plan and follow the guided steps.",
-    "spaceCheck1": "Your own site address",
-    "spaceCheck2": "Guided step-by-step setup",
-    "spaceCheck3": "Live install progress",
-    "spaceCta": "Create your site",
-    "spaceCtaSecondary": "Explore products",
+    "spaceBadge": "ZatGo ERP Suite",
+    "spaceWord1": "Start Your Business",
+    "spaceWord2": "with",
+    "spaceWord3": "ZatGo ERP",
+    "spaceBody": "Get your own business management system with ZatGo ERP. Start with 1 month free, choose your plan, and manage your business with a simple monthly subscription.",
+    "spaceCheck1": "1 Month Free Trial",
+    "spaceCheck2": "Simple Monthly Payments",
+    "spaceCheck3": "Your Own Business ERP",
+    "spaceCta": "Start 1 Month Free",
+    "spaceCtaSecondary": "Explore Products",
     "spaceNote": "Setup runs on our servers and can take several minutes.",
     "spaceSlideLabel": "Step",
     "spaceStepWord": "Step",
@@ -1017,7 +1018,7 @@
     "spaceStep4Title": "Apps and administrator",
     "spaceStep4Caption": "Review the included apps and set your administrator password.",
     "spaceStep5Title": "Install and open",
-    "spaceStep5Caption": "Follow the live progress, then open your ERPNext login.",
+    "spaceStep5Caption": "Follow the live progress, then open your ERP login.",
     "heroCheck1": "Downloadable apps",
     "heroCheck2": "API-ready integrations",
     "heroCheck3": "Cloud & on-premise",
@@ -1040,7 +1041,8 @@
     "phoneTitle": "Your business, in your pocket",
     "phoneDesc": "Pick a product and step through what its app does. Hover to tilt the phone; on a touch screen, swipe.",
     "labelTablet": "Tablet",
-    "labelOf": "of"
+    "labelOf": "of",
+    "spaceCheck4": "Guided Setup Process"
   },
   "servicesPage": {
     "title": "Services",

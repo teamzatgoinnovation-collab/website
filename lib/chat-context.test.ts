@@ -21,6 +21,8 @@ test("still builds when the catalog is unavailable", () => {
 
 test("tells the assistant where visitors create a site, without prices", () => {
   const p = buildSystemPrompt([], { whatsapp: "x", email: "y", site: "https://zatgoinnovation.com", space: "https://space.example.com" });
-  assert.match(p, /create their own ERPNext site .* at https:\/\/space\.example\.com/);
+  assert.match(p, /create their own ERP site .* at https:\/\/space\.example\.com/);
   assert.match(p, /Do not quote plan prices/);
+  assert.match(p, /1 month free, then a monthly subscription/);
+  assert.doesNotMatch(p.replace(/Never say the product is ERPNext;/, ""), /ERPNext/);
 });
