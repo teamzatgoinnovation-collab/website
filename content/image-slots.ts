@@ -1,3 +1,4 @@
+import { SPACE_STEP_COUNT } from "@/lib/space-steps";
 import { industryPages } from "@/content/industry-pages";
 import { serviceSlugs } from "@/content/services";
 
@@ -33,6 +34,7 @@ const HERO: ImageSlot = { slot: "heroImage", label: "Page header picture", hint:
 
 const HOME: ImageSlot[] = [
   { slot: "heroBackground", label: "Hero background", hint: "Replaces the decorative skyline behind the headline. A wide, light image works best." },
+  ...Array.from({ length: SPACE_STEP_COUNT }, (_, i): ImageSlot => ({ slot: `spaceStep${i + 1}Image`, label: `Create-a-site step ${i + 1}`, hint: "Screenshot of this step of creating a site at the Space website (landscape, about 16:10). Shown whole, never cropped." })),
   { slot: "whyBanner", label: "Why ZatGo banner", hint: "Picture shown in full under the Why heading (landscape)." },
 ];
 

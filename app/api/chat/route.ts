@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 
 import { company } from "@/content/company";
+import { spaceUrl } from "@/content/site";
 import { validateChat } from "@/lib/chat-schema";
 import { buildSystemPrompt } from "@/lib/chat-context";
 import { getCatalogSafe } from "@/lib/catalog";
@@ -58,6 +59,7 @@ export async function POST(req: Request) {
   const system = buildSystemPrompt(products, {
     whatsapp: company.whatsapp,
     email: company.email,
+    space: spaceUrl,
     site: process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://zatgoinnovation.com",
   });
 

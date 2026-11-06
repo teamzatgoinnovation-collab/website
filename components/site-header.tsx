@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { ChevronDown, Download, Menu, Moon, Sun, X } from "lucide-react";
+import { ChevronDown, Download, Menu, Moon, Rocket, Sun, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import { useEffect, useRef, useState } from "react";
@@ -10,7 +10,7 @@ import { LanguageSwitcher } from "@/components/language-switcher";
 import { MegaPanel, useMegaColumns } from "@/components/mega-menu";
 import { SiteSearch } from "@/components/site-search";
 import { Button } from "@/components/ui/button";
-import { primaryNav, type NavDropdownEntry, type NavMegaEntry } from "@/content/site";
+import { primaryNav, spaceUrl, type NavDropdownEntry, type NavMegaEntry } from "@/content/site";
 import { Link, usePathname } from "@/i18n/navigation";
 import { cn } from "@/lib/cn";
 import { BookDemoLink } from "@/components/demo-dialog";
@@ -271,7 +271,11 @@ export function SiteHeader() {
             <Download className="h-4 w-4" />
             {t("downloadSoftware")}
           </Link>
-          <BookDemoLink className="m-btn m-btn-primary !hidden sm:!inline-flex !px-4 !py-2">
+          <a href={`${spaceUrl}/signup`} rel="noopener" className="m-btn m-btn-ghost !hidden whitespace-nowrap 2xl:!inline-flex !px-3.5 !py-2">
+            <Rocket className="h-4 w-4" aria-hidden />
+            {t("createSite")}
+          </a>
+          <BookDemoLink className="m-btn m-btn-primary !hidden whitespace-nowrap sm:!inline-flex !px-4 !py-2">
             {t("bookDemo")}
           </BookDemoLink>
           <button
@@ -326,7 +330,11 @@ export function SiteHeader() {
               );
             })}
             <div className="mt-3 flex flex-wrap gap-2 px-3">
-              <BookDemoLink className="m-btn m-btn-primary !px-4 !py-2">
+              <a href={`${spaceUrl}/signup`} rel="noopener" className="m-btn m-btn-primary !px-4 !py-2">
+                <Rocket className="h-4 w-4" aria-hidden />
+                {t("createSite")}
+              </a>
+              <BookDemoLink className="m-btn m-btn-ghost !px-4 !py-2">
                 {t("bookDemo")}
               </BookDemoLink>
               <Link href="/downloads" className="m-btn m-btn-ghost !px-4 !py-2">

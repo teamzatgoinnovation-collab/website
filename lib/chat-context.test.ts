@@ -18,3 +18,9 @@ test("grounds the prompt in the catalog and carries the safety rules", () => {
 test("still builds when the catalog is unavailable", () => {
   assert.match(buildSystemPrompt([], { whatsapp: "x", email: "y", site: "z" }), /catalog temporarily unavailable/);
 });
+
+test("tells the assistant where visitors create a site, without prices", () => {
+  const p = buildSystemPrompt([], { whatsapp: "x", email: "y", site: "https://zatgoinnovation.com", space: "https://space.example.com" });
+  assert.match(p, /create their own ERPNext site .* at https:\/\/space\.example\.com/);
+  assert.match(p, /Do not quote plan prices/);
+});
