@@ -1,5 +1,5 @@
 /** The creation steps shown in the hero slideshow. Titles and captions are editable per language; screenshots are uploaded in the admin. */
-export const SPACE_STEP_COUNT = 5;
+export const SPACE_STEP_COUNT = 3;
 
 export type SpaceStep = { n: number; title: string; caption: string; image: string | null };
 
