@@ -10,6 +10,7 @@ import { PhoneShowcaseSection, ProductsGrid, WhyGrid } from "@/components/home-s
 import { Section } from "@/components/section";
 import { spaceUrl } from "@/content/site";
 import { Link } from "@/i18n/navigation";
+import { HERO_VIDEOS } from "@/content/hero-videos";
 import { buildSteps } from "@/lib/space-steps";
 import { BookDemoLink } from "@/components/demo-dialog";
 
@@ -21,7 +22,7 @@ export default async function HomePage({ params }: Props) {
 
   const { t, images } = await getSiteT("home", "home");
   const { t: t2 } = await getSiteT("home", "home2");
-  const steps = buildSteps(t2, images);
+  const steps = buildSteps(t2, images, HERO_VIDEOS);
 
   return (
     <>
@@ -59,7 +60,7 @@ export default async function HomePage({ params }: Props) {
           <HeroMotion delay={0.18}>
             <SpaceStepsSlideshow
               steps={steps}
-              labels={{ prev: t2("slidePrev"), next: t2("slideNext"), slide: t2("spaceSlideLabel"), step: t2("spaceStepWord"), note: t2("spaceNote"), host: new URL(spaceUrl).host }}
+              labels={{ prev: t2("slidePrev"), next: t2("slideNext"), slide: t2("spaceSlideLabel"), step: t2("spaceStepWord"), video: t2("spaceVideoWord"), note: t2("spaceNote"), host: new URL(spaceUrl).host }}
             />
           </HeroMotion>
         </div>

@@ -23,3 +23,17 @@ test("ignores images for steps without a title and caps at the step count", () =
   assert.equal(buildSteps(t, { spaceStep4Image: "https://a/b" }).length, 2);
   assert.equal(buildSteps(() => "x", {}).length, SPACE_STEP_COUNT);
 });
+
+test("videos come first, then the steps, and the step numbers are unchanged", async () => {
+  const { isYouTubeId } = await import("./space-steps.ts");
+  const withVideo = buildSteps((k) => ({ ...texts, spaceVideoTitle: "Watch", spaceVideoCaption: "How it works" })[k] ?? "", {}, [{ id: "3_ulD2r6rhg" }]);
+  assert.deepEqual(withVideo.map((s) => s.kind), ["video", "step", "step"]);
+  assert.equal(withVideo[0].video, "3_ulD2r6rhg");
+  assert.deepEqual(withVideo.slice(1).map((s) => s.n), [1, 2]);
+  assert.equal(new Set(withVideo.map((s) => s.kind + s.n)).size, withVideo.length);
+  assert.equal(isYouTubeId("3_ulD2r6rhg"), true);
+});
+
+test("a malformed video id is never used", () => {
+  assert.equal(buildSteps(t, {}, [{ id: "x" }, { id: "abc\"onload=" }, { id: "../../evil..." }]).filter((s) => s.kind === "video").length, 0);
+});
