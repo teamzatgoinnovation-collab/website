@@ -8,9 +8,8 @@ import { PhoneShowcase, type PhoneProduct } from "@/components/phone-showcase";
 import { MotionReveal } from "@/components/motion-reveal";
 import { Section, SectionHeading } from "@/components/section";
 import { whyTiles } from "@/content/home-sections";
-import { OppoPhoneFrame, MacBookFrame, ScreenshotSlot } from "@/components/devices";
 import { Link } from "@/i18n/navigation";
-import { getCatalog, layoutOf, screenshotsOf } from "@/lib/catalog";
+import { getCatalog, screenshotsOf } from "@/lib/catalog";
 import type { CatalogProduct } from "@/lib/catalog-types";
 import { ProductMark } from "@/components/product-mark";
 
@@ -79,15 +78,12 @@ export async function ProductsGrid() {
           </MotionReveal>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {featured.map((p, i) => {
-              const layout = layoutOf(p);
               const accent = p.accent ?? "#2952E3";
-              const desktop = screenshotsOf(p, "desktop")[0];
-              const mobile = screenshotsOf(p, "mobile")[0];
               return (
                 <MotionReveal key={p.slug} delay={i * 0.06}>
                   <Link
                     href={`/products/${p.slug}` as "/products"}
-                    className={`group relative flex h-full flex-col overflow-hidden rounded-3xl border border-white/70 p-5 shadow-[0_18px_40px_-26px_rgba(16,24,40,0.45)] transition-transform hover:-translate-y-1 dark:border-white/10 ${layout === "none" ? "min-h-[13rem]" : "min-h-[22rem]"}`}
+                    className={`group relative flex h-full flex-col overflow-hidden rounded-3xl border border-white/70 p-5 shadow-[0_18px_40px_-26px_rgba(16,24,40,0.45)] transition-transform hover:-translate-y-1 dark:border-white/10 min-h-[13rem]`}
                     style={{ background: `linear-gradient(180deg, color-mix(in oklch, ${accent} 16%, white), color-mix(in oklch, ${accent} 4%, white))` }}
                   >
                     <div className="flex items-center gap-2.5">
@@ -98,17 +94,8 @@ export async function ProductsGrid() {
                       </div>
                     </div>
                     {p.status === "coming-soon" ? <span className="mt-3 w-fit rounded-full bg-white/80 px-2.5 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wider text-[#475467]">{t("comingSoon")}</span> : null}
-                    {layout === "none" ? (
-                      <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-[#475467]">{p.summary}</p>
-                    ) : (
-                      <div className="relative mt-auto flex h-48 items-end justify-center pt-4">
-                        {layout === "laptop" && desktop ? (
-                          <div className="w-[92%] translate-y-3 transition-transform duration-500 group-hover:-translate-y-0.5"><MacBookFrame><ScreenshotSlot src={desktop} alt={`${p.name} desktop`} /></MacBookFrame></div>
-                        ) : mobile ? (
-                          <div className="w-[42%] translate-y-8 transition-transform duration-500 group-hover:translate-y-5"><OppoPhoneFrame><ScreenshotSlot src={mobile} alt={`${p.name} mobile`} /></OppoPhoneFrame></div>
-                        ) : null}
-                      </div>
-                    )}
+                    {/* Text only: the phone and laptop pictures were removed from these cards. */}
+                    <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-[#475467]">{p.summary}</p>
                   </Link>
                 </MotionReveal>
               );
